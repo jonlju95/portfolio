@@ -15,7 +15,7 @@
         <p class="introduction">{$_('homePage.heroSection.homeIntroduction')}</p>
     </div>
 </section>
-<section class="aboutSection animated-element">
+<section class="homePageSections aboutSection animated-element">
     <h2>About me</h2>
     <div>
         <p>
@@ -35,10 +35,63 @@
         </p>
     </div>
 </section>
-<section class="experienceSection animated-element">
+<section class="homePageSections experienceSection animated-element">
     <h2>Experience</h2>
-    <div>
-        <p>Experience section</p>
+    <div class="experienceContainer">
+        <div>
+            <h4>INBooks AB - Web Developer</h4>
+            <p class="dateText">November 2021 – January 2024</p>
+            <p>Focused on full-stack development and database management. Initially developed an accounting program
+                and later a property management system. Emphasized meeting specific market needs as well as user-
+                friendliness.</p>
+        </div>
+        <div>
+            <h4>Maxkompetens - Consultant</h4>
+            <p class="dateText">May 2019 – August 2019</p>
+            <p>Assigned to ATEA, where I worked on computer formatting from various companies and authorities.</p>
+        </div>
+        <div>
+            <h4>Inpeople - Consultant</h4>
+            <p class="dateText">August 2018 – September 2018</p>
+            <p>Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and
+                authorities.</p>
+        </div>
+        <div>
+            <h4>Various companies</h4>
+            <p class="dateText">May 2015 - July 2018</p>
+            <p>Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible for furniture
+                assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting,
+                and worked as a mattress assembler on a semi-automated line.</p>
+        </div>
+    </div>
+</section>
+<section class="homePageSections educationSection animated-element">
+    <h2>Education</h2>
+    <div class="educationContainer">
+        <div>
+            <h4>Ec Utbildning - Java Developer</h4>
+            <p class="dateText">August 2019 - May 2021</p>
+            <p>Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others.
+                Also had some courses on agile methods.</p>
+        </div>
+        <div>
+            <h4>Linnéuniversitetet - Bachelor of Engineering</h4>
+            <p class="dateText">September 2018 - Discontinued</p>
+            <p>University education in computer science, including programming, electronics, and typical engineering
+                courses such as physics and mathematics. Later chose to discontinue the education due to mismatched
+                quality and relevance to expectations.</p>
+        </div>
+        <div>
+            <h4>Linnéuniversitetet - Technical Preparatory Year</h4>
+            <p class="dateText">September 2017 – June 2018</p>
+            <p>Supplementary education with various high school courses to achieve eligibility for further education.</p>
+        </div>
+        <div>
+            <h4>Kungsmadskolan - Carpentry</h4>
+            <p class="dateText">August 2011 – June 2014</p>
+            <p>High school education in cabinetmaking and interior design, including a significant amount of design work,
+                primarily in furniture design but also in graphic design.</p>
+        </div>
     </div>
 </section>
 
@@ -108,10 +161,17 @@
         border: 2px solid var(--border-muted);
     }
 
-    .aboutSection {
+    .homePageSections {
         height: fit-content;
         padding: 4rem 10rem 6rem;
-        background-color: var(--bg);
+        background-color: var(--bg-dark);
+
+        &:nth-child(even) {
+            background-color: var(--bg);
+        }
+    }
+
+    .aboutSection {
         margin-top: 4rem;
 
         p {
@@ -121,9 +181,35 @@
         }
     }
 
-    .experienceSection {
-        height: fit-content;
-        padding: 4rem 10rem 6rem;
-        background-color: var(--bg-light);
+    .experienceSection,
+    .educationSection {
+        .experienceContainer,
+        .educationContainer {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            :nth-child(2n) {
+                flex-basis: calc(50% - 4rem);
+            }
+
+            div {
+                width: calc(50% - 4rem);
+                border: 1px solid var(--border-muted);
+                border-top: var(--highlight);
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                padding: 2rem;
+                margin: 2rem;
+                min-height: 18rem;
+                background: var(--gradient)
+            }
+        }
+
+        .dateText {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
     }
 </style>
