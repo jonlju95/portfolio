@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { Navbar, Footer } from '$lib';
+	// import { Navbar, Footer } from '$lib';
 
 	let { children } = $props();
 
 </script>
 
-<Navbar></Navbar>
+<!--<Navbar></Navbar>-->
 
 <article class="container animated-element">
 	{@render children()}
 </article>
 
-<Footer></Footer>
+<!--<Footer></Footer>-->
 
 <style>
     .container {
