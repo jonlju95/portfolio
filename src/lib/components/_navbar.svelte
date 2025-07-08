@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { locale, locales } from 'svelte-i18n';
+	import { base } from '$app/paths';
+	import { locale } from 'svelte-i18n';
 
 	const toggleLanguage = () => {
 		locale.set($locale === 'en' ? 'sv' : 'en');
@@ -18,8 +19,8 @@
 <nav class="navbar">
 	<section>
 		<p class="navbar-header">JL</p>
-		<a href="/" class="clickable" class:isActive={page.url.pathname === "/"}>Home</a>
-		<a href="/about" class="clickable" class:isActive={page.url.pathname === "/about"}>About me</a>
+		<a href="{ base }/" class="clickable" class:isActive={page.url.pathname === "/"}>Home</a>
+		<a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === "/about"}>About me</a>
 <!--		<a href="/experience" class="clickable" class:isActive={page.url.pathname === "/experience"}>Experience</a>-->
 <!--		<a href="/projects" class="clickable" class:isActive={page.url.pathname === "/projects"}>Projects</a>-->
 	</section>
