@@ -1,24 +1,24 @@
-<!--<script lang="ts">-->
-<!--	// import { Navbar, Footer } from '$lib';-->
+<script lang="ts">
+	// import { Navbar, Footer } from '$lib';
 
-<!--	let { children } = $props();-->
+	let { children } = $props();
 
-<!--</script>-->
+</script>
 
-<!--&lt;!&ndash;<Navbar></Navbar>&ndash;&gt;-->
+<!--<Navbar></Navbar>-->
 
-<!--<article class="container animated-element">-->
-<!--	{@render children()}-->
-<!--</article>-->
+<article class="container animated-element">
+	{@render children()}
+</article>
 
-<!--&lt;!&ndash;<Footer></Footer>&ndash;&gt;-->
+<!--<Footer></Footer>-->
 
-<!--<style>-->
-<!--    .container {-->
-<!--        height: fit-content;-->
-<!--				min-height: calc(100vh - 6rem);-->
-<!--				padding: 6rem 0 4rem;-->
-<!--    }-->
+<style>
+    .container {
+        height: fit-content;
+				min-height: calc(100vh - 6rem);
+				padding: 6rem 0 4rem;
+    }
 
-<!--</style>-->
+</style>
 
