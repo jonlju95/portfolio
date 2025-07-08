@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { base } from '$app/paths';
 </script>
 
 <section class="heroSection animated-element">
     <div class="imgContainer">
-        <img src="/resources/images/3V6A4207_cropped.png" alt="Me"/>
+        <img src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
     </div>
     <div class="infoContainer">
         <div class="header">
