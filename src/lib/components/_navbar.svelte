@@ -19,10 +19,10 @@
 <nav class="navbar">
 	<section>
 		<p class="navbar-header">JL</p>
-		<a href="{ base }/" class="clickable" class:isActive={page.url.pathname === "/"}>Home</a>
-		<a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === "/about"}>About me</a>
-<!--		<a href="/experience" class="clickable" class:isActive={page.url.pathname === "/experience"}>Experience</a>-->
-<!--		<a href="/projects" class="clickable" class:isActive={page.url.pathname === "/projects"}>Projects</a>-->
+		<a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>Home</a>
+		<a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === base+"/about"}>About me</a>
+		<a href="{ base }/experience" class="clickable" class:isActive={page.url.pathname === base+"/experience"}>Experience</a>
+		<a href="{ base }/projects" class="clickable" class:isActive={page.url.pathname === base+"/projects"}>Projects</a>
 	</section>
 	<section>
 		{#if $locale === 'sv'}
