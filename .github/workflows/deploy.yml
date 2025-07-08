@@ -2,11 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: 'main'
 
 jobs:
-  build:
+  build_site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,16 +20,31 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build
         env:
-          BASE_PATH: '/portfolio'  # use if needed
+          BASE_PATH: '/portfolio'
         run: |
           npm run build
           touch build/.nojekyll
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
+          path: 'build'
+
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
