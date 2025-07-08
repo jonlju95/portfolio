@@ -11,7 +11,7 @@ body {
 
     overflow-x: hidden;
 
-    background-image: url('../assets/background-new.png');
+    background-image: url('../resources/background-new.png');
 
     background-size: 100svw 100svh;
     -webkit-background-size: 100svw 100svh;

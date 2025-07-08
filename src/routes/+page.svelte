@@ -3,7 +3,7 @@
 
 <section class="heroSection animated-element">
     <div class="imgContainer">
-        <img src="/assets/images/3V6A4207_cropped.png" alt="Me"/>
+        <img src="/resources/images/3V6A4207_cropped.png" alt="Me"/>
     </div>
     <div class="infoContainer">
         <div class="header">
@@ -24,61 +24,61 @@
         margin: 0 10rem;
         padding: 4rem;
 
-        background-color: var(--bg-light);
-        border: 1px solid var(--border-muted);
-        border-top: 1px solid var(--highlight);
-        border-radius: 1rem;
+        /*background-color: var(--bg-light);*/
+        /*border: 1px solid var(--border-muted);*/
+        /*border-top: 1px solid var(--highlight);*/
+        /*border-radius: 1rem;*/
 
-        box-shadow: var(--shadow);
+        /*box-shadow: var(--shadow);*/
 
-        overflow: hidden;
+        /*overflow: hidden;*/
 
-        .infoContainer {
-            width: 100%;
-            height: 100%;
-            margin-left: var(--spacing-xxl);
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            align-items: baseline;
+        /*.infoContainer {*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    margin-left: var(--spacing-xxl);*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    align-content: center;*/
+        /*    justify-content: center;*/
+        /*    align-items: baseline;*/
 
-            .header {
-                margin-bottom: var(--spacing-xxl);
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
+        /*    .header {*/
+        /*        margin-bottom: var(--spacing-xxl);*/
+        /*        height: 100%;*/
+        /*        display: flex;*/
+        /*        flex-direction: column;*/
+        /*        justify-content: end;*/
 
-                h1 {
-                    color: var(--primary);
-                }
+        /*        h1 {*/
+        /*            color: var(--primary);*/
+        /*        }*/
 
-                p {
-                    font-style: italic;
-                    font-weight: bold;
-                    color: var(--text-muted);
-                }
-            }
+        /*        p {*/
+        /*            font-style: italic;*/
+        /*            font-weight: bold;*/
+        /*            color: var(--text-muted);*/
+        /*        }*/
+        /*    }*/
 
-            .introduction {
-                height: 100%;
-            }
-        }
+        /*    .introduction {*/
+        /*        height: 100%;*/
+        /*    }*/
+        /*}*/
 
-        .imgContainer {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        /*.imgContainer {*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    overflow: hidden;*/
 
-            display: flex;
-            justify-content: center;
+        /*    display: flex;*/
+        /*    justify-content: center;*/
 
-            img {
-                border-radius: 12px;
-                border: 2px solid var(--border-muted);
-            }
-        }
+        /*    img {*/
+        /*        border-radius: 12px;*/
+        /*        border: 2px solid var(--border-muted);*/
+        /*    }*/
+        /*}*/
 
     }
 </style>
