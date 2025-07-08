@@ -1,14 +1,17 @@
 {
-  "navbar": {
-    "home": "Home",
-    "about": "About me",
-    "experience": "Experience",
-    "projects": "Projects"
-  },
   "homePage": {
+    "aboutSection": {
+      "aboutTitle": "Om mig"
+    },
     "heroSection": {
-      "homeTitle": "Webbutvecklare",
-      "homeIntroduction": "Webbutvecklare med 2 års erfarenhet som är passionerad att skapa dynamiska och användarvänliga\nwebblösningar. Med kompetens inom ett brett spektrum av programmeringsspråk och teknologier är jag\nhängiven att leverera högkvalitativa webbplatser som uppfyller både kundens och användarens behov."
+      "homeIntroduction": "Webbutvecklare med 2 års erfarenhet som är passionerad att skapa dynamiska och användarvänliga webblösningar. Med kompetens inom ett brett spektrum av programmeringsspråk och teknologier är jag hängiven att leverera högkvalitativa webbplatser som uppfyller både kundens och användarens behov.",
+      "homeTitle": "Webbutvecklare"
     }
+  },
+  "navbar": {
+    "about": "Om mig",
+    "experience": "Experience",
+    "home": "Home",
+    "projects": "Projects"
   }
 }

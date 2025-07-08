@@ -3,7 +3,7 @@
     import {_} from 'svelte-i18n';
 </script>
 
-<section class="heroSection animated-element">
+<section class="heroSection animatedElement">
     <div class="imgContainer">
         <img src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
     </div>
@@ -15,7 +15,7 @@
         <p class="introduction">{$_('homePage.heroSection.homeIntroduction')}</p>
     </div>
 </section>
-<section class="homePageSections aboutSection animated-element">
+<section class="homePageSections aboutSection animatedElement">
     <h2>About me</h2>
     <div>
         <p>
@@ -35,7 +35,7 @@
         </p>
     </div>
 </section>
-<section class="homePageSections experienceSection animated-element">
+<section class="homePageSections experienceSection animatedElement">
     <h2>Experience</h2>
     <div class="experienceContainer">
         <div>
@@ -65,7 +65,7 @@
         </div>
     </div>
 </section>
-<section class="homePageSections educationSection animated-element">
+<section class="homePageSections educationSection animatedElement">
     <h2>Education</h2>
     <div class="educationContainer">
         <div>
@@ -84,13 +84,93 @@
         <div>
             <h4>Linnéuniversitetet - Technical Preparatory Year</h4>
             <p class="dateText">September 2017 – June 2018</p>
-            <p>Supplementary education with various high school courses to achieve eligibility for further education.</p>
+            <p>Supplementary education with various high school courses to achieve eligibility for further
+                education.</p>
         </div>
         <div>
             <h4>Kungsmadskolan - Carpentry</h4>
             <p class="dateText">August 2011 – June 2014</p>
-            <p>High school education in cabinetmaking and interior design, including a significant amount of design work,
+            <p>High school education in cabinetmaking and interior design, including a significant amount of design
+                work,
                 primarily in furniture design but also in graphic design.</p>
+        </div>
+    </div>
+</section>
+<section class="homePageSections animatedElement">
+    <h2>My tech stack</h2>
+    <p>Languages, frameworks and tools I've worked with before</p>
+    <div class="techStackContainer">
+        <div class="techStackCategory">
+            <h4>Frontend</h4>
+            <div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Html"/>
+                    <p>Html</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Css"/>
+                    <p>Css</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                    <p>JavaScript</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+                    <p>TypeScript</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Angular"/>
+                    <p>Angular</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
+                    <p>React</p>
+                </div>
+            </div>
+        </div>
+        <div class="techStackCategory">
+            <h4>Backend</h4>
+            <div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"/>
+                    <p>Java</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#"/>
+                    <p>C#</p>
+                </div>
+            </div>
+        </div>
+        <div class="techStackCategory">
+            <h4>Database</h4>
+            <div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>
+                    <p>MongoDB</p>
+                </div>
+            </div>
+        </div>
+        <div class="techStackCategory">
+            <h4>Tools</h4>
+            <div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira"/>
+                    <p>Jira</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/>
+                    <p>Git</p>
+                </div>
+                <div class="techStackIcon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"/>
+                    <p>Figma</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -175,6 +255,7 @@
         margin-top: 4rem;
 
         p {
+            margin: 0 2rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -212,4 +293,41 @@
             margin-bottom: 1rem;
         }
     }
+
+    .techStackContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .techStackCategory {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid var(--border-muted);
+            margin: 1rem 0 0 1rem;
+
+            & > div {
+                display: flex;
+            }
+        }
+
+        .techStackIcon {
+            width: fit-content;
+            padding: 1rem;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                height: 5rem;
+            }
+
+            p {
+
+                font-weight: bold;
+                margin: 0.5rem 0 0;
+            }
+        }
+    }
+
 </style>

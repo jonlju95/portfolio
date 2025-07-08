@@ -1,14 +1,17 @@
 {
+  "homePage": {
+    "aboutSection": {
+      "aboutTitle": "About me"
+    },
+    "heroSection": {
+      "homeIntroduction": "Web Developer with 2 years of experience, passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, dedicated to delivering high-quality websites that meet both customer and user needs.",
+      "homeTitle": "Web developer"
+    }
+  },
   "navbar": {
-    "home": "Home",
     "about": "About me",
     "experience": "Experience",
+    "home": "Home",
     "projects": "Projects"
-  },
-  "homePage": {
-    "heroSection": {
-      "homeTitle": "Web developer",
-      "homeIntroduction": "Web Developer with 2 years of experience, passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, dedicated to delivering high-quality websites that meet both customer and user needs."
-    }
   }
 }

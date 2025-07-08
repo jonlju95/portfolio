@@ -7,7 +7,7 @@
 
 <Navbar></Navbar>
 
-<article class="container animated-element">
+<article class="container animatedElement">
     {@render children()}
 </article>
 

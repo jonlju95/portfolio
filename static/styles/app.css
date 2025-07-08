@@ -28,8 +28,8 @@ body {
     font-family: 'Open Sans', sans-serif;
 
 
-    &.animated-element,
-    .animated-element * {
+    &.animatedElement,
+    .animatedElement * {
         transition: background-color 0.3s ease-in-out,
         color 0.3s ease-in-out,
         border-color 0.3s ease-in-out;
