@@ -1,6 +1,8 @@
 <script lang="ts">
     import {base} from '$app/paths';
     import {_} from 'svelte-i18n';
+
+    import { TechStackIcon } from "$lib";
 </script>
 
 <section class="heroSection animatedElement">
@@ -103,73 +105,34 @@
         <div class="techStackCategory">
             <h4>Frontend</h4>
             <div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Html"/>
-                    <p>Html</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Css"/>
-                    <p>Css</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                    <p>JavaScript</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/>
-                    <p>TypeScript</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Angular"/>
-                    <p>Angular</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
-                    <p>React</p>
-                </div>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" title="Html"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="Css"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" title="JavaScript"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" title="TypeScript"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" title="Angular"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" title="React"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Backend</h4>
             <div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"/>
-                    <p>Java</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#"/>
-                    <p>C#</p>
-                </div>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" title="Java"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" title="C#"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Database</h4>
             <div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
-                    <p>PostgreSQL</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>
-                    <p>MongoDB</p>
-                </div>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" title="PostgreSQL"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" title="MongoDB"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Tools</h4>
             <div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira"/>
-                    <p>Jira</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/>
-                    <p>Git</p>
-                </div>
-                <div class="techStackIcon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"/>
-                    <p>Figma</p>
-                </div>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" title="Jira"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" title="Git"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" title="Figma"/>
             </div>
         </div>
     </div>
@@ -307,25 +270,6 @@
 
             & > div {
                 display: flex;
-            }
-        }
-
-        .techStackIcon {
-            width: fit-content;
-            padding: 1rem;
-            margin: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            img {
-                height: 5rem;
-            }
-
-            p {
-
-                font-weight: bold;
-                margin: 0.5rem 0 0;
             }
         }
     }
