@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import '_variables.css';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+
+    overflow-x: hidden;
+
+    background-image: url('../assets/background-new.png');
+
+    background-size: 100svw 100svh;
+    -webkit-background-size: 100svw 100svh;
+    -moz-background-size: 100svw 100svh;
+    -o-background-size: 100svw 100svh;
+
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    background-origin: border-box;
+
+    background-color: var(--primary);
+    color: var(--text-muted);
+
+    font-family: 'Open Sans', sans-serif;
+
+
+    &.animated-element,
+    .animated-element * {
+        transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+        svg,
+        use {
+            transition: stroke 0.3s ease-in-out,
+            fill 0.3s ease-in-out;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.815rem;
+}
+
+h2 {
+    font-size: 3.052rem;
+}
+
+h3 {
+    font-size: 2.441rem;
+}
+
+h4 {
+    font-size: 1.953rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+main {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
