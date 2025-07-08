@@ -2,7 +2,7 @@
     import {base} from '$app/paths';
     import {_} from 'svelte-i18n';
 
-    import { TechStackIcon } from "$lib";
+    import {ProjectCard, TechStackIcon} from "$lib";
 </script>
 
 <section class="heroSection animatedElement">
@@ -105,36 +105,70 @@
         <div class="techStackCategory">
             <h4>Frontend</h4>
             <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" title="Html"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="Css"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" title="JavaScript"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" title="TypeScript"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" title="Angular"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" title="React"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                               title="Html"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                               title="Css"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                        title="JavaScript"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                        title="TypeScript"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                        title="Angular"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                               title="React"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Backend</h4>
             <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" title="Java"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" title="C#"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                               title="Java"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                        title="C#"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Database</h4>
             <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" title="PostgreSQL"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" title="MongoDB"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                        title="PostgreSQL"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                        title="MongoDB"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Tools</h4>
             <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" title="Jira"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" title="Git"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" title="Figma"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                               title="Jira"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                               title="Git"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                               title="Figma"/>
             </div>
         </div>
+    </div>
+</section>
+<section class="homePageSections animatedElement">
+    <h2>Projects</h2>
+    <p>Some of the projects I've done during my education, as well as some later projects to maintain my skills</p>
+    <div class="projectContainer">
+        <ProjectCard title="Connect Four" techStack="{['Java', 'JUnit']}"
+                     description="Game created with a focus on testing, as it was developed in a unit testing-oriented course."
+                     link="https://github.com/jonlju95/Four-in-a-row"/>
+        <ProjectCard title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
+                     description="Personal project to maintain my skills."
+                     link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
+        <ProjectCard title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
+                     description="Rock, Paper, Scissors game created with React."
+                     link="https://github.com/jonlju95/Rock_Paper_Scissors"/>
     </div>
 </section>
 
@@ -272,6 +306,12 @@
                 display: flex;
             }
         }
+    }
+
+    .projectContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
 
 </style>
