@@ -1,18 +1,17 @@
 <script lang="ts">
-	import { _ } from 'svelte-i18n'
 </script>
 
 <section class="heroSection animated-element">
-	<div class="imgContainer">
-		<img src="/assets/images/3V6A4207_cropped.png" alt="Me" />
-	</div>
-	<div class="infoContainer">
-		<div class="header">
-			<h1>Jonatan Ljung</h1>
-			<p>{$_('homeTitle')}</p>
-		</div>
-		<p class="introduction">{$_('homeIntroduction')}</p>
-	</div>
+    <div class="imgContainer">
+        <img src="/assets/images/3V6A4207_cropped.png" alt="Me"/>
+    </div>
+    <div class="infoContainer">
+        <div class="header">
+            <h1>Jonatan Ljung</h1>
+            <p>Web developer</p>
+        </div>
+        <p class="introduction">Introduction</p>
+    </div>
 
 </section>
 
@@ -25,7 +24,7 @@
         margin: 0 10rem;
         padding: 4rem;
 
-				background-color: var(--bg-light);
+        background-color: var(--bg-light);
         border: 1px solid var(--border-muted);
         border-top: 1px solid var(--highlight);
         border-radius: 1rem;
@@ -36,7 +35,7 @@
 
         .infoContainer {
             width: 100%;
-						height: 100%;
+            height: 100%;
             margin-left: var(--spacing-xxl);
             display: flex;
             flex-direction: column;
@@ -44,27 +43,27 @@
             justify-content: center;
             align-items: baseline;
 
-						.header {
-								margin-bottom: var(--spacing-xxl);
+            .header {
+                margin-bottom: var(--spacing-xxl);
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
 
-								h1 {
-										color: var(--primary);
-								}
+                h1 {
+                    color: var(--primary);
+                }
 
-								p {
-										font-style: italic;
-										font-weight: bold;
-										color: var(--text-muted);
-								}
-						}
+                p {
+                    font-style: italic;
+                    font-weight: bold;
+                    color: var(--text-muted);
+                }
+            }
 
-						.introduction {
-								height: 100%;
-						}
+            .introduction {
+                height: 100%;
+            }
         }
 
         .imgContainer {
@@ -77,7 +76,7 @@
 
             img {
                 border-radius: 12px;
-								border: 2px solid var(--border-muted);
+                border: 2px solid var(--border-muted);
             }
         }
 
