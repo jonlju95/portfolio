@@ -149,7 +149,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 4rem;
 
         padding: 0 1.5rem;
