@@ -1,5 +1,12 @@
 <script lang="ts">
-    let {title, techStack, description, link}: { title: string, techStack: string[], description: string, link?: string } = $props();
+    import {LinkButton} from "$lib/index";
+
+    let {title, techStack, description, link}: {
+        title: string,
+        techStack: string[],
+        description: string,
+        link?: string
+    } = $props();
 </script>
 
 <div class="projectCard">
@@ -12,7 +19,9 @@
             {/each}
         </ul>
     </div>
-    <a class="cardLink" href="{link}" target="_blank">Link to github repo</a>
+    {#if link}
+        <LinkButton {link} btnLabel="Github Repo" newTab="{true}"/>
+    {/if}
 </div>
 
 <style>
@@ -50,10 +59,5 @@
         border-right: 1px solid var(--border-muted);
         width: 100%;
         padding-right: 1rem;
-    }
-
-    .cardLink {
-        align-self: end;
-        color: var(--text);
     }
 </style>

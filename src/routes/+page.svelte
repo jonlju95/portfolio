@@ -2,7 +2,7 @@
     import {base} from '$app/paths';
     import {_} from 'svelte-i18n';
 
-    import {ProjectCard, TechStackIcon} from "$lib";
+    import {LinkButton, ProjectCard, TechStackIcon} from "$lib";
 </script>
 
 <section class="heroSection animatedElement">
@@ -168,7 +168,10 @@
                      link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
         <ProjectCard title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
                      description="Rock, Paper, Scissors game created with React."
-                     link="https://github.com/jonlju95/Rock_Paper_Scissors"/>
+                     link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
+    </div>
+    <div class="linkContainer">
+        <LinkButton link="/projects" btnLabel="More projects" newTab="{false}"/>
     </div>
 </section>
 
@@ -312,6 +315,12 @@
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .linkContainer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: end;
     }
 
 </style>
