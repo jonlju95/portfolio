@@ -2,7 +2,7 @@
     import {base} from '$app/paths';
     import {_} from 'svelte-i18n';
 
-    import {LinkButton, ProjectCard, TechStackIcon} from "$lib";
+    import {LinkButton, ProjectCard, ResumeItem, TechStackIcon} from "$lib";
 </script>
 
 <section class="heroSection animatedElement">
@@ -38,63 +38,53 @@
     </div>
 </section>
 <section class="homePageSections experienceSection animatedElement">
-    <h2>Experience</h2>
-    <div class="experienceContainer">
-        <div>
-            <h4>INBooks AB - Web Developer</h4>
-            <p class="dateText">November 2021 – January 2024</p>
-            <p>Focused on full-stack development and database management. Initially developed an accounting program
-                and later a property management system. Emphasized meeting specific market needs as well as user-
-                friendliness.</p>
+    <h2>Experience & education</h2>
+    <div class="timeline animatedElement">
+        <div class="timelineContainer left">
+            <ResumeItem title="INBooks AB - Web Developer" subtitle="November 2021 – January 2024"
+                        description="Focused on full-stack development and database management. Initially developed an
+                        accounting program and later a property management system. Emphasized meeting specific market
+                        needs as well as user-friendliness." icon="job"/>
         </div>
-        <div>
-            <h4>Maxkompetens - Consultant</h4>
-            <p class="dateText">May 2019 – August 2019</p>
-            <p>Assigned to ATEA, where I worked on computer formatting from various companies and authorities.</p>
+        <div class="timelineContainer right">
+            <ResumeItem title="Maxkompetens - Consultant" subtitle="May 2019 – August 2019"
+                        description="Assigned to ATEA, where I worked on computer formatting from various companies and authorities."
+                        icon="job"/>
         </div>
-        <div>
-            <h4>Inpeople - Consultant</h4>
-            <p class="dateText">August 2018 – September 2018</p>
-            <p>Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and
-                authorities.</p>
+        <div class="timelineContainer left">
+            <ResumeItem title="Inpeople - Consultant" subtitle="August 2018 – September 2018"
+                        description="Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities."
+                        icon="job"/>
         </div>
-        <div>
-            <h4>Various companies</h4>
-            <p class="dateText">May 2015 - July 2018</p>
-            <p>Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible for furniture
-                assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting,
-                and worked as a mattress assembler on a semi-automated line.</p>
+        <div class="timelineContainer right">
+            <ResumeItem title="Ec Utbildning - Java Developer" subtitle="August 2019 - May 2021"
+                        description="Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others.
+                        Also had some courses on agile methods."
+                        icon="education"/>
         </div>
-    </div>
-</section>
-<section class="homePageSections educationSection animatedElement">
-    <h2>Education</h2>
-    <div class="educationContainer">
-        <div>
-            <h4>Ec Utbildning - Java Developer</h4>
-            <p class="dateText">August 2019 - May 2021</p>
-            <p>Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others.
-                Also had some courses on agile methods.</p>
+        <div class="timelineContainer left">
+            <ResumeItem title="Linnéuniversitetet - Bachelor of Engineering" subtitle="September 2018 - Discontinued"
+                        description="University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics.
+                        Later chose to discontinue the education due to mismatched quality and relevance to expectations."
+                        icon="education"/>
         </div>
-        <div>
-            <h4>Linnéuniversitetet - Bachelor of Engineering</h4>
-            <p class="dateText">September 2018 - Discontinued</p>
-            <p>University education in computer science, including programming, electronics, and typical engineering
-                courses such as physics and mathematics. Later chose to discontinue the education due to mismatched
-                quality and relevance to expectations.</p>
+        <div class="timelineContainer right">
+            <ResumeItem title="Linnéuniversitetet - Technical Preparatory Year" subtitle="September 2017 – June 2018"
+                        description="Supplementary education with various high school courses to achieve eligibility for further education."
+                        icon="education"/>
         </div>
-        <div>
-            <h4>Linnéuniversitetet - Technical Preparatory Year</h4>
-            <p class="dateText">September 2017 – June 2018</p>
-            <p>Supplementary education with various high school courses to achieve eligibility for further
-                education.</p>
+        <div class="timelineContainer left">
+            <ResumeItem title="Various companies" subtitle="May 2015 - July 2018"
+                        description="Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible
+                        for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting,
+                        and worked as a mattress assembler on a semi-automated line."
+                        icon="job"/>
         </div>
-        <div>
-            <h4>Kungsmadskolan - Carpentry</h4>
-            <p class="dateText">August 2011 – June 2014</p>
-            <p>High school education in cabinetmaking and interior design, including a significant amount of design
-                work,
-                primarily in furniture design but also in graphic design.</p>
+        <div class="timelineContainer right">
+            <ResumeItem title="Kungsmadskolan - Carpentry" subtitle="August 2011 – June 2014"
+                        description="High school education in cabinetmaking and interior design, including a significant amount of design work,
+                        primarily in furniture design but also in graphic design."
+                        icon="education"/>
         </div>
     </div>
 </section>
@@ -249,6 +239,10 @@
         &:nth-child(even) {
             background-color: var(--bg);
         }
+
+        p {
+            margin-left: 2rem;
+        }
     }
 
     .aboutSection {
@@ -262,36 +256,95 @@
         }
     }
 
-    .experienceSection,
-    .educationSection {
-        .experienceContainer,
-        .educationContainer {
+    .timeline {
+        position: relative;
+        width: 100%;
+        margin: 8rem auto 0;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        top: -6rem;
+        bottom: 0;
+        left: 50%;
+        width: 3px;
+        margin-left: -3px;
+        background-color: var(--secondary);
+        border-radius: 3px;
+    }
+
+    /* Container around content */
+    .timelineContainer {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        margin-top: -6rem
+    }
+
+    /* The circles on the timeline */
+    .timelineContainer::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: -8px;
+        background-color: var(--bg);
+        border: 2px solid var(--primary);
+        top: 22px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Place the container to the left */
+    .left {
+        left: 0;
+    }
+
+    /* Place the container to the right */
+    .right {
+        left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 31px;
+        border: medium solid var(--primary);
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent var(--bg);
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 31px;
+        border: medium solid var(--primary);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--bg) transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    .right::after {
+        left: -11px;
+    }
+
+    .experienceSection {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
 
-            :nth-child(2n) {
-                flex-basis: calc(50% - 4rem);
-            }
-
-            div {
-                width: calc(50% - 4rem);
-                border: 1px solid var(--border-muted);
-                border-top: var(--highlight);
-                border-radius: 12px;
-                box-shadow: var(--shadow);
-                padding: 2rem;
-                margin: 2rem;
-                min-height: 18rem;
-                background: var(--gradient)
-            }
-        }
-
-        .dateText {
-            font-style: italic;
-            color: var(--text);
-            margin-bottom: 1rem;
-        }
     }
 
     .techStackContainer {
