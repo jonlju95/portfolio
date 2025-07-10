@@ -64,7 +64,7 @@
         width: 100%;
         height: 8rem;
 
-        padding: var(--spacing-xl) var(--spacing-xxl);
+        padding: 1.75rem 2.5rem;
 
         background-color: var(--bg-light);
         color: var(--text);
