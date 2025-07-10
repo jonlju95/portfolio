@@ -1,6 +1,7 @@
 <script lang="ts">
     import {base} from '$app/paths';
-    import {_} from 'svelte-i18n';
+    import { innerWidth } from 'svelte/reactivity/window';
+    import {t} from 'svelte-i18n';
 
     import {LinkButton, ProjectItem, ResumeItem, TechStackIcon} from "$lib";
 </script>
@@ -12,84 +13,84 @@
     <div class="infoContainer">
         <div class="header">
             <h1>Jonatan Ljung</h1>
-            <p>{$_('homePage.heroSection.homeTitle')}</p>
+            <p>{$t('homePage.heroSection.homeTitle')}</p>
         </div>
-        <p class="introduction">{$_('homePage.heroSection.homeIntroduction')}</p>
+        <p class="introduction">{$t('homePage.heroSection.homeIntroduction')}</p>
     </div>
 </section>
 <section class="homePageSections aboutSection animatedElement">
-    <h2>{$_('homePage.aboutSection.aboutTitle')}</h2>
+    <h2>{$t('homePage.aboutSection.aboutTitle')}</h2>
     <div>
         <p>
-            <span>{$_('homePage.aboutSection.aboutText.span1')}</span>
-            <span>{$_('homePage.aboutSection.aboutText.span2')}</span>
-            <span>{$_('homePage.aboutSection.aboutText.span3')}</span>
-            <span>{$_('homePage.aboutSection.aboutText.span4')}</span>
+            <span>{$t('homePage.aboutSection.aboutText.span1')}</span>
+            <span>{$t('homePage.aboutSection.aboutText.span2')}</span>
+            <span>{$t('homePage.aboutSection.aboutText.span3')}</span>
+            <span>{$t('homePage.aboutSection.aboutText.span4')}</span>
         </p>
     </div>
 </section>
 <section class="homePageSections experienceSection animatedElement">
-    <h2>{$_('homePage.experienceSection.title')}</h2>
+    <h2>{$t('homePage.experienceSection.title')}</h2>
     <div class="timeline animatedElement">
         <div class="timelineContainer left">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item1.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item1.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item1.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item1.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item1.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item1.description')}
                         icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item2.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item2.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item2.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item2.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item2.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item2.description')}
                         icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item3.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item3.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item3.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item3.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item3.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item3.description')}
                         icon="job"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item4.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item4.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item4.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item4.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item4.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item4.description')}
                         icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item5.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item5.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item5.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item5.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item5.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item5.description')}
                         icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item6.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item6.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item6.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item6.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item6.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item6.description')}
                         icon="education"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item7.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item7.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item7.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item7.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item7.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item7.description')}
                         icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item8.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item8.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item8.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item8.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item8.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item8.description')}
                         icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item9.title')}
-                        subtitle={$_('homePage.experienceSection.resumeItems.item9.subtitle')}
-                        description={$_('homePage.experienceSection.resumeItems.item9.description')}
+            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item9.title')}
+                        subtitle={$t('homePage.experienceSection.resumeItems.item9.subtitle')}
+                        description={$t('homePage.experienceSection.resumeItems.item9.description')}
                         icon="education"/>
         </div>
     </div>
 </section>
 <section class="homePageSections animatedElement">
-    <h2>{$_('homePage.techSection.title')}</h2>
-    <p>{$_('homePage.techSection.subtitle')}</p>
+    <h2>{$t('homePage.techSection.title')}</h2>
+    <p>{$t('homePage.techSection.subtitle')}</p>
     <div class="techStackContainer">
         <div class="techStackCategory">
             <h4>Frontend</h4>
@@ -122,7 +123,7 @@
             </div>
         </div>
         <div class="techStackCategory">
-            <h4>{$_('homePage.techSection.db')}</h4>
+            <h4>{$t('homePage.techSection.db')}</h4>
             <div>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
@@ -136,7 +137,7 @@
             </div>
         </div>
         <div class="techStackCategory">
-            <h4>{$_('homePage.techSection.tools')}</h4>
+            <h4>{$t('homePage.techSection.tools')}</h4>
             <div>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                                title="Jira"/>
@@ -152,20 +153,18 @@
     </div>
 </section>
 <section class="homePageSections animatedElement">
-    <h2>{$_('homePage.projectSection.title')}</h2>
-    <p>{$_('homePage.projectSection.subtitle')}</p>
+    <h2>{$t('homePage.projectSection.title')}</h2>
+    <p>{$t('homePage.projectSection.subtitle')}</p>
     <div class="projectContainer">
         <ProjectItem title="Personal economy" techStack="{['Svelte', 'TypeScript', 'HTML/CSS']}"
-                     description="Personal project comprised of an app where you could insert expenses and income to get an overview of your economy.
-                     Was gonna contain tables with diverse filters for specific entries etc."
+                     description={$t('projectPage.projectItems.item2.description')}
                      link="https://github.com/jonlju95/personalEconomyApp"/>
         <ProjectItem title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
-                     description="Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key.
-                     The repository contains a readme with a rough first draft of the intended functionality."
+                     description={$t('projectPage.projectItems.item3.description')}
                      link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
-        {#if window.innerWidth > 1440}
+        {#if innerWidth.current && innerWidth.current > 1600}
             <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
-                         description="Rock, Paper, Scissors game created with React and made as part of my education."
+                         description={$t('projectPage.projectItems.item4.description')}
                          link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
         {/if}
     </div>

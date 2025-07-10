@@ -1,10 +1,11 @@
 <script lang="ts">
+    import {t} from 'svelte-i18n';
 </script>
 
 <footer class="footer">
     <section>
         <h3>2025</h3>
-        <p>Made with SvelteKit, design by me</p>
+        <p>{$t('footer.credits')}</p>
     </section>
     <section class="contactSection">
         <p>

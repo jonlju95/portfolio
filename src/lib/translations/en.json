@@ -74,9 +74,39 @@
       "tools": "Tools"
     }
   },
+  "projectPage": {
+    "title": "Projects",
+    "subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
+    "projectItems": {
+      "item1": {
+        "description": "Sourcecode for this website project. Remade from a similar project I made in 2024 which used Angular instead."
+      },
+      "item2": {
+        "description": "Personal project comprised of an app where you could insert expenses and income to get an overview of your economy. Was gonna contain tables with diverse filters for specific entries etc."
+      },
+      "item3": {
+        "description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality."
+      },
+      "item4": {
+        "description": "Rock, Paper, Scissors game created with React and made as part of my education."
+      },
+      "item5": {
+        "description": "Game created with a focus on testing, as it was developed in a unit testing-oriented course."
+      },
+      "item6": {
+        "description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman."
+      },
+      "item7": {
+        "description": "Part of my education, focusing on database design and setting up simple CRUD-operations."
+      }
+    }
+  },
   "navbar": {
     "about": "About me",
     "home": "Home",
     "projects": "Projects"
+  },
+  "footer": {
+    "credits": "Made with SvelteKit, design by me"
   }
 }

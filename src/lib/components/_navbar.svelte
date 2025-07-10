@@ -1,7 +1,7 @@
 <script lang="ts">
     import {page} from '$app/state';
     import {base} from '$app/paths';
-    import {locale} from 'svelte-i18n';
+    import {locale, t} from 'svelte-i18n';
 
     let currentTheme = 'light';
 
@@ -22,11 +22,12 @@
 
 <nav class="navbar">
     <section>
-        <p class="navbar-header">JL</p>
-        <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>Home</a>
-        <a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === base+"/about"}>About me</a>
+        <p class="navbar-header">jL</p>
+        <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>{$t('navbar.home')}</a>
+        <a href="{ base }/about" class="clickable"
+           class:isActive={page.url.pathname === base+"/about"}>{$t('navbar.about')}</a>
         <a href="{ base }/projects" class="clickable"
-           class:isActive={page.url.pathname === base+"/projects"}>Projects</a>
+           class:isActive={page.url.pathname === base+"/projects"}>{$t('navbar.projects')}</a>
     </section>
     <section>
         {#if $locale === 'en'}

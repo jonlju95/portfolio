@@ -15,7 +15,7 @@
 
 <style>
     .container {
-        min-height: calc(100vh - 8rem);
+        min-height: calc(100vh - 12rem);
         margin-top: 4rem;
     }
 </style>
