@@ -1,35 +1,26 @@
-:root {
-  body {
+  [data-theme="light"] {
     /* hsl (fallback color) */
-    --bg-dark: hsl(2 9% 90%);
-    --bg: hsl(2 20% 95%);
-    --bg-light: hsl(2 100% 100%);
-    --text: hsl(1 23% 5%);
-    --text-muted: hsl(2 5% 29%);
-    --highlight: hsl(2 100% 100%);
-    --border: hsl(2 3% 51%);
-    --border-muted: hsl(2 5% 63%);
-    --primary: hsl(357 44% 32%);
-    --secondary: hsl(183 100% 9%);
-    --danger: hsl(9 21% 41%);
-    --warning: hsl(52 23% 34%);
-    --success: hsl(147 19% 36%);
-    --info: hsl(217 22% 41%);
+    --bg-dark: hsl(15, 7%, 89%);
+    --bg: hsl(0, 12%, 94%);
+    --bg-light: hsl(0, 0%, 100%);
+    --text: hsl(300, 2%, 11%);
+    --text-muted: hsl(240, 3%, 28%);
+    --highlight: hsl(0, 0%, 100%);
+    --border: hsl(240, 5%, 79%);
+    --border-muted: hsl(228, 2%, 47%);
+    --primary: hsl(223, 33%, 42%);
+    --secondary: hsl(225, 14%, 40%);
     /* oklch */
-    --bg-dark: oklch(0.92 0.005 20);
-    --bg: oklch(0.96 0.005 20);
-    --bg-light: oklch(1 0.005 20);
-    --text: oklch(0.15 0.01 20);
-    --text-muted: oklch(0.4 0.01 20);
-    --highlight: oklch(1 0.01 20);
-    --border: oklch(0.6 0.01 20);
-    --border-muted: oklch(0.7 0.01 20);
-    --primary: oklch(0.4 0.1 20);
-    --secondary: oklch(0.4 0.1 200);
-    --danger: oklch(0.5 0.05 30);
-    --warning: oklch(0.5 0.05 100);
-    --success: oklch(0.5 0.05 160);
-    --info: oklch(0.5 0.05 260);
+    --bg-dark: oklch(0.915 0.004 39.483);
+    --bg: oklch(0.949 0.004 17.233);
+    --bg-light: oklch(1 0 89.876);
+    --text: oklch(0.224 0.002 325.658);
+    --text-muted: oklch(0.396 0.008 286.013);
+    --highlight: oklch(1 0 89.876);
+    --border: oklch(0.828 0.007 286.248);
+    --border-muted: oklch(0.57 0.006 274.9);
+    --primary: oklch(0.485 0.086 266.242);
+    --secondary: oklch(0.484 0.035 270.597);
 
     --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
     --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
@@ -37,47 +28,35 @@
     --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
   }
 
-  body.dark {
+  [data-theme="dark"] {
     /* hsl (fallback color) */
-    --bg-dark: hsl(2 20% 1%);
-    --bg: hsl(2 13% 5%);
-    --bg-light: hsl(2 7% 9%);
-    --text: hsl(2 42% 96%);
-    --text-muted: hsl(2 6% 70%);
-    --highlight: hsl(2 4% 40%);
-    --border: hsl(2 5% 29%);
-    --border-muted: hsl(2 7% 19%);
-    --primary: hsl(0 66% 75%);
-    --secondary: hsl(183 52% 57%);
-    --danger: hsl(9 26% 64%);
-    --warning: hsl(52 19% 57%);
-    --success: hsl(146 17% 59%);
-    --info: hsl(217 28% 65%);
+    --bg-dark: hsl(0, 0%, 5%);
+    --bg: hsl(300, 2%, 12%);
+    --bg-light: hsl(300, 1%, 21%);
+    --text: hsl(15, 7%, 89%);
+    --text-muted: hsl(240, 5%, 79%);
+    --highlight: hsl(300, 1%, 21%);
+    --border: hsl(240, 3%, 28%);
+    --border-muted: hsl(240, 2%, 57%);
+    --primary: hsl(223, 100%, 85%);
+    --secondary: hsl(227, 33%, 81%);
     /* oklch */
-    --bg-dark: oklch(0.1 0.005 20);
-    --bg: oklch(0.15 0.005 20);
-    --bg-light: oklch(0.2 0.005 20);
-    --text: oklch(0.96 0.01 20);
-    --text-muted: oklch(0.76 0.01 20);
-    --highlight: oklch(0.5 0.01 20);
-    --border: oklch(0.4 0.01 20);
-    --border-muted: oklch(0.3 0.01 20);
-    --primary: oklch(0.76 0.1 20);
-    --secondary: oklch(0.76 0.1 200);
-    --danger: oklch(0.7 0.05 30);
-    --warning: oklch(0.7 0.05 100);
-    --success: oklch(0.7 0.05 160);
-    --info: oklch(0.7 0.05 260);
+    --bg-dark: oklch(0.164 0 89.876);
+    --bg: oklch(0.241 0.002 325.651);
+    --bg-light: oklch(0.326 0.002 325.628);
+    --text: oklch(0.915 0.004 39.483);
+    --text-muted: oklch(0.828 0.007 286.248);
+    --highlight: oklch(0.33 0.002 325.627);
+    --border: oklch(0.396 0.008 286.013);
+    --border-muted: oklch(0.652 0.007 286.194);
+    --primary: oklch(0.83 0.084 268.161);
+    --secondary: oklch(0.829 0.036 273.187);
   }
 
-  --spacing-xxs: 0.25rem;
-  --spacing-xs: 0.5rem;
-  --spacing-s: 0.75rem;
-  --spacing-m: 1rem;
-  --spacing-l: 1.25rem;
-  --spacing-xl: 1.75rem;
-  --spacing-xxl: 2.5rem;
-}
+  /* Possible blue alternative to primary red? */
+  /*--primary: oklch(0.39 0.088 264.456);*/
 
-/* Possible blue alternative to primary red? */
-/*--primary: oklch(0.39 0.088 264.456);*/
+  /*--primary: oklch(0.4 0.1 20);*/
+
+
+

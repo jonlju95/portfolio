@@ -3,18 +3,28 @@
     import {base} from '$app/paths';
     import {locale, t} from 'svelte-i18n';
 
-    let currentTheme = 'light';
+    import { browser } from '$app/environment';
+
+    let currentTheme:  string | null;
+
+    if (browser) {
+        currentTheme = document.documentElement.getAttribute('data-theme') ? document.documentElement.getAttribute('data-theme') : 'light';
+    }
 
     const toggleLanguage = () => {
-        locale.set($locale === 'en' ? 'sv' : 'en');
+        let lang = $locale === 'en' ? 'sv' : 'en';
+        locale.set(lang);
+        localStorage.setItem('lang', lang);
     };
 
     const toggleTheme = () => {
-        if (document.querySelector('body')?.classList.contains('dark')) {
-            document.querySelector('body')?.classList.remove('dark');
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
             currentTheme = 'light';
         } else {
-            document.querySelector('body')?.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
             currentTheme = 'dark';
         }
     };
