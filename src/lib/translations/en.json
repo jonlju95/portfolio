@@ -1,17 +1,112 @@
 {
   "homePage": {
     "aboutSection": {
+      "aboutText": {
+        "span1": "Hi! I’m Jonatan Ljung — a web developer with just over two years of experience at INBooks. I'm currently looking for new opportunities where I can contribute with both technical skill and creative thinking, while continuing to grow in my career.",
+        "span2": "My background is in full-stack web development, with hands-on experience in Java, HTML/CSS, JavaScript, TypeScript, and PostgreSQL. I’ve worked extensively with Angular and AngularJS to build user-friendly, dynamic applications. More recently, I’ve started diving into C# and Flutter to broaden my skill set and explore new areas of development.",
+        "span3": "I’m based in Växjö but open to roles across southern Sweden — or remote! I'm known for being creative, detail-oriented, and solution-focused, which led to me taking on additional responsibility for UI quality assurance in my previous role. That also meant close collaboration with designers, product owners, and business analysts, which I genuinely enjoyed.",
+        "span4": "If you're looking for someone with a mix of technical know-how, creativity, and a friendly team spirit — let’s talk!"
+      },
       "aboutTitle": "About me"
+    },
+    "experienceSection": {
+      "resumeItems": {
+        "item1": {
+          "description": "Labour market training course focusing on C#, but also React, database design and some AI engineering. In addition to this there's also a roughly three month long internship towards the end.",
+          "subtitle": "July 2025 - April 2026",
+          "title": "Lexicon - IT extension course"
+        },
+        "item2": {
+          "description": "Focused on full-stack development and database management. Initially developed an accounting program and later a property management system. Emphasized meeting specific market needs as well as user-friendliness.",
+          "subtitle": "November 2021 - January 2024",
+          "title": "INBooks AB - Web developer"
+        },
+        "item3": {
+          "description": "Assigned to ATEA, where I worked on computer formatting from various companies and authorities.",
+          "subtitle": "May 2019 - August 2019",
+          "title": "Maxkompetens - Consultant"
+        },
+        "item4": {
+          "description": "Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities.",
+          "subtitle": "August 2018 – September 2018",
+          "title": "Inpeople - Consultant"
+        },
+        "item5": {
+          "description": "Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others. Also had some courses on agile methods.",
+          "subtitle": "August 2019 - May 2021",
+          "title": "Ec Utbildning - Java Developer"
+        },
+        "item6": {
+          "description": "University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics. Later chose to discontinue the education due to mismatched quality and relevance to expectations.",
+          "subtitle": "September 2018 - Discontinued",
+          "title": "Linnéuniversitetet - Bachelor of Engineering"
+        },
+        "item7": {
+          "description": "Supplementary education with various high school courses to achieve eligibility for further education.",
+          "subtitle": "September 2017 - June 2018",
+          "title": "Linnéuniversitetet - Technical Preparatory Year"
+        },
+        "item8": {
+          "description": "Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting, and worked as a mattress assembler on a semi-automated line.",
+          "subtitle": "May 2015 - July 2018",
+          "title": "Various companies"
+        },
+        "item9": {
+          "description": "High school education in cabinetmaking and interior design, including a significant amount of design work, primarily in furniture design but also in graphic design.",
+          "subtitle": "August 2011 - June 2014",
+          "title": "Kungsmadskolan - Carpentry"
+        }
+      },
+      "title": "Experience & education"
     },
     "heroSection": {
       "homeIntroduction": "Web Developer with 2 years of experience, passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, dedicated to delivering high-quality websites that meet both customer and user needs.",
       "homeTitle": "Web developer"
+    },
+    "projectSection": {
+      "subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
+      "title": "Projects"
+    },
+    "techSection": {
+      "db": "Database",
+      "subtitle": "Languages, frameworks and tools I've worked with before",
+      "title": "My tech stack",
+      "tools": "Tools"
+    }
+  },
+  "projectPage": {
+    "title": "Projects",
+    "subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
+    "projectItems": {
+      "item1": {
+        "description": "Sourcecode for this website project. Remade from a similar project I made in 2024 which used Angular instead."
+      },
+      "item2": {
+        "description": "Personal project comprised of an app where you could insert expenses and income to get an overview of your economy. Was gonna contain tables with diverse filters for specific entries etc."
+      },
+      "item3": {
+        "description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality."
+      },
+      "item4": {
+        "description": "Rock, Paper, Scissors game created with React and made as part of my education."
+      },
+      "item5": {
+        "description": "Game created with a focus on testing, as it was developed in a unit testing-oriented course."
+      },
+      "item6": {
+        "description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman."
+      },
+      "item7": {
+        "description": "Part of my education, focusing on database design and setting up simple CRUD-operations."
+      }
     }
   },
   "navbar": {
     "about": "About me",
-    "experience": "Experience",
     "home": "Home",
     "projects": "Projects"
+  },
+  "footer": {
+    "credits": "Made with SvelteKit, design by me"
   }
 }

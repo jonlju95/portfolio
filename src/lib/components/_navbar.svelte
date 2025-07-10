@@ -1,20 +1,30 @@
 <script lang="ts">
     import {page} from '$app/state';
     import {base} from '$app/paths';
-    import {locale} from 'svelte-i18n';
+    import {locale, t} from 'svelte-i18n';
 
-    let currentTheme = 'light';
+    import { browser } from '$app/environment';
+
+    let currentTheme:  string | null;
+
+    if (browser) {
+        currentTheme = document.documentElement.getAttribute('data-theme') ? document.documentElement.getAttribute('data-theme') : 'light';
+    }
 
     const toggleLanguage = () => {
-        locale.set($locale === 'en' ? 'sv' : 'en');
+        let lang = $locale === 'en' ? 'sv' : 'en';
+        locale.set(lang);
+        localStorage.setItem('lang', lang);
     };
 
     const toggleTheme = () => {
-        if (document.querySelector('body')?.classList.contains('dark')) {
-            document.querySelector('body')?.classList.remove('dark');
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
             currentTheme = 'light';
         } else {
-            document.querySelector('body')?.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
             currentTheme = 'dark';
         }
     };
@@ -22,11 +32,12 @@
 
 <nav class="navbar">
     <section>
-        <p class="navbar-header">JL</p>
-        <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>Home</a>
-        <a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === base+"/about"}>About me</a>
+        <p class="navbar-header">jL</p>
+        <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>{$t('navbar.home')}</a>
+        <a href="{ base }/about" class="clickable"
+           class:isActive={page.url.pathname === base+"/about"}>{$t('navbar.about')}</a>
         <a href="{ base }/projects" class="clickable"
-           class:isActive={page.url.pathname === base+"/projects"}>Projects</a>
+           class:isActive={page.url.pathname === base+"/projects"}>{$t('navbar.projects')}</a>
     </section>
     <section>
         {#if $locale === 'en'}
