@@ -27,14 +27,13 @@
 <style>
     .projectCard {
         width: 100%;
-        height: 20rem;
+        min-height: 20rem;
         padding: 2rem;
         background: var(--gradient);
         border: 1px solid var(--border-muted);
         border-top-color: var(--highlight);
         border-radius: 12px;
         box-shadow: var(--shadow);
-        margin: 2rem;
         display: flex;
         flex-direction: column;
 

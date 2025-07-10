@@ -25,7 +25,6 @@
         <p class="navbar-header">JL</p>
         <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>Home</a>
         <a href="{ base }/about" class="clickable" class:isActive={page.url.pathname === base+"/about"}>About me</a>
-        <a href="{ base }/experience" class="clickable" class:isActive={page.url.pathname === base+"/experience"}>Experience</a>
         <a href="{ base }/projects" class="clickable"
            class:isActive={page.url.pathname === base+"/projects"}>Projects</a>
     </section>

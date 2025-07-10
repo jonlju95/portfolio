@@ -134,6 +134,9 @@
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
                 <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                        title="MySQL"/>
+                <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
                         title="MongoDB"/>
             </div>
@@ -145,6 +148,8 @@
                                title="Jira"/>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
                                title="Git"/>
+                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                               title="Postman"/>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
                                title="Figma"/>
             </div>
@@ -155,14 +160,16 @@
     <h2>Projects</h2>
     <p>Some of the projects I've done during my education, as well as some later projects to maintain my skills</p>
     <div class="projectContainer">
-        <ProjectItem title="Connect Four" techStack="{['Java', 'JUnit']}"
-                     description="Game created with a focus on testing, as it was developed in a unit testing-oriented course."
-                     link="https://github.com/jonlju95/Four-in-a-row"/>
+        <ProjectItem title="Personal economy" techStack="{['Svelte', 'TypeScript', 'HTML/CSS']}"
+                     description="Personal project comprised of an app where you could insert expenses and income to get an overview of your economy.
+                     Was gonna contain tables with diverse filters for specific entries etc."
+                     link="https://github.com/jonlju95/personalEconomyApp"/>
         <ProjectItem title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
-                     description="Personal project to maintain my skills."
+                     description="Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key.
+                     The repository contains a readme with a rough first draft of the intended functionality."
                      link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
         <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
-                     description="Rock, Paper, Scissors game created with React."
+                     description="Rock, Paper, Scissors game created with React and made as part of my education."
                      link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
     </div>
     <div class="linkContainer">
@@ -177,7 +184,7 @@
         align-items: center;
 
         height: calc(100vh - 10rem);
-        margin: 0 10rem;
+        margin: 6rem 10rem 0;
         padding: 4rem;
 
         background-color: var(--bg-light);
@@ -370,9 +377,10 @@
     }
 
     .projectContainer {
-        width: 100%;
         display: flex;
         justify-content: space-evenly;
+        margin: 2rem 0 2rem 2rem;
+        gap: 4rem;
     }
 
     .linkContainer {

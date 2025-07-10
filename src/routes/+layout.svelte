@@ -15,9 +15,8 @@
 
 <style>
     .container {
-        height: fit-content;
-        min-height: calc(100vh - 6rem);
-        padding: 6rem 0 0;
+        min-height: calc(100vh - 8rem);
+        margin-top: 4rem;
     }
 </style>
 

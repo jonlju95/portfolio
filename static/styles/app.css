@@ -11,18 +11,6 @@ body {
 
     overflow-x: hidden;
 
-    background-image: url('../resources/background-new.png');
-
-    background-size: 100svw 100svh;
-    -webkit-background-size: 100svw 100svh;
-    -moz-background-size: 100svw 100svh;
-    -o-background-size: 100svw 100svh;
-
-    background-blend-mode: screen;
-    background-attachment: fixed;
-    background-origin: border-box;
-
-    background-color: var(--primary);
     color: var(--text-muted);
 
     font-family: 'Open Sans', sans-serif;
@@ -80,7 +68,18 @@ p {
 main {
     width: 100vw;
     position: absolute;
-}
+    background-image: url('../resources/background-new.png');
+
+    background-size: 100svw 100svh;
+    -webkit-background-size: 100svw 100svh;
+    -moz-background-size: 100svw 100svh;
+    -o-background-size: 100svw 100svh;
+
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    background-origin: border-box;
+
+    background-color: var(--primary);}
 
 .clickable {
     cursor: pointer;
