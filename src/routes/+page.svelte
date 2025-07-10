@@ -173,7 +173,7 @@
                      link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
     </div>
     <div class="linkContainer">
-        <LinkButton link="/projects" btnLabel="More projects" newTab="{false}"/>
+        <LinkButton link="{base}/projects" btnLabel="More projects" newTab="{false}"/>
     </div>
 </section>
 
