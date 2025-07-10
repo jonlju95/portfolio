@@ -18,84 +18,78 @@
     </div>
 </section>
 <section class="homePageSections aboutSection animatedElement">
-    <h2>About me</h2>
+    <h2>{$_('homePage.aboutSection.aboutTitle')}</h2>
     <div>
         <p>
-            <span>Hi! I’m Jonatan Ljung — a web developer with just over two years of experience at INBooks. I'm currently
-            looking for new opportunities where I can contribute with both technical skill and creative thinking, while
-            continuing to grow in my career.</span>
-            <span>My background is in full-stack web development, with hands-on experience in Java, HTML/CSS, JavaScript,
-                TypeScript, and PostgreSQL. I’ve worked extensively with Angular and AngularJS to build user-friendly,
-                dynamic applications. More recently, I’ve started diving into C# and Flutter to broaden my skill set and
-                explore new areas of development.</span>
-            <span>I’m based in Växjö but open to roles across southern Sweden — or remote! I'm known for being creative,
-                detail-oriented, and solution-focused, which led to me taking on additional responsibility for UI
-                quality assurance in my previous role. That also meant close collaboration with designers, product owners, and
-                business analysts, which I genuinely enjoyed.</span>
-            <span>If you're looking for someone with a mix of technical know-how, creativity, and a friendly team spirit —
-                let’s talk!</span>
+            <span>{$_('homePage.aboutSection.aboutText.span1')}</span>
+            <span>{$_('homePage.aboutSection.aboutText.span2')}</span>
+            <span>{$_('homePage.aboutSection.aboutText.span3')}</span>
+            <span>{$_('homePage.aboutSection.aboutText.span4')}</span>
         </p>
     </div>
 </section>
 <section class="homePageSections experienceSection animatedElement">
-    <h2>Experience & education</h2>
+    <h2>{$_('homePage.experienceSection.title')}</h2>
     <div class="timeline animatedElement">
         <div class="timelineContainer left">
-            <ResumeItem title="Lexicon - IT extension course" subtitle="July 2025 - April 2026"
-                        description="Labour market training course focusing on C#, but also React, database design and some
-                        AI engineering. In addition to this there's also a roughly three month long internship towards the end." icon="education"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem title="INBooks AB - Web Developer" subtitle="November 2021 – January 2024"
-                        description="Focused on full-stack development and database management. Initially developed an
-                        accounting program and later a property management system. Emphasized meeting specific market
-                        needs as well as user-friendliness." icon="job"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem title="Maxkompetens - Consultant" subtitle="May 2019 – August 2019"
-                        description="Assigned to ATEA, where I worked on computer formatting from various companies and authorities."
-                        icon="job"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem title="Inpeople - Consultant" subtitle="August 2018 – September 2018"
-                        description="Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities."
-                        icon="job"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem title="Ec Utbildning - Java Developer" subtitle="August 2019 - May 2021"
-                        description="Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others.
-                        Also had some courses on agile methods."
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item1.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item1.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item1.description')}
                         icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title="Linnéuniversitetet - Bachelor of Engineering" subtitle="September 2018 - Discontinued"
-                        description="University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics.
-                        Later chose to discontinue the education due to mismatched quality and relevance to expectations."
-                        icon="education"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem title="Linnéuniversitetet - Technical Preparatory Year" subtitle="September 2017 – June 2018"
-                        description="Supplementary education with various high school courses to achieve eligibility for further education."
-                        icon="education"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem title="Various companies" subtitle="May 2015 - July 2018"
-                        description="Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible
-                        for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting,
-                        and worked as a mattress assembler on a semi-automated line."
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item2.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item2.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item2.description')}
                         icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title="Kungsmadskolan - Carpentry" subtitle="August 2011 – June 2014"
-                        description="High school education in cabinetmaking and interior design, including a significant amount of design work,
-                        primarily in furniture design but also in graphic design."
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item3.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item3.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item3.description')}
+                        icon="job"/>
+        </div>
+        <div class="timelineContainer right">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item4.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item4.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item4.description')}
+                        icon="job"/>
+        </div>
+        <div class="timelineContainer left">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item5.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item5.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item5.description')}
+                        icon="education"/>
+        </div>
+        <div class="timelineContainer right">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item6.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item6.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item6.description')}
+                        icon="education"/>
+        </div>
+        <div class="timelineContainer left">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item7.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item7.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item7.description')}
+                        icon="education"/>
+        </div>
+        <div class="timelineContainer right">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item8.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item8.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item8.description')}
+                        icon="job"/>
+        </div>
+        <div class="timelineContainer left">
+            <ResumeItem title={$_('homePage.experienceSection.resumeItems.item9.title')}
+                        subtitle={$_('homePage.experienceSection.resumeItems.item9.subtitle')}
+                        description={$_('homePage.experienceSection.resumeItems.item9.description')}
                         icon="education"/>
         </div>
     </div>
 </section>
 <section class="homePageSections animatedElement">
-    <h2>My tech stack</h2>
-    <p>Languages, frameworks and tools I've worked with before</p>
+    <h2>{$_('homePage.techSection.title')}</h2>
+    <p>{$_('homePage.techSection.subtitle')}</p>
     <div class="techStackContainer">
         <div class="techStackCategory">
             <h4>Frontend</h4>
@@ -128,7 +122,7 @@
             </div>
         </div>
         <div class="techStackCategory">
-            <h4>Database</h4>
+            <h4>{$_('homePage.techSection.db')}</h4>
             <div>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
@@ -142,14 +136,15 @@
             </div>
         </div>
         <div class="techStackCategory">
-            <h4>Tools</h4>
+            <h4>{$_('homePage.techSection.tools')}</h4>
             <div>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                                title="Jira"/>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
                                title="Git"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
-                               title="Postman"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                        title="Postman"/>
                 <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
                                title="Figma"/>
             </div>
@@ -157,8 +152,8 @@
     </div>
 </section>
 <section class="homePageSections animatedElement">
-    <h2>Projects</h2>
-    <p>Some of the projects I've done during my education, as well as some later projects to maintain my skills</p>
+    <h2>{$_('homePage.projectSection.title')}</h2>
+    <p>{$_('homePage.projectSection.subtitle')}</p>
     <div class="projectContainer">
         <ProjectItem title="Personal economy" techStack="{['Svelte', 'TypeScript', 'HTML/CSS']}"
                      description="Personal project comprised of an app where you could insert expenses and income to get an overview of your economy.
@@ -168,9 +163,11 @@
                      description="Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key.
                      The repository contains a readme with a rough first draft of the intended functionality."
                      link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
-        <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
-                     description="Rock, Paper, Scissors game created with React and made as part of my education."
-                     link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
+        {#if window.innerWidth > 1440}
+            <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
+                         description="Rock, Paper, Scissors game created with React and made as part of my education."
+                         link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
+        {/if}
     </div>
     <div class="linkContainer">
         <LinkButton link="/projects" btnLabel="More projects" newTab="{false}"/>
@@ -353,9 +350,9 @@
     }
 
     .experienceSection {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
 
     }
 

@@ -1,16 +1,81 @@
 {
   "homePage": {
     "aboutSection": {
+      "aboutText": {
+        "span1": "Hej! Jag heter Jonatan Ljung — webbutvecklare med strax över två års erfarenhet på INBooks. Jag letar just nu efter nya möjligheter där jag kan bidra med både tekniskt kunnande och kreativt tänkande, samtidigt som jag kan fortsätta utvecklas i min karriär.",
+        "span2": "Min bakgrund är inom fullstack webbutveckling, med praktisk erfarenhet av Java, HTML/CSS, JavaScript, TypeScript och PostgreSQL. Jag har arbetat mycket med Angular och AngularJS för att bygga användarvänliga, dynamiska applikationer. På senare tid har jag börjat fördjupa mig i C# och Flutter för att bredda mina kunskaper och utforska nya utvecklingsområden.",
+        "span3": "Jag är baserad i Växjö men öppen för roller i södra Sverige – eller på distans! Jag är känd för att vara kreativ, detaljorienterad och lösningsfokuserad, vilket ledde till att jag tog extra ansvar för UI-kvalitetssäkring i min tidigare roll. Det innebar också ett nära samarbete med designers, produktägare och affärsanalytiker, vilket jag verkligen uppskattade.",
+        "span4": "Om du letar efter någon med en blandning av teknisk kunskap, kreativitet och en vänlig laganda – hör av er!"
+      },
       "aboutTitle": "Om mig"
+    },
+    "experienceSection": {
+      "resumeItems": {
+        "item1": {
+          "description": "Arbetsmarknadsutbildning med fokus på C#, men också React, databasdesign och AI. Utöver detta kommer även en ca tre månader lång praktik i slutet av utbildningen. ",
+          "subtitle": "Juli 2025 - April 2026",
+          "title": "Lexicon - IT-påbyggnad"
+        },
+        "item2": {
+          "description": "Webbutvecklare med fokus på fullstackutveckling och databashantering. Utvecklade först ett bokföringsprogram och senare även ett fastighetssystem. Hade fokus på att möta specifika marknadsbehov men också användarvänlighet.",
+          "subtitle": "November 2021 - Januari 2024",
+          "title": "INBooks AB - Webbutvecklare"
+        },
+        "item3": {
+          "description": "Uthyrning till ATEA där jag arbetade med formatering av datorer från olika företag och myndigheter.",
+          "subtitle": "Maj 2019 - Augusti 2019",
+          "title": "Maxkompetens - Konsult"
+        },
+        "item4": {
+          "description": "Uthyrning till ATEA där jag arbetade med rekonditionering av mobiler och surfplattor från olika företag och myndigheter.",
+          "subtitle": "Augusti 2018 – September 2018",
+          "title": "Inpeople - Konsult"
+        },
+        "item5": {
+          "description": "Yrkeshögskoleutbildning inom programmering. Främst Java, men även en del HTML, CSS, JavaScript, SQL, med flera. Det förekom även några kurser med agila metoder.",
+          "subtitle": "Augusti 2019 - Maj 2021",
+          "title": "Ec Utbildning - Javautvecklare"
+        },
+        "item6": {
+          "description": "Universitetsutbildning inom datavetenskap. En del programmering och ellära förekom, samt ingenjörstypiska kurser så som fysik och matematik. Jag valde senare att avbryta utbildningen på grund av att utbildningens kvalitet och relevans inte motsvarade mina förväntningar.",
+          "subtitle": "September 2018 - Avbruten",
+          "title": "Linnéuniversitetet - Högskoleingenjör"
+        },
+        "item7": {
+          "description": "Kompletterande utbildning med olika gymnasiekurser för att uppnå behörighet till vidareutbildning.",
+          "subtitle": "September 2017 - Juni 2018",
+          "title": "Linnéuniversitetet - Tekniskt basår"
+        },
+        "item8": {
+          "description": "Tidigare har jag bland annat arbetat som maskinförare inom metall-CNC, lokalvårdare på Växjö Lasarett, och haft ansvar för montering av möbler samt arbete inom trä-CNC. Dessutom har jag erfarenhet från dagligvaruhandeln med fokus på varuuppackning och frontning, samt arbete som madrassmontör på ett semiautomatiserat band.",
+          "subtitle": "Maj 2015 – Juli 2018",
+          "title": "Diverse företag"
+        },
+        "item9": {
+          "description": "Gymnasieutbildning inom möbelsnickeri och inredning. Innehöll även en betydande mängd designarbete, främst inom möbeldesign men även inom grafisk design.",
+          "subtitle": "Augusti 2011 - Juni 2014",
+          "title": "Kungsmadskolan - Möbelsnickare"
+        }
+      },
+      "title": "Erfarenhet & utbildning"
     },
     "heroSection": {
       "homeIntroduction": "Webbutvecklare med 2 års erfarenhet som är passionerad att skapa dynamiska och användarvänliga webblösningar. Med kompetens inom ett brett spektrum av programmeringsspråk och teknologier är jag hängiven att leverera högkvalitativa webbplatser som uppfyller både kundens och användarens behov.",
       "homeTitle": "Webbutvecklare"
+    },
+    "projectSection": {
+      "subtitle": "Några av projekten jag gjort som del av min utbildning, och några senare projekt för att bibehålla mina kunskaper.",
+      "title": "Projekt"
+    },
+    "techSection": {
+      "db": "Databas",
+      "subtitle": "Programmeringsspråk, ramverk och verktyg jag arbetat med innan",
+      "title": "Min teknikstack",
+      "tools": "Verktyg"
     }
   },
   "navbar": {
     "about": "Om mig",
-    "experience": "Experience",
     "home": "Home",
     "projects": "Projects"
   }
