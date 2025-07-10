@@ -1,4 +1,4 @@
-  [data-theme="light"] {
+[data-theme="light"] {
     /* hsl (fallback color) */
     --bg-dark: hsl(15, 7%, 89%);
     --bg: hsl(0, 12%, 94%);
@@ -23,12 +23,11 @@
     --secondary: oklch(0.484 0.035 270.597);
 
     --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
-    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
 
     --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
-  }
+}
 
-  [data-theme="dark"] {
+[data-theme="dark"] {
     /* hsl (fallback color) */
     --bg-dark: hsl(0, 0%, 5%);
     --bg: hsl(300, 2%, 12%);
@@ -51,12 +50,16 @@
     --border-muted: oklch(0.652 0.007 286.194);
     --primary: oklch(0.83 0.084 268.161);
     --secondary: oklch(0.829 0.036 273.187);
-  }
 
-  /* Possible blue alternative to primary red? */
-  /*--primary: oklch(0.39 0.088 264.456);*/
+    --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
 
-  /*--primary: oklch(0.4 0.1 20);*/
+    --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+}
+
+/* Possible blue alternative to primary red? */
+/*--primary: oklch(0.39 0.088 264.456);*/
+
+/*--primary: oklch(0.4 0.1 20);*/
 
 
 

@@ -200,7 +200,7 @@
     }
 
     .heroSection .infoContainer {
-        margin-left: var(--spacing-xxl);
+        margin-left: 2.5rem;
         flex-direction: column;
         align-content: center;
         justify-content: center;
@@ -208,7 +208,7 @@
     }
 
     .heroSection .infoContainer .header {
-        margin-bottom: var(--spacing-xxl);
+        margin-bottom: 2.5rem;
         height: 100%;
         display: flex;
         flex-direction: column;
