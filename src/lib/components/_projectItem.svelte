@@ -20,7 +20,7 @@
         </ul>
     </div>
     {#if link}
-        <LinkButton {link} btnLabel="Github Repo" newTab="{true}"/>
+        <LinkButton {link} btnLabel="Github Repo" newTab={true}/>
     {/if}
 </div>
 

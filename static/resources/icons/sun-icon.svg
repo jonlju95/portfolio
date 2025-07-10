@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        id="sun"
+        xmlns="http://www.w3.org/2000/svg">
+    <g
+            id="layer1">
+        <ellipse
+                id="path1"
+                cx="12.000001"
+                cy="12"
+                rx="8.4710007"
+                ry="8.4709997"
+                style="stroke-opacity:1;fill-opacity:1"
+                stroke="currentColor"/>
+        <path
+                style="stroke-width:0.460411;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+                stroke="currentColor"
+                fill="currentColor"
+                id="path9"
+                d="M 6.8506711,2.2206145 7.5391118,3.6463521 6.0007482,4.0206723 5.7196809,5.5787736 4.2550987,4.9773776 3.1118815,6.0727007 2.2805013,4.7253013 0.71180436,4.9394702 0.83118516,3.3607281 -0.56380261,2.6119374 0.46073979,1.4048786 -0.22770092,-0.02085905 1.3106627,-0.39517928 1.59173,-1.9532805 3.0563122,-1.3518845 4.1995294,-2.4472077 5.0309096,-1.0998083 6.5996065,-1.3139771 6.4802257,0.26476494 7.8752135,1.0135556 Z"
+                transform="matrix(2.7562957,-0.34196365,0.35841485,2.6297828,1.2740813,8.4829887)"/>
+    </g>
+</svg>

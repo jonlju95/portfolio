@@ -2,7 +2,7 @@
     import {base} from '$app/paths';
     import {_} from 'svelte-i18n';
 
-    import {LinkButton, ProjectCard, ResumeItem, TechStackIcon} from "$lib";
+    import {LinkButton, ProjectItem, ResumeItem, TechStackIcon} from "$lib";
 </script>
 
 <section class="heroSection animatedElement">
@@ -41,46 +41,51 @@
     <h2>Experience & education</h2>
     <div class="timeline animatedElement">
         <div class="timelineContainer left">
+            <ResumeItem title="Lexicon - IT extension course" subtitle="July 2025 - April 2026"
+                        description="Labour market training course focusing on C#, but also React, database design and some
+                        AI engineering. In addition to this there's also a roughly three month long internship towards the end." icon="education"/>
+        </div>
+        <div class="timelineContainer right">
             <ResumeItem title="INBooks AB - Web Developer" subtitle="November 2021 – January 2024"
                         description="Focused on full-stack development and database management. Initially developed an
                         accounting program and later a property management system. Emphasized meeting specific market
                         needs as well as user-friendliness." icon="job"/>
         </div>
-        <div class="timelineContainer right">
+        <div class="timelineContainer left">
             <ResumeItem title="Maxkompetens - Consultant" subtitle="May 2019 – August 2019"
                         description="Assigned to ATEA, where I worked on computer formatting from various companies and authorities."
                         icon="job"/>
         </div>
-        <div class="timelineContainer left">
+        <div class="timelineContainer right">
             <ResumeItem title="Inpeople - Consultant" subtitle="August 2018 – September 2018"
                         description="Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities."
                         icon="job"/>
         </div>
-        <div class="timelineContainer right">
+        <div class="timelineContainer left">
             <ResumeItem title="Ec Utbildning - Java Developer" subtitle="August 2019 - May 2021"
                         description="Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others.
                         Also had some courses on agile methods."
                         icon="education"/>
         </div>
-        <div class="timelineContainer left">
+        <div class="timelineContainer right">
             <ResumeItem title="Linnéuniversitetet - Bachelor of Engineering" subtitle="September 2018 - Discontinued"
                         description="University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics.
                         Later chose to discontinue the education due to mismatched quality and relevance to expectations."
                         icon="education"/>
         </div>
-        <div class="timelineContainer right">
+        <div class="timelineContainer left">
             <ResumeItem title="Linnéuniversitetet - Technical Preparatory Year" subtitle="September 2017 – June 2018"
                         description="Supplementary education with various high school courses to achieve eligibility for further education."
                         icon="education"/>
         </div>
-        <div class="timelineContainer left">
+        <div class="timelineContainer right">
             <ResumeItem title="Various companies" subtitle="May 2015 - July 2018"
                         description="Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible
                         for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting,
                         and worked as a mattress assembler on a semi-automated line."
                         icon="job"/>
         </div>
-        <div class="timelineContainer right">
+        <div class="timelineContainer left">
             <ResumeItem title="Kungsmadskolan - Carpentry" subtitle="August 2011 – June 2014"
                         description="High school education in cabinetmaking and interior design, including a significant amount of design work,
                         primarily in furniture design but also in graphic design."
@@ -150,13 +155,13 @@
     <h2>Projects</h2>
     <p>Some of the projects I've done during my education, as well as some later projects to maintain my skills</p>
     <div class="projectContainer">
-        <ProjectCard title="Connect Four" techStack="{['Java', 'JUnit']}"
+        <ProjectItem title="Connect Four" techStack="{['Java', 'JUnit']}"
                      description="Game created with a focus on testing, as it was developed in a unit testing-oriented course."
                      link="https://github.com/jonlju95/Four-in-a-row"/>
-        <ProjectCard title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
+        <ProjectItem title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
                      description="Personal project to maintain my skills."
                      link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
-        <ProjectCard title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
+        <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
                      description="Rock, Paper, Scissors game created with React."
                      link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
     </div>
