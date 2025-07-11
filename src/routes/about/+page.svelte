@@ -3,6 +3,8 @@
 </script>
 
 <section class="aboutContainer">
+    <h2>About</h2>
+    <p>This page is still a work in progress</p>
 </section>
 
 <style>
@@ -11,9 +13,5 @@
         margin: 4rem 10rem 0;
         background-color: var(--bg);
         min-height: calc(100vh - 12rem);
-
-        p {
-            margin: 0 2rem;
-        }
     }
 </style>

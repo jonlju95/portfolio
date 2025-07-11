@@ -16,7 +16,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 
 
-    &.animatedElement,
     .animatedElement * {
         transition: background-color 0.3s ease-in-out,
         color 0.3s ease-in-out,
@@ -79,7 +78,8 @@ main {
     background-attachment: fixed;
     background-origin: border-box;
 
-    background-color: var(--primary);}
+    background-color: var(--primary);
+}
 
 .clickable {
     cursor: pointer;

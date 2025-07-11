@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<script>
-			(function () {
-				try {
-					const saved = localStorage.getItem('theme');
-					const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-					const theme = saved || (prefersDark ? 'dark' : 'light');
-					document.documentElement.setAttribute('data-theme', theme);
-				} catch (_) {}
-			})();
-		</script>
-		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
-		<link rel="stylesheet" href="%sveltekit.assets%/styles/app.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Portfolio</title>
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover" class="animatedElement">
-		<main>%sveltekit.body%</main>
-	</body>
+<head>
+    <meta charset="utf-8"/>
+    <script>
+        <!-- Function that loads a theme before the actual page is rendered, to prevent FOUC, flash of unstyled content -->
+        (function () {
+            try {
+                const saved = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = saved || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (_) {
+            }
+        })();
+    </script>
+    <link rel="icon" href="%sveltekit.assets%/favicon.svg"/>
+    <link rel="stylesheet" href="%sveltekit.assets%/styles/app.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Portfolio</title>
+    %sveltekit.head%
+</head>
+<body data-sveltekit-preload-data="hover" class="animatedElement">
+<main>%sveltekit.body%</main>
+</body>
 </html>

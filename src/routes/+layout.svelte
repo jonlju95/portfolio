@@ -1,6 +1,6 @@
 <script lang="ts">
-    import {Navbar, Footer} from '$lib';
-    import { browser } from '$app/environment';
+    import {Footer, Navbar} from '$lib';
+    import {browser} from '$app/environment';
 
     let {children} = $props();
 
@@ -14,7 +14,6 @@
             document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
         }
     }
-
 </script>
 
 <Navbar></Navbar>
@@ -26,6 +25,7 @@
 <Footer></Footer>
 
 <style>
+    /* Makes the main container fill the entire screen minus the height of the footer and navbar, and moves it down "below" the navbar */
     .container {
         min-height: calc(100vh - 12rem);
         margin-top: 4rem;

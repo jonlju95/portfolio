@@ -1,9 +1,9 @@
 <script lang="ts">
     import {base} from '$app/paths';
-    import { innerWidth } from 'svelte/reactivity/window';
+    import {innerWidth} from 'svelte/reactivity/window';
     import {t} from 'svelte-i18n';
 
-    import {LinkButton, ProjectItem, ResumeItem, TechStackIcon} from "$lib";
+    import {LinkButton, ProjectItem, ResumeItem, TechStackIcon} from '$lib';
 </script>
 
 <section class="heroSection animatedElement">
@@ -33,58 +33,67 @@
     <h2>{$t('homePage.experienceSection.title')}</h2>
     <div class="timeline animatedElement">
         <div class="timelineContainer left">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item1.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item1.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item1.description')}
-                        icon="education"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item1.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item1.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item1.description')}
+                    icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item2.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item2.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item2.description')}
-                        icon="job"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item2.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item2.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item2.description')}
+                    icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item3.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item3.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item3.description')}
-                        icon="job"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item3.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item3.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item3.description')}
+                    icon="job"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item4.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item4.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item4.description')}
-                        icon="job"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item4.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item4.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item4.description')}
+                    icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item5.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item5.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item5.description')}
-                        icon="education"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item5.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item5.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item5.description')}
+                    icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item6.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item6.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item6.description')}
-                        icon="education"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item6.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item6.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item6.description')}
+                    icon="education"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item7.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item7.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item7.description')}
-                        icon="education"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item7.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item7.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item7.description')}
+                    icon="education"/>
         </div>
         <div class="timelineContainer right">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item8.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item8.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item8.description')}
-                        icon="job"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item8.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item8.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item8.description')}
+                    icon="job"/>
         </div>
         <div class="timelineContainer left">
-            <ResumeItem title={$t('homePage.experienceSection.resumeItems.item9.title')}
-                        subtitle={$t('homePage.experienceSection.resumeItems.item9.subtitle')}
-                        description={$t('homePage.experienceSection.resumeItems.item9.description')}
-                        icon="education"/>
+            <ResumeItem
+                    title={$t('homePage.experienceSection.resumeItems.item9.title')}
+                    subtitle={$t('homePage.experienceSection.resumeItems.item9.subtitle')}
+                    description={$t('homePage.experienceSection.resumeItems.item9.description')}
+                    icon="education"/>
         </div>
     </div>
 </section>
@@ -94,11 +103,13 @@
     <div class="techStackContainer">
         <div class="techStackCategory">
             <h4>Frontend</h4>
-            <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                               title="Html"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                               title="Css"/>
+            <div class="techStackContent">
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                        title="Html"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                        title="Css"/>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
                         title="JavaScript"/>
@@ -108,15 +119,17 @@
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
                         title="Angular"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                               title="React"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                        title="React"/>
             </div>
         </div>
         <div class="techStackCategory">
             <h4>Backend</h4>
-            <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                               title="Java"/>
+            <div class="techStackContent">
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                        title="Java"/>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
                         title="C#"/>
@@ -124,7 +137,7 @@
         </div>
         <div class="techStackCategory">
             <h4>{$t('homePage.techSection.db')}</h4>
-            <div>
+            <div class="techStackContent">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
@@ -138,16 +151,19 @@
         </div>
         <div class="techStackCategory">
             <h4>{$t('homePage.techSection.tools')}</h4>
-            <div>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
-                               title="Jira"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                               title="Git"/>
+            <div class="techStackContent">
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                        title="Jira"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                        title="Git"/>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
                         title="Postman"/>
-                <TechStackIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-                               title="Figma"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                        title="Figma"/>
             </div>
         </div>
     </div>
@@ -156,20 +172,27 @@
     <h2>{$t('homePage.projectSection.title')}</h2>
     <p>{$t('homePage.projectSection.subtitle')}</p>
     <div class="projectContainer">
-        <ProjectItem title="Personal economy" techStack="{['Svelte', 'TypeScript', 'HTML/CSS']}"
-                     description={$t('projectPage.projectItems.item2.description')}
-                     link="https://github.com/jonlju95/personalEconomyApp"/>
-        <ProjectItem title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"
-                     description={$t('projectPage.projectItems.item3.description')}
-                     link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
+        <ProjectItem
+                title="Personal economy"
+                techStack={['Svelte', 'TypeScript', 'HTML/CSS']}
+                description={$t('projectPage.projectItems.item2.description')}
+                link="https://github.com/jonlju95/personalEconomyApp"/>
+        <ProjectItem
+                title="Customer Product Website"
+                techStack={['Java', 'Html', 'Css']}
+                description={$t('projectPage.projectItems.item3.description')}
+                link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
         {#if innerWidth.current && innerWidth.current > 1600}
-            <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"
-                         description={$t('projectPage.projectItems.item4.description')}
-                         link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
+            <ProjectItem
+                    title="Rock, Paper, Scissors"
+                    techStack={['JavaScript', 'Html', 'Css', 'React']}
+                    description={$t('projectPage.projectItems.item4.description')}
+                    link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
         {/if}
     </div>
     <div class="linkContainer">
-        <LinkButton link="{base}/projects" btnLabel="More projects" newTab="{false}"/>
+        <LinkButton link="{base}/projects" btnLabel="More projects"
+                    newTab={false}/>
     </div>
 </section>
 
@@ -185,7 +208,7 @@
 
         background-color: var(--bg-light);
         border: 1px solid var(--border-muted);
-        border-top-color: var(--highlight); /* simpler override */
+        border-top-color: var(--highlight);
         border-radius: 1rem;
 
         box-shadow: var(--shadow);
@@ -249,7 +272,7 @@
         }
 
         p {
-            margin-left: 2rem;
+            margin-left: 1rem;
         }
     }
 
@@ -271,7 +294,7 @@
     }
 
     .timeline::after {
-        content: "";
+        content: '';
         position: absolute;
         top: -6rem;
         bottom: 0;
@@ -288,7 +311,7 @@
         position: relative;
         background-color: inherit;
         width: 50%;
-        margin-top: -6rem
+        margin-top: -6rem;
     }
 
     /* The circles on the timeline */
@@ -317,28 +340,28 @@
 
     /* Add arrows to the left container (pointing right) */
     .left::before {
-        content: " ";
+        content: ' ';
         height: 0;
         position: absolute;
         top: 22px;
         width: 0;
         z-index: 1;
         right: 31px;
-        border: medium solid var(--primary);
+        border-style: solid;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent var(--bg);
     }
 
     /* Add arrows to the right container (pointing left) */
     .right::before {
-        content: " ";
+        content: ' ';
         height: 0;
         position: absolute;
         top: 22px;
         width: 0;
         z-index: 1;
         left: 31px;
-        border: medium solid var(--primary);
+        border-style: solid;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--bg) transparent transparent;
     }
@@ -352,7 +375,6 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-
     }
 
     .techStackContainer {
@@ -366,7 +388,7 @@
             border-bottom: 1px solid var(--border-muted);
             margin: 1rem 0 0 1rem;
 
-            & > div {
+            .techStackContent {
                 display: flex;
             }
         }
@@ -375,7 +397,7 @@
     .projectContainer {
         display: flex;
         justify-content: space-evenly;
-        margin: 2rem 0 2rem 2rem;
+        margin: 2rem 0 2rem 1rem;
         gap: 4rem;
     }
 
@@ -384,5 +406,4 @@
         display: flex;
         justify-content: end;
     }
-
 </style>

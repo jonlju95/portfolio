@@ -3,9 +3,9 @@
     import {base} from '$app/paths';
     import {locale, t} from 'svelte-i18n';
 
-    import { browser } from '$app/environment';
+    import {browser} from '$app/environment';
 
-    let currentTheme:  string | null;
+    let currentTheme: string | null;
 
     if (browser) {
         currentTheme = document.documentElement.getAttribute('data-theme') ? document.documentElement.getAttribute('data-theme') : 'light';

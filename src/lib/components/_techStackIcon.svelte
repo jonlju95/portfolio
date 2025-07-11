@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { src, title } = $props();
+    let {src, title} = $props();
 </script>
 
 <div class="techStackIcon">
