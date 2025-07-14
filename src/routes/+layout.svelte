@@ -1,4 +1,6 @@
 <script lang="ts">
+    import '$lib/styles/app.scss';
+
     import {Footer, Navbar} from '$lib';
     import {browser} from '$app/environment';
 
@@ -18,17 +20,17 @@
 
 <Navbar></Navbar>
 
-<article class="container animatedElement">
+<article class="animatedElement">
     {@render children()}
 </article>
 
 <Footer></Footer>
 
-<style>
+<style lang="scss">
     /* Makes the main container fill the entire screen minus the height of the footer and navbar, and moves it down "below" the navbar */
-    .container {
+    article {
+        width: 100vw;
         min-height: calc(100vh - 12rem);
-        margin-top: 4rem;
     }
 </style>
 

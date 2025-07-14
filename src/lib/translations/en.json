@@ -65,7 +65,8 @@
     },
     "projectSection": {
       "subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
-      "title": "Projects"
+      "title": "Projects",
+      "moreProjects": "More projects"
     },
     "techSection": {
       "db": "Database",

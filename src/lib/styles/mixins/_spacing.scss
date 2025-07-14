@@ -1,0 +1,44 @@
+$sizes: (
+        1: 0.25rem,
+        2: 0.5rem,
+        3: 1rem,
+        4: 1.5rem,
+        5: 2rem,
+        6: 4rem,
+);
+
+$percentages: (
+        100: 100%,
+        75: 75%,
+        50: 50%,
+        25: 25%
+);
+
+// Generates classes for margins and paddings. ms/ps is left and me/pe is right
+@mixin spacings() {
+  @each $size, $value in $sizes {
+    .mt-#{$size} {margin-top: $value};
+    .mb-#{$size} {margin-bottom: $value};
+    .ms-#{$size} {margin-left: $value};
+    .me-#{$size} {margin-right: $value};
+    .m-#{$size} {margin: $value};
+
+    .pt-#{$size} {padding-top: $value};
+    .pb-#{$size} {padding-bottom: $value};
+    .ps-#{$size} {padding-left: $value};
+    .pe-#{$size} {padding-right: $value};
+    .pe-#{$size} {padding: $value};
+  }
+}
+
+// Generates classes for height and width
+@mixin sizes() {
+  @each $percentage, $value in $percentages {
+    .h-#{$percentage} {height: #{$value}};
+
+    .w-#{$percentage} {width: #{$value}};
+  }
+
+  .h-fit {height: fit-content;}
+  .w-fit {width: fit-content;}
+}

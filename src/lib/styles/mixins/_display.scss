@@ -1,0 +1,20 @@
+// Generates classes for display properties
+@mixin display() {
+  .d-flex { display: flex; }
+  .d-none { display: none; }
+  .d-block  { display: block; }
+  .d-inline { display: inline; }
+}
+
+// Generates classes for flex-specific properties
+@mixin flexPositioning() {
+  .flex-col { flex-direction: column; }
+
+  .justify-center { justify-content: center; }
+  .justify-end { justify-content: end; }
+  .justify-between { justify-content: space-between; }
+
+  .align-center { align-items: center; }
+
+  .content-center { align-content: center; }
+}
