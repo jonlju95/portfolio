@@ -27,3 +27,9 @@ $fontSizes: (
     line-height: 2;
   }
 }
+
+@mixin fontStyles() {
+  .fontBold {font-weight: bold};
+
+  .fontItalic {font-style: italic;}
+}

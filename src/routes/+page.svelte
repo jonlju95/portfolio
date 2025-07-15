@@ -5,10 +5,10 @@
     import {LinkButton, ProjectItem, TechStackIcon, Timeline} from '$lib';
 </script>
 
-<section class="heroSection animatedElement">
+<section class="heroSection mt-7 mb-7 ms-10 me-10 p-6 animatedElement">
     <div class="container">
         <div class="row h-100 d-flex align-center">
-            <div class="d-flex justify-center imgContainer col-lg-6">
+            <div class="d-flex imgContainer col-lg-6">
                 <img class="h-fit w-100" src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
             </div>
             <div class="d-flex flex-col justify-center infoContainer col-lg-6">
@@ -148,6 +148,7 @@
 
         padding: 4rem 10rem 6rem;
 
+        /* Give the sections after the first one alternating background colors */
         &:not(:first-child) {
             background-color: var(--bg-dark);
         }
@@ -158,14 +159,13 @@
     }
 
     .heroSection {
-        margin: 6rem 10rem;
-        height: calc(100vh - 10rem);
-        padding: 4rem;
+        /* This height makes the first section of the home page fill the entire view, for design purposes */
+        height: calc(100vh - 12rem);
 
         background-color: var(--bg-light);
         border: 1px solid var(--border-muted);
         border-top-color: var(--highlight);
-        border-radius: 1rem;
+        border-radius: 12px;
 
         box-shadow: var(--shadow);
         overflow: hidden;
@@ -176,6 +176,7 @@
                 border: 2px solid var(--border-muted);
                 object-fit: cover;
                 max-width: 35rem;
+                aspect-ratio: 1/1;
             }
         }
 

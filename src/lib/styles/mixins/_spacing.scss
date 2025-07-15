@@ -1,10 +1,15 @@
 $sizes: (
+        0: 0,
         1: 0.25rem,
         2: 0.5rem,
         3: 1rem,
         4: 1.5rem,
         5: 2rem,
         6: 4rem,
+        7: 6rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
 );
 
 $percentages: (
@@ -22,12 +27,16 @@ $percentages: (
     .ms-#{$size} {margin-left: $value};
     .me-#{$size} {margin-right: $value};
     .m-#{$size} {margin: $value};
+    .mx-#{$size} {margin-left: $value; margin-right: $value};
+    .my-#{$size} {margin-top: $value; margin-bottom: $value};
 
     .pt-#{$size} {padding-top: $value};
     .pb-#{$size} {padding-bottom: $value};
     .ps-#{$size} {padding-left: $value};
     .pe-#{$size} {padding-right: $value};
-    .pe-#{$size} {padding: $value};
+    .p-#{$size} {padding: $value};
+    .px-#{$size} {padding-left: $value; padding-right: $value};
+    .py-#{$size} {padding-top: $value; padding-bottom: $value};
   }
 }
 

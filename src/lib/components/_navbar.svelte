@@ -30,16 +30,16 @@
     };
 </script>
 
-<nav class="navbar">
-    <section>
-        <p class="navbar-header">jL</p>
+<nav class="navbar d-flex justify-between align-center p-0 ps-4 pe-4">
+    <section class="d-flex justify-center align-center">
+        <p class="navbar-header m-o me-6">jL</p>
         <a href="{ base }/" class="clickable" class:isActive={page.url.pathname === base+"/"}>{$t('navbar.home')}</a>
         <a href="{ base }/about" class="clickable"
            class:isActive={page.url.pathname === base+"/about"}>{$t('navbar.about')}</a>
         <a href="{ base }/projects" class="clickable"
            class:isActive={page.url.pathname === base+"/projects"}>{$t('navbar.projects')}</a>
     </section>
-    <section>
+    <section class="d-flex justify-center align-center">
         {#if $locale === 'en'}
             <button class="toggles clickable" onclick={toggleLanguage} aria-labelledby="uk-flag">
                 <div class="iconContainer">
@@ -98,7 +98,6 @@
                     </svg>
                 </div>
             {/if}
-
         </button>
     </section>
 </nav>
@@ -111,8 +110,6 @@
         width: 100vw;
         height: 4rem;
 
-        padding: 0 1.5rem;
-
         border-radius: 0 0 12px 12px;
         border: 1px solid var(--border-muted);
         border-top: none;
@@ -121,10 +118,6 @@
         box-shadow: var(--shadow);
 
         overflow: hidden;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         z-index: 9999;
 
@@ -188,7 +181,6 @@
         .navbar-header {
             font-family: 'Nunito', sans-serif;
             font-size: 2rem;
-            margin: 0 3rem 0 0;
             color: var(--primary);
         }
     }

@@ -104,7 +104,7 @@
         position: absolute;
         width: 15px;
         height: 15px;
-        right: -8px;
+        right: -6px;
         background-color: var(--bg);
         border: 2px solid var(--primary);
         top: 22px;
@@ -127,7 +127,7 @@
         content: ' ';
         height: 0;
         position: absolute;
-        top: 22px;
+        top: 20px;
         width: 0;
         z-index: 1;
         right: 31px;
@@ -141,7 +141,7 @@
         content: ' ';
         height: 0;
         position: absolute;
-        top: 22px;
+        top: 20px;
         width: 0;
         z-index: 1;
         left: 31px;
@@ -152,6 +152,6 @@
 
     /* Fix the circle for containers on the right side */
     .right::after {
-        left: -11px;
+        left: -9px;
     }
 </style>
