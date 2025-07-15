@@ -65,7 +65,8 @@
     },
     "projectSection": {
       "subtitle": "Några av projekten jag gjort som del av min utbildning, och några senare projekt för att bibehålla mina kunskaper.",
-      "title": "Projekt"
+      "title": "Projekt",
+      "moreProjects": "Fler projekt"
     },
     "techSection": {
       "db": "Databas",

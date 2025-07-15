@@ -2,7 +2,7 @@
     import {t} from 'svelte-i18n';
 </script>
 
-<footer class="footer">
+<footer class="footer py-4 px-5">
     <section>
         <h3>2025</h3>
         <p>{$t('footer.credits')}</p>

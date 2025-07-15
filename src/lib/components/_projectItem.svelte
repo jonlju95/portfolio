@@ -27,6 +27,8 @@
 <style>
     .projectCard {
         width: 100%;
+        height: 100%;
+        min-width: 20rem;
         min-height: 20rem;
         padding: 2rem;
         background: var(--gradient);

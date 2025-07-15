@@ -1,0 +1,80 @@
+@use 'mixins/theme' as *;
+@use 'mixins/fonts' as *;
+@use 'mixins/grid' as *;
+@use 'mixins/spacing' as *;
+@use 'mixins/display' as *;
+
+@include columns;
+@include rows;
+@include container;
+
+@include spacings;
+@include sizes;
+
+@include flexPositioning;
+@include display;
+
+[data-theme="light"] {
+  @include light;
+}
+
+[data-theme="dark"] {
+  @include dark;
+}
+
+@include fontSizes;
+@include fontStyles;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+
+  color: var(--text-muted);
+
+  font-family: 'Open Sans', sans-serif;
+
+
+  .animatedElement * {
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+    svg,
+    use {
+      transition: stroke 0.3s ease-in-out,
+      fill 0.3s ease-in-out;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  position: absolute;
+  background-image: url('./resources/background-new.png');
+
+  background-size: 100svw 100svh;
+  -webkit-background-size: 100svw 100svh;
+  -moz-background-size: 100svw 100svh;
+  -o-background-size: 100svw 100svh;
+
+  background-blend-mode: screen;
+  background-attachment: fixed;
+  background-origin: border-box;
+
+  background-color: var(--primary);
+}
+
+.clickable {
+  cursor: pointer;
+}

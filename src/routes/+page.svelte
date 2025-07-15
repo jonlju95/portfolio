@@ -1,109 +1,48 @@
 <script lang="ts">
     import {base} from '$app/paths';
-    import {innerWidth} from 'svelte/reactivity/window';
     import {t} from 'svelte-i18n';
 
-    import {LinkButton, ProjectItem, ResumeItem, TechStackIcon} from '$lib';
+    import {LinkButton, ProjectItem, TechStackIcon, Timeline} from '$lib';
 </script>
 
-<section class="heroSection animatedElement">
-    <div class="imgContainer">
-        <img src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
-    </div>
-    <div class="infoContainer">
-        <div class="header">
-            <h1>Jonatan Ljung</h1>
-            <p>{$t('homePage.heroSection.homeTitle')}</p>
+<section class="heroSection mt-7 mb-7 ms-10 me-10 p-6 animatedElement">
+    <div class="container">
+        <div class="row h-100 d-flex align-center">
+            <div class="d-flex imgContainer col-lg-6">
+                <img class="h-fit w-100" src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
+            </div>
+            <div class="d-flex flex-col justify-center infoContainer col-lg-6">
+                <div class="header d-flex flex-col justify-end h-100 mb-4">
+                    <h1>Jonatan Ljung</h1>
+                    <p>{$t('homePage.heroSection.homeTitle')}</p>
+                </div>
+                <p class="h-100">{$t('homePage.heroSection.homeIntroduction')}</p>
+            </div>
         </div>
-        <p class="introduction">{$t('homePage.heroSection.homeIntroduction')}</p>
     </div>
 </section>
-<section class="homePageSections aboutSection animatedElement">
+<section class="animatedElement">
     <h2>{$t('homePage.aboutSection.aboutTitle')}</h2>
-    <div>
-        <p>
-            <span>{$t('homePage.aboutSection.aboutText.span1')}</span>
-            <span>{$t('homePage.aboutSection.aboutText.span2')}</span>
-            <span>{$t('homePage.aboutSection.aboutText.span3')}</span>
-            <span>{$t('homePage.aboutSection.aboutText.span4')}</span>
+    <div class="container">
+        <p class="d-flex flex-col ms-3">
+            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span1')}</span>
+            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span2')}</span>
+            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span3')}</span>
+            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span4')}</span>
         </p>
     </div>
 </section>
-<section class="homePageSections experienceSection animatedElement">
+<section class="animatedElement">
     <h2>{$t('homePage.experienceSection.title')}</h2>
-    <div class="timeline animatedElement">
-        <div class="timelineContainer left">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item1.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item1.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item1.description')}
-                    icon="education"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item2.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item2.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item2.description')}
-                    icon="job"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item3.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item3.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item3.description')}
-                    icon="job"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item4.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item4.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item4.description')}
-                    icon="job"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item5.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item5.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item5.description')}
-                    icon="education"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item6.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item6.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item6.description')}
-                    icon="education"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item7.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item7.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item7.description')}
-                    icon="education"/>
-        </div>
-        <div class="timelineContainer right">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item8.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item8.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item8.description')}
-                    icon="job"/>
-        </div>
-        <div class="timelineContainer left">
-            <ResumeItem
-                    title={$t('homePage.experienceSection.resumeItems.item9.title')}
-                    subtitle={$t('homePage.experienceSection.resumeItems.item9.subtitle')}
-                    description={$t('homePage.experienceSection.resumeItems.item9.description')}
-                    icon="education"/>
-        </div>
-    </div>
+    <Timeline/>
 </section>
-<section class="homePageSections animatedElement">
+<section class="animatedElement">
     <h2>{$t('homePage.techSection.title')}</h2>
-    <p>{$t('homePage.techSection.subtitle')}</p>
-    <div class="techStackContainer">
-        <div class="techStackCategory">
+    <div class="container techStackContainer">
+        <p class="ms-3">{$t('homePage.techSection.subtitle')}</p>
+        <div class="mt-3 ms-3 techStackCategory">
             <h4>Frontend</h4>
-            <div class="techStackContent">
+            <div class="row">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                         title="Html"/>
@@ -124,9 +63,9 @@
                         title="React"/>
             </div>
         </div>
-        <div class="techStackCategory">
+        <div class="mt-3 ms-3 techStackCategory">
             <h4>Backend</h4>
-            <div class="techStackContent">
+            <div class="row">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
                         title="Java"/>
@@ -135,9 +74,9 @@
                         title="C#"/>
             </div>
         </div>
-        <div class="techStackCategory">
+        <div class="mt-3 ms-3 techStackCategory">
             <h4>{$t('homePage.techSection.db')}</h4>
-            <div class="techStackContent">
+            <div class="row">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
@@ -149,9 +88,9 @@
                         title="MongoDB"/>
             </div>
         </div>
-        <div class="techStackCategory">
+        <div class="mt-3 ms-3 techStackCategory">
             <h4>{$t('homePage.techSection.tools')}</h4>
-            <div class="techStackContent">
+            <div class="row">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                         title="Jira"/>
@@ -168,242 +107,92 @@
         </div>
     </div>
 </section>
-<section class="homePageSections animatedElement">
+<section class="animatedElement">
     <h2>{$t('homePage.projectSection.title')}</h2>
-    <p>{$t('homePage.projectSection.subtitle')}</p>
-    <div class="projectContainer">
-        <ProjectItem
-                title="Personal economy"
-                techStack={['Svelte', 'TypeScript', 'HTML/CSS']}
-                description={$t('projectPage.projectItems.item2.description')}
-                link="https://github.com/jonlju95/personalEconomyApp"/>
-        <ProjectItem
-                title="Customer Product Website"
-                techStack={['Java', 'Html', 'Css']}
-                description={$t('projectPage.projectItems.item3.description')}
-                link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
-        {#if innerWidth.current && innerWidth.current > 1600}
-            <ProjectItem
-                    title="Rock, Paper, Scissors"
-                    techStack={['JavaScript', 'Html', 'Css', 'React']}
-                    description={$t('projectPage.projectItems.item4.description')}
-                    link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
-        {/if}
-    </div>
-    <div class="linkContainer">
-        <LinkButton link="{base}/projects" btnLabel="More projects"
-                    newTab={false}/>
+    <div class="container">
+        <p class="ms-3">{$t('homePage.projectSection.subtitle')}</p>
+        <div class="row d-flex ms-3 mb-4 mt-4 justify-between">
+            <div class="col-lg-6 col-xl-4">
+                <ProjectItem
+                        title="Personal economy"
+                        techStack={['Svelte', 'TypeScript', 'HTML/CSS']}
+                        description={$t('projectPage.projectItems.item2.description')}
+                        link="https://github.com/jonlju95/personalEconomyApp"/>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <ProjectItem
+                        title="Customer Product Website"
+                        techStack={['Java', 'Html', 'Css']}
+                        description={$t('projectPage.projectItems.item3.description')}
+                        link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <ProjectItem
+                        title="Rock, Paper, Scissors"
+                        techStack={['JavaScript', 'Html', 'Css', 'React']}
+                        description={$t('projectPage.projectItems.item4.description')}
+                        link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
+            </div>
+
+        </div>
+        <div class="d-flex justify-end mt-3">
+            <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"
+                        newTab={false}/>
+        </div>
     </div>
 </section>
 
 <style>
-    .heroSection {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    section {
+        max-width: 100%;
 
-        height: calc(100vh - 10rem);
-        margin: 6rem 10rem 0;
-        padding: 4rem;
-
-        background-color: var(--bg-light);
-        border: 1px solid var(--border-muted);
-        border-top-color: var(--highlight);
-        border-radius: 1rem;
-
-        box-shadow: var(--shadow);
-        overflow: hidden;
-    }
-
-    .heroSection .infoContainer,
-    .heroSection .imgContainer {
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
-
-    .heroSection .infoContainer {
-        margin-left: 2.5rem;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: baseline;
-    }
-
-    .heroSection .infoContainer .header {
-        margin-bottom: 2.5rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-    }
-
-    .heroSection .infoContainer .header h1 {
-        color: var(--primary);
-    }
-
-    .heroSection .infoContainer .header p {
-        font-style: italic;
-        font-weight: bold;
-        color: var(--text-muted);
-    }
-
-    .heroSection .infoContainer .introduction {
-        height: 100%;
-    }
-
-    .heroSection .imgContainer {
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .heroSection .imgContainer img {
-        border-radius: 12px;
-        border: 2px solid var(--border-muted);
-    }
-
-    .homePageSections {
-        height: fit-content;
         padding: 4rem 10rem 6rem;
-        background-color: var(--bg-dark);
+
+        /* Give the sections after the first one alternating background colors */
+        &:not(:first-child) {
+            background-color: var(--bg-dark);
+        }
 
         &:nth-child(even) {
             background-color: var(--bg);
         }
-
-        p {
-            margin-left: 1rem;
-        }
     }
 
-    .aboutSection {
-        margin-top: 4rem;
+    .heroSection {
+        /* This height makes the first section of the home page fill the entire view, for design purposes */
+        height: calc(100vh - 12rem);
 
-        p {
-            margin: 0 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
+        background-color: var(--bg-light);
+        border: 1px solid var(--border-muted);
+        border-top-color: var(--highlight);
+        border-radius: 12px;
 
-    .timeline {
-        position: relative;
-        width: 100%;
-        margin: 8rem auto 0;
-    }
+        box-shadow: var(--shadow);
+        overflow: hidden;
 
-    .timeline::after {
-        content: '';
-        position: absolute;
-        top: -6rem;
-        bottom: 0;
-        left: 50%;
-        width: 3px;
-        margin-left: -3px;
-        background-color: var(--secondary);
-        border-radius: 3px;
-    }
-
-    /* Container around content */
-    .timelineContainer {
-        padding: 10px 40px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-        margin-top: -6rem;
-    }
-
-    /* The circles on the timeline */
-    .timelineContainer::after {
-        content: '';
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        right: -8px;
-        background-color: var(--bg);
-        border: 2px solid var(--primary);
-        top: 22px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-
-    /* Place the container to the left */
-    .left {
-        left: 0;
-    }
-
-    /* Place the container to the right */
-    .right {
-        left: 50%;
-    }
-
-    /* Add arrows to the left container (pointing right) */
-    .left::before {
-        content: ' ';
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        right: 31px;
-        border-style: solid;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent var(--bg);
-    }
-
-    /* Add arrows to the right container (pointing left) */
-    .right::before {
-        content: ' ';
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        left: 31px;
-        border-style: solid;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent var(--bg) transparent transparent;
-    }
-
-    /* Fix the circle for containers on the right side */
-    .right::after {
-        left: -11px;
-    }
-
-    .experienceSection {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .techStackContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .techStackCategory {
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid var(--border-muted);
-            margin: 1rem 0 0 1rem;
-
-            .techStackContent {
-                display: flex;
+        .imgContainer {
+            img {
+                border-radius: 12px;
+                border: 2px solid var(--border-muted);
+                object-fit: cover;
+                max-width: 35rem;
+                aspect-ratio: 1/1;
             }
         }
+
+        .infoContainer .header h1 {
+            color: var(--primary);
+        }
+
+        .infoContainer .header p {
+            font-style: italic;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
     }
 
-    .projectContainer {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 2rem 0 2rem 1rem;
-        gap: 4rem;
+    .techStackCategory {
+        border-bottom: 1px solid var(--border-muted);
     }
 
-    .linkContainer {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: end;
-    }
 </style>
