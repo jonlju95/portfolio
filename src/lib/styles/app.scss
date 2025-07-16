@@ -27,17 +27,10 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100vw;
   height: 100vh;
 
   overflow-x: hidden;
-
-  color: var(--text-muted);
-
-  font-family: 'Open Sans', sans-serif;
-
 
   .animatedElement * {
     transition: background-color 0.3s ease-in-out,
@@ -52,27 +45,19 @@ body {
   }
 }
 
+// Makes every element on the page account for their paddings and borders when calculating width and height.
+// Also makes the default margin and padding 0
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 main {
   width: 100vw;
   position: absolute;
-  background-image: url('./resources/background-new.png');
-
-  background-size: 100svw 100svh;
-  -webkit-background-size: 100svw 100svh;
-  -moz-background-size: 100svw 100svh;
-  -o-background-size: 100svw 100svh;
-
-  background-blend-mode: screen;
-  background-attachment: fixed;
-  background-origin: border-box;
-
-  background-color: var(--primary);
 }
 
 .clickable {

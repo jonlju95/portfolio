@@ -60,8 +60,10 @@
       "title": "Erfarenhet & utbildning"
     },
     "heroSection": {
-      "homeIntroduction": "Webbutvecklare med 2 års erfarenhet som är passionerad att skapa dynamiska och användarvänliga webblösningar. Med kompetens inom ett brett spektrum av programmeringsspråk och teknologier är jag hängiven att leverera högkvalitativa webbplatser som uppfyller både kundens och användarens behov.",
-      "homeTitle": "Webbutvecklare"
+      "homeIntroduction": "Med två års erfarenhet brinner jag för att skapa dynamiska och användarvänliga webblösningar. Jag är skicklig i ett brett spektrum av programmeringsspråk och teknologier, och dedikerad till att leverera högkvalitativa webbplatser som möter både kunders och användares behov.",
+      "homeSubtitle": ", baserad i Växjö",
+      "homeTitle": "Hej, mitt namn är Jonatan",
+      "homeJobtitle": "Webbutvecklare"
     },
     "projectSection": {
       "subtitle": "Några av projekten jag gjort som del av min utbildning, och några senare projekt för att bibehålla mina kunskaper.",
@@ -109,5 +111,9 @@
   },
   "footer": {
     "credits": "Gjort med SvelteKit, design av mig"
+  },
+  "button": {
+    "projects": "Projekt",
+    "contact": "Kontakta mig"
   }
 }

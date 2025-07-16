@@ -60,8 +60,10 @@
       "title": "Experience & education"
     },
     "heroSection": {
-      "homeIntroduction": "Web Developer with 2 years of experience, passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, dedicated to delivering high-quality websites that meet both customer and user needs.",
-      "homeTitle": "Web developer"
+      "homeIntroduction": "With two years of experience I’m passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs.",
+      "homeSubtitle": ", based in Växjö, Sweden",
+      "homeTitle": "Hi there, I’m Jonatan",
+      "homeJobtitle": "Web developer"
     },
     "projectSection": {
       "subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
@@ -109,5 +111,9 @@
   },
   "footer": {
     "credits": "Made with SvelteKit, design by me"
+  },
+  "button": {
+    "projects": "Projects",
+    "contact": "Contact me"
   }
 }

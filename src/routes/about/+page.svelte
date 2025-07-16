@@ -20,9 +20,6 @@
 
             <img class="col-xl-4" height="400px" src="{base}/resources/images/3V6A8787.JPG" alt="Me"/>
         </div>
-        <div class="row">
-
-        </div>
         <div class="row"> <span class="col-xl-6 mb-3">Outside of work I have a strong interest in design, user experience and how
             technical decisions shape the usability of a product. I enjoy creating things that are both functional
             and maintainable, with focus on clean structure and attention to detail.</span></div>
@@ -38,9 +35,7 @@
             and the occasional friday fika. Whether the role is focused on frontend, backend or fullstack, I'm always
             looking to contribute, improve and build meaningful digital experiences.</span>
         </div>
-
     </div>
-
 </section>
 
 <style>

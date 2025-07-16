@@ -2,23 +2,51 @@
     import {base} from '$app/paths';
     import {t} from 'svelte-i18n';
 
-    import {LinkButton, ProjectItem, TechStackIcon, Timeline} from '$lib';
+    import {Button, LinkButton, ProjectItem, TechStackIcon, Timeline} from '$lib';
 </script>
 
-<section class="heroSection mt-7 mb-7 ms-10 me-10 p-6 animatedElement">
+<section class="heroSection animatedElement">
+    <!-- The divs color-overlay and bg-image only makes the bg appear like it should -->
+    <div class="color-overlay"></div>
+    <div class="bg-image"></div>
     <div class="container">
-        <div class="row h-100 d-flex align-center">
-            <div class="d-flex imgContainer col-lg-6">
-                <img class="h-fit w-100" src="{base}/resources/images/3V6A4207_cropped.png" alt="Me"/>
-            </div>
-            <div class="d-flex flex-col justify-center infoContainer col-lg-6">
-                <div class="header d-flex flex-col justify-end h-100 mb-4">
-                    <h1>Jonatan Ljung</h1>
-                    <p>{$t('homePage.heroSection.homeTitle')}</p>
+        <div class="row h-100 d-flex justify-between align-center">
+            <div class="d-flex flex-col justify-center infoContainer col-md-12 col-lg-6">
+                <div class="header d-flex flex-col h-100">
+                    <h1>{$t('homePage.heroSection.homeTitle')}</h1>
+                    <h4>
+                        <span class="jobtitle">{$t('homePage.heroSection.homeJobtitle')}</span>
+                        <span>{$t('homePage.heroSection.homeSubtitle')}</span>
+                    </h4>
                 </div>
-                <p class="h-100">{$t('homePage.heroSection.homeIntroduction')}</p>
+                <p class="h-100 my-5">{$t('homePage.heroSection.homeIntroduction')}</p>
+                <div class="d-flex">
+                    <Button label="{$t('button.contact')}" buttonProps="btnPrimary fontBold me-5"></Button>
+                    <Button label="{$t('button.projects')}" buttonProps="btnSecondary outline fontBold"></Button>
+                </div>
+            </div>
+            <div class="d-flex justify-center imgContainer col-lg-6 col-xl-5">
+                <img height="100%" width="100%"
+                     src="{base}/resources/images/3V6A4207_cropped.png"
+                     alt="Me"/>
             </div>
         </div>
+    </div>
+    <div class="arrowContainer">
+        <svg
+                width="48"
+                height="24"
+                viewBox="0 0 48 24"
+                id="arrow"
+                xmlns="http://www.w3.org/2000/svg">
+            <path
+                    d="M 46.5,1.5 24.468525,22.351655 c -0.2739,0.259267 -0.66315,0.259267 -0.93705,0 L 1.5,1.5"
+                    stroke-width="2.82307"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    style="fill-opacity: 0"
+                    id="path1"/>
+        </svg>
     </div>
 </section>
 <section class="animatedElement">
@@ -146,7 +174,7 @@
     section {
         max-width: 100%;
 
-        padding: 4rem 10rem 6rem;
+        padding: 4rem 9rem 6rem;
 
         /* Give the sections after the first one alternating background colors */
         &:not(:first-child) {
@@ -160,34 +188,63 @@
 
     .heroSection {
         /* This height makes the first section of the home page fill the entire view, for design purposes */
-        height: calc(100vh - 12rem);
-
-        background-color: var(--bg-light);
-        border: 1px solid var(--border-muted);
-        border-top-color: var(--highlight);
-        border-radius: 12px;
-
-        box-shadow: var(--shadow);
+        height: 100vh;
         overflow: hidden;
+        position: relative;
+
+        .bg-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('/resources/background-new.png');
+            background-size: cover;
+            background-position: center;
+
+            z-index: 1;
+            height: inherit;
+            width: inherit;
+        }
+
+        .color-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: var(--primary-bg);
+            mix-blend-mode: hard-light;
+            z-index: 2;
+            height: inherit;
+            width: inherit;
+        }
+
+        .container {
+            position: absolute;
+            inset: 4rem 9rem 6rem;
+            z-index: 3;
+            height: calc(100vh - 4rem);
+            width: inherit;
+        }
+
+        .jobtitle {
+            color: var(--primary);
+            font-weight: bolder;
+        }
 
         .imgContainer {
             img {
-                border-radius: 12px;
-                border: 2px solid var(--border-muted);
+                border-radius: 50%;
+                border: 2px solid var(--primary);
                 object-fit: cover;
-                max-width: 35rem;
                 aspect-ratio: 1/1;
             }
         }
 
-        .infoContainer .header h1 {
-            color: var(--primary);
-        }
+        .arrowContainer {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            z-index: 3;
 
-        .infoContainer .header p {
-            font-style: italic;
-            font-weight: bold;
-            color: var(--text-muted);
+            svg {
+                color: var(--border-muted);
+            }
         }
     }
 
