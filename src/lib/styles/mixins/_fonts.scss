@@ -39,12 +39,14 @@ $fontSizes: (
 
   html,
   body {
-    color: var(--text-muted);
+    color: var(--text);
     font-family: 'Nunito sans', sans-serif;
   }
 }
 
 @mixin fontStyles() {
+  .textMuted {color: var(--text-muted)};
+
   .fontBold {font-weight: bold};
 
   .fontItalic {font-style: italic;}
