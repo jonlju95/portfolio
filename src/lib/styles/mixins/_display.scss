@@ -15,6 +15,14 @@
   .justify-between { justify-content: space-between; }
 
   .align-center { align-items: center; }
+  .align-start { align-items: flex-start; }
+  .align-end { align-items: flex-end; }
 
   .content-center { align-content: center; }
+}
+
+// Generates classes for positioning
+@mixin positioning() {
+  .relative {position: relative};
+  .absolute {position: absolute !important;}
 }

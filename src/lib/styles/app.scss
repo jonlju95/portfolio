@@ -3,6 +3,7 @@
 @use 'mixins/grid' as *;
 @use 'mixins/spacing' as *;
 @use 'mixins/display' as *;
+@use 'mixins/button' as *;
 
 @include columns;
 @include rows;
@@ -13,6 +14,9 @@
 
 @include flexPositioning;
 @include display;
+@include positioning;
+
+@include buttonStyles;
 
 [data-theme="light"] {
   @include light;

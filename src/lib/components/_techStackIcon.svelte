@@ -10,18 +10,19 @@
 <style>
     .techStackIcon {
         width: fit-content;
-        padding: 1rem;
-        margin: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &:nth-child(n+2) {
+            margin-left: 4rem;
+        }
 
         img {
             height: 5rem;
         }
 
         p {
-
             font-weight: bold;
             margin: 0.5rem 0 0;
         }

@@ -7,12 +7,15 @@ $fontSizes: (
         h4: 1.953rem,
         p: 1rem,
         label: 0.75rem,
-        button: 0.75rem
+        button: 0.75rem,
+        a: 0.75rem
 );
 
 @mixin fontSizes() {
   @each $fontSize, $value in $fontSizes {
-    #{$fontSize} { font-size: #{$value}; }
+    #{$fontSize} {
+      font-size: #{$value};
+    }
   }
 
   h1,
@@ -20,7 +23,8 @@ $fontSizes: (
   h3,
   h4,
   button,
-  label {
+  label,
+  a {
     color: var(--text);
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
@@ -28,7 +32,8 @@ $fontSizes: (
   }
 
   button,
-  label {
+  label,
+  a {
     letter-spacing: 1px;
   }
 
@@ -45,9 +50,23 @@ $fontSizes: (
 }
 
 @mixin fontStyles() {
-  .textMuted {color: var(--text-muted)};
+  .textPrimary {
+    color: var(--primary);
+  }
 
-  .fontBold {font-weight: bold};
+  .textSecondary {
+    color: var(--secondary);
+  }
 
-  .fontItalic {font-style: italic;}
+  .textMuted {
+    color: var(--text-muted);
+  }
+
+  .fontBold {
+    font-weight: bold
+  }
+
+  .fontItalic {
+    font-style: italic;
+  }
 }

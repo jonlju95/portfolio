@@ -20,7 +20,7 @@
         </ul>
     </div>
     {#if link}
-        <LinkButton {link} btnLabel="Github Repo" newTab={true}/>
+        <LinkButton buttonProps="btnSecondary outline" {link} btnLabel="Github Repo" newTab={true}/>
     {/if}
 </div>
 

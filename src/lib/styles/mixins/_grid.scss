@@ -20,7 +20,7 @@ $columnWidths: (
 @mixin columns() {
   @include xs {
     @each $columnWidth, $width in $columnWidths {
-      .col-#{$columnWidth} {
+      .col-xs-#{$columnWidth} {
         max-width: #{$width};
       }
     }
@@ -65,6 +65,14 @@ $columnWidths: (
       }
     }
   }
+
+  @each $columnWidth, $width in $columnWidths {
+    .col-#{$columnWidth} {
+      max-width: #{$width};
+    }
+  }
+
+
 
   [class^='col-'],
   [class*='col-'] {

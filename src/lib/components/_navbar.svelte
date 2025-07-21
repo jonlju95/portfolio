@@ -148,7 +148,7 @@
 
     &.scrolled {
       transition: none !important;
-      background-color: var(--bg-light);
+      background-color: var(--bg-bright);
       box-shadow: var(--shadow);
 
       .navbarIcon {
@@ -159,7 +159,7 @@
     }
 
     .navbarIcon {
-      background-color: var(--bg-light);
+      background-color: var(--bg-bright);
       color: var(--primary);
       padding: 0 0.75rem;
       aspect-ratio: 1 / 1;

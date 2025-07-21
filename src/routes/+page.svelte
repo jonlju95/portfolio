@@ -22,13 +22,14 @@
                 <p class="h-100 my-5">{$t('homePage.heroSection.homeIntroduction')}</p>
                 <div class="d-flex">
                     <Button label="{$t('button.contact')}" buttonProps="btnPrimary fontBold me-5"></Button>
-                    <Button label="{$t('button.projects')}" buttonProps="btnSecondary outline fontBold"></Button>
+                    <LinkButton link="{base}/projects" btnLabel="{$t('button.projects')}"
+                                buttonProps="btnSecondary outline fontBold"></LinkButton>
                 </div>
             </div>
             <div class="d-flex justify-center imgContainer col-lg-6 col-xl-5">
                 <img height="100%" width="100%"
                      src="{base}/resources/images/3V6A4207_cropped.png"
-                     alt="Me"/>
+                     alt="Me smiling at the camera"/>
             </div>
         </div>
     </div>
@@ -51,13 +52,21 @@
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.aboutSection.aboutTitle')}</h2>
-    <div class="container">
-        <p class="d-flex flex-col ms-3">
-            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span1')}</span>
-            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span2')}</span>
-            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span3')}</span>
-            <span class="mb-3">{$t('homePage.aboutSection.aboutText.span4')}</span>
-        </p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-xl-4">
+                <h4 class="textPrimary">{$t('homePage.aboutSection.item1.title')}</h4>
+                <p class="textMuted">{$t('homePage.aboutSection.item1.description')}</p>
+            </div>
+            <div class="col-xl-4">
+                <h4 class="textPrimary">{$t('homePage.aboutSection.item2.title')}</h4>
+                <p class="textMuted">{$t('homePage.aboutSection.item2.description')}</p>
+            </div>
+            <div class="col-xl-4">
+                <h4 class="textPrimary">{$t('homePage.aboutSection.item3.title')}</h4>
+                <p class="textMuted">{$t('homePage.aboutSection.item3.description')}</p>
+            </div>
+        </div>
     </div>
 </section>
 <section class="animatedElement">
@@ -66,11 +75,11 @@
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.techSection.title')}</h2>
-    <div class="container techStackContainer">
-        <p class="ms-3">{$t('homePage.techSection.subtitle')}</p>
-        <div class="mt-3 ms-3 techStackCategory">
-            <h4>Frontend</h4>
-            <div class="row">
+    <p>{$t('homePage.techSection.subtitle')}</p>
+    <div class="container techStackContainer mt-5">
+        <div class="techStackCategory">
+            <h4 class="textPrimary">Frontend</h4>
+            <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                         title="Html"/>
@@ -91,9 +100,9 @@
                         title="React"/>
             </div>
         </div>
-        <div class="mt-3 ms-3 techStackCategory">
-            <h4>Backend</h4>
-            <div class="row">
+        <div class="techStackCategory mt-4">
+            <h4 class="textPrimary">Backend</h4>
+            <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
                         title="Java"/>
@@ -102,9 +111,9 @@
                         title="C#"/>
             </div>
         </div>
-        <div class="mt-3 ms-3 techStackCategory">
-            <h4>{$t('homePage.techSection.db')}</h4>
-            <div class="row">
+        <div class="techStackCategory mt-4">
+            <h4 class="textPrimary">{$t('homePage.techSection.db')}</h4>
+            <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
@@ -116,15 +125,18 @@
                         title="MongoDB"/>
             </div>
         </div>
-        <div class="mt-3 ms-3 techStackCategory">
-            <h4>{$t('homePage.techSection.tools')}</h4>
-            <div class="row">
+        <div class="techStackCategory mt-4">
+            <h4 class="textPrimary">{$t('homePage.techSection.tools')}</h4>
+            <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                         title="Jira"/>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
                         title="Git"/>
+                <TechStackIcon
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
+                        title="Docker"/>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
                         title="Postman"/>
@@ -178,7 +190,7 @@
 
         /* Give the sections after the first one alternating background colors */
         &:not(:first-child) {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-dim);
         }
 
         &:nth-child(even) {

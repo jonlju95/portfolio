@@ -2,13 +2,13 @@
     import {t} from 'svelte-i18n';
 </script>
 
-<footer class="footer py-4 px-5">
+<footer class="footer px-5">
     <section>
         <h3>2025</h3>
         <p>{$t('footer.credits')}</p>
     </section>
-    <section class="contactSection">
-        <p>
+    <section class="contactSection d-flex flex-col justify-center">
+        <p class="p-2">
             <svg
                     width="24"
                     height="24"
@@ -30,7 +30,7 @@
             </svg>
             <span>(+46) 073-395 00 15</span>
         </p>
-        <p>
+        <p class="p-2">
             <svg
                     width="24"
                     height="18"
@@ -64,9 +64,7 @@
         width: 100%;
         height: 8rem;
 
-        padding: 1.75rem 2.5rem;
-
-        background-color: var(--bg-light);
+        background-color: var(--bg-bright);
         color: var(--text);
         border-top: 1px solid var(--highlight);
 
@@ -81,12 +79,12 @@
             p {
                 display: flex;
                 align-items: center;
-                height: 50%;
 
                 svg {
                     margin-right: 1rem;
                     color: var(--text);
-                    fill: var(--text-muted);
+                    fill: none;
+                    stroke-width: 1px;
                 }
             }
         }
