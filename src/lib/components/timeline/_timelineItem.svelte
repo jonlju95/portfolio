@@ -54,10 +54,11 @@
 <style>
     .timelineItem {
         margin-bottom: 3rem;
+        padding-top: 1rem;
     }
 
     svg {
-        margin-top: 0.875rem;
+        margin-top: 0.5rem;
         fill: var(--bg-bright);
         color: var(--primary);
     }

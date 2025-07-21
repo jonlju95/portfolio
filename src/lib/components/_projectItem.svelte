@@ -9,56 +9,37 @@
     } = $props();
 </script>
 
-<div class="projectCard">
-    <h4>{title}</h4>
-    <div>
-        <p class="cardDescription">{description}</p>
-        <ul class="cardList">
-            {#each techStack as tech}
-                <li><p>{tech}</p></li>
-            {/each}
-        </ul>
-    </div>
+<div class="projectCard w-100 h-100 p-4 d-flex flex-col">
+    <h3 class="textPrimary">{title}</h3>
+    <p class="techStacks d-flex font-bold textMuted">
+        {#each techStack as tech, i}
+            <span>{tech}</span>
+            {#if i < techStack.length - 1}
+                <span class="mx-1">|</span>
+            {/if}
+        {/each}
+    </p>
+    <p class="h-100 mt-4">{description}</p>
     {#if link}
-        <LinkButton buttonProps="btnSecondary outline" {link} btnLabel="Github Repo" newTab={true}/>
+        <div class="w-100 d-flex justify-end">
+            <LinkButton buttonProps="btnSecondary outline" {link} btnLabel="Github Repo" newTab={true}/>
+        </div>
     {/if}
 </div>
 
 <style>
     .projectCard {
-        width: 100%;
-        height: 100%;
         min-width: 20rem;
         min-height: 20rem;
-        padding: 2rem;
-        background: var(--gradient);
+        background-color: var(--bg-bright);
         border: 1px solid var(--border-muted);
-        border-top-color: var(--highlight);
         border-radius: 12px;
         box-shadow: var(--shadow);
         display: flex;
         flex-direction: column;
 
-        div {
-            display: flex;
-            height: 100%;
-            margin: 1rem 0;
+        .techStacks {
+            letter-spacing: 1px;
         }
-    }
-
-    .cardList {
-        margin: 0;
-        padding-left: 1.5rem;
-        width: 100%;
-        list-style: none;
-        max-width: 6rem;
-        font-weight: bold;
-        font-style: italic;
-    }
-
-    .cardDescription {
-        border-right: 1px solid var(--border-muted);
-        width: 100%;
-        padding-right: 1rem;
     }
 </style>

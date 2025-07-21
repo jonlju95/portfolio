@@ -1,0 +1,39 @@
+@use '../variables' as *;
+
+@mixin heading-size() {
+  @each $heading, $size in $heading-sizes {
+    #{$heading} {
+      font-size: $size !important;
+    }
+  }
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin font-weight() {
+  @each $font-weight, $weight in $font-weights {
+    .#{$font-weight} {
+      font-weight: $weight !important;
+    }
+  }
+}
+
+@mixin font-styles() {
+  .textPrimary {
+    color: var(--primary) !important;
+  }
+
+  .textSecondary {
+    color: var(--secondary) !important;
+  }
+
+  .textMuted {
+    color: var(--text-muted) !important;
+  }
+
+  .fontItalic {
+    font-style: italic !important;
+  }
+}

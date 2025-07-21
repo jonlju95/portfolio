@@ -1,0 +1,52 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@use '../../variables' as *;
+@use '../breakpoints' as *;
+
+/* Generates classes for columns, with their respective breakpoint in the name, i.e. .col-md- */
+@mixin makeGridColumns() {
+  @each $breakpoint, $width in $grid-breakpoints {
+    $name: breakpointName($breakpoint, $grid-breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+
+      .col#{$name} {
+        flex: 1 0 0;
+      }
+
+      .col#{$name}-auto {
+        @include makeColAuto();
+      }
+
+      @for $i from 1 through 12 {
+        .col#{$name}-#{$i} {
+          @include makeCol($i, 12);
+        }
+      }
+    }
+  }
+}
+
+@mixin makeColReady() {
+  flex-shrink: 0;
+  width: 100% !important;
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@mixin makeCol($size: false, $columns: 12) {
+  @if $size {
+    flex: 0 0 auto;
+    width: math.percentage(calc($size / $columns)) !important;
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+@mixin makeColAuto() {
+  flex: 0 0 auto;
+  width: auto !important;
+}

@@ -1,0 +1,6 @@
+@mixin makeRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -32px;
+    margin-right: -32px;
+}

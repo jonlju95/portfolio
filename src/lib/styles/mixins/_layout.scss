@@ -1,0 +1,63 @@
+@use "../variables" as *;
+
+// Generates classes for display properties
+@mixin display() {
+  .d-flex { display: flex; }
+  .d-none { display: none; }
+  .d-block  { display: block; }
+  .d-inline { display: inline; }
+}
+
+// Generates classes for flex-specific properties
+@mixin flexPositioning() {
+  .flex-col { flex-direction: column; }
+
+  .justify-center { justify-content: center; }
+  .justify-end { justify-content: end; }
+  .justify-between { justify-content: space-between; }
+
+  .align-center { align-items: center; }
+  .align-start { align-items: flex-start; }
+  .align-end { align-items: flex-end; }
+
+  .content-center { align-content: center; }
+}
+
+// Generates classes for positioning
+@mixin positioning() {
+  .relative {position: relative};
+  .absolute {position: absolute !important;}
+}
+
+// Generates classes for margins and paddings. ms/ps is left and me/pe is right
+@mixin spacings() {
+  @each $size, $value in $sizes {
+    .mt-#{$size} {margin-top: $value !important;}
+    .mb-#{$size} {margin-bottom: $value !important;}
+    .ms-#{$size} {margin-left: $value !important;}
+    .me-#{$size} {margin-right: $value !important;}
+    .m-#{$size} {margin: $value !important;}
+    .mx-#{$size} {margin-left: $value !important; margin-right: $value !important;}
+    .my-#{$size} {margin-top: $value !important; margin-bottom: $value !important;}
+
+    .pt-#{$size} {padding-top: $value !important;}
+    .pb-#{$size} {padding-bottom: $value !important;}
+    .ps-#{$size} {padding-left: $value !important;}
+    .pe-#{$size} {padding-right: $value !important;}
+    .p-#{$size} {padding: $value !important;}
+    .px-#{$size} {padding-left: $value !important; padding-right: $value !important;}
+    .py-#{$size} {padding-top: $value !important; padding-bottom: $value !important;}
+  }
+}
+
+// Generates classes for height and width
+@mixin sizes() {
+  @each $percentage, $value in $percentages {
+    .h-#{$percentage} {height: #{$value} !important;}
+
+    .w-#{$percentage} {width: #{$value} !important;}
+  }
+
+  .h-fit {height: fit-content !important;}
+  .w-fit {width: fit-content !important;}
+}

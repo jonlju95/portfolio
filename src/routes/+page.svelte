@@ -14,10 +14,10 @@
             <div class="d-flex flex-col justify-center infoContainer col-md-12 col-lg-6">
                 <div class="header d-flex flex-col h-100">
                     <h1>{$t('homePage.heroSection.homeTitle')}</h1>
-                    <h4>
+                    <h3>
                         <span class="jobtitle">{$t('homePage.heroSection.homeJobtitle')}</span>
                         <span>{$t('homePage.heroSection.homeSubtitle')}</span>
-                    </h4>
+                    </h3>
                 </div>
                 <p class="h-100 my-5">{$t('homePage.heroSection.homeIntroduction')}</p>
                 <div class="d-flex">
@@ -55,15 +55,15 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-xl-4">
-                <h4 class="textPrimary">{$t('homePage.aboutSection.item1.title')}</h4>
+                <h3 class="textPrimary">{$t('homePage.aboutSection.item1.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item1.description')}</p>
             </div>
             <div class="col-xl-4">
-                <h4 class="textPrimary">{$t('homePage.aboutSection.item2.title')}</h4>
+                <h3 class="textPrimary">{$t('homePage.aboutSection.item2.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item2.description')}</p>
             </div>
             <div class="col-xl-4">
-                <h4 class="textPrimary">{$t('homePage.aboutSection.item3.title')}</h4>
+                <h3 class="textPrimary">{$t('homePage.aboutSection.item3.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item3.description')}</p>
             </div>
         </div>
@@ -75,10 +75,10 @@
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.techSection.title')}</h2>
-    <p>{$t('homePage.techSection.subtitle')}</p>
+    <p class="mt-2">{$t('homePage.techSection.subtitle')}</p>
     <div class="container techStackContainer mt-5">
         <div class="techStackCategory">
-            <h4 class="textPrimary">Frontend</h4>
+            <h3 class="textPrimary">Frontend</h3>
             <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h4 class="textPrimary">Backend</h4>
+            <h3 class="textPrimary">Backend</h3>
             <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h4 class="textPrimary">{$t('homePage.techSection.db')}</h4>
+            <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>
             <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h4 class="textPrimary">{$t('homePage.techSection.tools')}</h4>
+            <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>
             <div class="row ms-5 py-4">
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
@@ -149,36 +149,35 @@
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.projectSection.title')}</h2>
+    <p class="mt-2">{$t('homePage.projectSection.subtitle')}</p>
     <div class="container">
-        <p class="ms-3">{$t('homePage.projectSection.subtitle')}</p>
-        <div class="row d-flex ms-3 mb-4 mt-4 justify-between">
-            <div class="col-lg-6 col-xl-4">
+        <div class="row mb-4 mt-4">
+            <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
                 <ProjectItem
                         title="Personal economy"
                         techStack={['Svelte', 'TypeScript', 'HTML/CSS']}
                         description={$t('projectPage.projectItems.item2.description')}
                         link="https://github.com/jonlju95/personalEconomyApp"/>
             </div>
-            <div class="col-lg-6 col-xl-4">
+            <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
                 <ProjectItem
                         title="Customer Product Website"
                         techStack={['Java', 'Html', 'Css']}
                         description={$t('projectPage.projectItems.item3.description')}
                         link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
             </div>
-            <div class="col-lg-6 col-xl-4">
+            <div class="col-md col-lg-6 col-xxl-4 mb-5">
                 <ProjectItem
                         title="Rock, Paper, Scissors"
                         techStack={['JavaScript', 'Html', 'Css', 'React']}
                         description={$t('projectPage.projectItems.item4.description')}
                         link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
             </div>
-
         </div>
-        <div class="d-flex justify-end mt-3">
-            <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"
-                        newTab={false}/>
-        </div>
+    </div>
+    <div class="w-100 d-flex justify-end mt-3">
+        <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"
+                    newTab={false}/>
     </div>
 </section>
 
@@ -189,6 +188,7 @@
         padding: 4rem 9rem 6rem;
 
         /* Give the sections after the first one alternating background colors */
+
         &:not(:first-child) {
             background-color: var(--bg-dim);
         }
@@ -230,8 +230,8 @@
             position: absolute;
             inset: 4rem 9rem 6rem;
             z-index: 3;
-            height: calc(100vh - 4rem);
             width: inherit;
+            padding: 0;
         }
 
         .jobtitle {

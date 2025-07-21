@@ -1,71 +1,23 @@
-@use 'mixins/theme' as *;
-@use 'mixins/fonts' as *;
-@use 'mixins/grid' as *;
-@use 'mixins/spacing' as *;
-@use 'mixins/display' as *;
+@use "variables";
+@use "variables-dark";
+@use "root";
+@use "reboot";
+
+@use 'grid' as *;
+
+@use "mixins/font" as *;
+@use 'mixins/layout' as *;
 @use 'mixins/button' as *;
 
-@include columns;
-@include rows;
-@include container;
+@include spacings();
+@include sizes();
 
-@include spacings;
-@include sizes;
+@include flexPositioning();
+@include display();
+@include positioning();
 
-@include flexPositioning;
-@include display;
-@include positioning;
+@include button-styles();
 
-@include buttonStyles;
-
-[data-theme="light"] {
-  @include light;
-}
-
-[data-theme="dark"] {
-  @include dark;
-}
-
-@include fontSizes;
-@include fontStyles;
-
-html,
-body {
-  position: relative;
-
-  width: 100vw;
-  height: 100vh;
-
-  overflow-x: hidden;
-
-  .animatedElement * {
-    transition: background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
-
-    svg,
-    use {
-      transition: stroke 0.3s ease-in-out,
-      fill 0.3s ease-in-out;
-    }
-  }
-}
-
-// Makes every element on the page account for their paddings and borders when calculating width and height.
-// Also makes the default margin and padding 0
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  width: 100vw;
-  margin-top: -5rem;
-}
-
-.clickable {
-  cursor: pointer;
-}
+@include heading-size();
+@include font-weight();
+@include font-styles();

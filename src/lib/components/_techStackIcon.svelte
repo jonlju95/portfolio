@@ -9,13 +9,13 @@
 
 <style>
     .techStackIcon {
-        width: fit-content;
+        max-width: fit-content;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         &:nth-child(n+2) {
-            margin-left: 4rem;
+            margin-left: 3rem;
         }
 
         img {
@@ -23,7 +23,9 @@
         }
 
         p {
+            font-family: 'Nunito', sans-serif;
             font-weight: bold;
+            letter-spacing: 1px;
             margin: 0.5rem 0 0;
         }
     }

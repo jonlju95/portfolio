@@ -1,0 +1,19 @@
+@use 'variables' as *;
+@use 'variables-dark' as *;
+
+:root,
+[data-theme="light"] {
+  @each $color, $value in $light {
+    --#{$color}: #{$value};
+  }
+
+  @if $font-size-root != null {
+    --root-font-size: #{$font-size-root};
+  }
+}
+
+[data-theme="dark"] {
+  @each $color, $value in $dark {
+    --#{$color}: #{$value};
+  }
+}

@@ -51,7 +51,7 @@
 <div id="scroll-sentinel" style="position: absolute; top: 25vh; height: 1px;"></div>
 
 <header class:scrolled={$scrolled} class="ps-4 pe-5">
-    <h3 class="navbarIcon d-flex align-center justify-center">jL</h3>
+    <h2 class="navbarIcon d-flex align-center justify-center">jL</h2>
     <nav class="h-100 w-100 px-4">
         <ul class="linkList h-100">
             <li class="h-100"><a href="{ base }/" class="h-100 clickable d-flex align-center justify-center"

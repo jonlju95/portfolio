@@ -24,7 +24,7 @@
 <style>
     .lineContainer {
         top: 0;
-        left: calc(calc(100% * 1/12 * 4) + (1rem * 4) - 1px);
+        left: calc(calc(100% * 1/12 * 4) + (15px * 4) + 1px);
 
         height: calc(100% + 3rem);
 
