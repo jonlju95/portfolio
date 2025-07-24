@@ -2,7 +2,68 @@
     import {base} from '$app/paths';
     import {t} from 'svelte-i18n';
 
+    import type {TimelineItem} from "$lib";
     import {Button, LinkButton, ProjectItem, TechStackIcon, Timeline} from '$lib';
+
+    // The property values are the keys for the translation json. For actual value, see translations/en.json or
+    // translations/se.json
+    export const timelineItems: TimelineItem[] = [
+        {
+            title: 'homePage.experienceSection.resumeItems.item1.title',
+            months: 'homePage.experienceSection.resumeItems.item1.months',
+            years: '2025 - 2026',
+            description: 'homePage.experienceSection.resumeItems.item1.description',
+            icon: 'education'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item2.title',
+            months: 'homePage.experienceSection.resumeItems.item2.months',
+            years: '2021 - 2024',
+            description: 'homePage.experienceSection.resumeItems.item2.description',
+            icon: 'job'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item5.title',
+            months: 'homePage.experienceSection.resumeItems.item5.months',
+            years: '2019 - 2021',
+            description: 'homePage.experienceSection.resumeItems.item5.description',
+            icon: 'education'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item3.title',
+            months: 'homePage.experienceSection.resumeItems.item3.months',
+            years: '2019',
+            description: 'homePage.experienceSection.resumeItems.item3.description',
+            icon: 'job'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item4.title',
+            months: 'homePage.experienceSection.resumeItems.item4.months',
+            years: '2018',
+            description: 'homePage.experienceSection.resumeItems.item4.description',
+            icon: 'job'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item6.title',
+            months: 'homePage.experienceSection.resumeItems.item6.months',
+            years: '2018',
+            description: 'homePage.experienceSection.resumeItems.item6.description',
+            icon: 'education'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item7.title',
+            months: 'homePage.experienceSection.resumeItems.item7.months',
+            years: '2017 - 2018',
+            description: 'homePage.experienceSection.resumeItems.item7.description',
+            icon: 'education'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item8.title',
+            months: 'homePage.experienceSection.resumeItems.item8.months',
+            years: '2015 - 2018',
+            description: 'homePage.experienceSection.resumeItems.item8.description',
+            icon: 'job'
+        }, {
+            title: 'homePage.experienceSection.resumeItems.item9.title',
+            months: 'homePage.experienceSection.resumeItems.item9.months',
+            years: '2011 - 2014',
+            description: 'homePage.experienceSection.resumeItems.item9.description',
+            icon: 'education'
+        },
+    ]
 </script>
 
 <section class="heroSection animatedElement">
@@ -71,7 +132,7 @@
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.experienceSection.title')}</h2>
-    <Timeline/>
+    <Timeline {timelineItems}/>
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.techSection.title')}</h2>
@@ -181,87 +242,96 @@
     </div>
 </section>
 
-<style>
-    section {
-        max-width: 100%;
+<style lang="scss">
+  section {
+    max-width: 100%;
 
-        padding: 4rem 9rem 6rem;
+    padding: 4rem 9rem 6rem;
 
-        /* Give the sections after the first one alternating background colors */
+    position: relative;
 
-        &:not(:first-child) {
-            background-color: var(--bg-dim);
-        }
-
-        &:nth-child(even) {
-            background-color: var(--bg);
-        }
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--background-img);
+      opacity: 0.02;
     }
 
-    .heroSection {
-        /* This height makes the first section of the home page fill the entire view, for design purposes */
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-
-        .bg-image {
-            position: absolute;
-            inset: 0;
-            background-image: url('/resources/background-new.png');
-            background-size: cover;
-            background-position: center;
-
-            z-index: 1;
-            height: inherit;
-            width: inherit;
-        }
-
-        .color-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: var(--primary-bg);
-            mix-blend-mode: hard-light;
-            z-index: 2;
-            height: inherit;
-            width: inherit;
-        }
-
-        .container {
-            position: absolute;
-            inset: 4rem 9rem 6rem;
-            z-index: 3;
-            width: inherit;
-            padding: 0;
-        }
-
-        .jobtitle {
-            color: var(--primary);
-            font-weight: bolder;
-        }
-
-        .imgContainer {
-            img {
-                border-radius: 50%;
-                border: 2px solid var(--primary);
-                object-fit: cover;
-                aspect-ratio: 1/1;
-            }
-        }
-
-        .arrowContainer {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 50%;
-            z-index: 3;
-
-            svg {
-                color: var(--border-muted);
-            }
-        }
+    /* Give the sections after the first one alternating background colors */
+    &:not(:first-child) {
+      background-color: var(--bg-dim);
     }
 
-    .techStackCategory {
-        border-bottom: 1px solid var(--border-muted);
+    &:nth-child(even) {
+      background-color: var(--bg);
     }
+  }
+
+  .heroSection {
+    /* This height makes the first section of the home page fill the entire view, for design purposes */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .bg-image {
+      position: absolute;
+      inset: 0;
+      background-image: url('/resources/background-new.png');
+      background-size: cover;
+      background-position: center;
+
+      z-index: 1;
+      height: inherit;
+      width: inherit;
+    }
+
+    .color-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: var(--primary-bg);
+      mix-blend-mode: hard-light;
+      z-index: 2;
+      height: inherit;
+      width: inherit;
+    }
+
+    .container {
+      position: absolute;
+      inset: 4rem 9rem 6rem;
+      z-index: 3;
+      width: inherit;
+      padding: 0;
+    }
+
+    .jobtitle {
+      color: var(--primary);
+      font-weight: bolder;
+    }
+
+    .imgContainer {
+      img {
+        border-radius: 50%;
+        border: 2px solid var(--primary);
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    .arrowContainer {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      z-index: 3;
+
+      svg {
+        color: var(--border-muted);
+      }
+    }
+  }
+
+  .techStackCategory {
+    border-bottom: 1px solid var(--border-muted);
+  }
 
 </style>

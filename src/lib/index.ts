@@ -9,4 +9,5 @@ export { default as TechStackIcon } from './components/_techStackIcon.svelte';
 export { default as ProjectItem } from './components/_projectItem.svelte';
 
 export { default as Timeline } from './components/timeline/_timeline.svelte';
-export { default as TimelineItem } from './components/timeline/_timelineItem.svelte';
+
+export type { TimelineItem } from './data/timelineItem';

@@ -136,5 +136,34 @@
   "button": {
     "projects": "Projects",
     "contact": "Contact me"
+  },
+  "aboutPage": {
+    "heroSection": {
+      "description": "I’m Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I             specialize in Angular, TypeScript, Java, and PostgreSQL — and I’m always expanding my skills to become a             stronger fullstack developer.",
+      "title": "About me"
+    },
+    "journeySection": {
+      "title": "My journey",
+      "description": {
+        "span1": "During my time at INBooks, I’ve worked on projects ranging from AngularJS migrations to new feature development.",
+        "span2": "I’ve handled both frontendUI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products."
+      },
+      "resumeItems": {
+        "item1": {
+          "title": "Web developer at INBooks",
+          "description": "Worked with AngularJS and Angular, as well as backend integrations with PostgreSQL"
+        },
+        "item2": {
+          "title": "Learning new languages and tools",
+          "years": "2024 - Present",
+          "description": "Started learning new languages and frameworks, like C# and Flutter, as well as Docker"
+        },
+        "item3": {
+          "title": "Labour market education at Lexicon",
+          "years": "2025 - Present",
+          "description": "Supplementary education focused on C#, but also React, databases and some AI engineering"
+        }
+      }
+    }
   }
 }

@@ -28,6 +28,7 @@ $light: (
   //"primary-bg": oklch(0.715 0.058 265.607),
         "shadow": (0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1)),
         "blend-mode": screen,
+        "background-img": url('/resources/images/noisy.png'),
 );
 
 /* Possible blue alternative to primary red? */

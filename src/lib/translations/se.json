@@ -136,5 +136,34 @@
   "button": {
     "projects": "Projekt",
     "contact": "Kontakta mig"
+  },
+  "aboutPage": {
+    "heroSection": {
+      "description": "",
+      "title": "Om mig"
+    },
+    "journeySection": {
+      "title": "",
+      "description": {
+        "span1": "",
+        "span2": ""
+      },
+      "resumeItems": {
+        "item1": {
+          "title": "",
+          "description": ""
+        },
+        "item2": {
+          "title": "",
+          "years": "",
+          "description": ""
+        },
+        "item3": {
+          "title": "",
+          "years": "",
+          "description": ""
+        }
+      }
+    }
   }
 }
