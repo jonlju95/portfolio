@@ -98,6 +98,65 @@
       "tools": "Tools"
     }
   },
+  "aboutPage": {
+  "heroSection": {
+    "description": "I’m Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I specialize in Angular, TypeScript, Java, and PostgreSQL — and I’m always expanding my skills to become a stronger fullstack developer.",
+    "title": "About me"
+  },
+  "journeySection": {
+    "title": "My journey",
+    "description": {
+      "span1": "During my time at INBooks, I’ve worked on projects ranging from AngularJS migrations to new feature development.",
+      "span2": "I’ve handled both frontend UI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products."
+    },
+    "resumeItems": {
+      "item1": {
+        "title": "Web developer at INBooks",
+        "description": "Worked with AngularJS and Angular, as well as backend integrations with PostgreSQL"
+      },
+      "item2": {
+        "title": "Learning new languages and tools",
+        "years": "2024 - Present",
+        "description": "Started learning new languages and frameworks, like C# and Flutter, as well as Docker"
+      },
+      "item3": {
+        "title": "Labour market education at Lexicon",
+        "years": "2025 - Present",
+        "description": "Supplementary education focused on C#, but also React, databases and some AI engineering"
+      }
+    }
+  },
+  "skillsSection": {
+    "title": "My approach to development",
+    "bulletPoint1": "Clean code",
+    "bulletPoint2": "Attention to Detail",
+    "bulletPoint3": "User-Centric Design",
+    "description": "I enjoy creating clean, functional, and maintainable solutions with a strong focus on user experience. I believe that good design and solid technical choices go hand-in-hand, shaping how users experience a product."
+  },
+  "personalSection": {
+    "title": "Beyond code",
+    "description": "I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a strong interest in cooking, baking, gaming, and the odd fascination with animal behavior — especially hyenas.",
+    "funFacts": {
+      "title": "Fun facts about me",
+      "subtitle1": "Cooking & baking experiments",
+      "description1": "I love making sourdough and trying new dishes.",
+      "subtitle2": "Cycling & nature",
+      "description2": "Spending time outdoors keeps me balanced.",
+      "subtitle3": "Gaming & curiosity",
+      "description3": "Always exploring new topics, from RPGs to animal behaviour."
+    }
+  },
+  "futureSection": {
+    "title": "Where I'm headed",
+    "description": "I’m currently living in Växjö, Småland, but I’m open to opportunities across southern Sweden. I’m drawn to teams that value collaboration, clear communication, and continuous learning - with the occasional friday fika, of course."
+  },
+  "contactSection": {
+    "title": "Contact",
+    "description": "Want to know more about me and what I can bring? I'd love to hear from you!",
+    "button1": "Get in touch",
+    "button2": "Download CV"
+  }
+},
   "projectPage": {
     "title": "Projects",
     "subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
@@ -136,34 +195,5 @@
   "button": {
     "projects": "Projects",
     "contact": "Contact me"
-  },
-  "aboutPage": {
-    "heroSection": {
-      "description": "I’m Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I             specialize in Angular, TypeScript, Java, and PostgreSQL — and I’m always expanding my skills to become a             stronger fullstack developer.",
-      "title": "About me"
-    },
-    "journeySection": {
-      "title": "My journey",
-      "description": {
-        "span1": "During my time at INBooks, I’ve worked on projects ranging from AngularJS migrations to new feature development.",
-        "span2": "I’ve handled both frontendUI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products."
-      },
-      "resumeItems": {
-        "item1": {
-          "title": "Web developer at INBooks",
-          "description": "Worked with AngularJS and Angular, as well as backend integrations with PostgreSQL"
-        },
-        "item2": {
-          "title": "Learning new languages and tools",
-          "years": "2024 - Present",
-          "description": "Started learning new languages and frameworks, like C# and Flutter, as well as Docker"
-        },
-        "item3": {
-          "title": "Labour market education at Lexicon",
-          "years": "2025 - Present",
-          "description": "Supplementary education focused on C#, but also React, databases and some AI engineering"
-        }
-      }
-    }
   }
 }

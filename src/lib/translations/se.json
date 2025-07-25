@@ -139,31 +139,61 @@
   },
   "aboutPage": {
     "heroSection": {
-      "description": "",
+      "description": "Jag är Jonatan Ljung, en webbutvecklare med över två års erfarenhet av att bygga moderna och responsiva webbplatser. Jag specialiserar mig på Angular, TypeScript, Java och PostgreSQL – och jag utökar ständigt mina kunskaper för att bli en starkare fullstack-utvecklare.",
       "title": "Om mig"
     },
     "journeySection": {
-      "title": "",
+      "title": "Min resa",
       "description": {
-        "span1": "",
-        "span2": ""
+        "span1": "Under min tid på INBooks har jag arbetat med projekt som sträcker sig från AngularJS-migreringar till utveckling av nya funktioner.",
+        "span2": "Jag har hanterat både frontend-gränssnitt och backend-integrationer, och jag fick förtroendet att se till att designen förblev enhetlig i alla våra produkter."
       },
       "resumeItems": {
         "item1": {
-          "title": "",
-          "description": ""
+          "title": "Webbutvecklare på INBooks",
+          "description": "Jobbade med AngularJS och Angular, och backend-integrationer med PostgreSQL"
         },
         "item2": {
-          "title": "",
-          "years": "",
-          "description": ""
+          "title": "Lär mig nya språk och verktyg",
+          "years": "2024 - Nutid",
+          "description": "Började lära mig nya språk och ramverk, så som C# och Flutter, samt Docker"
         },
         "item3": {
-          "title": "",
-          "years": "",
-          "description": ""
+          "title": "Arbetsmarknadsutbildning på Lexicon",
+          "years": "2025 - Nutid",
+          "description": "Påbyggnadsutbildning med fokus på C#, men också React, databaser och viss AI-teknik"
         }
       }
+    },
+    "skillsSection": {
+      "title": "Mitt förhållningssätt till utveckling",
+      "bulletPoint1": "Ren kod",
+      "bulletPoint2": "Uppmärksam till detaljer",
+      "bulletPoint3": "Användarcentrerad design",
+      "description": "Jag tycker om att skapa rena, funktionella och lättskötta lösningar med starkt fokus på användarupplevelse. Jag tror att bra design och gedigna tekniska val går hand i hand och formar hur användarna upplever en produkt."
+    },
+    "personalSection": {
+      "title": "Utöver kod",
+      "description": "Jag tycker om att arbeta med personliga projekt, lära mig nya ramverk och utforska användbarhet. Jag har också ett starkt intresse för matlagning, bakning, spel och en och annan fascination för djurbeteende – särskilt hos hyenor.",
+      "funFacts": {
+        "title": "Roliga fakta om mig",
+        "subtitle1": "Matlagnings- och bakningsexperiement",
+        "subtitle2": "Cykling och natur",
+        "subtitle3": "Spel och äventyrlighet",
+        "description3": "Utforskar alltid nya områden, från RPG-spel till djurbeteende.",
+        "description2": "Att spendera tid utomhus håller mig i balans.",
+        "description1": "Jag älskar att göra surdeg och prova nya maträtter."
+      }
+    },
+    "futureSection": {
+      "title": "Vart jag är på väg",
+      "description": "Jag bor för närvarande i Växjö i Småland, men är öppen för möjligheter i södra Sverige. Jag dras till team som värdesätter samarbete, tydlig kommunikation och kontinuerligt lärande – och med fredagsfika förstås."
+    },
+    "contactSection": {
+      "title": "Kontakt",
+      "description": "Vill du veta mer om mig och vad jag kan bidra med? Jag vill gärna höra från dig!",
+      "button1": "Hör av dig",
+      "button2": "Ladda ner CV"
     }
   }
 }

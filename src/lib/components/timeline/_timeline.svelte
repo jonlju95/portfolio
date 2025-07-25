@@ -6,11 +6,6 @@
 </script>
 
 <div class="container relative mt-5">
-    <div class="lineContainer absolute">
-        <svg width="6" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <line x1="3" y1="3" x2="3" y2="99%" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-        </svg>
-    </div>
     {#each timelineItems as timelineItem}
         <div class="row timelineItem relative">
             <div class="col-xl-4 d-flex flex-col align-end">
@@ -21,8 +16,11 @@
                     <h4 class="textMuted">{$t(timelineItem.years)}</h4>
                 {/if}
             </div>
-            <div class="col-xl-1 d-flex justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <div class="col-xl-1 d-flex justify-center relative svgContainer">
+                <svg class="lineContainer absolute" width="6" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3" y1="3" x2="3" y2="97%" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <svg class="absolute" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="4"/>
                 </svg>
             </div>
@@ -35,15 +33,19 @@
 </div>
 
 <style>
-    .lineContainer {
-        top: 0;
-        left: calc(calc(100% * 1 / 12 * 4) + (15px * 4) + 1px);
-
-        height: calc(100% + 3rem);
-
-        svg {
-            color: var(--secondary);
+    .timelineItem {
+        .svgContainer > .lineContainer {
+            height: 250%;
         }
+
+        &:last-child .svgContainer > .lineContainer {
+            height: 150%;
+        }
+    }
+
+    .lineContainer {
+        top: -1rem;
+        color: var(--secondary);
     }
 
     .timelineItem {

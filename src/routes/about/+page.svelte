@@ -1,7 +1,7 @@
 <script lang="ts">
     import {base} from "$app/paths";
-    import {t} from 'svelte-i18n';
-    import {Button, Timeline, type TimelineItem} from "$lib";
+    import {locale, t} from 'svelte-i18n';
+    import {Button, LinkButton, Timeline, type TimelineItem} from "$lib";
 
     // The property values are the keys for the translation json. For actual value, see translations/en.json or
     // translations/se.json
@@ -20,6 +20,10 @@
             description: 'aboutPage.journeySection.resumeItems.item3.description'
         }
     ]
+
+    let resumeVersion: string = "";
+
+    $: resumeVersion = $locale === 'en' ? 'Resume.pdf' : 'CV.pdf';
 </script>
 
 <section class="aboutContainer d-flex align-center">
@@ -28,7 +32,7 @@
         <p class="mt-5 ms-5">{$t('aboutPage.heroSection.description')}</p>
     </div>
     <div class="imgContainer">
-        <img width="877px" height="400px" src="{base}/resources/images/3V6A8787.JPG" alt="Me"/>
+        <img width="877px" height="400px" src="{base}/resources/images/me_2.webp" alt="Me"/>
     </div>
 </section>
 <section class="d-flex ">
@@ -48,7 +52,7 @@
     </div>
 </section>
 <section>
-    <h2>My approach to development</h2>
+    <h2>{$t('aboutPage.skillsSection.title')}</h2>
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-6 ps-5">
@@ -56,91 +60,99 @@
                     <li>
                         <div class="d-flex align-center">
                             <svg
-                                    width="24"
-                                    height="18"
-                                    viewBox="0 0 24 18"
+                                    width="800px"
+                                    height="800px"
+                                    viewBox="0 0 24 24"
+                                    id="brackets"
                                     xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                        id="school"
+                                        d="m 8.314287,22.999995 c -1.3570426,0 -2.4571418,-1.094377 -2.4571418,-2.444443 v -4.491054 c 0,-0.597911 0,-0.896866 -0.067891,-1.178222 C 5.7290667,14.636943 5.6297859,14.398488 5.4950608,14.17971 5.3431111,13.933066 5.1306052,13.721621 4.7056548,13.298855 L 3.4000034,12 4.7056548,10.701145 C 5.1306175,10.278378 5.3431111,10.066934 5.4950608,9.8202897 5.6297859,9.601512 5.7290667,9.3631055 5.7892544,9.1136745 5.8571452,8.8323557 5.8571452,8.5334125 5.8571452,7.9355261 V 3.444448 c 0,-1.3500294 1.1000992,-2.4444434 2.4571418,-2.4444434 m 7.371425,21.9999904 c 1.35708,0 2.457142,-1.094377 2.457142,-2.444443 v -4.491054 c 0,-0.597911 0,-0.896866 0.06794,-1.178222 0.0602,-0.249333 0.159469,-0.487788 0.29412,-0.706566 0.151974,-0.246644 0.364517,-0.458089 0.78948,-0.880855 L 20.599996,12 19.294394,10.701145 C 18.869431,10.278378 18.656888,10.066934 18.504914,9.8202897 18.370263,9.601512 18.270994,9.3631055 18.210794,9.1136745 18.142854,8.8323557 18.142854,8.5334125 18.142854,7.9355261 V 3.444448 c 0,-1.3500294 -1.100062,-2.4444434 -2.457142,-2.4444434"
                                         stroke="currentColor"
-                                        style="stroke-width:0.75;stroke-linejoin:round"
-                                        d="M 23.360513,13.594881 V 6.9807408 Z m -0.637342,-0.064 V 6.9167408 Z m -0.680468,0 V 6.9167408 Z m -0.520222,-6.3545702 2.116113,-1.05584 z m -2.116111,1.05583 -2.116113,1.00783 z m -14.8127856,0 2.1161122,1.00783 z m 7.4063926,9.4064602 -7.4063926,-3.6474 V 8.2321408 l -4.23222448,-2.11167 11.63861708,-5.75907 11.638617,5.75907 V 13.799231 H 21.522481 V 7.1763108 l -2.116111,1.05583 v 5.7590602 z m 5.29028,-8.3986302 -5.29028,2.6395702 -5.2902804,-2.6395702 5.2902804,2.6395702 z"/>
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        fill="none"
+                                        id="path1" />
                             </svg>
-                            <h5 class="ms-2">Clean Code</h5>
+                            <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint1')}</h5>
                         </div>
                     </li>
                     <li class="mt-4">
                         <div class="d-flex align-center">
                             <svg
-                                    width="24"
-                                    height="18"
-                                    viewBox="0 0 24 18"
+                                    width="800px"
+                                    height="800px"
+                                    viewBox="0 0 24 24"
+                                    id="paintbrush"
                                     xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                        id="school"
+                                        d="m 11.751318,10.612755 9.820474,-8.3209619 c 0.345599,-0.2928662 0.857767,-0.2716004 1.178098,0.048894 0.320218,0.3205286 0.341408,0.8332655 0.04884,1.179245 l -8.313204,9.8295829 m -2.734205,-2.73676 -2.4992529,2.117615 c -0.9876789,0.836906 -1.0499775,2.339912 -0.1349539,3.255757 0.9150468,0.915844 2.4166488,0.853578 3.2526608,-0.13508 l 2.115751,-2.501532 m -2.734205,-2.73676 2.734205,2.73676 m -4.381413,5.153228 c 0,2.035727 -1.6487147,3.686062 -3.6825752,3.686062 H 1.2207224 L 1.4590162,22.069491 C 2.6329111,21.481989 3.2181306,20.13754 2.8486334,18.876907 2.7758648,18.62875 2.7322399,18.370499 2.7592307,18.113268 c 0.1943517,-1.852671 1.7598622,-3.296587 3.6623041,-3.296587 2.0338605,0 3.6825752,1.650222 3.6825752,3.686062 z"
                                         stroke="currentColor"
-                                        style="stroke-width:0.75;stroke-linejoin:round"
-                                        d="M 23.360513,13.594881 V 6.9807408 Z m -0.637342,-0.064 V 6.9167408 Z m -0.680468,0 V 6.9167408 Z m -0.520222,-6.3545702 2.116113,-1.05584 z m -2.116111,1.05583 -2.116113,1.00783 z m -14.8127856,0 2.1161122,1.00783 z m 7.4063926,9.4064602 -7.4063926,-3.6474 V 8.2321408 l -4.23222448,-2.11167 11.63861708,-5.75907 11.638617,5.75907 V 13.799231 H 21.522481 V 7.1763108 l -2.116111,1.05583 v 5.7590602 z m 5.29028,-8.3986302 -5.29028,2.6395702 -5.2902804,-2.6395702 5.2902804,2.6395702 z"/>
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        fill="none"
+                                        id="path1" />
                             </svg>
-                            <h5 class="ms-2">Attention to Detail</h5>
+                            <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint2')}</h5>
                         </div>
                     </li>
                     <li class="mt-4">
                         <div class="d-flex align-center">
                             <svg
-                                    width="24"
-                                    height="18"
-                                    viewBox="0 0 24 18"
+                                    width="800px"
+                                    height="800px"
+                                    viewBox="0 0 24 24"
+                                    id="ruler"
                                     xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                        id="school"
+                                        d="m 4.3845943,14.540958 1.6923199,1.692296 M 7.7692221,11.156247 9.46153,12.848662 m 1.69232,-5.0769956 1.692296,1.6923199 m 1.692296,-5.076936 1.692296,1.692308 M 0.99997856,17.92555 6.0769142,23.002439 23.000041,6.0793583 17.923153,1.0024223 Z"
                                         stroke="currentColor"
-                                        style="stroke-width:0.75;stroke-linejoin:round"
-                                        d="M 23.360513,13.594881 V 6.9807408 Z m -0.637342,-0.064 V 6.9167408 Z m -0.680468,0 V 6.9167408 Z m -0.520222,-6.3545702 2.116113,-1.05584 z m -2.116111,1.05583 -2.116113,1.00783 z m -14.8127856,0 2.1161122,1.00783 z m 7.4063926,9.4064602 -7.4063926,-3.6474 V 8.2321408 l -4.23222448,-2.11167 11.63861708,-5.75907 11.638617,5.75907 V 13.799231 H 21.522481 V 7.1763108 l -2.116111,1.05583 v 5.7590602 z m 5.29028,-8.3986302 -5.29028,2.6395702 -5.2902804,-2.6395702 5.2902804,2.6395702 z"/>
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        fill="none"
+                                        id="path1" />
                             </svg>
-                            <h5 class="ms-2">User-Centric Design</h5>
+                            <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint3')}</h5>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-6 pe-5 d-flex align-center">
-                <p>I enjoy creating clean, functional, and maintainable solutions with a strong focus on user
-                    experience. I believe that good design and solid technical choices go hand-in-hand, shaping how
-                    users experience a product.</p>
+                <p>{$t('aboutPage.skillsSection.description')}</p>
             </div>
         </div>
     </div>
 </section>
 <section>
-    <h2>Beyond code</h2>
+    <h2>{$t('aboutPage.personalSection.title')}</h2>
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-6 ps-5 pt-4">
-                <p>I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a
-                    strong interest in cooking, baking, gaming, and the odd fascination with animal behavior —
-                    especially hyenas.</p>
+                <p>{$t('aboutPage.personalSection.description')}</p>
             </div>
             <div class="col-lg-6 pe-5 d-flex align-center justify-end">
                 <div class="funFactCard">
-                    <h3 class="textPrimary text-bold">Fun facts about me</h3>
+                    <h3 class="textPrimary text-bold">{$t('aboutPage.personalSection.funFacts.title')}</h3>
                     <ul>
                         <li class="mt-3">
-                            <h5>Cooking & baking experiments</h5>
+                            <h5>{$t('aboutPage.personalSection.funFacts.subtitle1')}</h5>
                         </li>
-                        <li class="ms-2">
-                            <p>I love making sourdough and trying new dishes.</p>
-                        </li>
-                        <li class="mt-3">
-                            <h5>Cycling & nature</h5>
-                        </li>
-                        <li class="ms-2">
-                            <p>Spending time outdoors keeps me balanced.</p>
+                        <li class="ms-3">
+                            <p>{$t('aboutPage.personalSection.funFacts.description1')}</p>
                         </li>
                         <li class="mt-3">
-                            <h5>Gaming & curiosity</h5>
+                            <h5>{$t('aboutPage.personalSection.funFacts.subtitle2')}</h5>
                         </li>
-                        <li class="ms-2">
-                            <p>Always exploring new topics, from RPGs to animal behaviour.</p>
+                        <li class="ms-3">
+                            <p>{$t('aboutPage.personalSection.funFacts.description2')}</p>
+                        </li>
+                        <li class="mt-3">
+                            <h5>{$t('aboutPage.personalSection.funFacts.subtitle3')}</h5>
+                        </li>
+                        <li class="ms-3">
+                            <p>{$t('aboutPage.personalSection.funFacts.description3')}</p>
                         </li>
                     </ul>
 
@@ -150,22 +162,21 @@
     </div>
 </section>
 <section>
-    <h2>Where I'm headed</h2>
+    <h2>{$t('aboutPage.futureSection.title')}</h2>
     <div class="w-100 d-flex align-center justify-end relative">
-        <img class="swedenImg" width="373.24px" height="373.24px" src="{base}/resources/images/sweden.png"
+        <img class="swedenImg" width="373.24px" height="373.24px" src="{base}/resources/images/sweden_silhouette.webp"
              alt="Silhouette of Sweden"/>
-        <div class="w-50 futureSection pe-5"><p>I’m currently living in Växjö, Småland, but I’m open to opportunities
-            across southern
-            Sweden. I’m drawn to teams that value collaboration, clear communication, and continuous learning - with the
-            occasional friday fika, of course.</p></div>
+        <div class="w-50 futureSection pe-5"><p>{$t('aboutPage.futureSection.description')}</p></div>
     </div>
 </section>
 <section>
-    <h2 class="textCenter">Contact</h2>
-    <p class="mt-5 textCenter">Want to know more about my work or collaborate? I'd love to hear from you!</p>
+    <h2 class="textCenter">{$t('aboutPage.contactSection.title')}</h2>
+    <p class="mt-5 textCenter">{$t('aboutPage.contactSection.description')}</p>
     <div class="w-100 d-flex align-center justify-center mt-5 relative callToAction">
-        <Button buttonProps="btnPrimary me-5" label="Get in touch"/>
-        <Button buttonProps="btnSecondary outline" label="Download CV"/>
+        <LinkButton buttonProps="btnPrimary me-5" btnLabel="{$t('aboutPage.contactSection.button1')}"
+                    link="mailto:jonatan.ljung@hotmail.com"/>
+        <LinkButton buttonProps="btnSecondary outline" btnLabel="{$t('aboutPage.contactSection.button2')}"
+                    link="{base}/resources/resume/{resumeVersion}" download="{true}"/>
     </div>
 </section>
 
@@ -225,6 +236,12 @@
 
   ul {
     list-style: none;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      color: var(--primary);
+    }
   }
 
   .funFactCard {

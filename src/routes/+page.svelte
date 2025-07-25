@@ -89,7 +89,7 @@
             </div>
             <div class="d-flex justify-center imgContainer col-lg-6 col-xl-5">
                 <img height="100%" width="100%"
-                     src="{base}/resources/images/3V6A4207_cropped.png"
+                     src="{base}/resources/images/me_1_cropped.webp"
                      alt="Me smiling at the camera"/>
             </div>
         </div>
@@ -208,7 +208,7 @@
         </div>
     </div>
 </section>
-<section class="animatedElement">
+<section class="projectSection animatedElement">
     <h2>{$t('homePage.projectSection.title')}</h2>
     <p class="mt-2">{$t('homePage.projectSection.subtitle')}</p>
     <div class="container">
@@ -277,7 +277,7 @@
     .bg-image {
       position: absolute;
       inset: 0;
-      background-image: url('/resources/background-new.png');
+      background-image: url('/resources/background-new.webp');
       background-size: cover;
       background-position: center;
 
@@ -332,6 +332,11 @@
 
   .techStackCategory {
     border-bottom: 1px solid var(--border-muted);
+  }
+
+  .projectSection * {
+    position: relative;
+    z-index: 1;
   }
 
 </style>

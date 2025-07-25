@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="24"
+   viewBox="0 0 48 24"
+   id="arrow"
+   xmlns="http://www.w3.org/2000/svg">
+  <path
+     d="M 46.5,1.5 24.468525,22.351655 c -0.2739,0.259267 -0.66315,0.259267 -0.93705,0 L 1.5,1.5"
+     stroke-width="2.82307"
+     stroke-linecap="round"
+     stroke="currentColor"
+     style="fill-opacity: 0"
+     id="path1" />
+</svg>

@@ -71,11 +71,11 @@
                 'uk-flag' : 'se-flag'}">
                     {#if $locale === 'en'}
                         <div class="iconContainer">
-                            <img src="{base}/resources/icons/united-kingdom-flag-icon.svg" alt="United kingdom flag"/>
+                            <img src="{base}/resources/images/united-kingdom-flag-icon.webp" alt="United kingdom flag"/>
                         </div>
                     {:else}
                         <div class="iconContainer">
-                            <img src="{base}/resources/icons/sweden-flag-icon.svg" alt="Swedish flag"/>
+                            <img src="{base}/resources/images/sweden-flag-icon.webp" alt="Swedish flag"/>
                         </div>
                     {/if}
                 </button>
@@ -85,42 +85,35 @@
                     {#if currentTheme === 'dark'}
                         <div class="iconContainer">
                             <svg
-                                    width="24"
-                                    height="24"
+                                    width="800px"
+                                    height="800px"
                                     viewBox="0 0 24 24"
                                     id="sun"
                                     xmlns="http://www.w3.org/2000/svg">
-                                <g
-                                        id="layer1">
-                                    <ellipse
-                                            id="path1"
-                                            cx="12.000001"
-                                            cy="12"
-                                            rx="8.4710007"
-                                            ry="8.4709997"
-                                            style="stroke-opacity:1;fill-opacity:1"
-                                            stroke="currentColor"/>
-                                    <path
-                                            style="stroke-width:0.460411;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-                                            stroke="currentColor"
-                                            id="path9"
-                                            d="M 6.8506711,2.2206145 7.5391118,3.6463521 6.0007482,4.0206723 5.7196809,5.5787736 4.2550987,4.9773776 3.1118815,6.0727007 2.2805013,4.7253013 0.71180436,4.9394702 0.83118516,3.3607281 -0.56380261,2.6119374 0.46073979,1.4048786 -0.22770092,-0.02085905 1.3106627,-0.39517928 1.59173,-1.9532805 3.0563122,-1.3518845 4.1995294,-2.4472077 5.0309096,-1.0998083 6.5996065,-1.3139771 6.4802257,0.26476494 7.8752135,1.0135556 Z"
-                                            transform="matrix(2.7562957,-0.34196365,0.35841485,2.6297828,1.2740813,8.4829887)"/>
-                                </g>
+                                <path
+                                        d="M 12,0.9999999 V 2.2222221 M 12,21.777777 V 23 M 2.2222221,12 H 0.9999999 M 5.0505909,5.0505909 4.0555554,4.0555554 M 18.949433,5.0505909 19.944444,4.0555554 M 5.0505909,18.954444 4.0555554,19.944566 m 14.8938776,-0.990122 0.995011,0.990122 M 23,12 h -1.222223 m -4.888889,0 c 0,2.700011 -2.188877,4.888888 -4.888888,4.888888 -2.7000603,0 -4.8888891,-2.188877 -4.8888891,-4.888888 0,-2.7000603 2.1888288,-4.8888891 4.8888891,-4.8888891 2.700011,0 4.888888,2.1888288 4.888888,4.8888891 z"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
                             </svg>
+
                         </div>
                     {:else}
                         <div class="iconContainer">
                             <svg
-                                    width="100%"
-                                    height="100%"
+                                    width="800px"
+                                    height="800px"
                                     viewBox="0 0 24 24"
+                                    id="moon"
                                     xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                        d="M 23.687621,13.034642 A 9.6858591,9.6982941 0 0 1 14.853088,18.827112 9.6858591,9.6982941 0 0 1 5.1666554,9.1282414 9.6858591,9.6982941 0 0 1 10.87755,0.31237747 11.713618,11.728658 0 0 0 0.31239596,11.958922 11.713618,11.728658 0 0 0 12.026038,23.687604 11.713618,11.728658 0 0 0 23.687621,13.034642 Z"
-                                        style="stroke-width:0.624792;stroke-linejoin:round"
+                                        d="m 1.0034675,11.597194 c 0,6.297637 5.1051896,11.402795 11.4027395,11.402795 4.798279,0 8.904283,-2.963713 10.587456,-7.160322 -1.313344,0.527823 -2.750471,0.825309 -4.252593,0.825309 -6.297614,0 -11.40274,-5.105158 -11.40274,-11.4027694 0,-1.4950838 0.2931014,-2.9404387 0.816209,-4.2487574 C 3.9627858,2.6989343 1.0034675,6.8024707 1.0034675,11.597194 Z"
                                         stroke="currentColor"
-                                        id="moon"/>
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        style="stroke-width:2.00001;stroke-dasharray:none" />
                             </svg>
                         </div>
                     {/if}
