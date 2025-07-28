@@ -11,10 +11,12 @@
 // Generates classes for flex-specific properties
 @mixin flexPositioning() {
   .flex-col { flex-direction: column; }
+  .flex-reverse { flex-direction: column-reverse; }
 
   .justify-center { justify-content: center; }
   .justify-end { justify-content: end; }
   .justify-between { justify-content: space-between; }
+  .justify-evenly { justify-content: space-evenly; }
 
   .align-center { align-items: center; }
   .align-start { align-items: flex-start; }

@@ -6,6 +6,8 @@
 
     let {children} = $props();
 
+    let innerWidth = $state(0);
+
     if (browser) {
         const savedTheme = localStorage.getItem('theme');
 
@@ -18,7 +20,11 @@
     }
 </script>
 
-<Navbar></Navbar>
+<svelte:window bind:innerWidth/>
+
+{#if innerWidth >= 768}
+    <Navbar></Navbar>
+{/if}
 
 <main>
     <article class="animatedElement">

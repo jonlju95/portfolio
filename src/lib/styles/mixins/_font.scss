@@ -6,6 +6,14 @@
       font-size: $size !important;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    @each $heading, $size in $heading-sizes-small {
+      #{$heading} {
+        font-size: $size !important;
+      }
+    }
+  }
 }
 
 @mixin font-size($size) {

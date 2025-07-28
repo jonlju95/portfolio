@@ -2,7 +2,7 @@
     let {src, title} = $props();
 </script>
 
-<div class="techStackIcon">
+<div class="techStackIcon col-1 my-4">
     <img {src} alt="{title}"/>
     <p>{title}</p>
 </div>
@@ -10,13 +10,10 @@
 <style>
     .techStackIcon {
         max-width: fit-content;
+        min-width: fit-content;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        &:nth-child(n+2) {
-            margin-left: 3rem;
-        }
 
         img {
             height: 5rem;

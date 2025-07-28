@@ -64,7 +64,11 @@
             icon: 'education'
         },
     ]
+
+    let innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth/>
 
 <section class="heroSection animatedElement">
     <!-- The divs color-overlay and bg-image only makes the bg appear like it should -->
@@ -72,7 +76,7 @@
     <div class="bg-image"></div>
     <div class="container">
         <div class="row h-100 d-flex justify-between align-center">
-            <div class="d-flex flex-col justify-center infoContainer col-md-12 col-lg-6">
+            <div class="d-flex flex-col justify-center infoContainer col-lg-8 col-xl-6">
                 <div class="header d-flex flex-col h-100">
                     <h1>{$t('homePage.heroSection.homeTitle')}</h1>
                     <h3>
@@ -87,43 +91,45 @@
                                 buttonProps="btnSecondary outline fontBold"></LinkButton>
                 </div>
             </div>
-            <div class="d-flex justify-center imgContainer col-lg-6 col-xl-5">
+            <div class="d-flex justify-center imgContainer col-8 col-lg-6 col-xl-5">
                 <img height="100%" width="100%"
                      src="{base}/resources/images/me_1_cropped.webp"
                      alt="Me smiling at the camera"/>
             </div>
         </div>
     </div>
-    <div class="arrowContainer">
-        <svg
-                width="48"
-                height="24"
-                viewBox="0 0 48 24"
-                id="arrow"
-                xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M 46.5,1.5 24.468525,22.351655 c -0.2739,0.259267 -0.66315,0.259267 -0.93705,0 L 1.5,1.5"
-                    stroke-width="2.82307"
-                    stroke-linecap="round"
-                    stroke="currentColor"
-                    style="fill-opacity: 0"
-                    id="path1"/>
-        </svg>
-    </div>
+    {#if innerWidth >= 768}
+        <div class="arrowContainer">
+            <svg
+                    width="48"
+                    height="24"
+                    viewBox="0 0 48 24"
+                    id="arrow"
+                    xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M 46.5,1.5 24.468525,22.351655 c -0.2739,0.259267 -0.66315,0.259267 -0.93705,0 L 1.5,1.5"
+                        stroke-width="2.82307"
+                        stroke-linecap="round"
+                        stroke="currentColor"
+                        style="fill-opacity: 0"
+                        id="path1"/>
+            </svg>
+        </div>
+    {/if}
 </section>
 <section class="animatedElement">
     <h2>{$t('homePage.aboutSection.aboutTitle')}</h2>
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-xl-4">
+            <div class="mt-5 col-lg-4">
                 <h3 class="textPrimary">{$t('homePage.aboutSection.item1.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item1.description')}</p>
             </div>
-            <div class="col-xl-4">
+            <div class="mt-5 col-lg-4">
                 <h3 class="textPrimary">{$t('homePage.aboutSection.item2.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item2.description')}</p>
             </div>
-            <div class="col-xl-4">
+            <div class="mt-5 col-lg-4">
                 <h3 class="textPrimary">{$t('homePage.aboutSection.item3.title')}</h3>
                 <p class="textMuted">{$t('homePage.aboutSection.item3.description')}</p>
             </div>
@@ -139,8 +145,8 @@
     <p class="mt-2">{$t('homePage.techSection.subtitle')}</p>
     <div class="container techStackContainer mt-5">
         <div class="techStackCategory">
-            <h3 class="textPrimary">Frontend</h3>
-            <div class="row ms-5 py-4">
+            <div class="row">
+                <h3 class="textPrimary">Frontend</h3>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                         title="Html"/>
@@ -162,8 +168,8 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h3 class="textPrimary">Backend</h3>
-            <div class="row ms-5 py-4">
+            <div class="row">
+                <h3 class="textPrimary">Backend</h3>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
                         title="Java"/>
@@ -173,8 +179,8 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>
-            <div class="row ms-5 py-4">
+            <div class="row">
+                <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
@@ -187,8 +193,8 @@
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>
-            <div class="row ms-5 py-4">
+            <div class="row">
+                <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                         title="Jira"/>
@@ -244,11 +250,18 @@
 
 <style lang="scss">
   section {
+    position: relative;
     max-width: 100%;
 
     padding: 4rem 9rem 6rem;
 
-    position: relative;
+    @media screen and (max-width: 767px) {
+      padding: 3rem 1rem 5rem;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      padding: 3rem 2rem 5rem;
+    }
 
     &:after {
       content: "";
@@ -297,11 +310,20 @@
     }
 
     .container {
-      position: absolute;
-      inset: 4rem 9rem 6rem;
+      position: relative;
       z-index: 3;
       width: inherit;
+      height: 100%;
       padding: 0;
+
+      > .row {
+        @media screen and (max-width: 1200px) {
+          margin: 0 !important;
+          flex-direction: column-reverse !important;
+          flex-wrap: inherit;
+          justify-content: space-evenly !important;
+        }
+      }
     }
 
     .jobtitle {
@@ -319,13 +341,16 @@
     }
 
     .arrowContainer {
+      width: 100%;
       position: absolute;
       bottom: 1.5rem;
-      left: 50%;
+      left: 0;
+      right: 0;
       z-index: 3;
 
       svg {
         color: var(--border-muted);
+        margin-left: calc(50% - 24px);
       }
     }
   }

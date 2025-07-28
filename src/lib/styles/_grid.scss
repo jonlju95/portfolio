@@ -1,6 +1,7 @@
 @use "mixins/grid/container" as *;
 @use "mixins/grid/rows" as *;
 @use "mixins/grid/columns" as *;
+@use "mixins/breakpoints" as *;
 
 .container {
   @include makeContainer();

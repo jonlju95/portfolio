@@ -5,11 +5,11 @@
 @use '../breakpoints' as *;
 
 /* Generates classes for columns, with their respective breakpoint in the name, i.e. .col-md- */
-@mixin makeGridColumns() {
-  @each $breakpoint, $width in $grid-breakpoints {
+@mixin makeGridColumns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     $name: breakpointName($breakpoint, $grid-breakpoints);
 
-    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
 
       .col#{$name} {
         flex: 1 0 0;
@@ -19,9 +19,11 @@
         @include makeColAuto();
       }
 
-      @for $i from 1 through 12 {
-        .col#{$name}-#{$i} {
-          @include makeCol($i, 12);
+      @if $columns > 0 {
+        @for $i from 1 through $grid-columns {
+          .col#{$name}-#{$i} {
+            @include makeCol($i, $grid-columns);
+          }
         }
       }
     }
@@ -32,11 +34,11 @@
   flex-shrink: 0;
   width: 100% !important;
   max-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 }
 
-@mixin makeCol($size: false, $columns: 12) {
+@mixin makeCol($size: false, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
     width: math.percentage(calc($size / $columns)) !important;

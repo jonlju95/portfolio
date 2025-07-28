@@ -8,7 +8,7 @@
         <p>{$t('footer.credits')}</p>
     </section>
     <section class="contactSection d-flex flex-col justify-center">
-        <p class="p-2">
+        <p class="p-2 w-fit">
             <svg
                     width="800px"
                     height="800px"
@@ -25,7 +25,7 @@
             </svg>
             <span>(+46) 073-395 00 15</span>
         </p>
-        <p class="p-2">
+        <p class="p-2 w-fit">
             <svg
                     width="800px"
                     height="800px"
@@ -60,11 +60,15 @@
 
         .contactSection {
             height: 100%;
-            min-width: 15rem;
 
             p {
                 display: flex;
                 align-items: center;
+
+                @media screen and (max-width: 576px) {
+                    flex-direction: column;
+                    align-items: start;
+                }
 
                 svg {
                     margin-right: 1rem;
