@@ -1,7 +1,7 @@
 <script lang="ts">
     import '$lib/styles/app.scss';
 
-    import {Footer, Navbar} from '$lib';
+    import {Footer, Navbar, Sidebar} from '$lib';
     import {browser} from '$app/environment';
 
     let {children} = $props();
@@ -22,7 +22,9 @@
 
 <svelte:window bind:innerWidth/>
 
-{#if innerWidth >= 768}
+{#if innerWidth < 768}
+    <Sidebar></Sidebar>
+    {:else if (innerWidth >= 768)}
     <Navbar></Navbar>
 {/if}
 

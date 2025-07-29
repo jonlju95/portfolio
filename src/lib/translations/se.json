@@ -98,45 +98,6 @@
       "tools": "Verktyg"
     }
   },
-  "projectPage": {
-    "title": "Projekt",
-    "subtitle": "Tidigare projekt jag har gjort som en del av en utbildning eller för att hålla mig uppdaterad. De flesta äldre repos innehåller en readme-fil med projektets avsedda funktionalitet etc.",
-    "projectItems": {
-      "item1": {
-        "description": "Källkod för detta webbplatsprojekt. Omgjord från ett liknande projekt jag gjorde 2024 som använde Angular istället."
-      },
-      "item2": {
-        "description": "Personligt projekt bestående av en app där man kunde lägga in utgifter och inkomster för att få en överblick över sin ekonomi. Skulle innehålla tabeller med olika filter för specifika poster etc."
-      },
-      "item3": {
-        "description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen."
-      },
-      "item4": {
-        "description": "Sten, sax, papper-spelet skapat med React och gjort som en del av min utbildning."
-      },
-      "item5": {
-        "description": "Spel skapat med fokus på testning, eftersom det utvecklades i en kurs inriktad på enhetstestning."
-      },
-      "item6": {
-        "description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman."
-      },
-      "item7": {
-        "description": "En del av min utbildning, med fokus på databasdesign och uppsättning av enkla CRUD-operationer."
-      }
-    }
-  },
-  "navbar": {
-    "about": "Om mig",
-    "home": "Hem",
-    "projects": "Projekt"
-  },
-  "footer": {
-    "credits": "Gjort med SvelteKit, design av mig"
-  },
-  "button": {
-    "projects": "Projekt",
-    "contact": "Kontakta mig"
-  },
   "aboutPage": {
     "heroSection": {
       "description": "Jag är Jonatan Ljung, en webbutvecklare med över två års erfarenhet av att bygga moderna och responsiva webbplatser. Jag specialiserar mig på Angular, TypeScript, Java och PostgreSQL – och jag utökar ständigt mina kunskaper för att bli en starkare fullstack-utvecklare.",
@@ -178,11 +139,11 @@
       "funFacts": {
         "title": "Roliga fakta om mig",
         "subtitle1": "Matlagnings- och bakningsexperiement",
+        "description1": "Jag älskar att göra surdeg och prova nya maträtter.",
         "subtitle2": "Cykling och natur",
-        "subtitle3": "Spel och äventyrlighet",
-        "description3": "Utforskar alltid nya områden, från RPG-spel till djurbeteende.",
         "description2": "Att spendera tid utomhus håller mig i balans.",
-        "description1": "Jag älskar att göra surdeg och prova nya maträtter."
+        "subtitle3": "Spel och äventyrlighet",
+        "description3": "Utforskar alltid nya områden, från RPG-spel till djurbeteende."
       }
     },
     "futureSection": {
@@ -195,5 +156,47 @@
       "button1": "Hör av dig",
       "button2": "Ladda ner CV"
     }
+  },
+  "projectPage": {
+    "title": "Projekt",
+    "subtitle": "Tidigare projekt jag har gjort som en del av en utbildning eller för att hålla mig uppdaterad. De flesta äldre repos innehåller en readme-fil med projektets avsedda funktionalitet etc.",
+    "projectItems": {
+      "item1": {
+        "description": "Källkod för detta webbplatsprojekt. Omgjord från ett liknande projekt jag gjorde 2024 som använde Angular istället."
+      },
+      "item2": {
+        "description": "Personligt projekt bestående av en app där man kunde lägga in utgifter och inkomster för att få en överblick över sin ekonomi. Skulle innehålla tabeller med olika filter för specifika poster etc."
+      },
+      "item3": {
+        "description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen."
+      },
+      "item4": {
+        "description": "Sten, sax, papper-spelet skapat med React och gjort som en del av min utbildning."
+      },
+      "item5": {
+        "description": "Spel skapat med fokus på testning, eftersom det utvecklades i en kurs inriktad på enhetstestning."
+      },
+      "item6": {
+        "description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman."
+      },
+      "item7": {
+        "description": "En del av min utbildning, med fokus på databasdesign och uppsättning av enkla CRUD-operationer."
+      }
+    }
+  },
+  "navbar": {
+    "about": "Om mig",
+    "home": "Hem",
+    "projects": "Projekt",
+    "language": "Språk",
+    "theme": "Tema"
+  },
+  "footer": {
+    "credits": "Gjort med SvelteKit | Design av mig",
+    "phone": "Tel"
+  },
+  "button": {
+    "projects": "Projekt",
+    "contact": "Kontakta mig"
   }
 }

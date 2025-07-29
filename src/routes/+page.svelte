@@ -250,6 +250,8 @@
 
 <style lang="scss">
   section {
+    background-image: var(--background-img);
+
     position: relative;
     max-width: 100%;
 
@@ -263,13 +265,6 @@
       padding: 3rem 2rem 5rem;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: var(--background-img);
-      opacity: 0.02;
-    }
 
     /* Give the sections after the first one alternating background colors */
     &:not(:first-child) {
@@ -357,6 +352,12 @@
 
   .techStackCategory {
     border-bottom: 1px solid var(--border-muted);
+
+    @media screen and (max-width: 1200px) {
+      .row {
+        margin-left: auto;
+      }
+    }
   }
 
   .projectSection * {

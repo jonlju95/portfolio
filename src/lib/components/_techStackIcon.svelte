@@ -2,14 +2,15 @@
     let {src, title} = $props();
 </script>
 
-<div class="techStackIcon col-1 my-4">
+<div class="techStackIcon my-4 me-5">
     <img {src} alt="{title}"/>
     <p>{title}</p>
 </div>
 
 <style>
     .techStackIcon {
-        max-width: fit-content;
+        width: fit-content;
+        max-width: 120px;
         min-width: fit-content;
         display: flex;
         flex-direction: column;

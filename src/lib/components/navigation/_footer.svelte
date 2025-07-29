@@ -2,13 +2,13 @@
     import {t} from 'svelte-i18n';
 </script>
 
-<footer class="footer px-5">
-    <section>
+<footer class="footer px-4 py-3">
+    <section class="d-flex flex-col justify-between pt-1">
         <h3>2025</h3>
         <p>{$t('footer.credits')}</p>
     </section>
-    <section class="contactSection d-flex flex-col justify-center">
-        <p class="p-2 w-fit">
+    <section class="contactSection d-flex justify-between align-center">
+        <a class="w-fit d-flex flex-col items-center" href="tel:+46733950015" aria-labelledby="phone">
             <svg
                     width="800px"
                     height="800px"
@@ -21,11 +21,12 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        id="path1" />
+                        id="path1"/>
             </svg>
-            <span>(+46) 073-395 00 15</span>
-        </p>
-        <p class="p-2 w-fit">
+            {$t('footer.phone')}
+        </a>
+        <a class="w-fit d-flex flex-col items-center" href="mailto:jonatan.ljung@hotmail.com"
+           aria-labelledby="mail">
             <svg
                     width="800px"
                     height="800px"
@@ -38,9 +39,21 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        id="path1" />
+                        id="path1"/>
             </svg>
-            <span>jonatan.ljung@hotmail.com</span></p>
+            Mail
+        </a>
+        <a class="w-fit d-flex flex-col items-center" href="https://www.linkedin.com/in/jonatan-ljung/"
+           target="_blank"
+           aria-labelledby="devicon-linkedin-plain">
+            <i class="devicon-linkedin-plain"></i>
+            LinkedIn
+        </a>
+        <a class="w-fit d-flex flex-col items-center" href="https://github.com/jonlju95" target="_blank"
+           aria-labelledby="devicon-github-original">
+            <i class="devicon-github-original"></i>
+            Github
+        </a>
     </section>
 </footer>
 
@@ -48,7 +61,8 @@
     footer {
         position: relative;
         width: 100%;
-        height: 8rem;
+        height: fit-content;
+        min-height: 8rem;
 
         background-color: var(--bg-bright);
         color: var(--text);
@@ -58,24 +72,36 @@
         align-items: center;
         justify-content: space-between;
 
-        .contactSection {
-            height: 100%;
+        @media screen and (max-width: 576px) {
+            flex-direction: column-reverse;
+            align-items: start;
+        }
 
-            p {
+        .contactSection {
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
+
+            a {
+                min-width: 60px;
+                height: 100%;
                 display: flex;
                 align-items: center;
+                vertical-align: center;
+                color: var(--text-muted);
 
-                @media screen and (max-width: 576px) {
-                    flex-direction: column;
-                    align-items: start;
-                }
+                text-decoration: none;
 
                 svg {
-                    margin-right: 1rem;
-                    color: var(--text);
+                    color: var(--text-muted);
                     fill: none;
                     height: 1.5rem;
-                    width: 1.5rem;
+                    width: 100%;
+                    max-width: 1.5rem;
+                }
+
+                i {
+                    font-size: 1.5rem;
                 }
             }
         }
