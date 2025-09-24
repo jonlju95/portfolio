@@ -66,6 +66,7 @@
     background-color: var(--bg);
     width: 100vw;
     margin-top: -5rem;
+    overflow-x: hidden;
 
     @media screen and (max-width: 767px) {
       margin-top: 0;

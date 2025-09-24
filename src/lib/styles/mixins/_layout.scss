@@ -1,4 +1,8 @@
+@use 'sass:map';
+@use 'sass:meta';
+
 @use "../variables" as *;
+@use './breakpoints' as *;
 
 // Generates classes for display properties
 @mixin display() {
@@ -32,23 +36,29 @@
 }
 
 // Generates classes for margins and paddings. ms/ps is left and me/pe is right
-@mixin spacings() {
-  @each $size, $value in $sizes {
-    .mt-#{$size} {margin-top: $value !important;}
-    .mb-#{$size} {margin-bottom: $value !important;}
-    .ms-#{$size} {margin-left: $value !important;}
-    .me-#{$size} {margin-right: $value !important;}
-    .m-#{$size} {margin: $value !important;}
-    .mx-#{$size} {margin-left: $value !important; margin-right: $value !important;}
-    .my-#{$size} {margin-top: $value !important; margin-bottom: $value !important;}
+@mixin spacings($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
+    $name: breakpointName($breakpoint, $grid-breakpoints);
 
-    .pt-#{$size} {padding-top: $value !important;}
-    .pb-#{$size} {padding-bottom: $value !important;}
-    .ps-#{$size} {padding-left: $value !important;}
-    .pe-#{$size} {padding-right: $value !important;}
-    .p-#{$size} {padding: $value !important;}
-    .px-#{$size} {padding-left: $value !important; padding-right: $value !important;}
-    .py-#{$size} {padding-top: $value !important; padding-bottom: $value !important;}
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @each $short, $property in $sides {
+        @each $dir, $suffix in $directions {
+          @each $sizeKey, $sizeValue in $sizes {
+            $class: ".#{$short}#{$dir}#{$name}-#{$sizeKey}";
+
+            #{$class} {
+              @if meta.type-of($suffix) == 'list' {
+                @each $side in $suffix {
+                  #{$property}#{$side}: $sizeValue !important;
+                }
+              } @else {
+                #{$property}#{$suffix}: $sizeValue !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

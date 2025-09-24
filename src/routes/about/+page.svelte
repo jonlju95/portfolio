@@ -1,7 +1,7 @@
 <script lang="ts">
     import {base} from "$app/paths";
     import {locale, t} from 'svelte-i18n';
-    import {Button, LinkButton, Timeline, type TimelineItem} from "$lib";
+    import {LinkButton, Timeline, type TimelineItem} from "$lib";
 
     // The property values are the keys for the translation json. For actual value, see translations/en.json or
     // translations/se.json
@@ -26,26 +26,30 @@
     $: resumeVersion = $locale === 'en' ? 'Resume.pdf' : 'CV.pdf';
 </script>
 
-<section class="aboutContainer d-flex align-center">
-    <div class="w-50">
-        <h1>{$t('aboutPage.heroSection.title')}</h1>
-        <p class="mt-5 ms-5">{$t('aboutPage.heroSection.description')}</p>
-    </div>
+<section class="aboutContainer d-flex">
     <div class="imgContainer">
         <img width="877px" height="400px" src="{base}/resources/images/me_2.webp" alt="Me"/>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>{$t('aboutPage.heroSection.title')}</h1>
+                <p class="mt-5 mx-5">{$t('aboutPage.heroSection.description')}</p>
+            </div>
+        </div>
     </div>
 </section>
 <section class="d-flex ">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <h2>{$t('aboutPage.journeySection.title')}</h2>
-                <p class="d-flex flex-col mt-5 ms-5">
+                <p class="d-flex flex-col mt-5 ms-lg-5">
                     <span>{$t('aboutPage.journeySection.description.span1')}</span>
                     <span class="mt-4">{$t('aboutPage.journeySection.description.span2')}</span>
                 </p>
             </div>
-            <div class="col-lg-8">
+            <div class="col-md-8">
                 <Timeline {timelineItems}/>
             </div>
         </div>
@@ -72,7 +76,7 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                         fill="none"
-                                        id="path1" />
+                                        id="path1"/>
                             </svg>
                             <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint1')}</h5>
                         </div>
@@ -92,7 +96,7 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                         fill="none"
-                                        id="path1" />
+                                        id="path1"/>
                             </svg>
                             <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint2')}</h5>
                         </div>
@@ -112,14 +116,14 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                         fill="none"
-                                        id="path1" />
+                                        id="path1"/>
                             </svg>
                             <h5 class="ms-2 font-bold">{$t('aboutPage.skillsSection.bulletPoint3')}</h5>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6 pe-5 d-flex align-center">
+            <div class="col-lg-6 pe-5 mt-5 mt-lg-0 d-flex align-center">
                 <p>{$t('aboutPage.skillsSection.description')}</p>
             </div>
         </div>
@@ -129,10 +133,10 @@
     <h2>{$t('aboutPage.personalSection.title')}</h2>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-6 ps-5 pt-4">
+            <div class="col-md-6 ps-lg-5 pt-md-4">
                 <p>{$t('aboutPage.personalSection.description')}</p>
             </div>
-            <div class="col-lg-6 pe-5 d-flex align-center justify-end">
+            <div class="col-md-6 pe-5 mt-5 mt-md-0 d-flex align-center justify-end">
                 <div class="funFactCard">
                     <h3 class="textPrimary text-bold">{$t('aboutPage.personalSection.funFacts.title')}</h3>
                     <ul>
@@ -155,7 +159,6 @@
                             <p>{$t('aboutPage.personalSection.funFacts.description3')}</p>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </div>
@@ -163,10 +166,11 @@
 </section>
 <section>
     <h2>{$t('aboutPage.futureSection.title')}</h2>
-    <div class="w-100 d-flex align-center justify-end relative">
+    <div class="container d-flex align-center justify-end relative">
         <img class="swedenImg" width="373.24px" height="373.24px" src="{base}/resources/images/sweden_silhouette.webp"
              alt="Silhouette of Sweden"/>
-        <div class="w-50 futureSection pe-5"><p>{$t('aboutPage.futureSection.description')}</p></div>
+        <div class="row futureSection px-5 mt-5">
+            <p class="col-md-6">{$t('aboutPage.futureSection.description')}</p></div>
     </div>
 </section>
 <section>
@@ -182,18 +186,19 @@
 
 <style lang="scss">
   section {
+    background-image: var(--background-img);
+
+    position: relative;
     max-width: 100%;
 
     padding: 4rem 9rem 6rem;
 
-    position: relative;
+    @media screen and (max-width: 767px) {
+      padding: 3rem 1rem 5rem;
+    }
 
-    &:after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: var(--background-img);
-      opacity: 2%;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      padding: 3rem 2rem 5rem;
     }
 
     /* Give the sections after the first one alternating background colors */
@@ -213,9 +218,21 @@
     background-color: var(--bg);
 
     width: 100%;
-    aspect-ratio: 1 / 0.456;
+    min-height: 90vh;
 
-    :first-child {
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+      padding: 1.5rem 1rem 5rem;
+      align-items: end;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      padding: 8rem 2rem 5rem;
+      align-items: center;
+    }
+
+    :last-child {
       z-index: 1;
     }
 
@@ -228,8 +245,22 @@
         height: 100%;
         object-fit: cover;
         object-position: 0 10%;
-        mask-image: linear-gradient(75deg, transparent 35%, var(--text) 80%, var(--text) 100%);
+        mask-image: linear-gradient(75deg, transparent 45%, var(--text) 70%, var(--text) 100%);
         mask-mode: alpha;
+
+        @media screen and (max-width: 767px) {
+          width: 200%;
+          height: 200%;
+          object-position: 200% -5rem;
+          mask-image: linear-gradient(45deg, transparent 50%, var(--text) 70%, var(--text) 100%);
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+          width: 150%;
+          height: 150%;
+          object-position: -15rem -7.5rem;
+          mask-image: linear-gradient(60deg, transparent 45%, var(--text) 75%, var(--text) 100%);
+        }
       }
     }
   }
@@ -245,7 +276,7 @@
   }
 
   .funFactCard {
-    width: fit-content;
+    width: 100%;
     padding: 1rem 1.5rem;
     border-radius: 12px;
     background-color: var(--bg-bright);
@@ -263,11 +294,10 @@
   }
 
   .swedenImg {
-    width: auto;
-    height: auto;
     position: absolute;
-    left: 10%;
-    top: -73px;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .callToAction {
