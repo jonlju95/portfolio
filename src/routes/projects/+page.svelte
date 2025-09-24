@@ -4,7 +4,7 @@
     import {ProjectItem} from "$lib";
 </script>
 
-<section class="content py-7 px-6 my-0 mx-10">
+<section class="content pt-9 pb-7 px-6 my-0 mx-10">
     <div class="titleContainer pb-3">
         <h2>{$t('projectPage.title')}</h2>
         <p>{$t('projectPage.subtitle')}</p>

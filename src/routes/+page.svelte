@@ -86,7 +86,8 @@
                 </div>
                 <p class="h-100 my-5">{$t('homePage.heroSection.homeIntroduction')}</p>
                 <div class="d-flex">
-                    <Button label="{$t('button.contact')}" buttonProps="btnPrimary fontBold me-5"></Button>
+                    <LinkButton buttonProps="btnPrimary fontBold me-5" btnLabel="{$t('button.contact')}"
+                                link="mailto:jonatan.ljung@hotmail.com"/>
                     <LinkButton link="{base}/projects" btnLabel="{$t('button.projects')}"
                                 buttonProps="btnSecondary outline fontBold"></LinkButton>
                 </div>

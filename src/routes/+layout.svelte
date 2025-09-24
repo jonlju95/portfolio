@@ -2,13 +2,14 @@
     import '$lib/styles/app.scss';
 
     import {Footer, Navbar, Sidebar} from '$lib';
-    import {browser} from '$app/environment';
+    import {onMount} from 'svelte';
 
     let {children} = $props();
 
     let innerWidth = $state(0);
+    let mounted = $state(false);
 
-    if (browser) {
+    onMount(() => {
         const savedTheme = localStorage.getItem('theme');
 
         if (savedTheme) {
@@ -17,24 +18,29 @@
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
         }
-    }
+
+        mounted = true;
+    })
 </script>
 
 <svelte:window bind:innerWidth/>
 
-{#if innerWidth < 768}
-    <Sidebar></Sidebar>
-    {:else if (innerWidth >= 768)}
-    <Navbar></Navbar>
+{#if mounted}
+    {#if innerWidth < 768}
+        <Sidebar></Sidebar>
+    {:else}
+        <Navbar></Navbar>
+    {/if}
+
+
+    <main>
+        <article class="animatedElement">
+            {@render children()}
+        </article>
+    </main>
+
+    <Footer></Footer>
 {/if}
-
-<main>
-    <article class="animatedElement">
-        {@render children()}
-    </article>
-</main>
-
-<Footer></Footer>
 
 <style lang="scss">
   /* Makes the main container fill the entire screen minus the height of the footer and navbar, and moves it down "below" the navbar */
