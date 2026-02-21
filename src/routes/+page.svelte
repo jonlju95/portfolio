@@ -1,11 +1,11 @@
 <script lang="ts">
     import {localizeHref} from "$lib/paraglide/runtime";
 
-    import type {MeritEntryItem} from "$lib";
-    import {LinkButton, TechStackIcon} from '$lib';
+    import {LinkButton, type MeritEntryItem, ProjectCard, TechStackIcon} from "$lib";
     import * as m from "$lib/paraglide/messages";
     import Icon from "@iconify/svelte";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
+    import {resolve} from "$app/paths";
 
     // The property values are the keys for the translation JSON. For actual value, see translations/en.json or
     // translations/se.json
@@ -122,7 +122,7 @@
         </div>
     {/if}
 </section>
-<section class="flex flex-col bg-base gap-l justify-start  animatedElement">
+<section class="flex flex-col bg-base gap-l justify-start animatedElement">
     <div class="container">
         <h2 class="mb-l">{t('homePage_aboutSection_aboutTitle')}</h2>
         <div class="grid gap-l">
@@ -154,111 +154,109 @@
         </div>
     </div>
 </section>
-<section class="animatedElement">
-    <!--    <h2>{$t('homePage.techSection.title')}</h2>-->
-    <!--    <p class="mt-2">{$t('homePage.techSection.subtitle')}</p>-->
-    <div class="container techStackContainer mt-5">
+<section class="flex flex-col bg-base justify-start animatedElement">
+
+    <div class="container">
+        <h2>{t('homePage_techSection_title')}</h2>
+        <p class="mt-xs text-muted mb-l">{t('homePage_techSection_subtitle')}</p>
         <div class="techStackCategory">
-            <div class="row">
-                <h3 class="textPrimary">Frontend</h3>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                        title="Html"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                        title="Css"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                        title="JavaScript"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-                        title="TypeScript"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-                        title="Angular"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                        title="React"/>
+            <div class="stack mb-l" data-gap="md">
+                <h3 class="text-accent-dark">Frontend</h3>
+                <div class="flex gap-xl pb-l border-bottom">
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                            title="Html"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                            title="Css"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            title="JavaScript"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                            title="TypeScript"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                            title="Angular"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                            title="React"/>
+                </div>
+
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <div class="row">
-                <h3 class="textPrimary">Backend</h3>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                        title="Java"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-                        title="C#"/>
+            <div class="stack mb-l" data-gap="md">
+                <h3 class="text-accent-dark">Backend & Database</h3>
+                <div class="flex gap-xl pb-l border-bottom">
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            title="Java"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                            title="C#"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            title="PostgreSQL"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                            title="MySQL"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                            title="MongoDB"/>
+                </div>
             </div>
         </div>
         <div class="techStackCategory mt-4">
-            <div class="row">
-                <!--                <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>-->
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
-                        title="PostgreSQL"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                        title="MySQL"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-                        title="MongoDB"/>
-            </div>
-        </div>
-        <div class="techStackCategory mt-4">
-            <div class="row">
-                <!--                <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>-->
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
-                        title="Jira"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                        title="Git"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
-                        title="Docker"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
-                        title="Postman"/>
-                <TechStackIcon
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-                        title="Figma"/>
+            <div class="stack" data-gap="md">
+                <h3 class="text-accent-dark">{t('homePage_techSection_tools')}</h3>
+                <div class="flex gap-xl pb-l border-bottom">
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                            title="Jira"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            title="Git"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
+                            title="Docker"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                            title="Postman"/>
+                    <TechStackIcon
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                            title="Figma"/>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<section class="projectSection animatedElement">
-    <!--    <h2>{$t('homePage.projectSection.title')}</h2>-->
-    <!--    <p class="mt-2">{$t('homePage.projectSection.subtitle')}</p>-->
+<section class="animatedElement">
     <div class="container">
-        <div class="row mb-4 mt-4">
-            <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
-                <!--                <ProjectItem-->
-                <!--                        title="Personal economy"-->
-                <!--                        techStack={['Svelte', 'TypeScript', 'HTML/CSS']}-->
-                <!--                        description={$t('projectPage.projectItems.item2.description')}-->
-                <!--                        link="https://github.com/jonlju95/personalEconomyApp"/>-->
-            </div>
-            <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
-                <!--                <ProjectItem-->
-                <!--                        title="Customer Product Website"-->
-                <!--                        techStack={['Java', 'Html', 'Css']}-->
-                <!--                        description={$t('projectPage.projectItems.item3.description')}-->
-                <!--                        link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>-->
-            </div>
-            <div class="col-md col-lg-6 col-xxl-4 mb-5">
-                <!--                <ProjectItem-->
-                <!--                        title="Rock, Paper, Scissors"-->
-                <!--                        techStack={['JavaScript', 'Html', 'Css', 'React']}-->
-                <!--                        description={$t('projectPage.projectItems.item4.description')}-->
-                <!--                        link="https://github.com/jonlju95/Rock-Paper-Scissors"/>-->
-            </div>
+        <h2>{t('homePage_projectSection_title')}</h2>
+        <p class="mt-2">{t('homePage_projectSection_subtitle')}</p>
+
+        <div class="grid gap-l mt-l mb-l">
+            <ProjectCard
+                    title="Personal economy"
+                    techStack={['Svelte', 'TypeScript', 'HTML/CSS']}
+                    description={t('projectPage_projectItems_item2_description')}
+                    link="https://github.com/jonlju95/personalEconomyApp"/>
+            <ProjectCard
+                    title="Customer Product Website"
+                    techStack={['Java', 'Html', 'Css']}
+                    description={t('projectPage_projectItems_item3_description')}
+                    link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>
+            <ProjectCard
+                    title="Rock, Paper, Scissors"
+                    techStack={['JavaScript', 'Html', 'Css', 'React']}
+                    description={t('projectPage_projectItems_item4_description')}
+                    link="https://github.com/jonlju95/Rock-Paper-Scissors"/>
         </div>
     </div>
-    <div class="w-100 d-flex justify-end mt-3">
-        <!--        <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"-->
-        <!--                    newTab={false}/>-->
+    <div class="flex justify-center">
+        <LinkButton link="{resolve('/projects')}" btnLabel="{t('homePage_projectSection_moreProjects')}"
+                    newTab={false} buttonProps="btnPrimary"/>
     </div>
 </section>
 

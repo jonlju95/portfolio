@@ -109,8 +109,8 @@
 <!-- Navbar - desktop only -->
 <header class={[navScrolled && 'scrolled'].filter(Boolean).join(' ')}>
     <h2 class="navbarIcon">
-        <span class="text-light">Jonatan</span>
-        <span class="text-accent">Ljung</span>
+        <span class="{navScrolled ? 'text-primary' : 'text-light'}">Jonatan</span>
+        <span class="{navScrolled ? 'text-accent-dark' : 'text-accent'}">Ljung</span>
     </h2>
 
     <nav aria-label="Main navigation">
@@ -245,7 +245,7 @@
     &.scrolled {
       background-color: var(--bg-surface);
       box-shadow: var(--shadow);
-      color: var(--text);
+      color: var(--text-primary);
     }
   }
 

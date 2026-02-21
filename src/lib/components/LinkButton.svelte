@@ -11,23 +11,22 @@
     const linkTarget = newTab ? "_blank" : "";
 </script>
 
-<a class="btn text-small {buttonProps}" href="{link}" target="{linkTarget}" role="button"
+<a class="btn text-small font-bold text-primary {buttonProps}" href="{link}" target="{linkTarget}" role="button"
    {...(download ? { download: '' } : {})}>{btnLabel}</a>
 
 <style>
     .btn {
         padding: 0.75rem 1.5rem;
         border-radius: var(--radius);
-        box-shadow: var(--shadow);
 
         &.btnPrimary {
             background-color: var(--accent);
             color: var(--accent-dark);
+            box-shadow: var(--shadow);
         }
 
         &.btnSecondary {
-            outline: var(--accent) 1px solid;
-            color: var(--accent);
+            border: var(--accent) 2px solid ;
         }
     }
 

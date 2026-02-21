@@ -122,6 +122,116 @@
   margin-bottom: var(--space-2xl);
 }
 
+.ms-xs {
+  margin-left: var(--space-xs);
+}
+
+.ms-s {
+  margin-left: var(--space-sm);
+}
+
+.me-s {
+  margin-right: var(--space-sm);
+}
+
+// Padding
+// Spacing
+.pt-xs {
+  padding-top: var(--space-xs);
+}
+
+.pt-s {
+  padding-top: var(--space-sm);
+}
+
+.pt-m {
+  padding-top: var(--space-md);
+}
+
+.pt-l {
+  padding-top: var(--space-lg);
+}
+
+.pt-xl {
+  padding-top: var(--space-xl);
+}
+
+.pt-2xl {
+  padding-top: var(--space-2xl);
+}
+
+.pb-xs {
+  padding-bottom: var(--space-xs);
+}
+
+.pb-s {
+  padding-bottom: var(--space-sm);
+}
+
+.pb-m {
+  padding-bottom: var(--space-md);
+}
+
+.pb-l {
+  padding-bottom: var(--space-lg);
+}
+
+.pb-xl {
+  padding-bottom: var(--space-xl);
+}
+
+.pb-2xl {
+  padding-bottom: var(--space-2xl);
+}
+
+.ps-xs {
+  padding-left: var(--space-xs);
+}
+
+.ps-s {
+  padding-left: var(--space-sm);
+}
+
+.ps-m {
+  padding-left: var(--space-md);
+}
+
+.ps-l {
+  padding-left: var(--space-lg);
+}
+
+.ps-xl {
+  padding-left: var(--space-xl);
+}
+
+.ps-2xl {
+  padding-left: var(--space-2xl);
+}
+
+.pe-xs {
+  padding-right: var(--space-xs);
+}
+
+.pe-s {
+  padding-right: var(--space-sm);
+}
+
+.pe-m {
+  padding-right: var(--space-md);
+}
+
+.pe-l {
+  padding-right: var(--space-lg);
+}
+
+.pe-xl {
+  padding-right: var(--space-xl);
+}
+
+.pe-2xl {
+  padding-right: var(--space-2xl);
+}
+
 // Borders
 .border {
   border: 1px solid var(--border);
@@ -131,8 +241,16 @@
   border-top: 1px solid var(--border);
 }
 
+.border-bottom {
+  border-bottom: 1px solid var(--border);
+}
+
 .border-left {
   border-left: 3px solid var(--accent);
+}
+
+.border-right {
+  border-right: 1px solid var(--accent);
 }
 
 .border-accent-top {
@@ -160,6 +278,10 @@
   align-items: center;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -172,6 +294,10 @@
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .gap-s {
   gap: var(--space-sm);
 }
@@ -182,6 +308,10 @@
 
 .gap-l {
   gap: var(--space-lg);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
 }
 
 // Visibility
