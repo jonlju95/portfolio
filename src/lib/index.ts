@@ -6,7 +6,6 @@ export { default as ThemeToggle } from './components/toggles/ThemeToggle.svelte'
 export { default as LangToggle } from './components/toggles/LangToggle.svelte';
 
 export { default as Button } from './components/Button.svelte';
-export { default as LinkButton } from './components/LinkButton.svelte';
 
 export { default as TechStackIcon } from './components/TechStackIcon.svelte';
 export { default as ProjectCard } from './components/ProjectCard.svelte';

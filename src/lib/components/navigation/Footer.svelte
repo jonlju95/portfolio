@@ -63,6 +63,11 @@ import Icon from "@iconify/svelte";
                 vertical-align: center;
                 color: var(--text-muted);
                 text-decoration: none;
+                transition: color 0.1s;
+
+                &:hover {
+                    color: var(--text-primary);
+                }
             }
         }
     }

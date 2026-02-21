@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {LinkButton} from "$lib/index";
+    import {Button} from "$lib/index";
 
     let {title, techStack, description, link}: {
         title: string,
@@ -19,7 +19,7 @@
     <p class="cardDesc">{description}</p>
     {#if link}
         <div class="cardLink">
-            <LinkButton buttonProps="btnSecondary text-primary" {link} btnLabel="Github Repo" newTab={true}/>
+            <Button buttonProps="btnSecondary text-primary outline" {link} btnLabel="Github Repo" newTab={true}/>
         </div>
     {/if}
 </div>

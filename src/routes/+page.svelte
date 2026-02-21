@@ -1,7 +1,7 @@
 <script lang="ts">
     import {localizeHref} from "$lib/paraglide/runtime";
 
-    import {LinkButton, type MeritEntryItem, ProjectCard, TechStackIcon} from "$lib";
+    import {Button, type MeritEntryItem, ProjectCard, TechStackIcon} from "$lib";
     import * as m from "$lib/paraglide/messages";
     import Icon from "@iconify/svelte";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
@@ -99,12 +99,14 @@
                 <p>{t('homePage_heroSection_homeIntroduction')}</p>
 
                 <div class="cluster">
-                    <LinkButton link={localizeHref('/projects')}
-                                btnLabel={t('button_projects')}
-                                buttonProps="btnPrimary"/>
-                    <LinkButton link="mailto:jonatan.ljung@hotmail.com"
-                                btnLabel={t('button_contact')}
-                                buttonProps="btnSecondary"/>
+                    <Button link={localizeHref('/projects')}
+                            btnLabel={t('button_projects')}
+                            buttonProps="btnPrimary">
+                        <Icon icon="fa7-solid:arrow-right" width="24" height="24"/>
+                    </Button>
+                    <Button link="mailto:jonatan.ljung@hotmail.com"
+                            btnLabel={t('button_contact')}
+                            buttonProps="btnSecondary outline text-light"/>
                 </div>
             </div>
 
@@ -255,8 +257,8 @@
         </div>
     </div>
     <div class="flex justify-center">
-        <LinkButton link="{resolve('/projects')}" btnLabel="{t('homePage_projectSection_moreProjects')}"
-                    newTab={false} buttonProps="btnPrimary"/>
+        <Button link="{resolve('/projects')}" btnLabel="{t('homePage_projectSection_moreProjects')}"
+                newTab={false} buttonProps="btnPrimary outline"/>
     </div>
 </section>
 

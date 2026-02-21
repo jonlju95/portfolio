@@ -118,7 +118,7 @@
             {#each navLinks as link}
                 <li>
                     <a href="{localizeHref(link.href)}"
-                       class={{isActive: isActive(link.href)}}>
+                       class={'text-small' + {isActive: isActive(link.href)}}>
                         {t(link.labelKey)}
                     </a>
                 </li>
