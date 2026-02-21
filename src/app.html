@@ -3,16 +3,8 @@
     <head>
         <meta charset="utf-8"/>
         <script>
-            <!-- Function that loads a theme before the actual page is rendered, to prevent FOUC, flash of unstyled content -->
-            (function () {
-                try {
-                    const saved = localStorage.getItem('theme');
-                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    const theme = saved || (prefersDark ? 'dark' : 'light');
-                    document.documentElement.setAttribute('data-theme', theme);
-                } catch (_) {
-                }
-            })();
+            const theme = localStorage.getItem('theme') ?? 'light';
+            document.documentElement.setAttribute('data-theme', theme);
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

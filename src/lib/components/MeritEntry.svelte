@@ -40,19 +40,19 @@
 
   .entryDesc {
     font-size: 0.875rem;
-    color: #4a4a6a;
+    color: var(--text);
     line-height: 1.6;
   }
 
   .entry.muted .entryTitle {
-    color: #6b7a9a;
+    color: var(--accent);
   }
 
   .entry.muted .entryDesc {
-    color: #8a8aaa;
+    color: var(--text-muted);
   }
 
   .entry.muted {
-    border-left-color: #D0D8EC;
+    border-left-color: var(--accent);
   }
 </style>

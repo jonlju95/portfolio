@@ -4,13 +4,13 @@
   max-width: 75rem; // 1200px
   margin-inline: auto;
 
-  //@media (max-width: 1279px) {
-  //  padding-inline: var(--space-l); // 32px
-  //}
-  //
-  //@media (max-width: 767px) {
-  //  padding-inline: var(--space-s); // 16px
-  //}
+  @media (max-width: 1279px) {
+    padding-inline: var(--space-lg); // 32px
+  }
+
+  @media (max-width: 767px) {
+    padding-inline: var(--space-sm); // 16px
+  }
 }
 
 // Section vertical spacing

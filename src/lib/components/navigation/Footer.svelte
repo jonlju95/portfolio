@@ -1,34 +1,42 @@
 <script lang="ts">
-import Icon from "@iconify/svelte";
+    import Icon from "@iconify/svelte";
+
+    let innerWidth = $state(0);
 </script>
 
-<footer class="footer border-accent-top bg-base">
+<svelte:window bind:innerWidth/>
+
+<footer class="footer border-accent-top bg-surface">
     <section class="container flex justify-between">
         <div class="flex flex-col">
             <h4>{new Date(Date.now()).getFullYear()}</h4>
-            <p>Made with SvelteKit, design by me</p>
+            <p class="text-small">Made with SvelteKit, design by me</p>
         </div>
         <div class="contactSection flex justify-between align-center">
             <div class="flex flex-col border-right pe-s">
                 <a class="flex justify-end" href="tel:+46733950015" aria-labelledby="phone">
-                    <Icon class="me-s" icon="fa7-solid:phone" width="20" height="20" />
-                    (+46) 073-395 00 15
+                    <Icon class="me-s" icon="fa7-solid:phone" width="32" height="32"/>
+                    {#if innerWidth > 767}
+                        (+46) 073-395 00 15
+                    {/if}
                 </a>
                 <a class="flex" href="mailto:jonatan.ljung@hotmail.com"
                    aria-labelledby="mail">
-                    <Icon class="me-s" icon="fa7-solid:envelope" width="20" height="20" />
-                    jonatan.ljung@hotmail.com
+                    <Icon class="me-s" icon="fa7-solid:envelope" width="32" height="32"/>
+                    {#if innerWidth > 767}
+                        jonatan.ljung@hotmail.com
+                    {/if}
                 </a>
             </div>
             <div class="flex gap-s ps-s">
                 <a class="" href="https://www.linkedin.com/in/jonatan-ljung/"
                    target="_blank"
                    aria-labelledby="devicon-linkedin-plain">
-                    <Icon icon="fa7-brands:linkedin" width="32" height="32" />
+                    <Icon icon="fa7-brands:linkedin" width="32" height="32"/>
                 </a>
                 <a class="" href="https://github.com/jonlju95" target="_blank"
                    aria-labelledby="devicon-github-original">
-                    <Icon icon="fa7-brands:github" width="32" height="32" />
+                    <Icon icon="fa7-brands:github" width="32" height="32"/>
                 </a>
             </div>
         </div>
@@ -54,6 +62,11 @@ import Icon from "@iconify/svelte";
         .contactSection {
             @media screen and (max-width: 576px) {
                 width: 100%;
+                max-width: 10rem;
+
+                * {
+                    flex-direction: row;
+                }
             }
 
             a {

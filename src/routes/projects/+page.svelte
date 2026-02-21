@@ -68,3 +68,15 @@
         </div>
     </div>
 </section>
+
+<style lang="scss">
+  section {
+    position: relative;
+    max-width: 100%;
+    padding: var(--space-2xl) 0;
+
+    @media (max-width: 767px) {
+      padding: var(--space-3xl) 0;
+    }
+  }
+</style>

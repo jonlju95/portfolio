@@ -54,6 +54,8 @@
     const isActive = (href: string) => {
         const current = page.url.pathname.replace(/\/$/, '');
         const target = localizeHref(href).replace(/\/$/, '');
+
+        console.log(current === target);
         return current === target;
     }
 
@@ -91,7 +93,7 @@
             {#each navLinks as link}
                 <li>
                     <a href="{link.href}"
-                       class={{isActive: page.url.pathname === link.href}}
+                       class={isActive(link.href) ? 'active' : ''}
                        onclick={closeSidebar}>
                         {t(link.labelKey)}
                     </a>
@@ -118,12 +120,13 @@
             {#each navLinks as link}
                 <li>
                     <a href="{localizeHref(link.href)}"
-                       class={'text-small' + {isActive: isActive(link.href)}}>
+                       class={'text-small ' + (isActive(link.href) ? 'active' : '')}>
                         {t(link.labelKey)}
                     </a>
                 </li>
             {/each}
             <LangToggle/>
+            <ThemeToggle/>
         </ul>
     </nav>
 </header>
@@ -144,7 +147,7 @@
     line-height: 0;
 
     &.scrolled {
-      background-color: var(--bg-bright);
+      background-color: var(--bg-surface);
       box-shadow: var(--shadow);
     }
 
@@ -222,7 +225,7 @@
       border-radius: 12px;
       margin-bottom: 0.75rem;
 
-      &.isActive {
+      &.active {
         background-color: var(--border);
       }
     }
@@ -266,7 +269,7 @@
       color: var(--text);
 
       &:hover,
-      &.isActive {
+      &.active {
         text-decoration: underline;
         font-weight: bold;
       }

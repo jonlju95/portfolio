@@ -8,14 +8,16 @@
     const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
 </script>
 
-{#if groupTitle}
-    <h2 class="text-label text-accent font-bold mb-m">{groupTitle}</h2>
-{/if}
-<div class="entries">
-    {#each meritEntryItems as item}
-        <MeritEntry date={t(item.date)} title={t(item.title)} description={t(item.description)}
-                    muted={item.muted}/>
-    {/each}
+<div class="h-100">
+    {#if groupTitle}
+        <h2 class="text-label text-accent font-bold mb-m">{groupTitle}</h2>
+    {/if}
+    <div class="entries">
+        {#each meritEntryItems as item}
+            <MeritEntry date={t(item.date)} title={t(item.title)} description={t(item.description)}
+                        muted={item.muted}/>
+        {/each}
+    </div>
 </div>
 
 <style lang="scss">
