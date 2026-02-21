@@ -16,10 +16,8 @@
 <Footer/>
 
 <style lang="scss">
-  /* Makes the main container fill the entire screen minus the height of the footer and navbar, and moves it down "below" the navbar */
-  //article {
-  //  width: 100vw;
-  //  min-height: calc(100vh - 12rem);
-  //}
+  article {
+    margin-top: -5rem;
+  }
 </style>
 

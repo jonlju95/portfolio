@@ -73,6 +73,11 @@
   height: 100%;
 }
 
+// Width
+.w-50 {
+  width: 50%;
+}
+
 // Spacing
 .mt-xs {
   margin-top: var(--space-xs);
@@ -272,6 +277,10 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {

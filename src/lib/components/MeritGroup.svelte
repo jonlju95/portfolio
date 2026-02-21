@@ -13,7 +13,7 @@
 {/if}
 <div class="entries">
     {#each meritEntryItems as item}
-        <MeritEntry date={item.date} title={t(item.title)} description={t(item.description)}
+        <MeritEntry date={t(item.date)} title={t(item.title)} description={t(item.description)}
                     muted={item.muted}/>
     {/each}
 </div>

@@ -108,5 +108,8 @@
   "footer_credits": "Made with SvelteKit | Design by me",
   "footer_phone": "Phone",
   "button_projects": "See portfolio",
-  "button_contact": "Contact me"
+  "button_contact": "Contact me",
+  "aboutPage_skillsSection_description1": "I write code that's readable, maintainable, and built to last. Good  structure and clear naming aren't just habits, they're how I make sure future work stays manageable.",
+  "aboutPage_skillsSection_description2": "Whether it's a pixel off in the UI or an edge case in the logic, I notice the small things. Consistency across a product is what separates  good work from great work.",
+  "aboutPage_skillsSection_description3": "I believe technical decisions and design decisions are inseparable. Good code that delivers a poor experience isn't good enough. I keep the end user in mind throughout."
 }
