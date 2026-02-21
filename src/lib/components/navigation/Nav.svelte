@@ -109,7 +109,7 @@
 <!-- Navbar - desktop only -->
 <header class={[navScrolled && 'scrolled'].filter(Boolean).join(' ')}>
     <h2 class="navbarIcon">
-        <span>Jonatan</span>
+        <span class="text-light">Jonatan</span>
         <span class="text-accent">Ljung</span>
     </h2>
 
@@ -240,15 +240,12 @@
     border-radius: 0 0 12px 12px;
     background-color: transparent;
     align-items: center;
+    color: var(--text-light);
 
     &.scrolled {
       background-color: var(--bg-surface);
       box-shadow: var(--shadow);
-
-      .navbarIcon {
-        background-color: transparent;
-        box-shadow: none;
-      }
+      color: var(--text);
     }
   }
 

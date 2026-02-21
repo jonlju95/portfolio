@@ -1,8 +1,10 @@
 <script lang="ts">
-    import {base} from '$app/paths';
+    import {localizeHref} from "$lib/paraglide/runtime";
 
     import type {TimelineItem} from "$lib";
-    import {Button, LinkButton, ProjectItem, TechStackIcon} from '$lib';
+    import {LinkButton, TechStackIcon} from '$lib';
+    import * as m from "$lib/paraglide/messages";
+    import Icon from "@iconify/svelte";
 
     // The property values are the keys for the translation json. For actual value, see translations/en.json or
     // translations/se.json
@@ -65,84 +67,79 @@
     ]
 
     let innerWidth = 0;
+
+    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
+
 </script>
 
 <svelte:window bind:innerWidth/>
 
 <section class="heroSection animatedElement">
-    <!-- The divs color-overlay and bg-image only makes the bg appear like it should -->
     <div class="color-overlay"></div>
     <div class="bg-image"></div>
     <div class="container">
-        <div class="row h-100 d-flex justify-between align-center">
-            <div class="d-flex flex-col justify-center infoContainer col-lg-8 col-xl-6">
-                <div class="header d-flex flex-col h-100">
-<!--                    <h1>{$t('homePage.heroSection.homeTitle')}</h1>-->
+        <div class="split">
+            <div class="stack" data-gap="md">
+                <div class="stack title">
+                    <h1>{t('homePage_heroSection_homeTitle')}</h1>
                     <h3>
-<!--                        <span class="jobtitle">{$t('homePage.heroSection.homeJobtitle')}</span>-->
-<!--                        <span>{$t('homePage.heroSection.homeSubtitle')}</span>-->
+                        <span class="jobtitle">{t('homePage_heroSection_homeJobtitle')}</span>
+                        <span>{t('homePage_heroSection_homeSubtitle')}</span>
                     </h3>
                 </div>
-<!--                <p class="h-100 my-5">{$t('homePage.heroSection.homeIntroduction')}</p>-->
-                <div class="d-flex">
-<!--                    <LinkButton buttonProps="btnPrimary fontBold me-5" btnLabel="{$t('button.contact')}"-->
-<!--                                link="mailto:jonatan.ljung@hotmail.com"/>-->
-<!--                    <LinkButton link="{base}/projects" btnLabel="{$t('button.projects')}"-->
-<!--                                buttonProps="btnSecondary outline fontBold"></LinkButton>-->
+
+                <p>{t('homePage_heroSection_homeIntroduction')}</p>
+
+                <div class="cluster">
+                    <LinkButton link={localizeHref('/projects')}
+                                btnLabel={t('button_projects')}
+                                buttonProps="btnPrimary"/>
+                    <LinkButton link="mailto:jonatan.ljung@hotmail.com"
+                                btnLabel={t('button_contact')}
+                                buttonProps="btnSecondary"/>
                 </div>
             </div>
-            <div class="d-flex justify-center imgContainer col-8 col-lg-6 col-xl-5">
-                <img height="100%" width="100%"
-                     src="{base}/resources/images/me_1_cropped.webp"
+
+            <div class="imgContainer">
+                <img src="./resources/images/me_1_cropped.webp"
                      alt="Me smiling at the camera"/>
             </div>
+
         </div>
     </div>
+
     {#if innerWidth >= 768}
         <div class="arrowContainer">
-            <svg
-                    width="48"
-                    height="24"
-                    viewBox="0 0 48 24"
-                    id="arrow"
-                    xmlns="http://www.w3.org/2000/svg">
-                <path
-                        d="M 46.5,1.5 24.468525,22.351655 c -0.2739,0.259267 -0.66315,0.259267 -0.93705,0 L 1.5,1.5"
-                        stroke-width="2.82307"
-                        stroke-linecap="round"
-                        stroke="currentColor"
-                        style="fill-opacity: 0"
-                        id="path1"/>
-            </svg>
+            <Icon icon="fa7-solid:chevron-down" width="96" height="96"/>
         </div>
     {/if}
 </section>
-<section class="animatedElement">
-<!--    <h2>{$t('homePage.aboutSection.aboutTitle')}</h2>-->
+<section class="flex flex-col bg-base gap-l justify-start  animatedElement">
     <div class="container">
-        <div class="row">
-            <div class="mt-5 col-lg-4">
-<!--                <h3 class="textPrimary">{$t('homePage.aboutSection.item1.title')}</h3>-->
-<!--                <p class="textMuted">{$t('homePage.aboutSection.item1.description')}</p>-->
+    <h2 class="mb-l">{t('homePage_aboutSection_aboutTitle')}</h2>
+        <div class="grid gap-l">
+            <div>
+                <h3 class="text-accent-dark">{t('homePage_aboutSection_item1_title')}</h3>
+                <p>{t('homePage_aboutSection_item1_description')}</p>
             </div>
-            <div class="mt-5 col-lg-4">
-<!--                <h3 class="textPrimary">{$t('homePage.aboutSection.item2.title')}</h3>-->
-<!--                <p class="textMuted">{$t('homePage.aboutSection.item2.description')}</p>-->
+            <div>
+                <h3 class="text-accent-dark">{t('homePage_aboutSection_item2_title')}</h3>
+                <p>{t('homePage_aboutSection_item2_description')}</p>
             </div>
-            <div class="mt-5 col-lg-4">
-<!--                <h3 class="textPrimary">{$t('homePage.aboutSection.item3.title')}</h3>-->
-<!--                <p class="textMuted">{$t('homePage.aboutSection.item3.description')}</p>-->
+            <div>
+                <h3 class="text-accent-dark">{t('homePage_aboutSection_item3_title')}</h3>
+                <p>{t('homePage_aboutSection_item3_description')}</p>
             </div>
         </div>
     </div>
 </section>
 <section class="animatedElement">
-<!--    <h2>{$t('homePage.experienceSection.title')}</h2>-->
-<!--    <Timeline {timelineItems}/>-->
+    <!--    <h2>{$t('homePage.experienceSection.title')}</h2>-->
+    <!--    <Timeline {timelineItems}/>-->
 </section>
 <section class="animatedElement">
-<!--    <h2>{$t('homePage.techSection.title')}</h2>-->
-<!--    <p class="mt-2">{$t('homePage.techSection.subtitle')}</p>-->
+    <!--    <h2>{$t('homePage.techSection.title')}</h2>-->
+    <!--    <p class="mt-2">{$t('homePage.techSection.subtitle')}</p>-->
     <div class="container techStackContainer mt-5">
         <div class="techStackCategory">
             <div class="row">
@@ -180,7 +177,7 @@
         </div>
         <div class="techStackCategory mt-4">
             <div class="row">
-<!--                <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>-->
+                <!--                <h3 class="textPrimary">{$t('homePage.techSection.db')}</h3>-->
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                         title="PostgreSQL"/>
@@ -194,7 +191,7 @@
         </div>
         <div class="techStackCategory mt-4">
             <div class="row">
-<!--                <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>-->
+                <!--                <h3 class="textPrimary">{$t('homePage.techSection.tools')}</h3>-->
                 <TechStackIcon
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
                         title="Jira"/>
@@ -215,47 +212,45 @@
     </div>
 </section>
 <section class="projectSection animatedElement">
-<!--    <h2>{$t('homePage.projectSection.title')}</h2>-->
-<!--    <p class="mt-2">{$t('homePage.projectSection.subtitle')}</p>-->
+    <!--    <h2>{$t('homePage.projectSection.title')}</h2>-->
+    <!--    <p class="mt-2">{$t('homePage.projectSection.subtitle')}</p>-->
     <div class="container">
         <div class="row mb-4 mt-4">
             <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
-<!--                <ProjectItem-->
-<!--                        title="Personal economy"-->
-<!--                        techStack={['Svelte', 'TypeScript', 'HTML/CSS']}-->
-<!--                        description={$t('projectPage.projectItems.item2.description')}-->
-<!--                        link="https://github.com/jonlju95/personalEconomyApp"/>-->
+                <!--                <ProjectItem-->
+                <!--                        title="Personal economy"-->
+                <!--                        techStack={['Svelte', 'TypeScript', 'HTML/CSS']}-->
+                <!--                        description={$t('projectPage.projectItems.item2.description')}-->
+                <!--                        link="https://github.com/jonlju95/personalEconomyApp"/>-->
             </div>
             <div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
-<!--                <ProjectItem-->
-<!--                        title="Customer Product Website"-->
-<!--                        techStack={['Java', 'Html', 'Css']}-->
-<!--                        description={$t('projectPage.projectItems.item3.description')}-->
-<!--                        link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>-->
+                <!--                <ProjectItem-->
+                <!--                        title="Customer Product Website"-->
+                <!--                        techStack={['Java', 'Html', 'Css']}-->
+                <!--                        description={$t('projectPage.projectItems.item3.description')}-->
+                <!--                        link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>-->
             </div>
             <div class="col-md col-lg-6 col-xxl-4 mb-5">
-<!--                <ProjectItem-->
-<!--                        title="Rock, Paper, Scissors"-->
-<!--                        techStack={['JavaScript', 'Html', 'Css', 'React']}-->
-<!--                        description={$t('projectPage.projectItems.item4.description')}-->
-<!--                        link="https://github.com/jonlju95/Rock-Paper-Scissors"/>-->
+                <!--                <ProjectItem-->
+                <!--                        title="Rock, Paper, Scissors"-->
+                <!--                        techStack={['JavaScript', 'Html', 'Css', 'React']}-->
+                <!--                        description={$t('projectPage.projectItems.item4.description')}-->
+                <!--                        link="https://github.com/jonlju95/Rock-Paper-Scissors"/>-->
             </div>
         </div>
     </div>
     <div class="w-100 d-flex justify-end mt-3">
-<!--        <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"-->
-<!--                    newTab={false}/>-->
+        <!--        <LinkButton link="{base}/projects" btnLabel="{$t('homePage.projectSection.moreProjects')}"-->
+        <!--                    newTab={false}/>-->
     </div>
 </section>
 
 <style lang="scss">
   section {
-    background-image: var(--background-img);
-
     position: relative;
     max-width: 100%;
 
-    padding: 4rem 9rem 6rem;
+    padding: 4rem 0 6rem;
 
     @media screen and (max-width: 767px) {
       padding: 3rem 1rem 5rem;
@@ -264,23 +259,17 @@
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       padding: 3rem 2rem 5rem;
     }
-
-
-    /* Give the sections after the first one alternating background colors */
-    &:not(:first-child) {
-      background-color: var(--bg-dim);
-    }
-
-    &:nth-child(even) {
-      background-color: var(--bg);
-    }
   }
 
   .heroSection {
-    /* This height makes the first section of the home page fill the entire view, for design purposes */
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    margin-top: -5rem;
+    color: var(--text-light);
+
+    .title * {
+      color: var(--text-light);
+    }
 
     .bg-image {
       position: absolute;
@@ -288,7 +277,6 @@
       background-image: url('/resources/background-new.webp');
       background-size: cover;
       background-position: center;
-
       z-index: 1;
       height: inherit;
       width: inherit;
@@ -297,7 +285,7 @@
     .color-overlay {
       position: absolute;
       inset: 0;
-      background-color: var(--primary-bg);
+      background-color: var(--bg-emphasis);
       mix-blend-mode: hard-light;
       z-index: 2;
       height: inherit;
@@ -307,46 +295,36 @@
     .container {
       position: relative;
       z-index: 3;
-      width: inherit;
       height: 100%;
-      padding: 0;
 
-      > .row {
-        @media screen and (max-width: 1200px) {
-          margin: 0 !important;
-          flex-direction: column-reverse !important;
-          flex-wrap: inherit;
-          justify-content: space-evenly !important;
-        }
-      }
+      // Override container padding for hero since it's full-bleed
+      padding-block: var(--space-2xl);
     }
 
     .jobtitle {
-      color: var(--primary);
-      font-weight: bolder;
+      color: var(--accent);
+      font-weight: 700;
     }
 
     .imgContainer {
       img {
         border-radius: 50%;
-        border: 2px solid var(--primary);
+        border: 2px solid var(--accent);
         object-fit: cover;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1 / 1;
+        margin-inline: auto;
       }
     }
 
     .arrowContainer {
-      width: 100%;
       position: absolute;
-      bottom: 1.5rem;
+      bottom: var(--space-xs);
       left: 0;
       right: 0;
-      z-index: 3;
-
-      svg {
-        color: var(--border-muted);
-        margin-left: calc(50% - 24px);
-      }
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      color: var(--accent);
     }
   }
 

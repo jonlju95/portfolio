@@ -48,7 +48,7 @@
   "homePage_experienceSection_resumeItems_item9_months": "August - June",
   "homePage_experienceSection_title": "Experience & education",
   "homePage_heroSection_homeIntroduction": "With two years of experience I’m passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs.",
-  "homePage_heroSection_homeSubtitle": ", based in Växjö, Sweden",
+  "homePage_heroSection_homeSubtitle": " based in Växjö, Sweden",
   "homePage_heroSection_homeTitle": "Hi there, I’m Jonatan",
   "homePage_heroSection_homeJobtitle": "Web developer",
   "homePage_projectSection_subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
@@ -107,6 +107,6 @@
   "navbar_theme": "Theme",
   "footer_credits": "Made with SvelteKit | Design by me",
   "footer_phone": "Phone",
-  "button_projects": "Projects",
+  "button_projects": "See portfolio",
   "button_contact": "Contact me"
 }

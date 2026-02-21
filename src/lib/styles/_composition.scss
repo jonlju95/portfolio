@@ -3,15 +3,14 @@
   width: 100%;
   max-width: 75rem; // 1200px
   margin-inline: auto;
-  padding-inline: var(--space-3xl); // 120px
 
-  @media (max-width: 1279px) {
-    padding-inline: var(--space-l); // 32px
-  }
-
-  @media (max-width: 767px) {
-    padding-inline: var(--space-s); // 16px
-  }
+  //@media (max-width: 1279px) {
+  //  padding-inline: var(--space-l); // 32px
+  //}
+  //
+  //@media (max-width: 767px) {
+  //  padding-inline: var(--space-s); // 16px
+  //}
 }
 
 // Section vertical spacing
@@ -24,16 +23,16 @@
   display: flex;
   flex-direction: column;
 
-  & > * + * {
-    margin-top: var(--space-m);
+  &[data-gap="sm"] > * + * {
+    margin-top: var(--space-sm);
   }
 
-  &[data-gap="s"] > * + * {
-    margin-top: var(--space-s);
+  &[data-gap="md"] > * + * {
+    margin-top: var(--space-md);
   }
 
-  &[data-gap="l"] > * + * {
-    margin-top: var(--space-l);
+  &[data-gap="lg"] > * + * {
+    margin-top: var(--space-lg);
   }
 
   &[data-gap="xl"] > * + * {
@@ -45,7 +44,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-s);
+  gap: var(--space-lg);
   align-items: center;
 
   &[data-align="end"] {
