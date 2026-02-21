@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
     import { navLinks } from '$lib/config/nav';
-    import { t } from 'svelte-i18n';
     import { page } from '$app/state'
     import { LangToggle, ThemeToggle } from "$lib";
+    import Icon from "@iconify/svelte";
+    import * as m from '$lib/paraglide/messages';
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
     let btnScrolled = $state(false); // Trigger hamburger background (100vh)
@@ -46,6 +47,8 @@
     const toggleSidebar = () => {
         sidebarOpen = !sidebarOpen;
     }
+
+    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
 </script>
 
 <!-- Sentinels -->
@@ -90,8 +93,8 @@
                     <a href="{link.href}"
                        class={{isActive: page.url.pathname === link.href}}
                        onclick={closeSidebar}>
-                        <!-- TODO: add icon per link -->
-                        {$t(link.labelKey)}
+                        {t(link.labelKey)}
+                        Home
                     </a>
                 </li>
             {/each}
@@ -105,41 +108,45 @@
 </aside>
 
 <!-- Navbar - desktop only -->
-<header class={['animatedElement', navScrolled && 'scrolled'].filter(Boolean).join(' ')}>
-    <h2 class="navbarIcon">jL</h2>
+<header class={[navScrolled && 'scrolled'].filter(Boolean).join(' ')}>
+    <h2 class="navbarIcon">
+        <span>Jonatan</span>
+        <span class="text-accent">Ljung</span>
+    </h2>
 
+    <Icon icon="mdi:chevron-down" width="24" height="24" />
     <nav aria-label="Main navigation">
         <ul class="linkList">
             {#each navLinks as link}
                 <li>
                     <a href="{link.href}"
                        class={{isActive: page.url.pathname === link.href}}>
-                        {$t(link.labelKey)}
+                        {t(link.labelKey)}
                     </a>
                 </li>
             {/each}
+            <LangToggle/>
         </ul>
     </nav>
 
-    <div class="navbarControls">
-        <LangToggle/>
-        <ThemeToggle/>
-    </div>
+<!--    <div class="navbarControls">-->
+<!--        <ThemeToggle/>-->
+<!--    </div>-->
 </header>
 
 <style lang="scss">
 
   // Shared
   .navbarIcon {
-    background-color: var(--bg-bright);
-    color: var(--primary);
-    padding: 0 0.75rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    box-shadow: var(--shadow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    //background-color: var(--bg-bright);
+    //color: var(--primary);
+    //padding: 0 0.75rem;
+    //aspect-ratio: 1 / 1;
+    //border-radius: 50%;
+    //box-shadow: var(--shadow);
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
   }
 
   // Hamburger button
@@ -246,6 +253,7 @@
   // Navbar
   header {
     display: none; // shown via media query below
+
     position: sticky;
     inset: 0;
     z-index: 9999;
@@ -257,7 +265,7 @@
     align-items: center;
 
     &.scrolled {
-      background-color: var(--bg-bright);
+      background-color: var(--bg-surface);
       box-shadow: var(--shadow);
 
       .navbarIcon {
@@ -321,6 +329,7 @@
   //@include media-breakpoint-up(md) {
     header {
       display: flex;
+      justify-content: space-between;
     }
   //}
 </style>

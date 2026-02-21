@@ -3,6 +3,8 @@
     import {Footer, Nav} from '$lib';
 
     let {children} = $props();
+
+    export const prerender = true;
 </script>
 
 <Nav/>

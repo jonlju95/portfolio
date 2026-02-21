@@ -6,7 +6,7 @@ export interface NavLink {
 }
 
 export const navLinks: NavLink[] = [
-    { href: resolve('/'), labelKey: 'navbar.home'},
-    { href: resolve('/about'), labelKey: 'navbar.about' },
-    { href: resolve('/projects'), labelKey: 'navbar.projects' },
+    { href: resolve('/'), labelKey: 'navbar_home'},
+    { href: resolve('/about'), labelKey: 'navbar_about' },
+    { href: resolve('/projects'), labelKey: 'navbar_projects' },
 ]

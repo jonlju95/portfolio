@@ -1,11 +1,10 @@
 <script lang="ts">
-    import {t} from 'svelte-i18n';
 </script>
 
 <footer class="footer px-4 py-3">
     <section class="d-flex flex-col justify-between pt-1">
         <h3>2025</h3>
-        <p>{$t('footer.credits')}</p>
+        <p></p>
     </section>
     <section class="contactSection d-flex justify-between align-center">
         <a class="w-fit d-flex flex-col items-center" href="tel:+46733950015" aria-labelledby="phone">
@@ -23,7 +22,6 @@
                         stroke-linejoin="round"
                         id="path1"/>
             </svg>
-            {$t('footer.phone')}
         </a>
         <a class="w-fit d-flex flex-col items-center" href="mailto:jonatan.ljung@hotmail.com"
            aria-labelledby="mail">

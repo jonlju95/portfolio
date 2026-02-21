@@ -1,27 +1,29 @@
 <script lang="ts">
-    import { locale, t } from 'svelte-i18n';
-    import { base } from '$app/paths';
+    import Icon from "@iconify/svelte";
+    import { getLocale, setLocale,  } from '$lib/paraglide/runtime';
 
     const toggleLanguage = () => {
-        const next = $locale === 'en' ? 'sv' : 'en';
-        locale.set(next);
-        localStorage.setItem('lang', next);
+        const next = getLocale();
+        setLocale(next === 'en' ? 'se' : 'en');
+        localStorage.setItem("locale", next);
     };
 </script>
 
 <button
         onclick={toggleLanguage}
-        aria-label={$locale === 'en' ? 'Byt till Svenska' : 'Switch to English'}
+        aria-label={getLocale() === 'en' ? 'Byt till Svenska' : 'Switch to English'}
 >
     <!-- TODO: replace with dropdown component -->
     <div class="iconContainer">
-        {#if $locale === 'en'}
-            <img src="{base}/resources/images/united-kingdom-flag-icon.webp" alt="United Kingdom flag" />
+        {#if getLocale() === 'en'}
+            <span>EN</span>
+            <Icon icon="fluent:chevron-down-20-regular" width="20" height="20" />
         {:else}
-            <img src="{base}/resources/images/sweden-flag-icon.webp" alt="Swedish flag" />
+            <span>SE</span>
+            <Icon icon="fluent:chevron-down-20-regular" width="20" height="20" color="gray" />
         {/if}
+        <Icon icon="mdi:chevron-down-20-regular" width="20" height="20" />
     </div>
-    <span class="label">{$t('navbar.language')}</span>
 </button>
 
 <style lang="scss">

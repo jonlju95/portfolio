@@ -1,6 +1,4 @@
-import {locale, waitLocale} from 'svelte-i18n';
 import type {LayoutLoad} from './$types';
-import {setupI18n} from '$lib/i18n';
 import {browser} from '$app/environment';
 
 export const load: LayoutLoad = async () => {
@@ -12,10 +10,10 @@ export const load: LayoutLoad = async () => {
         }
     }
 
-    setupI18n(initialLocale);
-    locale.set(initialLocale); // This must be set before waitLocale
-
-    await waitLocale(); // Now it will wait for the right messages
+    // setupI18n(initialLocale);
+    // locale.set(initialLocale); // This must be set before waitLocale
+    //
+    // await waitLocale(); // Now it will wait for the right messages
 
     return {};
 };
