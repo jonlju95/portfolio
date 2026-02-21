@@ -1,60 +1,70 @@
-<!--<script lang="ts">-->
+<script lang="ts">
+    import { ProjectCard } from "$lib";
+    import * as m from "$lib/paraglide/messages";
 
-<!--    import {ProjectItem} from "$lib";-->
-<!--</script>-->
+    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
 
-<!--<section class="content pt-9 pb-7 px-6 my-0 mx-10">-->
-<!--    <div class="titleContainer pb-3">-->
-<!--        <h2>{$t('projectPage.title')}</h2>-->
-<!--        <p>{$t('projectPage.subtitle')}</p>-->
-<!--    </div>-->
-<!--    <div class="container mt-4">-->
-<!--        <div class="row h-100 mb-3">-->
-<!--            <div class="col-lg-6 col-xl-4">-->
-<!--                <ProjectItem title="Portfolio website" techStack="{['SvelteKit', 'TypeScript', 'HTML/CSS']}"-->
-<!--                             description={$t('projectPage.projectItems.item1.description')}-->
-<!--                             link="https://github.com/jonlju95/portfolio"/>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-xl-4">-->
-<!--                <ProjectItem title="Personal economy" techStack="{['Svelte', 'TypeScript', 'HTML/CSS']}"-->
-<!--                             description={$t('projectPage.projectItems.item2.description')}-->
-<!--                             link="https://github.com/jonlju95/personalEconomyApp"/>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-xl-4">-->
-<!--                <ProjectItem title="Customer Product Website" techStack="{['Java', 'Html', 'Css']}"-->
-<!--                             description={$t('projectPage.projectItems.item3.description')}-->
-<!--                             link="https://github.com/jonlju95/Personal_Project_Customer_Product_Website"/>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-xl-4 mt-5">-->
-<!--                <ProjectItem title="Rock, Paper, Scissors" techStack="{['JavaScript', 'Html', 'Css', 'React']}"-->
-<!--                             description={$t('projectPage.projectItems.item4.description')}-->
-<!--                             link="https://github.com/jonlju95/Rock-Paper-Scissors"/>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-xl-4 mt-5">-->
-<!--                <ProjectItem title="Connect Four" techStack="{['Java', 'JUnit']}"-->
-<!--                             description={$t('projectPage.projectItems.item5.description')}-->
-<!--                             link="https://github.com/jonlju95/Four-in-a-row"/>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-xl-4 mt-5">-->
-<!--                <ProjectItem title="Library app" techStack="{['Java', 'MongoDB', 'Postman']}"-->
-<!--                             description={$t('projectPage.projectItems.item6.description')}-->
-<!--                             link="https://github.com/jonlju95/Library-App"/>-->
-<!--            </div>-->
-<!--            <div class="col-xl-4 mt-5">-->
-<!--                <ProjectItem title="Recipe database" techStack="{['MySQL', 'Java']}"-->
-<!--                             description={$t('projectPage.projectItems.item7.description')}-->
-<!--                             link="https://github.com/jonlju95/Recipe-Database"/>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+    const projects = [
+        {
+            title: 'Portfolio website',
+            techStack: ['SvelteKit', 'TypeScript', 'HTML/CSS'],
+            descriptionKey: 'projectPage_projectItems_item1_description',
+            link: 'https://github.com/jonlju95/portfolio'
+        },
+        {
+            title: 'Personal economy',
+            techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
+            descriptionKey: 'projectPage_projectItems_item2_description',
+            link: 'https://github.com/jonlju95/personalEconomyApp'
+        },
+        {
+            title: 'Customer Product Website',
+            techStack: ['Java', 'HTML', 'CSS'],
+            descriptionKey: 'projectPage_projectItems_item3_description',
+            link: 'https://github.com/jonlju95/Personal_Project_Customer_Product_Website'
+        },
+        {
+            title: 'Rock, Paper, Scissors',
+            techStack: ['JavaScript', 'HTML', 'CSS', 'React'],
+            descriptionKey: 'projectPage_projectItems_item4_description',
+            link: 'https://github.com/jonlju95/Rock-Paper-Scissors'
+        },
+        {
+            title: 'Connect Four',
+            techStack: ['Java', 'JUnit'],
+            descriptionKey: 'projectPage_projectItems_item5_description',
+            link: 'https://github.com/jonlju95/Four-in-a-row'
+        },
+        {
+            title: 'Library app',
+            techStack: ['Java', 'MongoDB', 'Postman'],
+            descriptionKey: 'projectPage_projectItems_item6_description',
+            link: 'https://github.com/jonlju95/Library-App'
+        },
+        {
+            title: 'Recipe database',
+            techStack: ['MySQL', 'Java'],
+            descriptionKey: 'projectPage_projectItems_item7_description',
+            link: 'https://github.com/jonlju95/Recipe-Database'
+        }
+    ];
+</script>
 
-<!--<style>-->
-<!--    .content {-->
-<!--        background-color: var(&#45;&#45;bg);-->
-
-<!--        .titleContainer {-->
-<!--            border-bottom: 1px solid var(&#45;&#45;border-muted);-->
-<!--        }-->
-<!--    }-->
-<!--</style>-->
+<section class="section bg-base">
+    <div class="container">
+        <div class="stack pb-m" data-gap="sm">
+            <h2>{t('projectPage_title')}</h2>
+            <p class="text-muted">{t('projectPage_subtitle')}</p>
+        </div>
+        <div class="grid mt-lg gap-l">
+            {#each projects as project}
+                <ProjectCard
+                        title={project.title}
+                        techStack={project.techStack}
+                        description={t(project.descriptionKey)}
+                        link={project.link}
+                />
+            {/each}
+        </div>
+    </div>
+</section>

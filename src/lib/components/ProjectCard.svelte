@@ -26,18 +26,19 @@
 
 <style>
     .card {
-        background: #F6F6F6;
+        background: var(--bg-surface);
         border-radius: 8px;
         padding: 28px;
-        border-top: 3px solid #B8CDEE;
+        border-top: 3px solid var(--accent);
         display: flex;
         flex-direction: column;
         gap: 16px;
         transition: border-top-color 0.2s, box-shadow 0.2s;
+        min-height: 20rem;
     }
 
     .card:hover {
-        border-top-color: #37466D;
+        border-top-color: var(--accent-dark);
         box-shadow: 0 4px 20px rgba(55, 70, 109, 0.08);
     }
 
@@ -52,8 +53,8 @@
         font-weight: 600;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: #92A3C8;
-        background: #EEF2F8;
+        color: var(--text-light);
+        background: var(--accent-dark);
         padding: 3px 8px;
         border-radius: 4px;
     }
@@ -61,13 +62,13 @@
     .cardTitle {
         font-size: 1.15rem;
         font-weight: 700;
-        color: #37466D;
+        color: var(--text-primary);
         line-height: 1.3;
     }
 
     .cardDesc {
         font-size: 0.875rem;
-        color: #4a4a6a;
+        color: var(--text-muted);
         line-height: 1.65;
         flex: 1;
     }

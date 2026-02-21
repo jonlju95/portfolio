@@ -154,7 +154,7 @@
     &__gradient {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, var(--bg-base) 35%, transparent 65%);
+      background: linear-gradient(80deg, var(--bg-base) 35%, transparent 65%);
       z-index: 2;
     }
 
