@@ -1,7 +1,9 @@
 // place files you want to import through the `$lib` alias in this folder.
-export { default as Navbar } from './components/navigation/_navbar.svelte';
-export { default as Sidebar } from './components/navigation/_sidebar.svelte';
-export { default as Footer } from './components/navigation/_footer.svelte';
+export { default as Nav } from './components/navigation/Nav.svelte';
+export { default as Footer } from './components/navigation/Footer.svelte';
+
+export { default as ThemeToggle } from './components/toggles/ThemeToggle.svelte';
+export { default as LangToggle } from './components/toggles/LangToggle.svelte';
 
 export { default as Button } from './components/_button.svelte';
 export { default as LinkButton } from './components/_linkButton.svelte';
