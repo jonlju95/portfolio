@@ -1,6 +1,6 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
-    import { getLocale, setLocale,  } from '$lib/paraglide/runtime';
+    import {getLocale, setLocale} from '$lib/paraglide/runtime';
 
     const toggleLanguage = () => {
         const next = getLocale();
@@ -9,53 +9,21 @@
     };
 </script>
 
-<button
-        onclick={toggleLanguage}
-        aria-label={getLocale() === 'en' ? 'Byt till Svenska' : 'Switch to English'}
->
-    <!-- TODO: replace with dropdown component -->
-    <div class="iconContainer">
-        {#if getLocale() === 'en'}
-            <span>EN</span>
-            <Icon icon="fluent:chevron-down-20-regular" width="20" height="20" />
-        {:else}
-            <span>SE</span>
-            <Icon icon="fluent:chevron-down-20-regular" width="20" height="20" color="gray" />
-        {/if}
-        <Icon icon="mdi:chevron-down-20-regular" width="20" height="20" />
-    </div>
+<button onclick={toggleLanguage}
+        aria-label={getLocale() === 'en' ? 'Byt till Svenska' : 'Switch to English'}>
+    <span>{getLocale().toUpperCase()}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" {...$$props}>
+        <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+    </svg>
 </button>
 
 <style lang="scss">
   button {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    color: var(--text);
-  }
-
-  .iconContainer {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    flex-shrink: 0;
-
-    img {
-      position: absolute;
-      width: 36px;
-      height: 24px;
-      left: -6px;
-      top: 0;
-    }
-  }
-
-  .label {
-    font-size: 0.875rem;
   }
 </style>

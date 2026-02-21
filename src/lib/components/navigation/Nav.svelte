@@ -4,6 +4,7 @@
     import { LangToggle, ThemeToggle } from "$lib";
     import Icon from "@iconify/svelte";
     import * as m from '$lib/paraglide/messages';
+    import { localizeHref } from "$lib/paraglide/runtime";
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
     let btnScrolled = $state(false); // Trigger hamburger background (100vh)
@@ -49,6 +50,13 @@
     }
 
     const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
+
+    const isActive = (href: string) => {
+        const current = page.url.pathname.replace(/\/$/, '');
+        const target = localizeHref(href).replace(/\/$/, '');
+        return current === target;
+    }
+
 </script>
 
 <!-- Sentinels -->
@@ -61,14 +69,7 @@
         aria-label="Open navigation menu"
         aria-expanded={sidebarOpen}
         aria-controls="sidebar">
-    <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg">
-        <path
-                d="M 1,3.6666667 H 23 M 1,12 H 23 M 1,20.333333 h 22"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>
+    <Icon icon="mdi:hamburger-menu" width="32" height="32" />
 </button>
 
 <!-- Sidebar - mobile only -->
@@ -76,13 +77,12 @@
        class={['animatedElement', sidebarOpen && 'sidebarOpen'].filter(Boolean).join(' ')}
        aria-hidden={!sidebarOpen}>
     <div class="sidebarHeader">
-        <h2 class="navbarIcon">jL</h2>
+        <h2 class="navbarIcon">
+            <span>Jonatan</span>
+            <span class="text-accent">Ljung</span>
+        </h2>
         <button onclick={closeSidebar} aria-label="Close navigation menu">
-            <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 6.1428817,1.0000087 17.857157,12 6.1428817,22.999991"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      fill="none"/>
-            </svg>
+            <Icon icon="mdi:chevron-right" width="48" height="48" />
         </button>
     </div>
 
@@ -94,7 +94,6 @@
                        class={{isActive: page.url.pathname === link.href}}
                        onclick={closeSidebar}>
                         {t(link.labelKey)}
-                        Home
                     </a>
                 </li>
             {/each}
@@ -114,13 +113,12 @@
         <span class="text-accent">Ljung</span>
     </h2>
 
-    <Icon icon="mdi:chevron-down" width="24" height="24" />
     <nav aria-label="Main navigation">
         <ul class="linkList">
             {#each navLinks as link}
                 <li>
-                    <a href="{link.href}"
-                       class={{isActive: page.url.pathname === link.href}}>
+                    <a href="{localizeHref(link.href)}"
+                       class={{isActive: isActive(link.href)}}>
                         {t(link.labelKey)}
                     </a>
                 </li>
@@ -128,27 +126,9 @@
             <LangToggle/>
         </ul>
     </nav>
-
-<!--    <div class="navbarControls">-->
-<!--        <ThemeToggle/>-->
-<!--    </div>-->
 </header>
 
 <style lang="scss">
-
-  // Shared
-  .navbarIcon {
-    //background-color: var(--bg-bright);
-    //color: var(--primary);
-    //padding: 0 0.75rem;
-    //aspect-ratio: 1 / 1;
-    //border-radius: 50%;
-    //box-shadow: var(--shadow);
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-  }
-
   // Hamburger button
   .hamburger {
     display: none; // shown via media query below
@@ -162,7 +142,6 @@
     border: none;
     cursor: pointer;
     line-height: 0;
-    color: var(--text);
 
     &.scrolled {
       background-color: var(--bg-bright);
@@ -181,7 +160,7 @@
     position: fixed;
     z-index: 9999;
     inset: 0 0 0 auto;
-    background-color: var(--bg);
+    background-color: var(--bg-surface);
     border-radius: 12px 0 0 12px;
     border: var(--border);
     max-width: 70%;
@@ -243,7 +222,6 @@
       border-radius: 12px;
       margin-bottom: 0.75rem;
 
-      // TODO: add gap here once icons are added
       &.isActive {
         background-color: var(--border);
       }
@@ -252,8 +230,7 @@
 
   // Navbar
   header {
-    display: none; // shown via media query below
-
+    display: none;
     position: sticky;
     inset: 0;
     z-index: 9999;
@@ -307,29 +284,29 @@
   }
 
   // Responsive
-  //@include media-breakpoint-down(md) {
-  //  aside {
-  //    display: flex;
-  //    flex-direction: column;
-  //    transform: translateX(100%);
-  //    transition:
-  //            transform 0.5s ease-out,
-  //            background-color 0.3s ease-in-out,
-  //            color 0.3s ease-in-out,
-  //            border-color 0.3s ease-in-out !important;
-  //
-  //    &.sidebarOpen {
-  //      transform: translateX(0);
-  //    }
-  //  }
-  //
-  //  .hamburger { display: block; }
-  //}
-  //
-  //@include media-breakpoint-up(md) {
+  @media (max-width: 767px) {
+    aside {
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition:
+              transform 0.5s ease-out,
+              background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out;
+
+      &.sidebarOpen {
+        transform: translateX(0);
+      }
+    }
+
+    .hamburger { display: block; }
+  }
+
+  @media (min-width: 768px) {
     header {
       display: flex;
       justify-content: space-between;
     }
-  //}
+  }
 </style>
