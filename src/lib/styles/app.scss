@@ -1,23 +1,5 @@
-@use "variables";
-@use "variables-dark";
-@use "root";
-@use "reboot";
-
-@use 'grid' as *;
-
-@use "mixins/font" as *;
-@use 'mixins/layout' as *;
-@use 'mixins/button' as *;
-
-@include spacings();
-@include sizes();
-
-@include flexPositioning();
-@include display();
-@include positioning();
-
-@include button-styles();
-
-@include heading-size();
-@include font-weight();
-@include font-styles();
+@use 'variables';
+@use 'typography';
+@use 'reset';
+@use 'composition';
+@use 'utilities';

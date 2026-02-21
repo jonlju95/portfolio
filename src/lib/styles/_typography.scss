@@ -1,0 +1,106 @@
+@use 'variables' as *;
+
+// Base
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+// Headings
+h1, h2, h3, h4, h5 {
+  line-height: 1.2;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.8125rem; // 61px
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 2.5rem; // 40px
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 2rem; // 32px
+  letter-spacing: -0.005em;
+}
+
+h4 {
+  font-size: 1.625rem; // 26px
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem; // 20px
+  font-weight: 600;
+}
+
+// Body variants
+.text-small {
+  font-size: 0.8125rem; // 13px
+  line-height: 1.5;
+}
+
+.text-label {
+  font-size: 0.6875rem; // 11px
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+// Responsive scaling
+@media (max-width: 1279px) {
+  h1 {
+    font-size: 3rem;
+  }
+  // 48px
+  h2 {
+    font-size: 2.125rem;
+  }
+  // 34px
+  h3 {
+    font-size: 1.75rem;
+  }
+  // 28px
+  h4 {
+    font-size: 1.375rem;
+  }
+  // 22px
+  h5 {
+    font-size: 1.125rem;
+  }
+  // 18px
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.375rem;
+  }
+  // 38px
+  h2 {
+    font-size: 1.75rem;
+  }
+  // 28px
+  h3 {
+    font-size: 1.5rem;
+  }
+  // 24px
+  h4 {
+    font-size: 1.25rem;
+  }
+  // 20px
+  h5 {
+    font-size: 1.0625rem;
+  }
+  // 17px
+
+  body {
+    font-size: 0.9375rem;
+  }
+  // 15px
+}

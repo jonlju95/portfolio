@@ -21,7 +21,7 @@
         }
 
         p {
-            font-family: 'Nunito', sans-serif;
+
             font-weight: bold;
             letter-spacing: 1px;
             margin: 0.5rem 0 0;

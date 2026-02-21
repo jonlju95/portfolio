@@ -128,7 +128,6 @@
 </header>
 
 <style lang="scss">
-  @use '$lib/styles/mixins/breakpoints' as *;
 
   // Shared
   .navbarIcon {
@@ -278,7 +277,6 @@
       justify-content: center;
       min-width: 6rem;
       height: 100%;
-      font-family: 'Nunito', sans-serif;
       font-weight: 600;
       font-size: 0.75rem;
       letter-spacing: 1px;
@@ -301,28 +299,28 @@
   }
 
   // Responsive
-  @include media-breakpoint-down(md) {
-    aside {
-      display: flex;
-      flex-direction: column;
-      transform: translateX(100%);
-      transition:
-              transform 0.5s ease-out,
-              background-color 0.3s ease-in-out,
-              color 0.3s ease-in-out,
-              border-color 0.3s ease-in-out !important;
-
-      &.sidebarOpen {
-        transform: translateX(0);
-      }
-    }
-
-    .hamburger { display: block; }
-  }
-
-  @include media-breakpoint-up(md) {
+  //@include media-breakpoint-down(md) {
+  //  aside {
+  //    display: flex;
+  //    flex-direction: column;
+  //    transform: translateX(100%);
+  //    transition:
+  //            transform 0.5s ease-out,
+  //            background-color 0.3s ease-in-out,
+  //            color 0.3s ease-in-out,
+  //            border-color 0.3s ease-in-out !important;
+  //
+  //    &.sidebarOpen {
+  //      transform: translateX(0);
+  //    }
+  //  }
+  //
+  //  .hamburger { display: block; }
+  //}
+  //
+  //@include media-breakpoint-up(md) {
     header {
       display: flex;
     }
-  }
+  //}
 </style>

@@ -1,0 +1,97 @@
+// Content wrapper - limits width and applies side margins
+.container {
+  width: 100%;
+  max-width: 75rem; // 1200px
+  margin-inline: auto;
+  padding-inline: var(--space-3xl); // 120px
+
+  @media (max-width: 1279px) {
+    padding-inline: var(--space-l); // 32px
+  }
+
+  @media (max-width: 767px) {
+    padding-inline: var(--space-s); // 16px
+  }
+}
+
+// Section vertical spacing
+.section {
+  padding-block: var(--space-2xl); // 80px
+}
+
+// Stack - vertical rhythm between children
+.stack {
+  display: flex;
+  flex-direction: column;
+
+  & > * + * {
+    margin-top: var(--space-m);
+  }
+
+  &[data-gap="s"] > * + * {
+    margin-top: var(--space-s);
+  }
+
+  &[data-gap="l"] > * + * {
+    margin-top: var(--space-l);
+  }
+
+  &[data-gap="xl"] > * + * {
+    margin-top: var(--space-xl);
+  }
+}
+
+// Cluster - groups inline elements with consistent gap
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  align-items: center;
+
+  &[data-align="end"] {
+    justify-content: flex-end;
+  }
+
+  &[data-align="center"] {
+    justify-content: center;
+  }
+
+  &[data-align="between"] {
+    justify-content: space-between;
+  }
+}
+
+// Grid - responsive column grid
+.grid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(var(--grid-cols, 3), 1fr);
+
+  @media (max-width: 1279px) {
+    --grid-cols: 2;
+  }
+
+  @media (max-width: 767px) {
+    --grid-cols: 1;
+  }
+
+  &[data-cols="2"] {
+    --grid-cols: 2;
+
+    @media (max-width: 767px) {
+      --grid-cols: 1;
+    }
+  }
+}
+
+// Split - two column layout, left/right
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+
+  @media (max-width: 1279px) {
+    grid-template-columns: 1fr;
+  }
+}
