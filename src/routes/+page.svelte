@@ -1,69 +1,77 @@
 <script lang="ts">
     import {localizeHref} from "$lib/paraglide/runtime";
 
-    import type {TimelineItem} from "$lib";
+    import type {MeritEntryItem} from "$lib";
     import {LinkButton, TechStackIcon} from '$lib';
     import * as m from "$lib/paraglide/messages";
     import Icon from "@iconify/svelte";
+    import MeritGroup from "$lib/components/MeritGroup.svelte";
 
-    // The property values are the keys for the translation json. For actual value, see translations/en.json or
+    // The property values are the keys for the translation JSON. For actual value, see translations/en.json or
     // translations/se.json
-    export const timelineItems: TimelineItem[] = [
+    const experienceItems: MeritEntryItem[] = [
         {
-            title: 'homePage.experienceSection.resumeItems.item1.title',
-            months: 'homePage.experienceSection.resumeItems.item1.months',
-            years: '2025 - 2026',
-            description: 'homePage.experienceSection.resumeItems.item1.description',
-            icon: 'education'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item2.title',
-            months: 'homePage.experienceSection.resumeItems.item2.months',
-            years: '2021 - 2024',
-            description: 'homePage.experienceSection.resumeItems.item2.description',
-            icon: 'job'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item5.title',
-            months: 'homePage.experienceSection.resumeItems.item5.months',
-            years: '2019 - 2021',
-            description: 'homePage.experienceSection.resumeItems.item5.description',
-            icon: 'education'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item3.title',
-            months: 'homePage.experienceSection.resumeItems.item3.months',
-            years: '2019',
-            description: 'homePage.experienceSection.resumeItems.item3.description',
-            icon: 'job'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item4.title',
-            months: 'homePage.experienceSection.resumeItems.item4.months',
-            years: '2018',
-            description: 'homePage.experienceSection.resumeItems.item4.description',
-            icon: 'job'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item6.title',
-            months: 'homePage.experienceSection.resumeItems.item6.months',
-            years: '2018',
-            description: 'homePage.experienceSection.resumeItems.item6.description',
-            icon: 'education'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item7.title',
-            months: 'homePage.experienceSection.resumeItems.item7.months',
-            years: '2017 - 2018',
-            description: 'homePage.experienceSection.resumeItems.item7.description',
-            icon: 'education'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item8.title',
-            months: 'homePage.experienceSection.resumeItems.item8.months',
-            years: '2015 - 2018',
-            description: 'homePage.experienceSection.resumeItems.item8.description',
-            icon: 'job'
-        }, {
-            title: 'homePage.experienceSection.resumeItems.item9.title',
-            months: 'homePage.experienceSection.resumeItems.item9.months',
-            years: '2011 - 2014',
-            description: 'homePage.experienceSection.resumeItems.item9.description',
-            icon: 'education'
+            title: 'homePage_experienceSection_resumeItems_item2_title',
+            date: 'Nov 2021 - Jan 2024',
+            description: 'homePage_experienceSection_resumeItems_item2_description',
         },
+        {
+            title: 'homePage_experienceSection_resumeItems_item3_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item3_description',
+            muted: true
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item4_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item4_description',
+            muted: true
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item8_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item8_description',
+            muted: true
+        }
+    ]
+
+    const educationItems: MeritEntryItem[] = [
+        {
+            title: 'homePage_experienceSection_resumeItems_item1_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item1_description',
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item5_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item5_description',
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item6_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item6_description',
+            muted: true
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item7_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item7_description',
+            muted: true
+        },
+        {
+            title: 'homePage_experienceSection_resumeItems_item9_title',
+            date: 'Nov 2021 - Jan 2024',
+
+            description: 'homePage_experienceSection_resumeItems_item9_description',
+            muted: true
+        }
     ]
 
     let innerWidth = 0;
@@ -116,7 +124,7 @@
 </section>
 <section class="flex flex-col bg-base gap-l justify-start  animatedElement">
     <div class="container">
-    <h2 class="mb-l">{t('homePage_aboutSection_aboutTitle')}</h2>
+        <h2 class="mb-l">{t('homePage_aboutSection_aboutTitle')}</h2>
         <div class="grid gap-l">
             <div>
                 <h3 class="text-accent-dark">{t('homePage_aboutSection_item1_title')}</h3>
@@ -134,8 +142,17 @@
     </div>
 </section>
 <section class="animatedElement">
-    <!--    <h2>{$t('homePage.experienceSection.title')}</h2>-->
-    <!--    <Timeline {timelineItems}/>-->
+    <div class="container">
+        <h2 class="mb-l">{t('homePage_experienceSection_title')}</h2>
+        <div class="split">
+            <div class="h-100">
+                <MeritGroup groupTitle="Experience" meritEntryItems={experienceItems}/>
+            </div>
+            <div class="h-100">
+                <MeritGroup groupTitle="Education" meritEntryItems={educationItems}/>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="animatedElement">
     <!--    <h2>{$t('homePage.techSection.title')}</h2>-->

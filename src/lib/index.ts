@@ -11,4 +11,4 @@ export { default as LinkButton } from './components/_linkButton.svelte';
 export { default as TechStackIcon } from './components/_techStackIcon.svelte';
 export { default as ProjectItem } from './components/_projectItem.svelte';
 
-export type { TimelineItem } from './data/timelineItem';
+export type { MeritEntryItem } from './data/meritEntryItem';
