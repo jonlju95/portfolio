@@ -74,6 +74,10 @@
 }
 
 // Width
+.w-full {
+  width: 100%;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -305,6 +309,10 @@
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-s {
