@@ -1,66 +1,68 @@
 <script lang="ts">
     import {localizeHref} from "$lib/paraglide/runtime";
     import {Button, type MeritEntryItem, ProjectCard, TechStackIcon} from "$lib";
-    import * as m from "$lib/paraglide/messages";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
-
-    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
+    import {t} from "$lib/i18n";
 
     let innerWidth = $state(0);
 
     const experienceItems: MeritEntryItem[] = [
         {
-            title: 'homePage_experienceSection_resumeItems_item2_title',
-            date: 'Nov 2021 - Jan 2024',
-            description: 'homePage_experienceSection_resumeItems_item2_description'
+            title: 'home_experience_items_item10_title',
+            date: 'home_experience_items_item10_subtitle',
+            description: 'home_experience_items_item10_description',
+        }, {
+            title: 'home_experience_items_item2_title',
+            date: 'home_experience_items_item2_subtitle',
+            description: 'home_experience_items_item2_description',
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item3_title',
-            date: 'May - Aug 2019',
-            description: 'homePage_experienceSection_resumeItems_item3_description',
+            title: 'home_experience_items_item3_title',
+            date: 'home_experience_items_item3_subtitle',
+            description: 'home_experience_items_item3_description',
             muted: true
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item4_title',
-            date: 'Aug - Sep 2018',
-            description: 'homePage_experienceSection_resumeItems_item4_description',
+            title: 'home_experience_items_item4_title',
+            date: 'home_experience_items_item4_subtitle',
+            description: 'home_experience_items_item4_description',
             muted: true
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item8_title',
-            date: 'May 2015 - Jun 2018',
-            description: 'homePage_experienceSection_resumeItems_item8_description',
+            title: 'home_experience_items_item8_title',
+            date: 'home_experience_items_item8_subtitle',
+            description: 'home_experience_items_item8_description',
             muted: true
         }
     ];
 
     const educationItems: MeritEntryItem[] = [
         {
-            title: 'homePage_experienceSection_resumeItems_item1_title',
-            date: 'Jul 2025 - Apr 2026',
-            description: 'homePage_experienceSection_resumeItems_item1_description'
+            title: 'home_experience_items_item1_title',
+            date: 'home_experience_items_item1_subtitle',
+            description: 'home_experience_items_item1_description'
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item5_title',
-            date: 'Aug 2019 - May 2021',
-            description: 'homePage_experienceSection_resumeItems_item5_description'
+            title: 'home_experience_items_item5_title',
+            date: 'home_experience_items_item5_subtitle',
+            description: 'home_experience_items_item5_description'
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item6_title',
-            date: 'Sep 2018 - Discontinued',
-            description: 'homePage_experienceSection_resumeItems_item6_description',
+            title: 'home_experience_items_item6_title',
+            date: 'home_experience_items_item6_subtitle',
+            description: 'home_experience_items_item6_description',
             muted: true
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item7_title',
-            date: 'Sep 2017 - Jun 2018',
-            description: 'homePage_experienceSection_resumeItems_item7_description',
+            title: 'home_experience_items_item7_title',
+            date: 'home_experience_items_item7_subtitle',
+            description: 'home_experience_items_item7_description',
             muted: true
         },
         {
-            title: 'homePage_experienceSection_resumeItems_item9_title',
-            date: 'Aug 2011 - Jun 2014',
-            description: 'homePage_experienceSection_resumeItems_item9_description',
+            title: 'home_experience_items_item9_title',
+            date: 'home_experience_items_item9_subtitle',
+            description: 'home_experience_items_item9_description',
             muted: true
         }
     ];
@@ -112,19 +114,19 @@
         {
             title: 'Personal economy',
             techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projectPage_projectItems_item2_description',
+            descriptionKey: 'projects_items_item2_description',
             link: 'https://github.com/jonlju95/personalEconomyApp'
         },
         {
             title: 'Customer Product Website',
             techStack: ['Java', 'HTML', 'CSS'],
-            descriptionKey: 'projectPage_projectItems_item3_description',
+            descriptionKey: 'projects_items_item3_description',
             link: 'https://github.com/jonlju95/Personal_Project_Customer_Product_Website'
         },
         {
             title: 'Rock, Paper, Scissors',
             techStack: ['JavaScript', 'HTML', 'CSS', 'React'],
-            descriptionKey: 'projectPage_projectItems_item4_description',
+            descriptionKey: 'projects_items_item4_description',
             link: 'https://github.com/jonlju95/Rock-Paper-Scissors'
         },
     ];
@@ -140,13 +142,13 @@
         <div class="split justify-items-center">
             <div class="stack" data-gap="lg">
                 <div class="stack title" data-gap="sm">
-                    <h1>{t('homePage_heroSection_homeTitle')}</h1>
+                    <h1>{t('home_hero_title')}</h1>
                     <h3>
-                        <span class="jobtitle">{t('homePage_heroSection_homeJobtitle')}</span>
-                        <span>{t('homePage_heroSection_homeSubtitle')}</span>
+                        <span class="jobtitle">{t('home_hero_jobtitle')}</span>
+                        <span>{t('home_hero_subtitle')}</span>
                     </h3>
                 </div>
-                <p>{t('homePage_heroSection_homeIntroduction')}</p>
+                <p>{t('home_hero_introduction')}</p>
                 <div class="cluster">
                     <Button link={localizeHref('/projects')} btnLabel={t('button_projects')} buttonProps="btnPrimary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
@@ -179,19 +181,19 @@
 <!-- About -->
 <section class="section bg-base">
     <div class="container">
-        <h2 class="mb-l">{t('homePage_aboutSection_aboutTitle')}</h2>
+        <h2 class="mb-l">{t('home_about_title')}</h2>
         <div class="grid gap-l">
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-dark">{t('homePage_aboutSection_item1_title')}</h3>
-                <p>{t('homePage_aboutSection_item1_description')}</p>
+                <h3 class="text-accent-mid">{t('home_about_item1_title')}</h3>
+                <p>{t('home_about_item1_description')}</p>
             </div>
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-dark">{t('homePage_aboutSection_item2_title')}</h3>
-                <p>{t('homePage_aboutSection_item2_description')}</p>
+                <h3 class="text-accent-mid">{t('home_about_item2_title')}</h3>
+                <p>{t('home_about_item2_description')}</p>
             </div>
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-dark">{t('homePage_aboutSection_item3_title')}</h3>
-                <p>{t('homePage_aboutSection_item3_description')}</p>
+                <h3 class="text-accent-mid">{t('home_about_item3_title')}</h3>
+                <p>{t('home_about_item3_description')}</p>
             </div>
         </div>
     </div>
@@ -200,7 +202,7 @@
 <!-- Experience & Education -->
 <section class="section bg-base">
     <div class="container">
-        <h2 class="mb-l">{t('homePage_experienceSection_title')}</h2>
+        <h2 class="mb-l">{t('home_experience_title')}</h2>
         <div class="split h-100">
             <MeritGroup groupTitle="Experience" meritEntryItems={experienceItems}/>
             <MeritGroup groupTitle="Education" meritEntryItems={educationItems}/>
@@ -211,16 +213,16 @@
 <!-- Tech Stack -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('homePage_techSection_title')}</h2>
-        <p class="mt-xs text-muted mb-l">{t('homePage_techSection_subtitle')}</p>
+        <h2>{t('home_tech_title')}</h2>
+        <p class="mt-xs text-muted mb-l">{t('home_tech_subtitle')}</p>
 
         {#each [
             { label: 'Frontend', icons: frontendIcons },
-            { label: t('homePage_techSection_backendAndDb'), icons: backendIcons },
-            { label: t('homePage_techSection_tools'), icons: toolIcons }
+            { label: t('home_tech_backendAndDb'), icons: backendIcons },
+            { label: t('home_tech_tools'), icons: toolIcons }
         ] as category}
             <div class="techCategory mb-l">
-                <h3 class="text-accent-dark mb-m">{category.label}</h3>
+                <h3 class="text-accent-mid mb-m">{category.label}</h3>
                 <div class="cluster pb-l border-bottom">
                     {#each category.icons as icon}
                         <TechStackIcon src={icon.src} title={icon.title}/>
@@ -234,8 +236,8 @@
 <!-- Projects -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('homePage_projectSection_title')}</h2>
-        <p class="mt-xs text-muted">{t('homePage_projectSection_subtitle')}</p>
+        <h2>{t('home_projects_title')}</h2>
+        <p class="mt-xs text-muted">{t('home_projects_subtitle')}</p>
         <div class="grid gap-l mt-l mb-l">
             {#each featuredProjects as project}
                 <ProjectCard
@@ -247,7 +249,7 @@
             {/each}
         </div>
         <div class="cluster" style="justify-content: center;">
-            <Button link={localizeHref('/projects')} btnLabel={t('homePage_projectSection_moreProjects')}
+            <Button link={localizeHref('/projects')} btnLabel={t('home_projects_more')}
                     buttonProps="btnSecondary outline"/>
         </div>
     </div>

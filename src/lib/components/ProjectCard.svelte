@@ -62,13 +62,13 @@
     .cardTitle {
         font-size: 1.15rem;
         font-weight: 700;
-        color: var(--text-primary);
+        color: var(--card-title);
         line-height: 1.3;
     }
 
     .cardDesc {
         font-size: 0.875rem;
-        color: var(--text-muted);
+        color: var(--text-primary);
         line-height: 1.65;
         flex: 1;
     }

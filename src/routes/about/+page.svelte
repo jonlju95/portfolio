@@ -1,32 +1,31 @@
 <script lang="ts">
     import {base} from "$app/paths";
     import {Button, type MeritEntryItem} from "$lib";
-    import * as m from "$lib/paraglide/messages";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
     import Icon from "@iconify/svelte";
     import {getLocale} from "$lib/paraglide/runtime";
+    import {t} from "$lib/i18n";
 
     const meritEntryItems: MeritEntryItem[] = [
         {
-            title: 'aboutPage_journeySection_resumeItems_item1_title',
+            title: 'about_journey_items_item1_title',
             date: '2021 - 2024',
-            description: 'aboutPage_journeySection_resumeItems_item1_description'
+            description: 'about_journey_items_item1_description',
         },
         {
-            title: 'aboutPage_journeySection_resumeItems_item2_title',
-            date: 'aboutPage_journeySection_resumeItems_item2_years',
-            description: 'aboutPage_journeySection_resumeItems_item2_description'
+            title: 'about_journey_items_item2_title',
+            date: 'about_journey_items_item2_years',
+            description: 'about_journey_items_item2_description',
         },
         {
-            title: 'aboutPage_journeySection_resumeItems_item3_title',
-            date: 'aboutPage_journeySection_resumeItems_item3_years',
-            description: 'aboutPage_journeySection_resumeItems_item3_description'
+            title: 'about_journey_items_item3_title',
+            date: 'about_journey_items_item3_years',
+            description: 'about_journey_items_item3_description',
         }
     ];
 
     const resumeVersion = $derived(getLocale() === 'en' ? 'Resume.pdf' : 'CV.pdf');
 
-    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
 </script>
 
 <!-- Hero -->
@@ -38,8 +37,8 @@
     </div>
     <div class="container">
         <div class="stack" data-gap="sm">
-            <h1>{t('aboutPage_heroSection_title')}</h1>
-            <p class="w-50">{t('aboutPage_heroSection_description')}</p>
+            <h1>{t('about_hero_title')}</h1>
+            <p class="w-50">{t('about_hero_description')}</p>
         </div>
     </div>
 </section>
@@ -47,11 +46,11 @@
 <!-- Journey -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('aboutPage_journeySection_title')}</h2>
+        <h2>{t('about_journey_title')}</h2>
         <div class="split mt-l">
             <div class="stack h-100" data-gap="lg">
-                <p>{t('aboutPage_journeySection_description_span1')}</p>
-                <p>{t('aboutPage_journeySection_description_span2')}</p>
+                <p>{t('about_journey_description1')}</p>
+                <p>{t('about_journey_description2')}</p>
             </div>
             <MeritGroup {meritEntryItems}/>
         </div>
@@ -61,22 +60,22 @@
 <!-- Approach -->
 <section class="section bg-emphasis">
     <div class="container">
-        <h2 class="text-accent">{t('aboutPage_skillsSection_title')}</h2>
+        <h2 class="text-accent">{t('about_approach_title')}</h2>
         <div class="grid mt-l gap-l" data-cols="3">
             <div class="stack" data-gap="sm">
                 <Icon icon="fa6-solid:code" width="24" height="24" color="var(--accent)"/>
-                <h5 class="text-accent">{t('aboutPage_skillsSection_bulletPoint1')}</h5>
-                <p class="text-light">{t('aboutPage_skillsSection_description1')}</p>
+                <h5 class="text-accent">{t('about_approach_item1_title')}</h5>
+                <p class="text-light">{t('about_approach_item1_description')}</p>
             </div>
             <div class="stack" data-gap="sm">
                 <Icon icon="fa6-solid:magnifying-glass" width="24" height="24" color="var(--accent)"/>
-                <h5 class="text-accent">{t('aboutPage_skillsSection_bulletPoint2')}</h5>
-                <p class="text-light">{t('aboutPage_skillsSection_description2')}</p>
+                <h5 class="text-accent">{t('about_approach_item2_title')}</h5>
+                <p class="text-light">{t('about_approach_item2_description')}</p>
             </div>
             <div class="stack" data-gap="sm">
                 <Icon icon="fa6-solid:paintbrush" width="24" height="24" color="var(--accent)"/>
-                <h5 class="text-accent">{t('aboutPage_skillsSection_bulletPoint3')}</h5>
-                <p class="text-light">{t('aboutPage_skillsSection_description3')}</p>
+                <h5 class="text-accent">{t('about_approach_item3_title')}</h5>
+                <p class="text-light">{t('about_approach_item3_description')}</p>
             </div>
         </div>
     </div>
@@ -85,17 +84,17 @@
 <!-- Personal -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('aboutPage_personalSection_title')}</h2>
-        <p class="mt-l">{t('aboutPage_personalSection_description')}</p>
+        <h2>{t('about_personal_title')}</h2>
+        <p class="mt-l">{t('about_personal_description')}</p>
     </div>
 </section>
 
 <!-- Where I'm headed -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('aboutPage_futureSection_title')}</h2>
+        <h2>{t('about_future_title')}</h2>
         <h4 class="mt-l border-top border-bottom text-center font-regular pt-s pb-s">
-            {t('aboutPage_futureSection_description')}
+            {t('about_future_description')}
         </h4>
     </div>
 </section>
@@ -104,14 +103,14 @@
 <section class="section bg-emphasis">
     <div class="container">
         <div class="stack text-center" data-gap="md">
-            <h2 class="text-light">{t('aboutPage_contactSection_title')}</h2>
-            <p class="text-light">{t('aboutPage_contactSection_description')}</p>
+            <h2 class="text-light">{t('about_contact_title')}</h2>
+            <p class="text-light">{t('about_contact_description')}</p>
             <div class="cluster" style="justify-content: center;">
                 <Button buttonProps="btnPrimary"
-                        btnLabel={t('aboutPage_contactSection_button1')}
+                        btnLabel={t('about_contact_cta')}
                         link="mailto:jonatan.ljung@hotmail.com"/>
                 <Button buttonProps="btnSecondary outline text-light"
-                        btnLabel={t('aboutPage_contactSection_button2')}
+                        btnLabel={t('about_contact_cv')}
                         link="{base}/resources/resume/{resumeVersion}"
                         download={true}/>
             </div>

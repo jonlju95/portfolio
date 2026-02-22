@@ -1,11 +1,10 @@
 <script lang="ts">
     import type {MeritEntryItem} from "$lib";
     import MeritEntry from "$lib/components/MeritEntry.svelte";
-    import * as m from "$lib/paraglide/messages";
+    import {t} from '$lib/i18n'
 
     let {groupTitle, meritEntryItems}: { groupTitle?: string; meritEntryItems: MeritEntryItem[] } = $props();
 
-    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
 </script>
 
 <div class="h-100">

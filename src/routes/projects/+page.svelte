@@ -1,50 +1,57 @@
 <script lang="ts">
-    import { ProjectCard } from "$lib";
-    import * as m from "$lib/paraglide/messages";
-
-    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
+    import {ProjectCard} from "$lib";
+    import {t} from "$lib/i18n";
 
     const projects = [
         {
+            title: 'Radio scheduler frontend',
+            techStack: ['React', 'TypeScript', 'HTML/CSS'],
+            descriptionKey: 'projects_items_item8_description',
+            link: 'https://github.com/jonlju95/radio_scheduler_frontend'
+        }, {
+            title: 'Radio scheduler',
+            techStack: ['C#/.NET', 'EF Core', 'SQLite'],
+            descriptionKey: 'projects_items_item9_description',
+            link: 'https://github.com/jonlju95/radio_scheduler'
+        }, {
+            title: 'Sokoban game',
+            techStack: ['React', 'JavaScript'],
+            descriptionKey: 'projects_items_item10_description',
+            link: 'https://github.com/jonlju95/sokoban-game'
+        }, {
             title: 'Portfolio website',
             techStack: ['SvelteKit', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projectPage_projectItems_item1_description',
+            descriptionKey: 'projects_items_item1_description',
             link: 'https://github.com/jonlju95/portfolio'
-        },
-        {
+        }, {
             title: 'Personal economy',
             techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projectPage_projectItems_item2_description',
+            descriptionKey: 'projects_items_item2_description',
             link: 'https://github.com/jonlju95/personalEconomyApp'
-        },
-        {
+        }, {
             title: 'Customer Product Website',
             techStack: ['Java', 'HTML', 'CSS'],
-            descriptionKey: 'projectPage_projectItems_item3_description',
+            descriptionKey: 'projects_items_item3_description',
             link: 'https://github.com/jonlju95/Personal_Project_Customer_Product_Website'
-        },
-        {
+        }, {
             title: 'Rock, Paper, Scissors',
             techStack: ['JavaScript', 'HTML', 'CSS', 'React'],
-            descriptionKey: 'projectPage_projectItems_item4_description',
+            descriptionKey: 'projects_items_item4_description',
             link: 'https://github.com/jonlju95/Rock-Paper-Scissors'
-        },
-        {
+        }, {
             title: 'Connect Four',
             techStack: ['Java', 'JUnit'],
-            descriptionKey: 'projectPage_projectItems_item5_description',
+            descriptionKey: 'projects_items_item5_description',
             link: 'https://github.com/jonlju95/Four-in-a-row'
-        },
-        {
+        }, {
             title: 'Library app',
             techStack: ['Java', 'MongoDB', 'Postman'],
-            descriptionKey: 'projectPage_projectItems_item6_description',
+            descriptionKey: 'projects_items_item6_description',
             link: 'https://github.com/jonlju95/Library-App'
-        },
-        {
+        }, {
             title: 'Recipe database',
             techStack: ['MySQL', 'Java'],
-            descriptionKey: 'projectPage_projectItems_item7_description',
+            descriptionKey: 'projects_items_item7_description',
             link: 'https://github.com/jonlju95/Recipe-Database'
         }
     ];
@@ -53,8 +60,8 @@
 <section class="section bg-base">
     <div class="container">
         <div class="stack pb-m" data-gap="sm">
-            <h2>{t('projectPage_title')}</h2>
-            <p class="text-muted">{t('projectPage_subtitle')}</p>
+            <h2>{t('projects_title')}</h2>
+            <p class="text-muted">{t('projects_subtitle')}</p>
         </div>
         <div class="grid mt-lg gap-l">
             {#each projects as project}

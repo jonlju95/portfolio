@@ -1,10 +1,12 @@
 <script lang="ts">
-    import { navLinks } from '$lib/config/nav';
-    import { page } from '$app/state'
-    import { LangToggle, ThemeToggle } from "$lib";
+    import {navLinks} from '$lib/config/nav';
+    import {page} from '$app/state'
+    import {LangToggle, ThemeToggle} from "$lib";
     import Icon from "@iconify/svelte";
-    import * as m from '$lib/paraglide/messages';
-    import { localizeHref } from "$lib/paraglide/runtime";
+    import {localizeHref} from "$lib/paraglide/runtime";
+    import {t} from '$lib/i18n'
+
+    const isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/se/');
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
     let btnScrolled = $state(false); // Trigger hamburger background (100vh)
@@ -18,14 +20,14 @@
             ([entry]) => {
                 navScrolled = !entry.isIntersecting
             },
-            { threshold: 0.01 },
+            {threshold: 0.01},
         );
 
         const btnObserver = new IntersectionObserver(
             ([entry]) => {
                 btnScrolled = !entry.isIntersecting
             },
-            { threshold: 0.01 }
+            {threshold: 0.01}
         );
 
         if (navSentinel) {
@@ -49,13 +51,9 @@
         sidebarOpen = !sidebarOpen;
     }
 
-    const t = (key: string) => (m as unknown as Record<string, () => string>)[key]?.() ?? key;
-
     const isActive = (href: string) => {
         const current = page.url.pathname.replace(/\/$/, '');
         const target = localizeHref(href).replace(/\/$/, '');
-
-        console.log(current === target);
         return current === target;
     }
 
@@ -71,7 +69,7 @@
         aria-label="Open navigation menu"
         aria-expanded={sidebarOpen}
         aria-controls="sidebar">
-    <Icon icon="mdi:hamburger-menu" width="32" height="32" />
+    <Icon icon="mdi:hamburger-menu" width="32" height="32"/>
 </button>
 
 <!-- Sidebar - mobile only -->
@@ -84,7 +82,7 @@
             <span class="text-accent">Ljung</span>
         </h2>
         <button onclick={closeSidebar} aria-label="Close navigation menu">
-            <Icon icon="mdi:chevron-right" width="48" height="48" />
+            <Icon icon="mdi:chevron-right" width="48" height="48"/>
         </button>
     </div>
 
@@ -109,10 +107,10 @@
 </aside>
 
 <!-- Navbar - desktop only -->
-<header class={[navScrolled && 'scrolled'].filter(Boolean).join(' ')}>
-    <h2 class="navbarIcon">
-        <span class="{navScrolled ? 'text-primary' : 'text-light'}">Jonatan</span>
-        <span class="{navScrolled ? 'text-accent-dark' : 'text-accent'}">Ljung</span>
+<header class={[navScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}>
+    <h2 class={[navScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}>
+        <span>Jonatan</span>
+        <span class="{[navScrolled ? 'text-accent-dark' : 'text-accent']}">Ljung</span>
     </h2>
 
     <nav aria-label="Main navigation">
@@ -203,8 +201,9 @@
     bottom: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 0.75rem 0;
+    justify-content: end;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
   }
 
   nav ul {
@@ -243,7 +242,10 @@
     border-radius: 0 0 12px 12px;
     background-color: transparent;
     align-items: center;
-    color: var(--text-light);
+
+    &.home:not(.scrolled) {
+      color: var(--text-light);
+    }
 
     &.scrolled {
       background-color: var(--bg-surface);
@@ -289,18 +291,19 @@
       display: flex;
       flex-direction: column;
       transform: translateX(100%);
-      transition:
-              transform 0.5s ease-out,
-              background-color 0.3s ease-in-out,
-              color 0.3s ease-in-out,
-              border-color 0.3s ease-in-out;
+      transition: transform 0.5s ease-out,
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out,
+      border-color 0.3s ease-in-out;
 
       &.sidebarOpen {
         transform: translateX(0);
       }
     }
 
-    .hamburger { display: block; }
+    .hamburger {
+      display: block;
+    }
   }
 
   @media (min-width: 768px) {

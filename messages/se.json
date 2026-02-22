@@ -1,113 +1,195 @@
 {
-  "homePage_aboutSection_aboutText_span1": "Hej! Jag heter Jonatan Ljung — webbutvecklare med strax över två års erfarenhet på INBooks. Jag letar just nu efter nya möjligheter där jag kan bidra med både tekniskt kunnande och kreativt tänkande, samtidigt som jag kan fortsätta utvecklas i min karriär.",
-  "homePage_aboutSection_aboutText_span2": "Min bakgrund är inom fullstack webbutveckling, med praktisk erfarenhet av Java, HTML/CSS, JavaScript, TypeScript och PostgreSQL. Jag har arbetat mycket med Angular och AngularJS för att bygga användarvänliga, dynamiska applikationer. På senare tid har jag börjat fördjupa mig i C# och Flutter för att bredda mina kunskaper och utforska nya utvecklingsområden.",
-  "homePage_aboutSection_aboutText_span3": "Jag är baserad i Växjö men öppen för roller i södra Sverige – eller på distans! Jag är känd för att vara kreativ, detaljorienterad och lösningsfokuserad, vilket ledde till att jag tog extra ansvar för UI-kvalitetssäkring i min tidigare roll. Det innebar också ett nära samarbete med designers, produktägare och affärsanalytiker, vilket jag verkligen uppskattade.",
-  "homePage_aboutSection_aboutText_span4": "Om du letar efter någon med en blandning av teknisk kunskap, kreativitet och en vänlig laganda – hör av er!",
-  "homePage_aboutSection_aboutTitle": "Lär känna mig",
-  "homePage_aboutSection_item1_title": "Vem är jag?",
-  "homePage_aboutSection_item1_description": "Mitt namn är Jonatan Ljung, webbutvecklare med strax över två års erfarenhet på INBooks. Jag letar just nu efter nya möjligheter där jag kan bidra med både tekniskt kunnande och kreativt tänkande — och fortsätta växa som utvecklare.",
-  "homePage_aboutSection_item2_title": "Vad bidrar jag med?",
-  "homePage_aboutSection_item2_description": "Jag har en bakgrund av fullstack med erfarenhet inom Java, HTML/CSS, JavaScript, TypeScript och PostgreSQL. Jag har jobbat mycket med Angular och AngularJs för att bygga dynamiska och användarvänliga applikationer. På senare tid har jag även börjat dyka ner i C# och Flutter för att ytterligare utöka min verktygslåda.",
-  "homePage_aboutSection_item3_title": "Varför mig?",
-  "homePage_aboutSection_item3_description": "Jag är bosatt i Växjö, men är öppen för roller på distans eller i södra Sverige. Jag är kreativ, detaljorienterad och lösningsfokuserad — egenskaper som gjorde att jag fick ta ansvar för kvalitetssäkring av gränssnittet och samarbetade nära designers, produktägare och business analysts i min förra roll.",
-  "homePage_experienceSection_resumeItems_item1_description": "Arbetsmarknadsutbildning med fokus på C#, men också React, databasdesign och AI. Utöver detta kommer även en ca tre månader lång praktik i slutet av utbildningen. ",
-  "homePage_experienceSection_resumeItems_item1_subtitle": "Juli 2025 - April 2026",
-  "homePage_experienceSection_resumeItems_item1_title": "Lexicon - IT-påbyggnad",
-  "homePage_experienceSection_resumeItems_item1_months": "Juli - April",
-  "homePage_experienceSection_resumeItems_item2_description": "Webbutvecklare med fokus på fullstackutveckling och databashantering. Utvecklade först ett bokföringsprogram och senare även ett fastighetssystem. Hade fokus på att möta specifika marknadsbehov men också användarvänlighet.",
-  "homePage_experienceSection_resumeItems_item2_subtitle": "November 2021 - Januari 2024",
-  "homePage_experienceSection_resumeItems_item2_title": "INBooks AB - Webbutvecklare",
-  "homePage_experienceSection_resumeItems_item2_months": "November - Januari",
-  "homePage_experienceSection_resumeItems_item3_description": "Uthyrning till ATEA där jag arbetade med formatering av datorer från olika företag och myndigheter.",
-  "homePage_experienceSection_resumeItems_item3_subtitle": "Maj 2019 - Augusti 2019",
-  "homePage_experienceSection_resumeItems_item3_title": "Maxkompetens - Konsult",
-  "homePage_experienceSection_resumeItems_item3_months": "Maj - Augusti",
-  "homePage_experienceSection_resumeItems_item4_description": "Uthyrning till ATEA där jag arbetade med rekonditionering av mobiler och surfplattor från olika företag och myndigheter.",
-  "homePage_experienceSection_resumeItems_item4_subtitle": "Augusti 2018 – September 2018",
-  "homePage_experienceSection_resumeItems_item4_title": "Inpeople - Konsult",
-  "homePage_experienceSection_resumeItems_item4_months": "Augusti - September",
-  "homePage_experienceSection_resumeItems_item5_description": "Yrkeshögskoleutbildning inom programmering. Främst Java, men även en del HTML, CSS, JavaScript, SQL, med flera. Det förekom även några kurser med agila metoder.",
-  "homePage_experienceSection_resumeItems_item5_subtitle": "Augusti 2019 - Maj 2021",
-  "homePage_experienceSection_resumeItems_item5_title": "Ec Utbildning - Javautvecklare",
-  "homePage_experienceSection_resumeItems_item5_months": "Augusti - Maj",
-  "homePage_experienceSection_resumeItems_item6_description": "Universitetsutbildning inom datavetenskap. En del programmering och ellära förekom, samt ingenjörstypiska kurser så som fysik och matematik. Jag valde senare att avbryta utbildningen på grund av att utbildningens kvalitet och relevans inte motsvarade mina förväntningar.",
-  "homePage_experienceSection_resumeItems_item6_subtitle": "September 2018 - Avbruten",
-  "homePage_experienceSection_resumeItems_item6_title": "Linnéuniversitetet - Högskoleingenjör",
-  "homePage_experienceSection_resumeItems_item6_months": "September - Avbruten",
-  "homePage_experienceSection_resumeItems_item7_description": "Kompletterande utbildning med olika gymnasiekurser för att uppnå behörighet till vidareutbildning.",
-  "homePage_experienceSection_resumeItems_item7_subtitle": "September 2017 - Juni 2018",
-  "homePage_experienceSection_resumeItems_item7_title": "Linnéuniversitetet - Tekniskt basår",
-  "homePage_experienceSection_resumeItems_item7_months": "September - Juni",
-  "homePage_experienceSection_resumeItems_item8_description": "Tidigare har jag bland annat arbetat som maskinförare inom metall-CNC, lokalvårdare på Växjö Lasarett, och haft ansvar för montering av möbler samt arbete inom trä-CNC. Dessutom har jag erfarenhet från dagligvaruhandeln med fokus på varuuppackning och frontning, samt arbete som madrassmontör på ett semiautomatiserat band.",
-  "homePage_experienceSection_resumeItems_item8_subtitle": "Maj 2015 – Juli 2018",
-  "homePage_experienceSection_resumeItems_item8_title": "Diverse företag",
-  "homePage_experienceSection_resumeItems_item8_months": "Maj - Juli",
-  "homePage_experienceSection_resumeItems_item9_description": "Gymnasieutbildning inom möbelsnickeri och inredning. Innehöll även en betydande mängd designarbete, främst inom möbeldesign men även inom grafisk design.",
-  "homePage_experienceSection_resumeItems_item9_subtitle": "Augusti 2011 - Juni 2014",
-  "homePage_experienceSection_resumeItems_item9_title": "Kungsmadskolan - Möbelsnickare",
-  "homePage_experienceSection_resumeItems_item9_months": "Augusti - Juni",
-  "homePage_experienceSection_title": "Erfarenhet & utbildning",
-  "homePage_heroSection_homeIntroduction": "Med två års erfarenhet brinner jag för att skapa dynamiska och användarvänliga webblösningar. Jag är skicklig i ett brett spektrum av programmeringsspråk och teknologier, och dedikerad till att leverera högkvalitativa webbplatser som möter både kunders och användares behov.",
-  "homePage_heroSection_homeSubtitle": ", baserad i Växjö",
-  "homePage_heroSection_homeTitle": "Hej, mitt namn är Jonatan",
-  "homePage_heroSection_homeJobtitle": "Webbutvecklare",
-  "homePage_projectSection_subtitle": "Några av projekten jag gjort som del av min utbildning, och några senare projekt för att bibehålla mina kunskaper.",
-  "homePage_projectSection_title": "Projekt",
-  "homePage_projectSection_moreProjects": "Fler projekt",
-  "homePage_techSection_db": "Databas",
-  "homePage_techSection_subtitle": "Programmeringsspråk, ramverk och verktyg jag arbetat med innan",
-  "homePage_techSection_title": "Min teknikstack",
-  "homePage_techSection_backendAndDb": "Backend & Databaser",
-  "homePage_techSection_tools": "Verktyg",
-  "aboutPage_heroSection_description": "Jag är Jonatan Ljung, en webbutvecklare med över två års erfarenhet av att bygga moderna och responsiva webbplatser. Jag specialiserar mig på Angular, TypeScript, Java och PostgreSQL – och jag utökar ständigt mina kunskaper för att bli en starkare fullstack-utvecklare.",
-  "aboutPage_heroSection_title": "Om mig",
-  "aboutPage_journeySection_title": "Min resa",
-  "aboutPage_journeySection_description_span1": "Under min tid på INBooks har jag arbetat med projekt som sträcker sig från AngularJS-migreringar till utveckling av nya funktioner.",
-  "aboutPage_journeySection_description_span2": "Jag har hanterat både frontend-gränssnitt och backend-integrationer, och jag fick förtroendet att se till att designen förblev enhetlig i alla våra produkter.",
-  "aboutPage_journeySection_resumeItems_item1_title": "Webbutvecklare på INBooks",
-  "aboutPage_journeySection_resumeItems_item1_description": "Jobbade med AngularJS och Angular, och backend-integrationer med PostgreSQL",
-  "aboutPage_journeySection_resumeItems_item2_title": "Lär mig nya språk och verktyg",
-  "aboutPage_journeySection_resumeItems_item2_years": "2024 - Nutid",
-  "aboutPage_journeySection_resumeItems_item2_description": "Började lära mig nya språk och ramverk, så som C# och Flutter, samt Docker",
-  "aboutPage_journeySection_resumeItems_item3_title": "Arbetsmarknadsutbildning på Lexicon",
-  "aboutPage_journeySection_resumeItems_item3_years": "2025 - Nutid",
-  "aboutPage_journeySection_resumeItems_item3_description": "Påbyggnadsutbildning med fokus på C#, men också React, databaser och viss AI-teknik",
-  "aboutPage_skillsSection_title": "Mitt förhållningssätt till utveckling",
-  "aboutPage_skillsSection_bulletPoint1": "Ren kod",
-  "aboutPage_skillsSection_bulletPoint2": "Uppmärksam till detaljer",
-  "aboutPage_skillsSection_bulletPoint3": "Användarcentrerad design",
-  "aboutPage_skillsSection_description": "Jag tycker om att skapa rena, funktionella och lättskötta lösningar med starkt fokus på användarupplevelse. Jag tror att bra design och gedigna tekniska val går hand i hand och formar hur användarna upplever en produkt.",
-  "aboutPage_personalSection_title": "Utöver kod",
-  "aboutPage_personalSection_description": "Jag tycker om att arbeta med personliga projekt, lära mig nya ramverk och utforska användbarhet. Jag har också ett starkt intresse för matlagning, bakning, spel och en och annan fascination för djurbeteende – särskilt hos hyenor.",
-  "aboutPage_personalSection_funFacts_title": "Roliga fakta om mig",
-  "aboutPage_personalSection_funFacts_subtitle1": "Matlagnings- och bakningsexperiement",
-  "aboutPage_personalSection_funFacts_description1": "Jag älskar att göra surdeg och prova nya maträtter.",
-  "aboutPage_personalSection_funFacts_subtitle2": "Cykling och natur",
-  "aboutPage_personalSection_funFacts_description2": "Att spendera tid utomhus håller mig i balans.",
-  "aboutPage_personalSection_funFacts_subtitle3": "Spel och äventyrlighet",
-  "aboutPage_personalSection_funFacts_description3": "Utforskar alltid nya områden, från RPG-spel till djurbeteende.",
-  "aboutPage_futureSection_title": "Vart jag är på väg",
-  "aboutPage_futureSection_description": "Jag bor för närvarande i Växjö i Småland, men är öppen för möjligheter i södra Sverige. Jag dras till team som värdesätter samarbete, tydlig kommunikation och kontinuerligt lärande – och med fredagsfika förstås.",
-  "aboutPage_contactSection_title": "Kontakt",
-  "aboutPage_contactSection_description": "Vill du veta mer om mig och vad jag kan bidra med? Jag vill gärna höra från dig!",
-  "aboutPage_contactSection_button1": "Hör av dig",
-  "aboutPage_contactSection_button2": "Ladda ner CV",
-  "projectPage_title": "Projekt",
-  "projectPage_subtitle": "Tidigare projekt jag har gjort som en del av en utbildning eller för att hålla mig uppdaterad. De flesta äldre repos innehåller en readme-fil med projektets avsedda funktionalitet etc.",
-  "projectPage_projectItems_item1_description": "Källkod för detta webbplatsprojekt. Omgjord från ett liknande projekt jag gjorde 2024 som använde Angular istället.",
-  "projectPage_projectItems_item2_description": "Personligt projekt bestående av en app där man kunde lägga in utgifter och inkomster för att få en överblick över sin ekonomi. Skulle innehålla tabeller med olika filter för specifika poster etc.",
-  "projectPage_projectItems_item3_description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen.",
-  "projectPage_projectItems_item4_description": "Sten, sax, påse skapat med React och gjort som en del av min utbildning.",
-  "projectPage_projectItems_item5_description": "Spel skapat med fokus på testning, eftersom det utvecklades i en kurs inriktad på enhetstestning.",
-  "projectPage_projectItems_item6_description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman.",
-  "projectPage_projectItems_item7_description": "En del av min utbildning, med fokus på databasdesign och uppsättning av enkla CRUD-operationer.",
-  "navbar_about": "Om mig",
-  "navbar_home": "Hem",
-  "navbar_projects": "Projekt",
-  "navbar_language": "Språk",
-  "navbar_theme": "Tema",
-  "footer_credits": "Gjort med SvelteKit | Design av mig",
-  "footer_phone": "Tel",
-  "button_projects": "Projekt",
-  "button_contact": "Kontakta mig"
+  "nav": {
+    "home": "Hem",
+    "about": "Om mig",
+    "projects": "Projekt"
+  },
+  "footer": {
+    "credits": "Gjort med SvelteKit | Design av mig"
+  },
+  "button": {
+    "projects": "Se portfölj",
+    "contact": "Kontakta mig"
+  },
+  "home": {
+    "hero": {
+      "title": "Hej, mitt namn är Jonatan",
+      "jobtitle": "Webbutvecklare",
+      "subtitle": ", baserad i Växjö",
+      "introduction": "Med två års erfarenhet brinner jag för att skapa dynamiska och användarvänliga webblösningar. Jag är skicklig i ett brett spektrum av programmeringsspråk och teknologier, och dedikerad till att leverera högkvalitativa webbplatser som möter både kunders och användares behov."
+    },
+    "about": {
+      "title": "Lär känna mig",
+      "item1": {
+        "title": "Vem är jag?",
+        "description": "Mitt namn är Jonatan Ljung, webbutvecklare med strax över två års erfarenhet på INBooks. Jag letar just nu efter nya möjligheter där jag kan bidra med både tekniskt kunnande och kreativt tänkande - och fortsätta växa som utvecklare."
+      },
+      "item2": {
+        "title": "Vad bidrar jag med?",
+        "description": "Jag har en bakgrund av fullstack med erfarenhet inom Java, HTML/CSS, JavaScript, TypeScript och PostgreSQL. Jag har jobbat mycket med Angular och AngularJs för att bygga dynamiska och användarvänliga applikationer. På senare tid har jag även börjat dyka ner i C# och Flutter för att ytterligare utöka min verktygslåda."
+      },
+      "item3": {
+        "title": "Varför mig?",
+        "description": "Jag är bosatt i Växjö, men är öppen för roller på distans eller i södra Sverige. Jag är kreativ, detaljorienterad och lösningsfokuserad - egenskaper som gjorde att jag fick ta ansvar för kvalitetssäkring av gränssnittet och samarbetade nära designers, produktägare och business analysts i min förra roll."
+      }
+    },
+    "experience": {
+      "title": "Erfarenhet & utbildning",
+      "items": {
+        "item1": {
+          "title": "Lexicon - IT-påbyggnad",
+          "subtitle": "Juli 2025 - April 2026",
+          "description": "Arbetsmarknadsutbildning med fokus på C#, men också React, databasdesign och AI."
+        },
+        "item2": {
+          "title": "INBooks AB - Webbutvecklare",
+          "subtitle": "November 2021 - Januari 2024",
+          "description": "Webbutvecklare med fokus på fullstackutveckling och databashantering. Utvecklade först ett bokföringsprogram och senare även ett fastighetssystem. Hade fokus på att möta specifika marknadsbehov men också användarvänlighet."
+        },
+        "item3": {
+          "title": "Maxkompetens - Konsult",
+          "subtitle": "Maj 2019 - Augusti 2019",
+          "description": "Uthyrning till ATEA där jag arbetade med formatering av datorer från olika företag och myndigheter."
+        },
+        "item4": {
+          "title": "Inpeople - Konsult",
+          "subtitle": "Augusti 2018 – September 2018",
+          "description": "Uthyrning till ATEA där jag arbetade med rekonditionering av mobiler och surfplattor från olika företag och myndigheter."
+        },
+        "item5": {
+          "title": "Ec Utbildning - Javautvecklare",
+          "subtitle": "Augusti 2019 - Maj 2021",
+          "description": "Yrkeshögskoleutbildning inom programmering. Främst Java, men även en del HTML, CSS, JavaScript, SQL, med flera. Det förekom även några kurser med agila metoder."
+        },
+        "item6": {
+          "title": "Linnéuniversitetet - Högskoleingenjör",
+          "subtitle": "September 2018 - Avbruten",
+          "description": "Universitetsutbildning inom datavetenskap. En del programmering och ellära förekom, samt ingenjörstypiska kurser så som fysik och matematik. Jag valde senare att avbryta utbildningen på grund av att utbildningens kvalitet och relevans inte motsvarade mina förväntningar."
+        },
+        "item7": {
+          "title": "Linnéuniversitetet - Tekniskt basår",
+          "subtitle": "September 2017 - Juni 2018",
+          "description": "Kompletterande utbildning med olika gymnasiekurser för att uppnå behörighet till vidareutbildning."
+        },
+        "item8": {
+          "title": "Diverse företag",
+          "subtitle": "Maj 2015 – Juli 2018",
+          "description": "Tidigare har jag bland annat arbetat som maskinförare inom metall-CNC, lokalvårdare på Växjö Lasarett, och haft ansvar för montering av möbler samt arbete inom trä-CNC. Dessutom har jag erfarenhet från dagligvaruhandeln med fokus på varuuppackning och frontning, samt arbete som madrassmontör på ett semiautomatiserat band."
+        },
+        "item9": {
+          "title": "Kungsmadskolan - Möbelsnickare",
+          "subtitle": "Augusti 2011 - Juni 2014",
+          "description": "Gymnasieutbildning inom möbelsnickeri och inredning. Innehöll även en betydande mängd designarbete, främst inom möbeldesign men även inom grafisk design."
+        },
+        "item10": {
+          "description": "Praktik på Visma. Backend-utveckling av kundmoduler i C#/.NET. Sista delen i utbildningen på Lexicon.",
+          "title": "Visma - Praktik",
+          "subtitle": "Februari 2026 - April 2026"
+        }
+      }
+    },
+    "tech": {
+      "title": "Min teknikstack",
+      "subtitle": "Programmeringsspråk, ramverk och verktyg jag arbetat med innan",
+      "backendAndDb": "Backend & Databaser",
+      "tools": "Verktyg"
+    },
+    "projects": {
+      "title": "Projekt",
+      "subtitle": "Några av projekten jag gjort som del av min utbildning, och några senare projekt för att bibehålla mina kunskaper.",
+      "more": "Fler projekt"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Om mig",
+      "description": "Jag är Jonatan Ljung, en webbutvecklare med över två års erfarenhet av att bygga moderna och responsiva webbplatser. Jag specialiserar mig på Angular, TypeScript, Java och PostgreSQL - och jag utökar ständigt mina kunskaper för att bli en starkare fullstack-utvecklare."
+    },
+    "journey": {
+      "title": "Min resa",
+      "description1": "Under min tid på INBooks har jag arbetat med projekt som sträcker sig från AngularJS-migreringar till utveckling av nya funktioner.",
+      "description2": "Jag har hanterat både frontend-gränssnitt och backend-integrationer, och jag fick förtroendet att se till att designen förblev enhetlig i alla våra produkter.",
+      "items": {
+        "item1": {
+          "title": "Webbutvecklare på INBooks",
+          "description": "Jobbade med AngularJS och Angular, och backend-integrationer med PostgreSQL"
+        },
+        "item2": {
+          "title": "Lär mig nya språk och verktyg",
+          "years": "2024 - Nutid",
+          "description": "Började lära mig nya språk och ramverk, så som C# och Flutter, samt Docker"
+        },
+        "item3": {
+          "title": "Arbetsmarknadsutbildning på Lexicon",
+          "years": "2025 - Nutid",
+          "description": "Påbyggnadsutbildning med fokus på C#, men också React, databaser och viss AI-teknik"
+        }
+      }
+    },
+    "approach": {
+      "title": "Mitt förhållningssätt till utveckling",
+      "item1": {
+        "title": "Ren kod",
+        "description": "Jag skriver kod som är läsbar, underhållbar och byggd för att hålla. God struktur och tydliga namn är inte bara vanor — det är så jag ser till att framtida arbete förblir hanterbart."
+      },
+      "item2": {
+        "title": "Uppmärksam till detaljer",
+        "description": "Oavsett om det är en pixel fel i gränssnittet eller ett kantfall i logiken, lägger jag märke till de små sakerna. Enhetlighet i en produkt är det som skiljer bra arbete från riktigt bra arbete."
+      },
+      "item3": {
+        "title": "Användarcentrerad design",
+        "description": "Jag tror att tekniska beslut och designbeslut är oskiljaktiga. Bra kod som ger en dålig upplevelse räcker inte. Jag håller slutanvändaren i åtanke hela vägen."
+      }
+    },
+    "personal": {
+      "title": "Utöver kod",
+      "description": "Jag tycker om att arbeta med personliga projekt, lära mig nya ramverk och utforska användbarhet. Jag har också ett starkt intresse för matlagning, bakning, spel och en och annan fascination för djurbeteende – särskilt hos hyenor."
+    },
+    "future": {
+      "title": "Vart jag är på väg",
+      "description": "Jag bor för närvarande i Växjö i Småland, men är öppen för möjligheter i södra Sverige. Jag dras till team som värdesätter samarbete, tydlig kommunikation och kontinuerligt lärande – och med fredagsfika förstås."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Vill du veta mer om mig och vad jag kan bidra med? Jag vill gärna höra från dig!",
+      "cta": "Hör av dig",
+      "cv": "Ladda ner CV"
+    }
+  },
+  "projects": {
+    "title": "Projekt",
+    "subtitle": "Tidigare projekt jag har gjort som en del av en utbildning eller för att hålla mig uppdaterad. De flesta äldre repos innehåller en readme-fil med projektets avsedda funktionalitet etc.",
+    "items": {
+      "item1": {
+        "description": "Källkod för detta webbplatsprojekt. Omgjord från ett liknande projekt jag gjorde 2024 som använde Angular istället."
+      },
+      "item2": {
+        "description": "Personligt projekt bestående av en app där man kunde lägga in utgifter och inkomster för att få en överblick över sin ekonomi. Skulle innehålla tabeller med olika filter för specifika poster etc."
+      },
+      "item3": {
+        "description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen."
+      },
+      "item4": {
+        "description": "Sten, sax, påse skapat med React och gjort som en del av min utbildning."
+      },
+      "item5": {
+        "description": "Spel skapat med fokus på testning, eftersom det utvecklades i en kurs inriktad på enhetstestning."
+      },
+      "item6": {
+        "description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman."
+      },
+      "item7": {
+        "description": "En del av min utbildning, med fokus på databasdesign och uppsättning av enkla CRUD-operationer."
+      },
+      "item8": {
+        "description": "Frontend-delen av mitt radioschemaläggningsprojekt. Har en administratörssida med inloggning och en vanlig sida för gäster. Skapad som en del av min utbildning på Lexicon."
+      },
+      "item9": {
+        "description": "Backend-delen av mitt radioschemaläggarprojekt. Har grundläggande CRUD-operationer och koppling till en SQLite-databas med EF-kärna. Skapad som en del av min utbildning på Lexicon."
+      },
+      "item10": {
+        "description": "Sokoban-spel byggt i React, som en del av min utbildning på Lexicon. Har funktioner för att kontrollera spelarrörelser och liknande. Läser även spelplanen från en fil."
+      }
+    }
+  }
 }

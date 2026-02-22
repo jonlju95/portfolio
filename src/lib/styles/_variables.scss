@@ -29,6 +29,10 @@
   --space-xl: 3rem;
   --space-2xl: 5rem;
   --space-3xl: 7.5rem;
+
+  /* Component specific */
+  --entry-title: var(--accent-dark);
+  --card-title: var(--accent-dark);
 }
 
 [data-theme="dark"] {
@@ -43,4 +47,8 @@
 
   /* Borders */
   --border: #37466D;
+
+  /* Component specific */
+  --entry-title: var(--accent);
+  --card-title: var(--accent);
 }

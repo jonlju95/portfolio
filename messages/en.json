@@ -1,116 +1,195 @@
 {
-  "homePage_aboutSection_aboutText_span1": "Hi! I’m Jonatan Ljung — a web developer with just over two years of experience at INBooks. I'm currently looking for new opportunities where I can contribute with both technical skill and creative thinking, while continuing to grow in my career.",
-  "homePage_aboutSection_aboutText_span2": "My background is in full-stack web development, with hands-on experience in Java, HTML/CSS, JavaScript, TypeScript, and PostgreSQL. I’ve worked extensively with Angular and AngularJS to build user-friendly, dynamic applications. More recently, I’ve started diving into C# and Flutter to broaden my skill set and explore new areas of development.",
-  "homePage_aboutSection_aboutText_span3": "I’m based in Växjö but open to roles across southern Sweden — or remote! I'm known for being creative, detail-oriented, and solution-focused, which led to me taking on additional responsibility for UI quality assurance in my previous role. That also meant close collaboration with designers, product owners, and business analysts, which I genuinely enjoyed.",
-  "homePage_aboutSection_aboutText_span4": "If you're looking for someone with a mix of technical know-how, creativity, and a friendly team spirit — let’s talk!",
-  "homePage_aboutSection_aboutTitle": "Get to know me",
-  "homePage_aboutSection_item1_title": "Who am I?",
-  "homePage_aboutSection_item1_description": "My name is Jonatan Ljung, a web developer with just over two years of experience at INBooks. I’m currently on the lookout for new opportunities where I can contribute with both technical skills and creative thinking — and keep growing as a developer.",
-  "homePage_aboutSection_item2_title": "What I bring?",
-  "homePage_aboutSection_item2_description": "I have a full-stack background with experience in Java, HTML/CSS, JavaScript, TypeScript, and PostgreSQL. I’ve worked extensively with Angular and AngularJS to build dynamic, user-friendly applications. Lately, I’ve been diving into C# and Flutter to expand my toolkit even further.",
-  "homePage_aboutSection_item3_title": "Why me?",
-  "homePage_aboutSection_item3_description": "I’m based in Växjö, but open to remote work or roles across southern Sweden. I’m creative, detail-oriented, and solution-focused — traits that led me to take on UI quality assurance and collaborate closely with designers, product owners, and analysts in my previous role.",
-  "homePage_experienceSection_resumeItems_item1_description": "Labour market training course focusing on C#, but also React, database design and some AI engineering. In addition to this there's also a roughly three month long internship towards the end.",
-  "homePage_experienceSection_resumeItems_item1_subtitle": "July 2025 - April 2026",
-  "homePage_experienceSection_resumeItems_item1_title": "Lexicon - IT extension course",
-  "homePage_experienceSection_resumeItems_item1_months": "July - April",
-  "homePage_experienceSection_resumeItems_item2_description": "Focused on full-stack development and database management. Initially developed an accounting program and later a property management system. Emphasized meeting specific market needs as well as user-friendliness.",
-  "homePage_experienceSection_resumeItems_item2_subtitle": "November 2021 - January 2024",
-  "homePage_experienceSection_resumeItems_item2_title": "INBooks AB - Web developer",
-  "homePage_experienceSection_resumeItems_item2_months": "November - January",
-  "homePage_experienceSection_resumeItems_item3_description": "Assigned to ATEA, where I worked on computer formatting from various companies and authorities.",
-  "homePage_experienceSection_resumeItems_item3_subtitle": "May 2019 - August 2019",
-  "homePage_experienceSection_resumeItems_item3_title": "Maxkompetens - Consultant",
-  "homePage_experienceSection_resumeItems_item3_months": "May - August",
-  "homePage_experienceSection_resumeItems_item4_description": "Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities.",
-  "homePage_experienceSection_resumeItems_item4_subtitle": "August 2018 – September 2018",
-  "homePage_experienceSection_resumeItems_item4_title": "Inpeople - Consultant",
-  "homePage_experienceSection_resumeItems_item4_months": "August - September",
-  "homePage_experienceSection_resumeItems_item5_description": "Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others. Also had some courses on agile methods.",
-  "homePage_experienceSection_resumeItems_item5_subtitle": "August 2019 - May 2021",
-  "homePage_experienceSection_resumeItems_item5_title": "Ec Utbildning - Java Developer",
-  "homePage_experienceSection_resumeItems_item5_months": "August - May",
-  "homePage_experienceSection_resumeItems_item6_description": "University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics. Later chose to discontinue the education due to mismatched quality and relevance to expectations.",
-  "homePage_experienceSection_resumeItems_item6_subtitle": "September 2018 - Discontinued",
-  "homePage_experienceSection_resumeItems_item6_title": "Linnéuniversitetet - Bachelor of Engineering",
-  "homePage_experienceSection_resumeItems_item6_months": "September - Discontinued",
-  "homePage_experienceSection_resumeItems_item7_description": "Supplementary education with various high school courses to achieve eligibility for further education.",
-  "homePage_experienceSection_resumeItems_item7_subtitle": "September 2017 - June 2018",
-  "homePage_experienceSection_resumeItems_item7_title": "Linnéuniversitetet - Technical Preparatory Year",
-  "homePage_experienceSection_resumeItems_item7_months": "September - June",
-  "homePage_experienceSection_resumeItems_item8_description": "Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting, and worked as a mattress assembler on a semi-automated line.",
-  "homePage_experienceSection_resumeItems_item8_subtitle": "May 2015 - July 2018",
-  "homePage_experienceSection_resumeItems_item8_title": "Various companies",
-  "homePage_experienceSection_resumeItems_item8_months": "May - July",
-  "homePage_experienceSection_resumeItems_item9_description": "High school education in cabinetmaking and interior design, including a significant amount of design work, primarily in furniture design but also in graphic design.",
-  "homePage_experienceSection_resumeItems_item9_subtitle": "August 2011 - June 2014",
-  "homePage_experienceSection_resumeItems_item9_title": "Kungsmadskolan - Carpentry",
-  "homePage_experienceSection_resumeItems_item9_months": "August - June",
-  "homePage_experienceSection_title": "Experience & education",
-  "homePage_heroSection_homeIntroduction": "With two years of experience I’m passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs.",
-  "homePage_heroSection_homeSubtitle": " based in Växjö, Sweden",
-  "homePage_heroSection_homeTitle": "Hi there, I’m Jonatan",
-  "homePage_heroSection_homeJobtitle": "Web developer",
-  "homePage_projectSection_subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
-  "homePage_projectSection_title": "Projects",
-  "homePage_projectSection_moreProjects": "More projects",
-  "homePage_techSection_db": "Database",
-  "homePage_techSection_subtitle": "Languages, frameworks and tools I've worked with before",
-  "homePage_techSection_title": "My tech stack",
-  "homePage_techSection_backendAndDb": "Backend & Database",
-  "homePage_techSection_tools": "Tools",
-  "aboutPage_heroSection_description": "I’m Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I specialize in Angular, TypeScript, Java, and PostgreSQL — and I’m always expanding my skills to become a stronger fullstack developer.",
-  "aboutPage_heroSection_title": "About me",
-  "aboutPage_journeySection_title": "My journey",
-  "aboutPage_journeySection_description_span1": "During my time at INBooks, I’ve worked on projects ranging from AngularJS migrations to new feature development.",
-  "aboutPage_journeySection_description_span2": "I’ve handled both frontend UI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products.",
-  "aboutPage_journeySection_resumeItems_item1_title": "Web developer at INBooks",
-  "aboutPage_journeySection_resumeItems_item1_description": "Worked with AngularJS and Angular, as well as backend integrations with PostgreSQL",
-  "aboutPage_journeySection_resumeItems_item2_title": "Learning new languages and tools",
-  "aboutPage_journeySection_resumeItems_item2_years": "2024 - Present",
-  "aboutPage_journeySection_resumeItems_item2_description": "Started learning new languages and frameworks, like C# and Flutter, as well as Docker",
-  "aboutPage_journeySection_resumeItems_item3_title": "Labour market education at Lexicon",
-  "aboutPage_journeySection_resumeItems_item3_years": "2025 - Present",
-  "aboutPage_journeySection_resumeItems_item3_description": "Supplementary education focused on C#, but also React, databases and some AI engineering",
-  "aboutPage_skillsSection_title": "My approach to development",
-  "aboutPage_skillsSection_bulletPoint1": "Clean code",
-  "aboutPage_skillsSection_bulletPoint2": "Attention to Detail",
-  "aboutPage_skillsSection_bulletPoint3": "User-Centric Design",
-  "aboutPage_skillsSection_description": "I enjoy creating clean, functional, and maintainable solutions with a strong focus on user experience. I believe that good design and solid technical choices go hand-in-hand, shaping how users experience a product.",
-  "aboutPage_personalSection_title": "Beyond code",
-  "aboutPage_personalSection_description": "I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a strong interest in cooking, baking, gaming, and the odd fascination with animal behavior — especially hyenas.",
-  "aboutPage_personalSection_funFacts_title": "Fun facts about me",
-  "aboutPage_personalSection_funFacts_subtitle1": "Cooking & baking experiments",
-  "aboutPage_personalSection_funFacts_description1": "I love making sourdough and trying new dishes.",
-  "aboutPage_personalSection_funFacts_subtitle2": "Cycling & nature",
-  "aboutPage_personalSection_funFacts_description2": "Spending time outdoors keeps me balanced.",
-  "aboutPage_personalSection_funFacts_subtitle3": "Gaming & curiosity",
-  "aboutPage_personalSection_funFacts_description3": "Always exploring new topics, from RPGs to animal behaviour.",
-  "aboutPage_futureSection_title": "Where I'm headed",
-  "aboutPage_futureSection_description": "I’m currently living in Växjö, Småland, but I’m open to opportunities across southern Sweden. I’m drawn to teams that value collaboration, clear communication, and continuous learning - with the occasional friday fika, of course.",
-  "aboutPage_contactSection_title": "Contact",
-  "aboutPage_contactSection_description": "Want to know more about me and what I can bring? I'd love to hear from you!",
-  "aboutPage_contactSection_button1": "Get in touch",
-  "aboutPage_contactSection_button2": "Download CV",
-  "projectPage_title": "Projects",
-  "projectPage_subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
-  "projectPage_projectItems_item1_description": "Sourcecode for this website project. Remade from a similar project I made in 2024 which used Angular instead.",
-  "projectPage_projectItems_item2_description": "Personal project comprised of an app where you could insert expenses and income to get an overview of your economy. Was gonna contain tables with diverse filters for specific entries etc.",
-  "projectPage_projectItems_item3_description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality.",
-  "projectPage_projectItems_item4_description": "Rock, Paper, Scissors game created with React and made as part of my education.",
-  "projectPage_projectItems_item5_description": "Game created with a focus on testing, as it was developed in a unit testing-oriented course.",
-  "projectPage_projectItems_item6_description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman.",
-  "projectPage_projectItems_item7_description": "Part of my education, focusing on database design and setting up simple CRUD-operations.",
-  "navbar_about": "About me",
-  "navbar_home": "Home",
-  "navbar_projects": "Projects",
-  "navbar_language": "Language",
-  "navbar_theme": "Theme",
-  "footer_credits": "Made with SvelteKit | Design by me",
-  "footer_phone": "Phone",
-  "button_projects": "See portfolio",
-  "button_contact": "Contact me",
-  "aboutPage_skillsSection_description1": "I write code that's readable, maintainable, and built to last. Good  structure and clear naming aren't just habits, they're how I make sure future work stays manageable.",
-  "aboutPage_skillsSection_description2": "Whether it's a pixel off in the UI or an edge case in the logic, I notice the small things. Consistency across a product is what separates  good work from great work.",
-  "aboutPage_skillsSection_description3": "I believe technical decisions and design decisions are inseparable. Good code that delivers a poor experience isn't good enough. I keep the end user in mind throughout."
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects"
+  },
+  "footer": {
+    "credits": "Made with SvelteKit | Design by me"
+  },
+  "button": {
+    "projects": "See portfolio",
+    "contact": "Contact me"
+  },
+  "home": {
+    "hero": {
+      "title": "Hi there, I'm Jonatan",
+      "jobtitle": "Web developer",
+      "subtitle": " based in Växjö, Sweden",
+      "introduction": "With two years of experience I'm passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs."
+    },
+    "about": {
+      "title": "Get to know me",
+      "item1": {
+        "title": "Who am I?",
+        "description": "My name is Jonatan Ljung, a web developer with just over two years of experience at INBooks. I'm currently on the lookout for new opportunities where I can contribute with both technical skills and creative thinking - and keep growing as a developer."
+      },
+      "item2": {
+        "title": "What I bring?",
+        "description": "I have a full-stack background with experience in Java, HTML/CSS, JavaScript, TypeScript, and PostgreSQL. I've worked extensively with Angular and AngularJS to build dynamic, user-friendly applications. Lately, I've been diving into C# and Flutter to expand my toolkit even further."
+      },
+      "item3": {
+        "title": "Why me?",
+        "description": "I'm based in Växjö, but open to remote work or roles across southern Sweden. I'm creative, detail-oriented, and solution-focused - traits that led me to take on UI quality assurance and collaborate closely with designers, product owners, and analysts in my previous role."
+      }
+    },
+    "experience": {
+      "title": "Experience & education",
+      "items": {
+        "item1": {
+          "title": "Lexicon - IT extension course",
+          "subtitle": "July 2025 - April 2026",
+          "description": "Labour market training course focusing on C#, but also React, database design and some AI engineering."
+        },
+        "item2": {
+          "title": "INBooks AB - Web developer",
+          "subtitle": "November 2021 - January 2024",
+          "description": "Focused on full-stack development and database management. Initially developed an accounting program and later a property management system. Emphasized meeting specific market needs as well as user-friendliness."
+        },
+        "item3": {
+          "title": "Maxkompetens - Consultant",
+          "subtitle": "May 2019 - August 2019",
+          "description": "Assigned to ATEA, where I worked on computer formatting from various companies and authorities."
+        },
+        "item4": {
+          "title": "Inpeople - Consultant",
+          "subtitle": "August 2018 – September 2018",
+          "description": "Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities."
+        },
+        "item5": {
+          "title": "Ec Utbildning - Java Developer",
+          "subtitle": "August 2019 - May 2021",
+          "description": "Vocational education in programming, mainly Java, but also some HTML, CSS, JavaScript, SQL, among others. Also had some courses on agile methods."
+        },
+        "item6": {
+          "title": "Linnéuniversitetet - Bachelor of Engineering",
+          "subtitle": "September 2018 - Discontinued",
+          "description": "University education in computer science, including programming, electronics, and typical engineering courses such as physics and mathematics. Later chose to discontinue the education due to mismatched quality and relevance to expectations."
+        },
+        "item7": {
+          "title": "Linnéuniversitetet - Technical Preparatory Year",
+          "subtitle": "September 2017 - June 2018",
+          "description": "Supplementary education with various high school courses to achieve eligibility for further education."
+        },
+        "item8": {
+          "title": "Various companies",
+          "subtitle": "May 2015 - July 2018",
+          "description": "Previously worked as a metal-CNC machine operator, cleaner at Växjö Lasarett, responsible for furniture assembly and work in wood-CNC. Also, experienced in grocery retail with focus on stocking and fronting, and worked as a mattress assembler on a semi-automated line."
+        },
+        "item9": {
+          "title": "Kungsmadskolan - Carpentry",
+          "subtitle": "August 2011 - June 2014",
+          "description": "High school education in cabinetmaking and interior design, including a significant amount of design work, primarily in furniture design but also in graphic design."
+        },
+        "item10": {
+          "description": "Internship at Visma. Backend development of customer modules in C#/.NET. Final part of the education at Lexicon.",
+          "title": "Visma - Internship",
+          "subtitle": "February 2026 - April 2026"
+        }
+      }
+    },
+    "tech": {
+      "title": "My tech stack",
+      "subtitle": "Languages, frameworks and tools I've worked with before",
+      "backendAndDb": "Backend & Database",
+      "tools": "Tools"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Some of the projects I've done during my education, as well as some later projects to maintain my skills.",
+      "more": "More projects"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About me",
+      "description": "I'm Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I specialize in Angular, TypeScript, Java, and PostgreSQL - and I'm always expanding my skills to become a stronger fullstack developer."
+    },
+    "journey": {
+      "title": "My journey",
+      "description1": "During my time at INBooks, I've worked on projects ranging from AngularJS migrations to new feature development.",
+      "description2": "I've handled both frontend UI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products.",
+      "items": {
+        "item1": {
+          "title": "Web developer at INBooks",
+          "description": "Worked with AngularJS and Angular, as well as backend integrations with PostgreSQL"
+        },
+        "item2": {
+          "title": "Learning new languages and tools",
+          "years": "2024 - Present",
+          "description": "Started learning new languages and frameworks, like C# and Flutter, as well as Docker"
+        },
+        "item3": {
+          "title": "Labour market education at Lexicon",
+          "years": "2025 - Present",
+          "description": "Supplementary education focused on C#, but also React, databases and some AI engineering"
+        }
+      }
+    },
+    "approach": {
+      "title": "My approach to development",
+      "item1": {
+        "title": "Clean code",
+        "description": "I write code that's readable, maintainable, and built to last. Good structure and clear naming aren't just habits, they're how I make sure future work stays manageable."
+      },
+      "item2": {
+        "title": "Attention to Detail",
+        "description": "Whether it's a pixel off in the UI or an edge case in the logic, I notice the small things. Consistency across a product is what separates good work from great work."
+      },
+      "item3": {
+        "title": "User-Centric Design",
+        "description": "I believe technical decisions and design decisions are inseparable. Good code that delivers a poor experience isn't good enough. I keep the end user in mind throughout."
+      }
+    },
+    "personal": {
+      "title": "Beyond code",
+      "description": "I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a strong interest in cooking, baking, gaming, and the odd fascination with animal behavior — especially hyenas."
+    },
+    "future": {
+      "title": "Where I'm headed",
+      "description": "I'm currently living in Växjö, Småland, but I'm open to opportunities across southern Sweden. I'm drawn to teams that value collaboration, clear communication, and continuous learning - with the occasional friday fika, of course."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Want to know more about me and what I can bring? I'd love to hear from you!",
+      "cta": "Get in touch",
+      "cv": "Download CV"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
+    "items": {
+      "item1": {
+        "description": "Sourcecode for this website project. Remade from a similar project I made in 2024 which used Angular instead."
+      },
+      "item2": {
+        "description": "Personal project comprised of an app where you could insert expenses and income to get an overview of your economy. Was gonna contain tables with diverse filters for specific entries etc."
+      },
+      "item3": {
+        "description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality."
+      },
+      "item4": {
+        "description": "Rock, Paper, Scissors game created with React and made as part of my education."
+      },
+      "item5": {
+        "description": "Game created with a focus on testing, as it was developed in a unit testing-oriented course."
+      },
+      "item6": {
+        "description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman."
+      },
+      "item7": {
+        "description": "Part of my education, focusing on database design and setting up simple CRUD-operations."
+      },
+      "item8": {
+        "description": "Frontend part of my radio scheduler project. Has an admin page with login, and a regular page for guests. Made as part of my education at Lexicon."
+      },
+      "item9": {
+        "description": "Backend part of my radio scheduler project. Has basic CRUD-operations and connection to an SQLite db using EF core. Made as part of my education at Lexicon."
+      },
+      "item10": {
+        "description": "Sokoban game built in React, as part of my education at Lexicon. Has functions to check player movement and similar. Also reads the playing board from a file."
+      }
+    }
+  }
 }

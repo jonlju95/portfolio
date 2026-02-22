@@ -1,5 +1,7 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
+    import {t} from '$lib/i18n'
+    import {footer_credits} from "$lib/paraglide/messages/se";
 
     let innerWidth = $state(0);
 </script>
@@ -10,7 +12,7 @@
     <section class="container flex justify-between">
         <div class="flex flex-col">
             <h4>{new Date(Date.now()).getFullYear()}</h4>
-            <p class="text-small">Made with SvelteKit, design by me</p>
+            <p class="text-small">{t('footer_credits')}</p>
         </div>
         <div class="contactSection flex justify-between align-center">
             <div class="flex flex-col border-right pe-s">

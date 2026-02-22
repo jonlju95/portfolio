@@ -1,7 +1,6 @@
 <script lang="ts">
     let {date, title, description, muted}: { date: string, title: string, description: string, muted?: boolean
-    } =
-        $props();
+    } = $props();
 </script>
 
 <div class="entry {muted ? 'muted' : ''}">
@@ -33,7 +32,7 @@
   .entryTitle {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--accent-dark);
+    color: var(--entry-title);
     margin-bottom: 6px;
     line-height: 1.3;
   }
@@ -45,7 +44,7 @@
   }
 
   .entry.muted .entryTitle {
-    color: var(--accent);
+    color: var(--text-muted);
   }
 
   .entry.muted .entryDesc {
@@ -53,6 +52,6 @@
   }
 
   .entry.muted {
-    border-left-color: var(--accent);
+    border-left-color: var(--border);
   }
 </style>
