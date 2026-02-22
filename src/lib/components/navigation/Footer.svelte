@@ -12,7 +12,7 @@
     <section class="container flex justify-between">
         <div class="flex flex-col">
             <h4>{new Date(Date.now()).getFullYear()}</h4>
-            <p class="text-small">{t('footer_credits')}</p>
+            <p class="text-small">{t('footer.credits')}</p>
         </div>
         <div class="contactSection flex justify-between align-center">
             <div class="flex flex-col border-right pe-s">

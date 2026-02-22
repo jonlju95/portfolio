@@ -8,61 +8,61 @@
 
     const experienceItems: MeritEntryItem[] = [
         {
-            title: 'home_experience_items_item10_title',
-            date: 'home_experience_items_item10_subtitle',
-            description: 'home_experience_items_item10_description',
+            title: 'home.experience.items.item10.title',
+            date: 'home.experience.items.item10.subtitle',
+            description: 'home.experience.items.item10.description',
         }, {
-            title: 'home_experience_items_item2_title',
-            date: 'home_experience_items_item2_subtitle',
-            description: 'home_experience_items_item2_description',
+            title: 'home.experience.items.item2.title',
+            date: 'home.experience.items.item2.subtitle',
+            description: 'home.experience.items.item2.description',
         },
         {
-            title: 'home_experience_items_item3_title',
-            date: 'home_experience_items_item3_subtitle',
-            description: 'home_experience_items_item3_description',
+            title: 'home.experience.items.item3.title',
+            date: 'home.experience.items.item3.subtitle',
+            description: 'home.experience.items.item3.description',
             muted: true
         },
         {
-            title: 'home_experience_items_item4_title',
-            date: 'home_experience_items_item4_subtitle',
-            description: 'home_experience_items_item4_description',
+            title: 'home.experience.items.item4.title',
+            date: 'home.experience.items.item4.subtitle',
+            description: 'home.experience.items.item4.description',
             muted: true
         },
         {
-            title: 'home_experience_items_item8_title',
-            date: 'home_experience_items_item8_subtitle',
-            description: 'home_experience_items_item8_description',
+            title: 'home.experience.items.item8.title',
+            date: 'home.experience.items.item8.subtitle',
+            description: 'home.experience.items.item8.description',
             muted: true
         }
     ];
 
     const educationItems: MeritEntryItem[] = [
         {
-            title: 'home_experience_items_item1_title',
-            date: 'home_experience_items_item1_subtitle',
-            description: 'home_experience_items_item1_description'
+            title: 'home.experience.items.item1.title',
+            date: 'home.experience.items.item1.subtitle',
+            description: 'home.experience.items.item1.description'
         },
         {
-            title: 'home_experience_items_item5_title',
-            date: 'home_experience_items_item5_subtitle',
-            description: 'home_experience_items_item5_description'
+            title: 'home.experience.items.item5.title',
+            date: 'home.experience.items.item5.subtitle',
+            description: 'home.experience.items.item5.description'
         },
         {
-            title: 'home_experience_items_item6_title',
-            date: 'home_experience_items_item6_subtitle',
-            description: 'home_experience_items_item6_description',
+            title: 'home.experience.items.item6.title',
+            date: 'home.experience.items.item6.subtitle',
+            description: 'home.experience.items.item6.description',
             muted: true
         },
         {
-            title: 'home_experience_items_item7_title',
-            date: 'home_experience_items_item7_subtitle',
-            description: 'home_experience_items_item7_description',
+            title: 'home.experience.items.item7.title',
+            date: 'home.experience.items.item7.subtitle',
+            description: 'home.experience.items.item7.description',
             muted: true
         },
         {
-            title: 'home_experience_items_item9_title',
-            date: 'home_experience_items_item9_subtitle',
-            description: 'home_experience_items_item9_description',
+            title: 'home.experience.items.item9.title',
+            date: 'home.experience.items.item9.subtitle',
+            description: 'home.experience.items.item9.description',
             muted: true
         }
     ];
@@ -114,19 +114,19 @@
         {
             title: 'Personal economy',
             techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projects_items_item2_description',
+            descriptionKey: 'projects.items.item2.description',
             link: 'https://github.com/jonlju95/personalEconomyApp'
         },
         {
             title: 'Customer Product Website',
             techStack: ['Java', 'HTML', 'CSS'],
-            descriptionKey: 'projects_items_item3_description',
+            descriptionKey: 'projects.items.item3.description',
             link: 'https://github.com/jonlju95/Personal_Project_Customer_Product_Website'
         },
         {
             title: 'Rock, Paper, Scissors',
             techStack: ['JavaScript', 'HTML', 'CSS', 'React'],
-            descriptionKey: 'projects_items_item4_description',
+            descriptionKey: 'projects.items.item4.description',
             link: 'https://github.com/jonlju95/Rock-Paper-Scissors'
         },
     ];
@@ -142,22 +142,22 @@
         <div class="split justify-items-center">
             <div class="stack" data-gap="lg">
                 <div class="stack title" data-gap="sm">
-                    <h1>{t('home_hero_title')}</h1>
+                    <h1>{t('home.hero.title')}</h1>
                     <h3>
-                        <span class="jobtitle">{t('home_hero_jobtitle')}</span>
-                        <span>{t('home_hero_subtitle')}</span>
+                        <span class="jobtitle">{t('home.hero.jobtitle')}</span>
+                        <span>{t('home.hero.subtitle')}</span>
                     </h3>
                 </div>
-                <p>{t('home_hero_introduction')}</p>
+                <p>{t('home.hero.introduction')}</p>
                 <div class="cluster">
-                    <Button link={localizeHref('/projects')} btnLabel={t('button_projects')} buttonProps="btnPrimary">
+                    <Button link={localizeHref('/projects')} btnLabel={t('button.projects')} buttonProps="btnPrimary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
                              aria-hidden="true">
                             <path fill="currentColor"
                                   d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
                         </svg>
                     </Button>
-                    <Button link="mailto:jonatan.ljung@hotmail.com" btnLabel={t('button_contact')}
+                    <Button link="mailto:jonatan.ljung@hotmail.com" btnLabel={t('button.contact')}
                             buttonProps="btnSecondary outline text-light"/>
                 </div>
             </div>
@@ -181,19 +181,19 @@
 <!-- About -->
 <section class="section bg-base">
     <div class="container">
-        <h2 class="mb-l">{t('home_about_title')}</h2>
+        <h2 class="mb-l">{t('home.about.title')}</h2>
         <div class="grid gap-l">
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home_about_item1_title')}</h3>
-                <p>{t('home_about_item1_description')}</p>
+                <h3 class="text-accent-mid">{t('home.about.item1.title')}</h3>
+                <p>{t('home.about.item1.description')}</p>
             </div>
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home_about_item2_title')}</h3>
-                <p>{t('home_about_item2_description')}</p>
+                <h3 class="text-accent-mid">{t('home.about.item2.title')}</h3>
+                <p>{t('home.about.item2.description')}</p>
             </div>
             <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home_about_item3_title')}</h3>
-                <p>{t('home_about_item3_description')}</p>
+                <h3 class="text-accent-mid">{t('home.about.item3.title')}</h3>
+                <p>{t('home.about.item3.description')}</p>
             </div>
         </div>
     </div>
@@ -202,10 +202,10 @@
 <!-- Experience & Education -->
 <section class="section bg-base">
     <div class="container">
-        <h2 class="mb-l">{t('home_experience_title')}</h2>
+        <h2 class="mb-l">{t('home.experience.title')}</h2>
         <div class="split h-100">
-            <MeritGroup groupTitle="Experience" meritEntryItems={experienceItems}/>
-            <MeritGroup groupTitle="Education" meritEntryItems={educationItems}/>
+            <MeritGroup groupTitle={t('home.experience.subtitle1')} meritEntryItems={experienceItems}/>
+            <MeritGroup groupTitle={t('home.experience.subtitle2')} meritEntryItems={educationItems}/>
         </div>
     </div>
 </section>
@@ -213,13 +213,13 @@
 <!-- Tech Stack -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('home_tech_title')}</h2>
-        <p class="mt-xs text-muted mb-l">{t('home_tech_subtitle')}</p>
+        <h2>{t('home.tech.title')}</h2>
+        <p class="mt-xs text-muted mb-l">{t('home.tech.subtitle')}</p>
 
         {#each [
             { label: 'Frontend', icons: frontendIcons },
-            { label: t('home_tech_backendAndDb'), icons: backendIcons },
-            { label: t('home_tech_tools'), icons: toolIcons }
+            { label: t('home.tech.backendAndDb'), icons: backendIcons },
+            { label: t('home.tech.tools'), icons: toolIcons }
         ] as category}
             <div class="techCategory mb-l">
                 <h3 class="text-accent-mid mb-m">{category.label}</h3>
@@ -236,8 +236,8 @@
 <!-- Projects -->
 <section class="section bg-base">
     <div class="container">
-        <h2>{t('home_projects_title')}</h2>
-        <p class="mt-xs text-muted">{t('home_projects_subtitle')}</p>
+        <h2>{t('home.projects.title')}</h2>
+        <p class="mt-xs text-muted">{t('home.projects.subtitle')}</p>
         <div class="grid gap-l mt-l mb-l">
             {#each featuredProjects as project}
                 <ProjectCard
@@ -249,7 +249,7 @@
             {/each}
         </div>
         <div class="cluster" style="justify-content: center;">
-            <Button link={localizeHref('/projects')} btnLabel={t('home_projects_more')}
+            <Button link={localizeHref('/projects')} btnLabel={t('home.projects.more')}
                     buttonProps="btnSecondary outline"/>
         </div>
     </div>
