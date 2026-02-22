@@ -1,7 +1,6 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
     import {t} from '$lib/i18n'
-    import {footer_credits} from "$lib/paraglide/messages/se";
 
     let innerWidth = $state(0);
 </script>
