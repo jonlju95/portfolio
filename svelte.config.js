@@ -19,6 +19,7 @@ const config = {
             base: dev ? '' : process.env.BASE_PATH,
         },
         prerender: {
+            entries: ['*', '/se', '/se/about', '/se/projects'],
             handleHttpError: 'warn',
         },
     },
