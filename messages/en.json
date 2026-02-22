@@ -15,7 +15,7 @@
     "hero": {
       "title": "Hi there, I'm Jonatan",
       "jobtitle": "Web developer",
-      "subtitle": " based in Växjö, Sweden",
+      "subtitle": " living in Växjö, Sweden",
       "introduction": "With two years of experience I'm passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs."
     },
     "about": {
@@ -47,12 +47,12 @@
           "description": "Focused on full-stack development and database management. Initially developed an accounting program and later a property management system. Emphasized meeting specific market needs as well as user-friendliness."
         },
         "item3": {
-          "title": "Maxkompetens - Consultant",
+          "title": "Maxkompetens - IT Technician",
           "subtitle": "May 2019 - August 2019",
           "description": "Assigned to ATEA, where I worked on computer formatting from various companies and authorities."
         },
         "item4": {
-          "title": "Inpeople - Consultant",
+          "title": "Inpeople - Device refurbisher",
           "subtitle": "August 2018 – September 2018",
           "description": "Assigned to ATEA, where I worked on reconditioning mobile phones and tablets from various companies and authorities."
         },
@@ -109,7 +109,7 @@
     },
     "journey": {
       "title": "My journey",
-      "description1": "During my time at INBooks, I've worked on projects ranging from AngularJS migrations to new feature development.",
+      "description1": "During my time at INBooks, I worked on projects ranging from AngularJS migrations to new feature development.",
       "description2": "I've handled both frontend UI work and backend integrations, and I was trusted with ensuring that designs stayed consistent across our products.",
       "items": {
         "item1": {

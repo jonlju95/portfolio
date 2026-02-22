@@ -91,7 +91,7 @@
         <ul>
             {#each navLinks as link}
                 <li>
-                    <a href="{link.href}"
+                    <a href="{localizeHref(link.href)}"
                        class={isActive(link.href) ? 'active' : ''}
                        onclick={closeSidebar}>
                         {t(link.labelKey)}
@@ -167,6 +167,7 @@
     border: var(--border);
     max-width: 70%;
     min-width: 250px;
+    height: 100vh;
 
     &.sidebarTouched {
       animation: 0.5s ease-out forwards closeSidebar;
