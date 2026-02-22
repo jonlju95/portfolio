@@ -6,7 +6,8 @@
     import {localizeHref} from "$lib/paraglide/runtime";
     import {t} from '$lib/i18n'
 
-    const isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/se/');
+    const isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/se/' ||
+        page.url.pathname === '/portfolio/' || page.url.pathname === '/portfolio/se/' );
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
     let btnScrolled = $state(false); // Trigger hamburger background (100vh)
