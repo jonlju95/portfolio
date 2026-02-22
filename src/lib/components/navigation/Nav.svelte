@@ -7,7 +7,7 @@
     import {t} from '$lib/i18n'
 
     const isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/se/' ||
-        page.url.pathname === '/portfolio/' || page.url.pathname === '/portfolio/se/' );
+        page.url.pathname === '/portfolio/' || page.url.pathname === '/portfolio/se/');
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
     let btnScrolled = $state(false); // Trigger hamburger background (100vh)
@@ -78,12 +78,12 @@
        class={['animatedElement', sidebarOpen && 'sidebarOpen'].filter(Boolean).join(' ')}
        aria-hidden={!sidebarOpen}>
     <div class="sidebarHeader">
-        <h2 class="navbarIcon">
+        <h2 class="navbarIcon text-small">
             <span>Jonatan</span>
             <span class="text-accent">Ljung</span>
         </h2>
         <button onclick={closeSidebar} aria-label="Close navigation menu">
-            <Icon icon="mdi:chevron-right" width="48" height="48"/>
+            <Icon icon="fa7-solid:close" width="16" height="16"/>
         </button>
     </div>
 
@@ -94,6 +94,9 @@
                     <a href="{localizeHref(link.href)}"
                        class={isActive(link.href) ? 'active' : ''}
                        onclick={closeSidebar}>
+                        {#if link.icon}
+                            <Icon icon={link.icon} width={18} height={18}/>
+                        {/if}
                         {t(link.labelKey)}
                     </a>
                 </li>
@@ -163,8 +166,8 @@
     z-index: 9999;
     inset: 0 0 0 auto;
     background-color: var(--bg-surface);
-    border-radius: 12px 0 0 12px;
-    border: var(--border);
+    border-radius: 1rem 0 0 1rem;
+    border-top: var(--border) 3px solid;
     max-width: 70%;
     min-width: 250px;
     height: 100vh;
@@ -182,47 +185,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.75rem 1rem;
-
-    button {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      line-height: 0;
-      color: var(--text);
-
-      svg {
-        width: 24px;
-        height: 24px;
-      }
-    }
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid var(--accent);
   }
 
   .sidebarFooter {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     display: flex;
-    justify-content: end;
-    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
     gap: 1rem;
+    border-top: 1px solid var(--accent);
   }
 
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-  aside nav {
-    margin: 3rem 0.75rem auto;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
     a {
       display: flex;
       align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  aside nav {
+    margin: 1rem 0.75rem auto;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
       text-decoration: none;
       color: var(--text);
-      padding: 1rem 0.75rem;
       border-radius: 12px;
       margin-bottom: 0.75rem;
 
@@ -259,6 +262,7 @@
   .linkList {
     display: flex;
     height: 100%;
+    gap: 0.75rem;
 
     a {
       display: flex;
