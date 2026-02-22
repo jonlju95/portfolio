@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
-import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.argv.includes('dev');
 
@@ -19,7 +19,13 @@ const config = {
             base: dev ? '' : process.env.BASE_PATH,
         },
         prerender: {
-            entries: ['*', '/se', '/se/about', '/se/projects'],
+            entries: [
+                '/',
+                '/about',
+                '/projects',
+                '/se',
+                '/se/about',
+                '/se/projects'],
             handleHttpError: 'warn',
         },
     },
