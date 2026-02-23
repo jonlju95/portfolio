@@ -10,7 +10,7 @@
         page.url.pathname === '/portfolio/' || page.url.pathname === '/portfolio/se/');
 
     let navScrolled = $state(false); // Trigger navbar background (25vh)
-    let btnScrolled = $state(false); // Trigger hamburger background (100vh)
+    let btnScrolled = $state(false); // Trigger hamburger background (10vh)
     let sidebarOpen = $state(false);
 
     $effect(() => {
@@ -62,15 +62,15 @@
 
 <!-- Sentinels -->
 <div id="navSentinel" style="position:absolute; top:25vh; height:1px; pointer-events:none;" aria-hidden="true"></div>
-<div id="btnSentinel" style="position:absolute; top:100vh; height:1px; pointer-events:none;" aria-hidden="true"></div>
+<div id="btnSentinel" style="position:absolute; top:10vh; height:1px; pointer-events:none;" aria-hidden="true"></div>
 
 <!-- Hamburger button - mobile only -->
-<button class="hamburger {btnScrolled ? 'scrolled' : ''}"
+<button class="hamburger {[btnScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}"
         onclick={toggleSidebar}
         aria-label="Open navigation menu"
         aria-expanded={sidebarOpen}
         aria-controls="sidebar">
-    <Icon icon="mdi:hamburger-menu" width="32" height="32"/>
+    <Icon icon="fa7-solid:bars" width="32" height="32"/>
 </button>
 
 <!-- Sidebar - mobile only -->
@@ -80,7 +80,7 @@
     <div class="sidebarHeader">
         <h2 class="navbarIcon text-small">
             <span>Jonatan</span>
-            <span class="text-accent">Ljung</span>
+            <span class="text-muted">Ljung</span>
         </h2>
         <button onclick={closeSidebar} aria-label="Close navigation menu">
             <Icon icon="fa7-solid:close" width="16" height="16"/>
@@ -112,10 +112,10 @@
 
 <!-- Navbar - desktop only -->
 <header class={[navScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}>
-    <h2 class={[navScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}>
-        <span>Jonatan</span>
-        <span class="{[navScrolled ? 'text-accent-dark' : 'text-accent']}">Ljung</span>
-    </h2>
+    <h5 class={['font-bold', navScrolled && 'scrolled', isHome && 'home'].filter(Boolean).join(' ')}>
+        <span class={[navScrolled && 'text-primary', (isHome && !navScrolled) && 'text-light'].filter(Boolean).join(' ')}>Jonatan</span>
+        <span class="{[(!isHome || navScrolled) && 'text-accent-dark', (isHome && !navScrolled) && 'text-accent'].filter(Boolean).join(' ')}">Ljung</span>
+    </h5>
 
     <nav aria-label="Main navigation">
         <ul class="linkList">
@@ -147,15 +147,15 @@
     border: none;
     cursor: pointer;
     line-height: 0;
+    color: var(--text-primary);
+
+    &.home:not(.scrolled) {
+      color: var(--text-light);
+    }
 
     &.scrolled {
       background-color: var(--bg-surface);
       box-shadow: var(--shadow);
-    }
-
-    svg {
-      width: 24px;
-      height: 24px;
     }
   }
 
@@ -170,7 +170,7 @@
     border-top: var(--border) 3px solid;
     max-width: 70%;
     min-width: 250px;
-    height: 100vh;
+    min-height: 100svh;
 
     &.sidebarTouched {
       animation: 0.5s ease-out forwards closeSidebar;

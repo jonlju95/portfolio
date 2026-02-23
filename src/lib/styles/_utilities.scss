@@ -12,7 +12,7 @@
 }
 
 .text-primary {
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 
 .text-muted {
@@ -20,11 +20,11 @@
 }
 
 .text-light {
-  color: var(--text-light);
+  color: var(--text-light) !important;
 }
 
 .text-accent {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 .text-accent-mid {

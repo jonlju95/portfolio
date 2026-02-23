@@ -9,7 +9,7 @@
 
 <footer class="footer border-accent-top bg-surface">
     <section class="container flex justify-between">
-        <div class="flex flex-col">
+        <div class="copyright">
             <h4>{new Date(Date.now()).getFullYear()}</h4>
             <p class="text-small">{t('footer.credits')}</p>
         </div>
@@ -55,9 +55,10 @@
         align-items: center;
         justify-content: space-between;
 
-        @media screen and (max-width: 576px) {
-            flex-direction: column-reverse;
-            align-items: start;
+        .copyright {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
         }
 
         .contactSection {
