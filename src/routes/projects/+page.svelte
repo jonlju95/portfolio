@@ -4,6 +4,11 @@
 
     const projects = [
         {
+            title: 'Focus helper app',
+            techStack: ['React Native', 'TypeScript'],
+            descriptionKey: 'projects.items.item11.description',
+            link: 'https://github.com/jonlju95/focus_helper_app'
+        }, {
             title: 'Radio scheduler frontend',
             techStack: ['React', 'TypeScript', 'HTML/CSS'],
             descriptionKey: 'projects.items.item8.description',

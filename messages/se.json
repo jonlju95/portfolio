@@ -191,6 +191,9 @@
       },
       "item10": {
         "description": "Sokoban-spel byggt i React, som en del av min utbildning på Lexicon. Har funktioner för att kontrollera spelarrörelser och liknande. Läser även spelplanen från en fil."
+      },
+      "item11": {
+        "description": "App byggd med React Native. Byggd med ADHD i åtanke och innehåller funktioner för påminnelser, aktiviteter och utgiftsspårning. Pågående arbete från och med mars 2026."
       }
     }
   }

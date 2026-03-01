@@ -82,7 +82,9 @@
             src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
             title: 'Angular'
         },
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg', title: 'Svelte'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', title: 'React'},
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', title: 'React Native'},
     ];
 
     const backendIcons = [
@@ -116,18 +118,16 @@
             techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
             descriptionKey: 'projects.items.item2.description',
             link: 'https://github.com/jonlju95/personalEconomyApp'
-        },
-        {
-            title: 'Customer Product Website',
-            techStack: ['Java', 'HTML', 'CSS'],
-            descriptionKey: 'projects.items.item3.description',
-            link: 'https://github.com/jonlju95/Personal_Project_Customer_Product_Website'
-        },
-        {
-            title: 'Rock, Paper, Scissors',
-            techStack: ['JavaScript', 'HTML', 'CSS', 'React'],
-            descriptionKey: 'projects.items.item4.description',
-            link: 'https://github.com/jonlju95/Rock-Paper-Scissors'
+        }, {
+            title: 'Focus helper app',
+            techStack: ['React Native', 'TypeScript'],
+            descriptionKey: 'projects.items.item11.description',
+            link: 'https://github.com/jonlju95/focus_helper_app'
+        }, {
+            title: 'Radio scheduler frontend',
+            techStack: ['React', 'TypeScript', 'HTML/CSS'],
+            descriptionKey: 'projects.items.item8.description',
+            link: 'https://github.com/jonlju95/radio_scheduler_frontend'
         },
     ];
 </script>

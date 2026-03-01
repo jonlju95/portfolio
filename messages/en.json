@@ -191,6 +191,9 @@
       },
       "item10": {
         "description": "Sokoban game built in React, as part of my education at Lexicon. Has functions to check player movement and similar. Also reads the playing board from a file."
+      },
+      "item11": {
+        "description": "App built with React Native. Built with ADHD in mind and contains functionality for reminders, activities and expense tracking. WIP as of march 2026."
       }
     }
   }
