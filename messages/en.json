@@ -193,7 +193,10 @@
         "description": "Sokoban game built in React, as part of my education at Lexicon. Has functions to check player movement and similar. Also reads the playing board from a file."
       },
       "item11": {
-        "description": "App built with React Native. Built with ADHD in mind and contains functionality for reminders, activities and expense tracking. WIP as of march 2026."
+        "description": "Focus Helper is a personal Android app built with React Native and Expo, using Expo Router for file-based navigation and SQLite via Drizzle ORM for local data persistence. The codebase follows a strict separation of concerns - database access, business logic, form handling, and rendering are each isolated into their own layers with custom hooks."
+      },
+      "item12": {
+        "description": "A command line tool written in C++ that recursively renames image and video files in a given directory. Files are sorted by last modified date and renamed sequentially to img_1, img_2, and so on, with their original file extensions preserved. Each subdirectory is processed independently with its own counter."
       }
     }
   }

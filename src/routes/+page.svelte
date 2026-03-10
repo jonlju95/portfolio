@@ -90,11 +90,13 @@
     const backendIcons = [
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg', title: 'Java'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', title: 'C#'},
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg', title: 'C++'},
         {
             src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
             title: 'PostgreSQL'
         },
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg', title: 'MySQL'},
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg', title: 'SQLite'},
         {
             src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
             title: 'MongoDB'
@@ -114,13 +116,13 @@
 
     const featuredProjects = [
         {
-            title: 'Personal economy',
-            techStack: ['Svelte', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projects.items.item2.description',
-            link: 'https://github.com/jonlju95/personalEconomyApp'
+            title: 'File renamer',
+            techStack: ['C++'],
+            descriptionKey: 'projects.items.item12.description',
+            link: 'https://github.com/jonlju95/file_renamer'
         }, {
             title: 'Focus helper app',
-            techStack: ['React Native', 'TypeScript'],
+            techStack: ['React Native', 'TypeScript', 'Expo'],
             descriptionKey: 'projects.items.item11.description',
             link: 'https://github.com/jonlju95/focus_helper_app'
         }, {
@@ -150,7 +152,8 @@
                 </div>
                 <p>{t('home.hero.introduction')}</p>
                 <div class="cluster">
-                    <Button link={localizeHref('/projects')} btnLabel={t('button.projects')} buttonProps="btnPrimary">
+                    <Button link={localizeHref('/projects')} btnLabel={t('button.projects')}
+                            buttonProps="btnPrimary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
                              aria-hidden="true">
                             <path fill="currentColor"

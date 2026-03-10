@@ -5,7 +5,7 @@
     const projects = [
         {
             title: 'Focus helper app',
-            techStack: ['React Native', 'TypeScript'],
+            techStack: ['React Native', 'TypeScript', 'Expo'],
             descriptionKey: 'projects.items.item11.description',
             link: 'https://github.com/jonlju95/focus_helper_app'
         }, {
@@ -18,6 +18,11 @@
             techStack: ['C#/.NET', 'EF Core', 'SQLite'],
             descriptionKey: 'projects.items.item9.description',
             link: 'https://github.com/jonlju95/radio_scheduler'
+        }, {
+            title: 'File renamer',
+            techStack: ['C++'],
+            descriptionKey: 'projects.items.item12.description',
+            link: 'https://github.com/jonlju95/file_renamer'
         }, {
             title: 'Sokoban game',
             techStack: ['React', 'JavaScript'],

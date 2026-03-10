@@ -193,7 +193,10 @@
         "description": "Sokoban-spel byggt i React, som en del av min utbildning på Lexicon. Har funktioner för att kontrollera spelarrörelser och liknande. Läser även spelplanen från en fil."
       },
       "item11": {
-        "description": "App byggd med React Native. Byggd med ADHD i åtanke och innehåller funktioner för påminnelser, aktiviteter och utgiftsspårning. Pågående arbete från och med mars 2026."
+        "description": "Focus Helper är en personlig Android-app byggd med React Native och Expo, med Expo Router för filbaserad navigering och SQLite via Drizzle ORM för lokal datalagring. Kodbasen följer en strikt separering av ansvar - databasåtkomst, affärslogik, formulärhantering och rendering är isolerade i egna lager med hjälp av custom hooks. "
+      },
+      "item12": {
+        "description": "Ett kommandoradsverktyg skrivet i C++ som rekursivt döper om bild- och videofiler i en given mapp. Filerna sorteras efter senast ändringsdatum och döps om i följd till img_1, img_2, och så vidare, med ursprungliga filändelser bevarade. Varje undermapp behandlas självständigt med en egen räknare."
       }
     }
   }

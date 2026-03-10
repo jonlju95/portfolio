@@ -28,8 +28,8 @@
         border: transparent 2px solid;
 
         &.btnPrimary {
-            background-color: var(--accent);
-            color: var(--accent-dark);
+            background-color: var(--accent) !important;
+            color: var(--accent-dark) !important;
             box-shadow: var(--shadow);
 
             &.outline {
