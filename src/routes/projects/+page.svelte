@@ -4,6 +4,16 @@
 
     const projects = [
         {
+            title: 'Resume generator',
+            techStack: ['React', 'Tauri'],
+            descriptionKey: 'projects.items.item14.description',
+            link: 'https://github.com/jonlju95/resume-generator'
+        }, {
+            title: 'Budget tracker',
+            techStack: ['C++'],
+            descriptionKey: 'projects.items.item13.description',
+            link: 'https://github.com/jonlju95/budget_tracker'
+        }, {
             title: 'Focus helper app',
             techStack: ['React Native', 'TypeScript', 'Expo'],
             descriptionKey: 'projects.items.item11.description',
