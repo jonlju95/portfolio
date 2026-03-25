@@ -161,7 +161,7 @@
   "projects": {
     "items": {
       "item1": {
-        "description": "Sourcecode for this website project. Remade from a similar project I made in 2024 which used Angular instead."
+        "description": "Source code for this website. A personal portfolio built with SvelteKit and deployed as a static site with English and Swedish language support."
       },
       "item10": {
         "description": "Sokoban game built in React, as part of my education at Lexicon. Has functions to check player movement and similar. Also reads the playing board from a file."
@@ -185,10 +185,10 @@
         "description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality."
       },
       "item4": {
-        "description": "Rock, Paper, Scissors game created with React and made as part of my education."
+        "description": "A React app where you play rock paper scissors against a computer opponent over a configurable number of sets, using a best-of format. The computer adapts its strategy based on the outcome of the previous round."
       },
       "item5": {
-        "description": "Game created with a focus on testing, as it was developed in a unit testing-oriented course."
+        "description": "A Java implementation of Four in a Row for two players, featuring configurable rounds, a best-of win condition, and a replay function after each round. Built with unit testing in mind as part of a testing-focused course."
       },
       "item6": {
         "description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman."
@@ -203,7 +203,7 @@
         "description": "Backend part of my radio scheduler project. Has basic CRUD-operations and connection to an SQLite db using EF core. Made as part of my education at Lexicon."
       }
     },
-    "subtitle": "Past projects I've done as part of an education or to keep up with my skills. Most of the older repos contain a readme with the project's intended functionality etc.",
+    "subtitle": "A mix of projects from my education and personal development, ranging from early assignments to more recent work built to explore new tools and frameworks.",
     "title": "Projects"
   }
 }

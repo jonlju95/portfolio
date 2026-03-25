@@ -161,7 +161,7 @@
   "projects": {
     "items": {
       "item1": {
-        "description": "Källkod för detta webbplatsprojekt. Omgjord från ett liknande projekt jag gjorde 2024 som använde Angular istället."
+        "description": "Källkoden till den här webbplatsen. En personlig portfolio byggd med SvelteKit och publicerad som en statisk sida med stöd för engelska och svenska."
       },
       "item10": {
         "description": "Sokoban-spel byggt i React, som en del av min utbildning på Lexicon. Har funktioner för att kontrollera spelarrörelser och liknande. Läser även spelplanen från en fil."
@@ -185,10 +185,10 @@
         "description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen."
       },
       "item4": {
-        "description": "Sten, sax, påse skapat med React och gjort som en del av min utbildning."
+        "description": "En React-app där du spelar sten, sax, påse mot en datormotsångare över ett valfritt antal set i best-of-format. Datorn anpassar sin strategi baserat på resultatet av föregående runda."
       },
       "item5": {
-        "description": "Spel skapat med fokus på testning, eftersom det utvecklades i en kurs inriktad på enhetstestning."
+        "description": "En Java-implementation av Fyra i rad för två spelare med valbara omgångar, best-of-vinst och möjlighet att se en repris efter varje omgång. Byggd med enhetstestning i fokus som del av en testkurs."
       },
       "item6": {
         "description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman."
@@ -203,7 +203,7 @@
         "description": "Backend-delen av mitt radioschemaläggarprojekt. Har grundläggande CRUD-operationer och koppling till en SQLite-databas med EF-kärna. Skapad som en del av min utbildning på Lexicon."
       }
     },
-    "subtitle": "Tidigare projekt jag har gjort som en del av en utbildning eller för att hålla mig uppdaterad. De flesta äldre repos innehåller en readme-fil med projektets avsedda funktionalitet etc.",
+    "subtitle": "En blandning av projekt från min utbildning och egen utveckling, från tidiga skoluppgifter till nyare projekt där jag utforskat nya verktyg och ramverk.",
     "title": "Projekt"
   }
 }
