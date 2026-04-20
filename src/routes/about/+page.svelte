@@ -24,7 +24,8 @@
         }
     ];
 
-    const resumeVersion = $derived(getLocale() === 'en' ? 'Resume.pdf' : 'CV.pdf');
+    const resumeVersion = $derived(getLocale() === 'en' ? 'Jonatan_Ljung_Resume_2026.pdf' :
+        'Jonatan_Ljung_CV_2026.pdf');
 
 </script>
 
