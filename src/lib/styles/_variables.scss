@@ -1,25 +1,28 @@
 :root {
   /* Backgrounds */
-  --bg-base: #F0F2F5;
+  --bg-base: #F5F6F8;
   --bg-surface: #FFF;
-  --bg-emphasis: #37466D;
+  --bg-emphasis: #12151C;
 
   /* Text */
-  --text-primary: #1A1A2E;
-  --text-muted: #6B7A9A;
-  --text-light: #E5E2E1;
+  --text-primary: #12151C;
+  --text-muted: #5B6270;
+  --text-light: #F5F6F8;
 
   /* Accent */
-  --accent: #B8CDEE;
-  --accent-mid: #92A3C8;
-  --accent-dark: #37466D;
+  --accent: #FF9AA8;
+  --accent-mid: #E04558;
+  --accent-dark: #C8102E;
+  --accent-tint: #FCE9EC;
+  --accent-tint-text: #8F0B20;
 
   /* Borders */
-  --border: #B8CDEE;
+  --border: #DCE0E7;
 
   /* Other styles */
-  --radius: 6px;
-  --shadow: 0 4px 20px rgba(55, 70, 109, 0.08);
+  --radius: 20px;
+  --radius-pill: 999px;
+  --shadow: 0 4px 20px rgba(18, 21, 28, 0.06);
 
   /* Spacing */
   --space-xs: .5rem;
@@ -31,24 +34,31 @@
   --space-3xl: 7.5rem;
 
   /* Component specific */
-  --entry-title: var(--accent-dark);
-  --card-title: var(--accent-dark);
+  --entry-title: var(--text-primary);
+  --card-title: var(--text-primary);
+  --link: var(--accent-dark);
 }
 
 [data-theme="dark"] {
   /* Backgrounds */
-  --bg-base: #1A2238;
-  --bg-surface: #222D45;
-  --bg-emphasis: #2A3655;
+  --bg-base: #12151C;
+  --bg-surface: #1B1F29;
+  --bg-emphasis: #252B38;
 
   /* Text */
-  --text-primary: #E5E2E1;
-  --text-muted: #92A3C8;
+  --text-primary: #F5F6F8;
+  --text-muted: #A9AFBB;
+
+  /* Accent */
+  --accent-tint: #3A1A21;
+  --accent-tint-text: #FF9AA8;
 
   /* Borders */
-  --border: #37466D;
+  --border: #2B303B;
+
+  /* Other styles */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 
   /* Component specific */
-  --entry-title: var(--accent);
-  --card-title: var(--accent);
+  --link: var(--accent);
 }

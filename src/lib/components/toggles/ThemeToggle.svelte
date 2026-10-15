@@ -14,30 +14,23 @@
     }
 </script>
 
-<button onclick={toggleTheme} aria-label={currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
+<button onclick={toggleTheme} aria-label={currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        class="radius-full flex items-center justify-center">
     {#if currentTheme === 'dark'}
-        <Icon icon="fa7-solid:sun" width="16" height="16" />
+        <Icon icon="fa7-solid:sun" width="18" height="18"/>
     {:else}
-        <Icon icon="fa7-solid:moon" width="16" height="16" />
+        <Icon icon="fa7-solid:moon" width="18" height="18"/>
     {/if}
 </button>
 
 <style lang="scss">
   button {
-    display: flex;
-    align-items: center;
+    min-height: 48px;
+    min-width: 48px;
     background: transparent;
-    border: 2px solid var(--accent-mid);
-    border-radius: 0.75rem;
+    border: 1px solid var(--border);
     cursor: pointer;
     padding: 0.5rem 0.75rem;
     color: inherit;
-  }
-
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: var(--text);
-    color: var(--text);
   }
 </style>

@@ -9,9 +9,9 @@
 
 <div class="h-100">
     {#if groupTitle}
-        <h2 class="text-label text-accent font-bold mb-m">{groupTitle}</h2>
+        <h3 class="mb-m">{groupTitle}</h3>
     {/if}
-    <div class="entries">
+    <div class="entries border-top pt-m">
         {#each meritEntryItems as item}
             <MeritEntry date={t(item.date)} title={t(item.title)} description={t(item.description)}
                         muted={item.muted}/>

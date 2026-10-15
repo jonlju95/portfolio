@@ -14,47 +14,42 @@
     };
 </script>
 
-<a class="btn text-small font-bold text-primary {buttonProps}" href="{link}" target="{linkTarget()}" role="button"
-   {...(download ? { download: '' } : {})}>{btnLabel}{@render children?.()}</a>
+<a class="btn text-small font-bold text-primary radius-full {buttonProps}" href="{link}" target="{linkTarget()}"
+   role="button"
+   {...(download ? {download: ''} : {})}>{btnLabel}{@render children?.()}</a>
 
 <style>
     .btn {
-        display: flex;
+        height: 3rem;
+        min-height: 3rem;
+        display: inline-flex;
         align-items: center;
         gap: 0.25rem;
-        padding: 0.75rem 1.5rem;
-        border-radius: var(--radius);
+        padding: 0.75rem 1rem;
         transition: background-color 50ms;
         border: transparent 2px solid;
 
         &.btnPrimary {
-            background-color: var(--accent) !important;
-            color: var(--accent-dark) !important;
-            box-shadow: var(--shadow);
-
-            &.outline {
-                border-color: var(--accent);
-                background-color: transparent;
-
-                &:hover {
-                    background-color: var(--accent);
-                }
-            }
-
-            &:hover {
-                background-color: var(--accent-mid);
-            }
+            background-color: var(--text-primary) !important;
+            color: var(--text-light) !important;
         }
 
         &.btnSecondary {
-
-
-            &.outline {
-                border-color: var(--accent);
-            }
+            border: 1px solid var(--text-primary);
+            color: var(--text-primary) !important;
 
             &:hover {
-                background-color: var(--accent);
+                background-color: var(--text-primary) !important;
+                color: var(--text-light) !important;
+            }
+        }
+
+        &.btnLink {
+            background-color: var(--accent-dark) !important;
+            color: var(--text-light) !important;
+
+            &:hover {
+                background-color: var(--accent-mid) !important;
             }
         }
     }

@@ -22,10 +22,7 @@ const config = {
             entries: [
                 '/',
                 '/about',
-                '/projects',
-                '/se',
-                '/se/about',
-                '/se/projects'],
+                '/projects'],
             handleHttpError: 'warn',
         },
     },

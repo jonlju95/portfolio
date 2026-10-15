@@ -1,3 +1,19 @@
+// Layout
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
 // Colors
 .bg-base {
   background-color: var(--bg-base);
@@ -9,6 +25,14 @@
 
 .bg-emphasis {
   background-color: var(--bg-emphasis);
+}
+
+.bg-accent-dark {
+  background-color: var(--accent-dark);
+}
+
+.bg-accent-tint {
+  background-color: var(--accent-tint);
 }
 
 .text-primary {
@@ -33,6 +57,14 @@
 
 .text-accent-dark {
   color: var(--accent-dark);
+}
+
+.text-accent-tint {
+  color: var(--accent-tint-text);
+}
+
+.text-link {
+  color: var(--link);
 }
 
 // Typography
@@ -82,6 +114,10 @@
   width: 50%;
 }
 
+.min-w-0 {
+  min-width: 0;
+}
+
 // Spacing
 .mt-xs {
   margin-top: var(--space-xs);
@@ -105,6 +141,10 @@
 
 .mt-2xl {
   margin-top: var(--space-2xl);
+}
+
+.mt-3xl {
+  margin-top: var(--space-3xl);
 }
 
 .mb-xs {
@@ -131,6 +171,10 @@
   margin-bottom: var(--space-2xl);
 }
 
+.mb-3xl {
+  margin-bottom: var(--space-3xl);
+}
+
 .ms-xs {
   margin-left: var(--space-xs);
 }
@@ -144,7 +188,6 @@
 }
 
 // Padding
-// Spacing
 .pt-xs {
   padding-top: var(--space-xs);
 }
@@ -169,6 +212,10 @@
   padding-top: var(--space-2xl);
 }
 
+.pt-3xl {
+  padding-top: var(--space-3xl);
+}
+
 .pb-xs {
   padding-bottom: var(--space-xs);
 }
@@ -191,6 +238,10 @@
 
 .pb-2xl {
   padding-bottom: var(--space-2xl);
+}
+
+.pb-3xl {
+  padding-bottom: var(--space-3xl);
 }
 
 .ps-xs {
@@ -271,7 +322,11 @@
 }
 
 .radius-full {
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
+}
+
+.shadow {
+  box-shadow: var(--shadow);
 }
 
 // Display
@@ -279,8 +334,20 @@
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1 1 0;
 }
 
 .items-start {
@@ -315,6 +382,10 @@
   justify-items: center;
 }
 
+.gap-xs {
+  gap: var(--space-xs);
+}
+
 .gap-s {
   gap: var(--space-sm);
 }
@@ -329,6 +400,10 @@
 
 .gap-xl {
   gap: var(--space-xl);
+}
+
+.gap-2xl {
+  gap: var(--space-2xl);
 }
 
 // Visibility

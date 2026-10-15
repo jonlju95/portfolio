@@ -32,7 +32,7 @@
 <!-- Hero -->
 <section class="aboutHero">
     <div class="aboutHero__image">
-        <img src="{base}/resources/images/me_2.webp" alt="Jonatan Ljung"/>
+        <img src="./resources/images/me_2.webp" alt="Jonatan Ljung"/>
         <div class="aboutHero__overlay"></div>
         <div class="aboutHero__gradient"></div>
     </div>

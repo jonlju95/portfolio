@@ -62,6 +62,7 @@
   "footer": {
     "credits": "Gjort med SvelteKit | Design av mig"
   },
+  "hello_world": "Hello, {name} from sv!",
   "home": {
     "about": {
       "item1": {

@@ -11,11 +11,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
+  min-height: 100dvh;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--bg-surface);
+  background-color: var(--bg-base);
 }
 
 img,
@@ -51,4 +58,16 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+[data-theme="dark"] a:focus-visible,
+[data-theme="dark"] button:focus-visible {
+  outline-color: var(--accent);
 }

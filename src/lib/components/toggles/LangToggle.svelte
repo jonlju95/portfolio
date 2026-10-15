@@ -1,28 +1,29 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
     import {getLocale, setLocale} from '$lib/paraglide/runtime';
 
     const toggleLanguage = () => {
         const next = getLocale();
-        setLocale(next === 'en' ? 'se' : 'en');
+        setLocale(next === 'en' ? 'sv' : 'en');
         localStorage.setItem("locale", next);
     };
 </script>
 
 <button onclick={toggleLanguage}
-        aria-label={getLocale() === 'en' ? 'Byt till Svenska' : 'Switch to English'}>
-    <Icon icon="fa7-solid:globe" width="16" height="16"/>
-    <span class="text-small font-bold">{getLocale().toUpperCase()}</span>
+        aria-label={getLocale() === 'en' ? 'Byt till Svenska' : 'Switch to English'}
+        class="radius-full">
+    {#if getLocale() === 'en'}
+        <span class="text-small font-bold">SV</span>
+    {:else}
+        <span class="text-small font-bold">EN</span>
+    {/if}
 </button>
 
 <style lang="scss">
   button {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
+    min-height: 48px;
+    min-width: 48px;
     background: transparent;
-    border: 2px solid var(--accent-mid);
-    border-radius: 0.75rem;
+    border: 1px solid var(--border);
     cursor: pointer;
     padding: 0.5rem 0.75rem;
     color: inherit;

@@ -30,7 +30,6 @@ jobs:
         env:
           BASE_PATH: '/portfolio'
         run: |
-          npm run paraglide
           npm run build
 
       - name: Upload Artifacts

@@ -1,156 +1,42 @@
 <script lang="ts">
     import {localizeHref} from "$lib/paraglide/runtime";
-    import {Button, type MeritEntryItem, ProjectCard, TechStackIcon} from "$lib";
+    import {Button, ProjectCard,} from "$lib";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
-    import {t} from "$lib/i18n";
+    import {t} from '$lib/i18n';
+    import Card from "$lib/components/Card.svelte";
+    import TechCard from "$lib/components/TechCard.svelte";
+    import experienceItems from "$lib/data/experience";
+    import educationItems from "$lib/data/education";
+    import {featuredProjects} from "$lib/data/projects";
+    import {
+        frontendStack,
+        backendStack,
+        toolStack
+    } from '$lib/data/techStack';
 
     let innerWidth = $state(0);
-
-    const experienceItems: MeritEntryItem[] = [
-        {
-            title: 'home.experience.items.item10.title',
-            date: 'home.experience.items.item10.subtitle',
-            description: 'home.experience.items.item10.description',
-        }, {
-            title: 'home.experience.items.item2.title',
-            date: 'home.experience.items.item2.subtitle',
-            description: 'home.experience.items.item2.description',
-        },
-        {
-            title: 'home.experience.items.item3.title',
-            date: 'home.experience.items.item3.subtitle',
-            description: 'home.experience.items.item3.description',
-            muted: true
-        },
-        {
-            title: 'home.experience.items.item4.title',
-            date: 'home.experience.items.item4.subtitle',
-            description: 'home.experience.items.item4.description',
-            muted: true
-        },
-        {
-            title: 'home.experience.items.item8.title',
-            date: 'home.experience.items.item8.subtitle',
-            description: 'home.experience.items.item8.description',
-            muted: true
-        }
-    ];
-
-    const educationItems: MeritEntryItem[] = [
-        {
-            title: 'home.experience.items.item1.title',
-            date: 'home.experience.items.item1.subtitle',
-            description: 'home.experience.items.item1.description'
-        },
-        {
-            title: 'home.experience.items.item5.title',
-            date: 'home.experience.items.item5.subtitle',
-            description: 'home.experience.items.item5.description'
-        },
-        {
-            title: 'home.experience.items.item6.title',
-            date: 'home.experience.items.item6.subtitle',
-            description: 'home.experience.items.item6.description',
-            muted: true
-        },
-        {
-            title: 'home.experience.items.item7.title',
-            date: 'home.experience.items.item7.subtitle',
-            description: 'home.experience.items.item7.description',
-            muted: true
-        },
-        {
-            title: 'home.experience.items.item9.title',
-            date: 'home.experience.items.item9.subtitle',
-            description: 'home.experience.items.item9.description',
-            muted: true
-        }
-    ];
-
-    const frontendIcons = [
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg', title: 'HTML'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg', title: 'CSS'},
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-            title: 'JavaScript'
-        },
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
-            title: 'TypeScript'
-        },
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
-            title: 'Angular'
-        },
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg', title: 'Svelte'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', title: 'React'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', title: 'React Native'},
-    ];
-
-    const backendIcons = [
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg', title: 'Java'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', title: 'C#'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg', title: 'C++'},
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
-            title: 'PostgreSQL'
-        },
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg', title: 'MySQL'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg', title: 'SQLite'},
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
-            title: 'MongoDB'
-        },
-    ];
-
-    const toolIcons = [
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg', title: 'Jira'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg', title: 'Git'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg', title: 'Docker'},
-        {
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
-            title: 'Postman'
-        },
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg', title: 'Figma'},
-    ];
-
-    const featuredProjects = [
-        {
-            title: 'File renamer',
-            techStack: ['C++'],
-            descriptionKey: 'projects.items.item12.description',
-            link: 'https://github.com/jonlju95/file_renamer'
-        }, {
-            title: 'Focus helper app',
-            techStack: ['React Native', 'TypeScript', 'Expo'],
-            descriptionKey: 'projects.items.item11.description',
-            link: 'https://github.com/jonlju95/focus_helper_app'
-        }, {
-            title: 'Radio scheduler frontend',
-            techStack: ['React', 'TypeScript', 'HTML/CSS'],
-            descriptionKey: 'projects.items.item8.description',
-            link: 'https://github.com/jonlju95/radio_scheduler_frontend'
-        },
-    ];
 </script>
 
 <svelte:window bind:innerWidth/>
 
 <!-- Hero -->
-<section class="heroSection">
-    <div class="color-overlay"></div>
-    <div class="bg-image"></div>
+<section class="section bg-base border-bottom">
     <div class="container">
         <div class="split justify-items-center">
-            <div class="stack" data-gap="lg">
-                <div class="stack title" data-gap="sm">
+            <div class="stack">
+                <div class="flex items-center gap-xs radius-full border bg-surface mb-m heroTag">
+                    <svg viewBox="0 0 8 8" width="8" height="8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="4"/>
+                    </svg>
+                    <span class="text-muted">Open to new opportunities</span>
+                </div>
+                <div class="stack title">
                     <h1>{t('home.hero.title')}</h1>
-                    <h3>
-                        <span class="jobtitle">{t('home.hero.jobtitle')}</span>
-                        <span>{t('home.hero.subtitle')}</span>
+                    <h3 class="text-accent-dark mt-s mb-m">
+                        {t('home.hero.jobtitle') + ' ' + t('home.hero.subtitle')}
                     </h3>
                 </div>
-                <p>{t('home.hero.introduction')}</p>
+                <p class="text-muted mb-l">{t('home.hero.introduction')}</p>
                 <div class="cluster">
                     <Button link={localizeHref('/projects')} btnLabel={t('button.projects')}
                             buttonProps="btnPrimary">
@@ -164,47 +50,30 @@
                             buttonProps="btnSecondary outline text-light"/>
                 </div>
             </div>
-
             <div class="imgContainer">
                 <img src="./resources/images/me_1_cropped.webp" alt="Me smiling at the camera"/>
             </div>
         </div>
     </div>
-
-    {#if innerWidth >= 768}
-        <div class="arrowContainer" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7L86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
-            </svg>
-        </div>
-    {/if}
 </section>
 
 <!-- About -->
-<section class="section bg-base">
+<section class="section bg-surface border-bottom">
     <div class="container">
-        <h2 class="mb-l">{t('home.about.title')}</h2>
-        <div class="grid gap-l">
-            <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home.about.item1.title')}</h3>
-                <p>{t('home.about.item1.description')}</p>
-            </div>
-            <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home.about.item2.title')}</h3>
-                <p>{t('home.about.item2.description')}</p>
-            </div>
-            <div class="stack" data-gap="sm">
-                <h3 class="text-accent-mid">{t('home.about.item3.title')}</h3>
-                <p>{t('home.about.item3.description')}</p>
-            </div>
+        <p class="text-label mb-xs">01 / About</p>
+        <h2 class="mb-m">{t('home.about.title')}</h2>
+        <div class="grid gap-m">
+            <Card title={t('home.about.item1.title')} content={t('home.about.item1.description')}/>
+            <Card title={t('home.about.item2.title')} content={t('home.about.item2.description')}/>
+            <Card title={t('home.about.item3.title')} content={t('home.about.item3.description')}/>
         </div>
     </div>
 </section>
 
 <!-- Experience & Education -->
-<section class="section bg-base">
+<section class="section bg-base border-bottom">
     <div class="container">
+        <p class="text-label mb-xs">02 / Background</p>
         <h2 class="mb-l">{t('home.experience.title')}</h2>
         <div class="split h-100">
             <MeritGroup groupTitle={t('home.experience.subtitle1')} meritEntryItems={experienceItems}/>
@@ -214,31 +83,29 @@
 </section>
 
 <!-- Tech Stack -->
-<section class="section bg-base">
+<section class="section bg-surface border-bottom">
     <div class="container">
+        <p class="text-label mb-xs">03 / Skills</p>
         <h2>{t('home.tech.title')}</h2>
         <p class="mt-xs text-muted mb-l">{t('home.tech.subtitle')}</p>
+        <div class="grid gap-m">
+            {#each [
+                {label: 'Frontend', techList: frontendStack},
+                {label: t('home.tech.backendAndDb'), techList: backendStack},
+                {label: t('home.tech.tools'), techList: toolStack}
+            ] as category}
+                <TechCard title={category.label} content={category.techList}/>
+            {/each}
+        </div>
 
-        {#each [
-            { label: 'Frontend', icons: frontendIcons },
-            { label: t('home.tech.backendAndDb'), icons: backendIcons },
-            { label: t('home.tech.tools'), icons: toolIcons }
-        ] as category}
-            <div class="techCategory mb-l">
-                <h3 class="text-accent-mid mb-m">{category.label}</h3>
-                <div class="cluster pb-l border-bottom">
-                    {#each category.icons as icon}
-                        <TechStackIcon src={icon.src} title={icon.title}/>
-                    {/each}
-                </div>
-            </div>
-        {/each}
+
     </div>
 </section>
 
 <!-- Projects -->
-<section class="section bg-base">
+<section class="section bg-base border-bottom">
     <div class="container">
+        <p class="text-label mb-xs">04 / Work</p>
         <h2>{t('home.projects.title')}</h2>
         <p class="mt-xs text-muted">{t('home.projects.subtitle')}</p>
         <div class="grid gap-l mt-l mb-l">
@@ -251,7 +118,7 @@
                 />
             {/each}
         </div>
-        <div class="cluster" style="justify-content: center;">
+        <div class="cluster">
             <Button link={localizeHref('/projects')} btnLabel={t('home.projects.more')}
                     buttonProps="btnSecondary outline"/>
         </div>
@@ -269,73 +136,27 @@
     }
   }
 
-  .heroSection {
-    min-height: 100vh;
-    overflow: hidden;
-    margin-top: calc(var(--space-2xl) * -1);
-    color: var(--text-light);
+  .heroTag {
+    width: fit-content;
+    padding: 0.5rem 1rem;
 
-    .title * {
-      color: var(--text-light);
+    svg {
+      color: var(--accent-dark);
+    }
+  }
+
+  .imgContainer {
+    img {
+      width: 420px;
+      height: 525px;
+      border-radius: 1.5rem;
+      box-shadow: 1rem 1rem var(--accent-dark);
+      object-fit: cover;
     }
 
-    .bg-image {
-      position: absolute;
-      inset: 0;
-      background-image: url('/resources/background-new.webp');
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-      height: inherit;
-      width: inherit;
-    }
-
-    .color-overlay {
-      position: absolute;
-      inset: 0;
-      background-color: var(--bg-emphasis);
-      mix-blend-mode: hard-light;
-      z-index: 2;
-      height: inherit;
-      width: inherit;
-    }
-
-    .container {
-      position: relative;
-      z-index: 3;
-      height: 100%;
-      padding-block: var(--space-2xl);
-    }
-
-    .jobtitle {
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .imgContainer {
-      img {
-        border-radius: 50%;
-        border: 2px solid var(--accent);
-        object-fit: cover;
-        aspect-ratio: 1 / 1;
-        margin-inline: auto;
-      }
-
-      @media (max-width: 1279px) {
-        order: -1; // moves image above text
-        max-width: 350px;
-      }
-    }
-
-    .arrowContainer {
-      position: absolute;
-      bottom: var(--space-xs);
-      left: 0;
-      right: 0;
-      z-index: 4;
-      display: flex;
-      justify-content: center;
-      color: var(--accent);
+    @media (max-width: 1279px) {
+      order: -1; // moves image above text
+      max-width: 350px;
     }
   }
 

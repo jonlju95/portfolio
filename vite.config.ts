@@ -5,19 +5,26 @@ import {defineConfig} from 'vite';
 export default defineConfig({
     plugins: [
         sveltekit(),
+        // paraglideVitePlugin({
+        //     project: './project.inlang',
+        //     outdir: './src/lib/paraglide',
+        //     strategy: ['url', 'cookie', 'baseLocale'],
+        //     urlPatterns: [
+        //         {
+        //             pattern: '/portfolio{/:path}?',
+        //             localized: [
+        //                 ['sv', '/portfolio/sv{/:path}?'],
+        //                 ['en', '/portfolio{/:path}?']
+        //             ]
+        //         }
+        //     ]
+        // }),
+
         paraglideVitePlugin({
             project: './project.inlang',
             outdir: './src/lib/paraglide',
-            strategy: ['url', 'cookie', 'baseLocale'],
-            urlPatterns: [
-                {
-                    pattern: '/portfolio{/:path}?',
-                    localized: [
-                        ['se', '/portfolio/se{/:path}?'],
-                        ['en', '/portfolio{/:path}?']
-                    ]
-                }
-            ]
+            emitTsDeclarations: true,
+            strategy: ['cookie', 'baseLocale']
         })
     ]
 });
