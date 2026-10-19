@@ -27,5 +27,9 @@
     cursor: pointer;
     padding: 0.5rem 0.75rem;
     color: inherit;
+
+    &:hover {
+      background-color: var(--bg-surface);
+    }
   }
 </style>

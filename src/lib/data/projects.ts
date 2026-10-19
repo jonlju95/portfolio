@@ -10,25 +10,10 @@ const projects = [
         descriptionKey: 'projects.items.item13.description',
         link: 'https://github.com/jonlju95/budget_tracker'
     }, {
-        title: 'Focus helper app',
-        techStack: ['React Native', 'TypeScript', 'Expo'],
-        descriptionKey: 'projects.items.item11.description',
-        link: 'https://github.com/jonlju95/focus_helper_app'
-    }, {
-        title: 'Radio scheduler frontend',
-        techStack: ['React', 'TypeScript', 'HTML/CSS'],
-        descriptionKey: 'projects.items.item8.description',
-        link: 'https://github.com/jonlju95/radio_scheduler_frontend'
-    }, {
         title: 'Radio scheduler',
         techStack: ['C#/.NET', 'EF Core', 'SQLite'],
         descriptionKey: 'projects.items.item9.description',
         link: 'https://github.com/jonlju95/radio_scheduler'
-    }, {
-        title: 'File renamer',
-        techStack: ['C++'],
-        descriptionKey: 'projects.items.item12.description',
-        link: 'https://github.com/jonlju95/file_renamer'
     }, {
         title: 'Sokoban game',
         techStack: ['React', 'JavaScript'],

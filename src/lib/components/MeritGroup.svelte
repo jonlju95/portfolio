@@ -1,6 +1,5 @@
 <script lang="ts">
     import type {MeritEntryItem} from "$lib";
-    import MeritEntry from "$lib/components/MeritEntry.svelte";
     import {t} from '$lib/i18n'
 
     let {groupTitle, meritEntryItems}: { groupTitle?: string; meritEntryItems: MeritEntryItem[] } = $props();
@@ -13,8 +12,11 @@
     {/if}
     <div class="entries border-top pt-m">
         {#each meritEntryItems as item}
-            <MeritEntry date={t(item.date)} title={t(item.title)} description={t(item.description)}
-                        muted={item.muted}/>
+            <div class="border-bottom pb-m">
+                <p class="text-label text-muted">{t(item.date)}</p>
+                <h5 class="mt-xs mb-xs">{t(item.title)}</h5>
+                <p class="text-muted">{t(item.description)}</p>
+            </div>
         {/each}
     </div>
 </div>

@@ -1,89 +1,72 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
-    import {t} from '$lib/i18n'
+    import { base } from '$app/paths';
+    import Button from '$lib/components/Button.svelte';
+    import { contact, resumeFile } from '$lib/data/contact';
+    import { getLocale } from '$lib/paraglide/runtime';
+    import { t } from '$lib/i18n';
 
-    let innerWidth = $state(0);
+    let { variant = 'default' }: { variant?: 'default' | 'cv' } = $props();
+
+    const withCv = $derived(variant === 'cv');
+    const resume = $derived(resumeFile(getLocale()));
 </script>
 
-<svelte:window bind:innerWidth/>
+<footer>
+    <div class="container">
+        <h2>{withCv ? t('about.contact.title') : t('about.contact.cta')}</h2>
 
-<footer class="footer border-accent-top bg-surface">
-    <section class="container flex justify-between">
-        <div class="copyright">
-            <h4>{new Date(Date.now()).getFullYear()}</h4>
-            <p class="text-small">{t('footer.credits')}</p>
+        <div class="cluster">
+            <Button variant="accent"
+                    btnLabel={withCv ? t('about.contact.cta') : contact.email}
+                    link="mailto:{contact.email}"/>
+            {#if withCv}
+                <Button variant="emphasis"
+                        btnLabel={t('about.contact.cv')}
+                        link="./resources/resume/{resume}"
+                        download={true}/>
+            {/if}
         </div>
-        <div class="contactSection flex justify-between align-center">
-            <div class="flex flex-col border-right pe-s">
-                <a class="flex justify-end" href="tel:+46733950015" aria-labelledby="phone">
-                    <Icon class="me-s" icon="fa7-solid:phone" width="32" height="32"/>
-                    {#if innerWidth > 767}
-                        (+46) 073-395 00 15
-                    {/if}
-                </a>
-                <a class="flex" href="mailto:jonatan.ljung@hotmail.com"
-                   aria-labelledby="mail">
-                    <Icon class="me-s" icon="fa7-solid:envelope" width="32" height="32"/>
-                    {#if innerWidth > 767}
-                        jonatan.ljung@hotmail.com
-                    {/if}
-                </a>
-            </div>
-            <div class="flex gap-s ps-s">
-                <a class="" href="https://www.linkedin.com/in/jonatan-ljung/"
-                   target="_blank"
-                   aria-labelledby="devicon-linkedin-plain">
-                    <Icon icon="fa7-brands:linkedin" width="32" height="32"/>
-                </a>
-                <a class="" href="https://github.com/jonlju95" target="_blank"
-                   aria-labelledby="devicon-github-original">
-                    <Icon icon="fa7-brands:github" width="32" height="32"/>
-                </a>
-            </div>
-        </div>
-    </section>
+
+        <nav class="links" aria-label="Contact">
+            {#if withCv}
+                <a href="mailto:{contact.email}">{contact.email}</a>
+            {/if}
+            <a href="tel:{contact.phone}">{contact.phone}</a>
+            <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <p class="legal">{new Date().getFullYear()} | {t('footer.credits')}</p>
+    </div>
 </footer>
 
-<style>
-    footer {
-        position: relative;
-        width: 100%;
-        height: fit-content;
-        min-height: 8rem;
+<style lang="scss">
+  footer {
+    padding-block: var(--space-xl);
+    background-color: var(--bg-emphasis);
+    color: var(--text-light);
+  }
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  h2 {
+    margin-bottom: var(--space-md);
+    color: var(--accent);
+  }
 
-        .copyright {
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-        }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-block: var(--space-md) var(--space-xl);
 
-        .contactSection {
-            @media screen and (max-width: 576px) {
-                width: 100%;
-                max-width: 10rem;
-
-                * {
-                    flex-direction: row;
-                }
-            }
-
-            a {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                vertical-align: center;
-                color: var(--text-muted);
-                text-decoration: none;
-                transition: color 0.1s;
-
-                &:hover {
-                    color: var(--text-primary);
-                }
-            }
-        }
+    a:hover {
+      text-decoration: underline;
     }
+  }
+
+  .legal {
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--border);
+    font-size: 0.8125rem;
+    opacity: 0.75;
+  }
 </style>

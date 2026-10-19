@@ -15,6 +15,10 @@
       },
       "title": "My approach to development"
     },
+    "chapter1": "01 / Path",
+    "chapter2": "02 / Principles",
+    "chapter3": "03 / Interests",
+    "chapter4": "04 / Next",
     "contact": {
       "cta": "Get in touch",
       "cv": "Download CV",
@@ -27,7 +31,8 @@
     },
     "hero": {
       "description": "I'm Jonatan Ljung, a web developer with over two years of experience building modern and responsive websites. I specialize in Angular, TypeScript, Java, and PostgreSQL - and I'm always expanding my skills to become a stronger fullstack developer.",
-      "title": "About me"
+      "label": "About",
+      "title": "Get to know me"
     },
     "journey": {
       "description1": "During my time at INBooks, I worked on projects ranging from AngularJS migrations to new feature development.",
@@ -45,13 +50,13 @@
         "item3": {
           "description": "Supplementary education focused on C#, but also React, databases and some AI engineering",
           "title": "Labour market education at Lexicon",
-          "years": "2025 - Present"
+          "years": "2025 - 2026"
         }
       },
       "title": "My journey"
     },
     "personal": {
-      "description": "I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a strong interest in cooking, baking, gaming, and the odd fascination with animal behavior — especially hyenas.",
+      "description": "I enjoy working on personal projects, learning new frameworks, and exploring usability. I also have a strong interest in cooking, baking, gaming, and the odd fascination with animal behavior - especially hyenas.",
       "title": "Beyond code"
     }
   },
@@ -60,7 +65,7 @@
     "projects": "See portfolio"
   },
   "footer": {
-    "credits": "Made with SvelteKit | Design by me"
+    "credits": "Design by me"
   },
   "hello_world": "Hello, {name} from en!",
   "home": {
@@ -79,6 +84,10 @@
       },
       "title": "Get to know me"
     },
+    "chapter1": "01 / About",
+    "chapter2": "02 / Background",
+    "chapter3": "03 / Skills",
+    "chapter4": "04 / Work",
     "experience": {
       "items": {
         "item1": {
@@ -140,6 +149,7 @@
       "introduction": "With two years of experience I'm passionate about creating dynamic and user-friendly web solutions. Proficient in a wide range of programming languages and technologies, and dedicated to delivering high-quality websites that meet both customer and user needs.",
       "jobtitle": "Web developer",
       "subtitle": " living in Växjö, Sweden",
+      "tag": "Open to new opportunities",
       "title": "Hi there, I'm Jonatan"
     },
     "projects": {
@@ -162,10 +172,10 @@
   "projects": {
     "items": {
       "item1": {
-        "description": "Source code for this website. A personal portfolio built with SvelteKit and deployed as a static site with English and Swedish language support."
+        "description": "Static site with English and Swedish support."
       },
       "item10": {
-        "description": "Sokoban game built in React, as part of my education at Lexicon. Has functions to check player movement and similar. Also reads the playing board from a file."
+        "description": "Puzzle game that loads its board from a file."
       },
       "item11": {
         "description": "Focus Helper is a personal Android app built with React Native and Expo, using Expo Router for file-based navigation and SQLite via Drizzle ORM for local data persistence. The codebase follows a strict separation of concerns - database access, business logic, form handling, and rendering are each isolated into their own layers with custom hooks."
@@ -174,34 +184,34 @@
         "description": "A command line tool written in C++ that recursively renames image and video files in a given directory. Files are sorted by last modified date and renamed sequentially to img_1, img_2, and so on, with their original file extensions preserved. Each subdirectory is processed independently with its own counter."
       },
       "item13": {
-        "description": "A command-line budget tracker written in C++ that lets you log income and expenses, view summaries, and filter entries by category. Data is stored in a local CSV file and persists between sessions."
+        "description": "Command-line income and expense tracker with CSV storage."
       },
       "item14": {
-        "description": "A desktop resume generator built with Tauri, React, and TypeScript, combining a modern web frontend with a lightweight native wrapper. Generate and export polished resumes from a clean, cross-platform application."
+        "description": "Desktop app for building and exporting resumes."
       },
       "item2": {
-        "description": "Personal project comprised of an app where you could insert expenses and income to get an overview of your economy. Was gonna contain tables with diverse filters for specific entries etc."
+        "description": "Unfinished expense and income overview app."
       },
       "item3": {
-        "description": "Personal project to maintain my skills. Was going to function like a service where you buy and register products with an activation key. The repository contains a readme with a rough first draft of the intended functionality."
+        "description": "Unfinished product registration concept with a draft readme."
       },
       "item4": {
-        "description": "A React app where you play rock paper scissors against a computer opponent over a configurable number of sets, using a best-of format. The computer adapts its strategy based on the outcome of the previous round."
+        "description": "Best-of-series game against an adaptive computer opponent."
       },
       "item5": {
-        "description": "A Java implementation of Four in a Row for two players, featuring configurable rounds, a best-of win condition, and a replay function after each round. Built with unit testing in mind as part of a testing-focused course."
+        "description": "Two-player game with configurable rounds and replay."
       },
       "item6": {
-        "description": "Library manager with login and connection to MongoDB. Made as part of my education and was tested with Postman."
+        "description": "Library manager with login and database connection."
       },
       "item7": {
-        "description": "Part of my education, focusing on database design and setting up simple CRUD-operations."
+        "description": "Database design and CRUD operations coursework."
       },
       "item8": {
         "description": "Frontend part of my radio scheduler project. Has an admin page with login, and a regular page for guests. Made as part of my education at Lexicon."
       },
       "item9": {
-        "description": "Backend part of my radio scheduler project. Has basic CRUD-operations and connection to an SQLite db using EF core. Made as part of my education at Lexicon."
+        "description": "Backend with CRUD operations."
       }
     },
     "subtitle": "A mix of projects from my education and personal development, ranging from early assignments to more recent work built to explore new tools and frameworks.",

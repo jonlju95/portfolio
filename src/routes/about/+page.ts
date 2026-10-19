@@ -1,0 +1,1 @@
+export const load = () => ({ footer: 'cv' as const });

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import {localizeHref} from "$lib/paraglide/runtime";
-    import {Button, ProjectCard,} from "$lib";
+    import {getLocale, localizeHref} from "$lib/paraglide/runtime";
+    import {Button,} from "$lib";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
     import {t} from '$lib/i18n';
     import Card from "$lib/components/Card.svelte";
@@ -13,129 +13,103 @@
         backendStack,
         toolStack
     } from '$lib/data/techStack';
+    import Section from "$lib/components/Section.svelte";
+    import {base} from "$app/paths";
 
     let innerWidth = $state(0);
+
+    const resumeVersion = $derived(getLocale() === 'en' ? 'Jonatan_Ljung_Resume_2026.pdf' :
+        'Jonatan_Ljung_CV_2026.pdf');
+
 </script>
 
 <svelte:window bind:innerWidth/>
 
 <!-- Hero -->
-<section class="section bg-base border-bottom">
-    <div class="container">
-        <div class="split justify-items-center">
-            <div class="stack">
-                <div class="flex items-center gap-xs radius-full border bg-surface mb-m heroTag">
-                    <svg viewBox="0 0 8 8" width="8" height="8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4"/>
-                    </svg>
-                    <span class="text-muted">Open to new opportunities</span>
-                </div>
-                <div class="stack title">
-                    <h1>{t('home.hero.title')}</h1>
-                    <h3 class="text-accent-dark mt-s mb-m">
-                        {t('home.hero.jobtitle') + ' ' + t('home.hero.subtitle')}
-                    </h3>
-                </div>
-                <p class="text-muted mb-l">{t('home.hero.introduction')}</p>
-                <div class="cluster">
-                    <Button link={localizeHref('/projects')} btnLabel={t('button.projects')}
-                            buttonProps="btnPrimary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
-                             aria-hidden="true">
-                            <path fill="currentColor"
-                                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                        </svg>
-                    </Button>
-                    <Button link="mailto:jonatan.ljung@hotmail.com" btnLabel={t('button.contact')}
-                            buttonProps="btnSecondary outline text-light"/>
-                </div>
+<Section>
+    <div class="split justify-items-center">
+        <div class="stack">
+            <div class="flex items-center gap-xs radius-full border bg-surface mb-m heroTag">
+                <svg viewBox="0 0 8 8" width="8" height="8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="4"/>
+                </svg>
+                <span class="text-muted">{t('home.hero.tag')}</span>
             </div>
-            <div class="imgContainer">
-                <img src="./resources/images/me_1_cropped.webp" alt="Me smiling at the camera"/>
+            <div class="stack title">
+                <h1>{t('home.hero.title')}</h1>
+                <h3 class="text-accent-dark mt-s mb-m">
+                    {t('home.hero.jobtitle') + ' ' + t('home.hero.subtitle')}
+                </h3>
+            </div>
+            <p class="text-muted mb-l">{t('home.hero.introduction')}</p>
+            <div class="cluster">
+                <Button link={'/projects'} btnLabel={t('button.projects')}
+                        >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
+                         aria-hidden="true">
+                        <path fill="currentColor"
+                              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                </Button>
+                <Button link="mailto:jonatan.ljung@hotmail.com" btnLabel={t('button.contact')}
+                        variant="secondary"/>
             </div>
         </div>
+        <div class="imgContainer">
+            <img src="./resources/images/me_1_cropped.webp" alt="Me smiling at the camera"/>
+        </div>
     </div>
-</section>
+</Section>
 
 <!-- About -->
-<section class="section bg-surface border-bottom">
-    <div class="container">
-        <p class="text-label mb-xs">01 / About</p>
-        <h2 class="mb-m">{t('home.about.title')}</h2>
-        <div class="grid gap-m">
-            <Card title={t('home.about.item1.title')} content={t('home.about.item1.description')}/>
-            <Card title={t('home.about.item2.title')} content={t('home.about.item2.description')}/>
-            <Card title={t('home.about.item3.title')} content={t('home.about.item3.description')}/>
-        </div>
+<Section title={t('home.about.title')} chapter={t('home.chapter1')} tone="surface">
+    <div class="grid gap-m">
+        <Card title={t('home.about.item1.title')} variant="base"><p>{t('home.about.item1.description')}</p></Card>
+        <Card title={t('home.about.item2.title')} variant="base"><p>{t('home.about.item2.description')}</p></Card>
+        <Card title={t('home.about.item3.title')} variant="base"><p>{t('home.about.item3.description')}</p></Card>
     </div>
-</section>
+</Section>
 
 <!-- Experience & Education -->
-<section class="section bg-base border-bottom">
-    <div class="container">
-        <p class="text-label mb-xs">02 / Background</p>
-        <h2 class="mb-l">{t('home.experience.title')}</h2>
-        <div class="split h-100">
-            <MeritGroup groupTitle={t('home.experience.subtitle1')} meritEntryItems={experienceItems}/>
-            <MeritGroup groupTitle={t('home.experience.subtitle2')} meritEntryItems={educationItems}/>
-        </div>
+<Section title={t('home.experience.title')} chapter={t('home.chapter2')}>
+    <div class="split h-100">
+        <MeritGroup groupTitle={t('home.experience.subtitle1')} meritEntryItems={experienceItems}/>
+        <MeritGroup groupTitle={t('home.experience.subtitle2')} meritEntryItems={educationItems}/>
     </div>
-</section>
+</Section>
 
 <!-- Tech Stack -->
-<section class="section bg-surface border-bottom">
-    <div class="container">
-        <p class="text-label mb-xs">03 / Skills</p>
-        <h2>{t('home.tech.title')}</h2>
-        <p class="mt-xs text-muted mb-l">{t('home.tech.subtitle')}</p>
-        <div class="grid gap-m">
-            {#each [
-                {label: 'Frontend', techList: frontendStack},
-                {label: t('home.tech.backendAndDb'), techList: backendStack},
-                {label: t('home.tech.tools'), techList: toolStack}
-            ] as category}
-                <TechCard title={category.label} content={category.techList}/>
-            {/each}
-        </div>
-
-
+<Section title={t('home.tech.title')} subtitle={t('home.tech.subtitle')} chapter={t('home.chapter3')} tone="surface">
+    <div class="grid gap-m">
+        {#each [
+            {label: 'Frontend', techList: frontendStack},
+            {label: t('home.tech.backendAndDb'), techList: backendStack},
+            {label: t('home.tech.tools'), techList: toolStack}
+        ] as category}
+            <TechCard title={category.label} content={category.techList}/>
+        {/each}
     </div>
-</section>
+
+</Section>
 
 <!-- Projects -->
-<section class="section bg-base border-bottom">
-    <div class="container">
-        <p class="text-label mb-xs">04 / Work</p>
-        <h2>{t('home.projects.title')}</h2>
-        <p class="mt-xs text-muted">{t('home.projects.subtitle')}</p>
-        <div class="grid gap-l mt-l mb-l">
-            {#each featuredProjects as project}
-                <ProjectCard
-                        title={project.title}
-                        techStack={project.techStack}
-                        description={t(project.descriptionKey)}
-                        link={project.link}
-                />
-            {/each}
-        </div>
-        <div class="cluster">
-            <Button link={localizeHref('/projects')} btnLabel={t('home.projects.more')}
-                    buttonProps="btnSecondary outline"/>
-        </div>
+<Section title={t('home.projects.title')} subtitle={t('home.projects.subtitle')} chapter={t('home.chapter4')}>
+    <div class="grid gap-l mt-l mb-l">
+        {#each featuredProjects as project}
+            <Card
+                    title={project.title}
+                    tags={project.techStack}
+                    link={project.link}
+            ><p>{t(project.descriptionKey)}</p></Card>
+        {/each}
     </div>
-</section>
+    <div class="cluster">
+        <Button link={localizeHref('/projects')} btnLabel={t('home.projects.more')}
+                variant="secondary"/>
+    </div>
+</Section>
 
 <style lang="scss">
-  section {
-    position: relative;
-    max-width: 100%;
-    padding: var(--space-2xl) 0;
-
-    @media (max-width: 767px) {
-      padding: var(--space-xl) 0;
-    }
-  }
-
   .heroTag {
     width: fit-content;
     padding: 0.5rem 1rem;
@@ -158,9 +132,5 @@
       order: -1; // moves image above text
       max-width: 350px;
     }
-  }
-
-  .techCategory:last-child .border-bottom {
-    border-bottom: none;
   }
 </style>

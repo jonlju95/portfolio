@@ -15,6 +15,10 @@
       },
       "title": "Mitt förhållningssätt till utveckling"
     },
+    "chapter1": "01 / Väg",
+    "chapter2": "02 / Principer",
+    "chapter3": "03 / Intressen",
+    "chapter4": "04 / Härnäst",
     "contact": {
       "cta": "Hör av dig",
       "cv": "Ladda ner CV",
@@ -27,7 +31,8 @@
     },
     "hero": {
       "description": "Jag heter Jonatan Ljung, en webbutvecklare med över två års erfarenhet av att bygga moderna och responsiva webbplatser. Jag specialiserar mig på Angular, TypeScript, Java och PostgreSQL - och jag utökar ständigt mina kunskaper för att bli en starkare fullstack-utvecklare.",
-      "title": "Om mig"
+      "label": "Om mig",
+      "title": "Lär känna mig"
     },
     "journey": {
       "description1": "Under min tid på INBooks  arbetade jag med projekt som sträcker sig från AngularJS-migreringar till utveckling av nya funktioner.",
@@ -45,7 +50,7 @@
         "item3": {
           "description": "Påbyggnadsutbildning med fokus på C#, men också React, databaser och viss AI-teknik",
           "title": "Arbetsmarknadsutbildning på Lexicon",
-          "years": "2025 - Nutid"
+          "years": "2025 - 2026"
         }
       },
       "title": "Min resa"
@@ -60,7 +65,7 @@
     "projects": "Se portfölj"
   },
   "footer": {
-    "credits": "Gjort med SvelteKit | Design av mig"
+    "credits": "Design av mig"
   },
   "hello_world": "Hello, {name} from sv!",
   "home": {
@@ -79,6 +84,10 @@
       },
       "title": "Lär känna mig"
     },
+    "chapter1": "01 / Om mig",
+    "chapter2": "02 / Bakgrund",
+    "chapter3": "03 / Färdigheter",
+    "chapter4": "04 / Arbeten",
     "experience": {
       "items": {
         "item1": {
@@ -140,6 +149,7 @@
       "introduction": "Med två års erfarenhet brinner jag för att skapa dynamiska och användarvänliga webblösningar. Jag är skicklig i ett brett spektrum av programmeringsspråk och teknologier, och dedikerad till att leverera högkvalitativa webbplatser som möter både kunders och användares behov.",
       "jobtitle": "Webbutvecklare",
       "subtitle": " bosatt i Växjö",
+      "tag": "Öppen för nya möjligheter",
       "title": "Hej, mitt namn är Jonatan"
     },
     "projects": {
@@ -162,10 +172,10 @@
   "projects": {
     "items": {
       "item1": {
-        "description": "Källkoden till den här webbplatsen. En personlig portfolio byggd med SvelteKit och publicerad som en statisk sida med stöd för engelska och svenska."
+        "description": "Statisk sida med support för Engelska och Svenska."
       },
       "item10": {
-        "description": "Sokoban-spel byggt i React, som en del av min utbildning på Lexicon. Har funktioner för att kontrollera spelarrörelser och liknande. Läser även spelplanen från en fil."
+        "description": "Pusselspel som laddar spelplanen från en fil."
       },
       "item11": {
         "description": "Focus Helper är en personlig Android-app byggd med React Native och Expo, med Expo Router för filbaserad navigering och SQLite via Drizzle ORM för lokal datalagring. Kodbasen följer en strikt separering av ansvar - databasåtkomst, affärslogik, formulärhantering och rendering är isolerade i egna lager med hjälp av custom hooks. "
@@ -174,34 +184,34 @@
         "description": "Ett kommandoradsverktyg skrivet i C++ som rekursivt döper om bild- och videofiler i en given mapp. Filerna sorteras efter senast ändringsdatum och döps om i följd till img_1, img_2, och så vidare, med ursprungliga filändelser bevarade. Varje undermapp behandlas självständigt med en egen räknare."
       },
       "item13": {
-        "description": "Ett kommandoradsbaserat budgetverktyg skrivet i C++ som låter dig registrera inkomster och utgifter, visa sammanfattningar och filtrera poster per kategori. Data sparas i en lokal CSV-fil och finns kvar mellan sessioner."
+        "description": "Kommandorad för inkomst- och utgiftskoll med CSV lagring."
       },
       "item14": {
-        "description": "En skrivbordsapplikation för att skapa CV:n, byggd med Tauri, React och TypeScript, som kombinerar ett modernt webbgränssnitt med en lättviktig native-wrapper. Generera och exportera snygga CV:n från en smidig, plattformsoberoende applikation."
+        "description": "Skrivbordsapp för att bygga och exportera CV."
       },
       "item2": {
-        "description": "Personligt projekt bestående av en app där man kunde lägga in utgifter och inkomster för att få en överblick över sin ekonomi. Skulle innehålla tabeller med olika filter för specifika poster etc."
+        "description": "Ofärdig app för överblick över utgifter och inkomster."
       },
       "item3": {
-        "description": "Personligt projekt för att underhålla mina kunskaper. Skulle fungera som en tjänst där man köper och registrerar produkter med en aktiveringsnyckel. Arkivet innehåller en readme-fil med ett grovt första utkast av den avsedda funktionen."
+        "description": "Swedish  Koncept för produktregistrering under utveckling, med ett utkast till en readme-fil."
       },
       "item4": {
-        "description": "En React-app där du spelar sten, sax, påse mot en datormotsångare över ett valfritt antal set i best-of-format. Datorn anpassar sin strategi baserat på resultatet av föregående runda."
+        "description": "Match i en serie mot en anpassningsbar datormotståndare."
       },
       "item5": {
-        "description": "En Java-implementation av Fyra i rad för två spelare med valbara omgångar, best-of-vinst och möjlighet att se en repris efter varje omgång. Byggd med enhetstestning i fokus som del av en testkurs."
+        "description": "Spel för två spelare med konfigurerbara omgångar och möjlighet till omspel."
       },
       "item6": {
-        "description": "Bibliotekshanterare med inloggning och koppling till MongoDB. Skapad som en del av min utbildning och testades med Postman."
+        "description": "Bibliotekshanterare med inloggning och databasanslutning."
       },
       "item7": {
-        "description": "En del av min utbildning, med fokus på databasdesign och uppsättning av enkla CRUD-operationer."
+        "description": "Kursuppgift om databasdesign och CRUD-operationer."
       },
       "item8": {
         "description": "Frontend-delen av mitt radioschemaläggningsprojekt. Har en administratörssida med inloggning och en vanlig sida för gäster. Skapad som en del av min utbildning på Lexicon."
       },
       "item9": {
-        "description": "Backend-delen av mitt radioschemaläggarprojekt. Har grundläggande CRUD-operationer och koppling till en SQLite-databas med EF-kärna. Skapad som en del av min utbildning på Lexicon."
+        "description": "Backend med CRUD-operationer."
       }
     },
     "subtitle": "En blandning av projekt från min utbildning och egen utveckling, från tidiga skoluppgifter till nyare projekt där jag utforskat nya verktyg och ramverk.",

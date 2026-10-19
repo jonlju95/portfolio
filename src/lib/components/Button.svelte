@@ -1,57 +1,77 @@
 <script lang="ts">
+    import type { Snippet } from 'svelte';
 
-    let {link, btnLabel, newTab = false, buttonProps = 'btnPrimary', download = false, children}: {
-        link: string,
-        btnLabel: string,
-        newTab?: boolean,
-        buttonProps?: string,
-        download?: boolean,
-        children?: any,
+    let {
+        link,
+        btnLabel,
+        variant = 'primary',
+        newTab = false,
+        download = false,
+        children
+    }: {
+        link: string;
+        btnLabel: string;
+        variant?: 'primary' | 'secondary' | 'emphasis' | 'accent';
+        newTab?: boolean;
+        download?: boolean;
+        children?: Snippet;
     } = $props();
-
-    const linkTarget = () => {
-        return newTab ? "_blank" : "";
-    };
 </script>
 
-<a class="btn text-small font-bold text-primary radius-full {buttonProps}" href="{link}" target="{linkTarget()}"
-   role="button"
-   {...(download ? {download: ''} : {})}>{btnLabel}{@render children?.()}</a>
+<a class="btn"
+   data-variant={variant}
+   href={link}
+   target={newTab ? '_blank' : undefined}
+   rel={newTab ? 'noopener noreferrer' : undefined}
+   download={download ? '' : undefined}>
+    {btnLabel}{@render children?.()}
+</a>
 
-<style>
-    .btn {
-        height: 3rem;
-        min-height: 3rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
-        padding: 0.75rem 1rem;
-        transition: background-color 50ms;
-        border: transparent 2px solid;
+<style lang="scss">
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 3rem;
+    padding-inline: 1rem;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    transition: background-color 50ms, color 50ms, border-color 50ms;
+  }
 
-        &.btnPrimary {
-            background-color: var(--text-primary) !important;
-            color: var(--text-light) !important;
-        }
+  [data-variant='primary'] {
+    background-color: var(--bg-emphasis);
+    color: var(--text-light);
+  }
 
-        &.btnSecondary {
-            border: 1px solid var(--text-primary);
-            color: var(--text-primary) !important;
+  [data-variant='secondary'] {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
 
-            &:hover {
-                background-color: var(--text-primary) !important;
-                color: var(--text-light) !important;
-            }
-        }
-
-        &.btnLink {
-            background-color: var(--accent-dark) !important;
-            color: var(--text-light) !important;
-
-            &:hover {
-                background-color: var(--accent-mid) !important;
-            }
-        }
+    &:hover {
+      background-color: var(--text-muted);
+      border-color: var(--text-muted);
+      color: var(--text-light);
     }
+  }
 
+  [data-variant='emphasis'] {
+    border-color: var(--text-muted);
+    color: var(--text-light);
+
+    &:hover {
+      background-color: var(--text-muted);
+    }
+  }
+
+  [data-variant='accent'] {
+    background-color: var(--accent-dark);
+    color: var(--text-light);
+
+    &:hover {
+      background-color: var(--accent-mid);
+    }
+  }
 </style>
