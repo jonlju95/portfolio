@@ -32,23 +32,6 @@
         {/each}
     </div>
 </Section>
-<!--<section class="section bg-base">-->
-<!--    <div class="container">-->
-<!--        <div class="stack pb-m" data-gap="sm">-->
-<!--            <h2>{t('projects.title')}</h2>-->
-<!--            <p class="text-muted">{t('projects.subtitle')}</p>-->
-<!--        </div>-->
-<!--        <div class="grid mt-lg gap-l">-->
-<!--            {#each projects as project}-->
-<!--                <Card-->
-<!--                        title={project.title}-->
-<!--                        tags={project.techStack}-->
-<!--                        link={project.link}-->
-<!--                ><p>{t(project.descriptionKey)}</p></Card>-->
-<!--            {/each}-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 <style lang="scss">
   section {

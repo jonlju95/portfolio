@@ -59,7 +59,12 @@
     background-color: var(--bg-emphasis);
     color: var(--text-light);
 
-    :global(h2) { color: var(--accent); }
-    :global(p) { color: var(--text-light); }
+    :global(h2) {
+      color: var(--accent);
+    }
+
+    :global(p) {
+      color: var(--text-light);
+    }
   }
 </style>

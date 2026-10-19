@@ -8,13 +8,8 @@
     import experienceItems from "$lib/data/experience";
     import educationItems from "$lib/data/education";
     import {featuredProjects} from "$lib/data/projects";
-    import {
-        frontendStack,
-        backendStack,
-        toolStack
-    } from '$lib/data/techStack';
+    import {backendStack, frontendStack, toolStack} from '$lib/data/techStack';
     import Section from "$lib/components/Section.svelte";
-    import {base} from "$app/paths";
 
     let innerWidth = $state(0);
 
@@ -44,7 +39,7 @@
             <p class="text-muted mb-l">{t('home.hero.introduction')}</p>
             <div class="cluster">
                 <Button link={'/projects'} btnLabel={t('button.projects')}
-                        >
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="20" viewBox="0 0 448 512"
                          aria-hidden="true">
                         <path fill="currentColor"

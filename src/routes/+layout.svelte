@@ -10,4 +10,4 @@
 <main>
     <article class="animatedElement">{@render children()}</article>
 </main>
-<Footer variant={page.data.footer ?? 'default'} />
+<Footer variant={page.data.footer ?? 'default'}/>

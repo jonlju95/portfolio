@@ -1,9 +1,8 @@
 <script lang="ts">
-    import { base } from '$app/paths';
     import Button from '$lib/components/Button.svelte';
-    import { contact, resumeFile } from '$lib/data/contact';
-    import { getLocale } from '$lib/paraglide/runtime';
-    import { t } from '$lib/i18n';
+    import {contact, resumeFile} from '$lib/data/contact';
+    import {getLocale} from '$lib/paraglide/runtime';
+    import {t} from '$lib/i18n';
 
     let { variant = 'default' }: { variant?: 'default' | 'cv' } = $props();
 

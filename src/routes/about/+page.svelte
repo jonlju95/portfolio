@@ -1,9 +1,7 @@
 <script lang="ts">
-    import {base} from "$app/paths";
-    import {Button, type MeritEntryItem} from "$lib";
+    import {type MeritEntryItem} from "$lib";
     import MeritGroup from "$lib/components/MeritGroup.svelte";
     import Icon from "@iconify/svelte";
-    import {getLocale} from "$lib/paraglide/runtime";
     import {t} from "$lib/i18n";
     import Section from "$lib/components/Section.svelte";
     import Card from "$lib/components/Card.svelte";
@@ -25,9 +23,6 @@
             description: 'about.journey.items.item3.description',
         }
     ];
-
-    const resumeVersion = $derived(getLocale() === 'en' ? 'Jonatan_Ljung_Resume_2026.pdf' :
-        'Jonatan_Ljung_CV_2026.pdf');
 
 </script>
 
